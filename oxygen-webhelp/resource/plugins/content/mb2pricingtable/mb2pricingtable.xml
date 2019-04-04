@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade">
+	<name>Content - Mb2 Pricing Table</name>
+	<creationDate>October 2014</creationDate>    
+    <author>Mariusz Boloz</author>
+    <authorEmail>mariuszboloz@gmail.com</authorEmail>
+    <authorUrl>http://mb2extensions.com</authorUrl>
+    <version>1.0.0</version>
+	<copyright>Copyright (C) 20014 - 2015 Mariusz Boloz (http://mb2extensions.com) All rights reserved.</copyright>
+	<license>Commercial (http://codecanyon.net/licenses)</license>
+	<description>PLG_CONTENT_MB2PRICINGTABLE_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="mb2pricingtable">mb2pricingtable.php</filename>
+		<filename>index.html</filename>		
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_content_mb2pricingtable.ini</language>
+	</languages>
+	<config>
+	
+	<fields name="params">	
+	</fields>		
+	</config>
+</extension>

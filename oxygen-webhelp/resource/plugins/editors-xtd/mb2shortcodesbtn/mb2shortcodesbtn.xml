@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="editors-xtd" method="upgrade">
+	<name>plg_editors-xtd_mb2shortcodesbtn</name>
+	<author>Mariusz Boloz</author>
+	<creationDate>May 2013</creationDate>
+	<copyright>Copyright (C) 2013 - 2016 Mariusz Boloz (http://mb2extensions.com) All rights reserved.</copyright>
+	<license>GNU/GPL (http://www.gnu.org/copyleft/gpl.html)</license>
+	<authorEmail>mariuszboloz@gmail.com</authorEmail>
+	<authorUrl>www.mb2extensions.com</authorUrl>
+	<version>4.0.0</version>
+	<description>PLG_MB2SHORTCODESBTN_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="mb2shortcodesbtn">mb2shortcodesbtn.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_editors-xtd_mb2shortcodesbtn.ini</language>
+		<language tag="en-GB">en-GB.plg_editors-xtd_mb2shortcodesbtn.sys.ini</language>
+	</languages>
+</extension>

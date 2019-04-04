@@ -1,0 +1,1 @@
+define({"topics" : [{"title":"Get","id":"abt_Get_radiobutton","href":"TA_Automation\/Topics\/abt_Get_7.html","menu": {"hasChildren":false,},"tocID":"abt_Get_radiobutton-d46e41660","topics":[]},{"title":"Set","id":"abt_Set_radiobutton","href":"TA_Automation\/Topics\/abt_Set_7.html","menu": {"hasChildren":false,},"tocID":"abt_Set_radiobutton-d46e41668","topics":[]}]});

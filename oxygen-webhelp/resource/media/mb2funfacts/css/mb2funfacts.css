@@ -1,0 +1,197 @@
+/**
+ * @package		Mb2 Fun Facts
+ * @version		1.0.3
+ * @author		Mariusz Boloz (http://mb2extensions.com)
+ * @copyright	Copyright (C) 2016 Mariusz Boloz (http://mb2extensions.com). All rights reserved
+ * @license		Commercial (http://codecanyon.net/licenses)
+**/
+
+@font-face {
+  font-family: 'mb2_funfactsfont';
+  src: url('font/mb2_funfactsfont.eot?79502622');
+  src: url('font/mb2_funfactsfont.eot?79502622#iefix') format('embedded-opentype'),
+       url('font/mb2_funfactsfont.woff?79502622') format('woff'),
+       url('font/mb2_funfactsfont.ttf?79502622') format('truetype'),
+       url('font/mb2_funfactsfont.svg?79502622#mb2_funfactsfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'mb2_funfactsfont';
+    src: url('../font/mb2_funfactsfont.svg?79502622#mb2_funfactsfont') format('svg');
+  }
+}
+*/
+ 
+ [class^="mb2_funfactsicon-"]:before, [class*=" mb2_funfactsicon-"]:before {
+  font-family: "mb2_funfactsfont";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.mb2_funfactsicon-plus:before { content: '\e800'; } /* '' */
+
+
+/* General styles */
+
+.mb2funfacts *,
+.mb2funfacts *:before,
+.mb2funfacts *:after {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+    box-sizing: content-box;	
+}
+
+
+
+/* Fuct item */
+
+.mb2funfacts-item {
+	float: left;
+}
+
+.mb2funfacts-item-inner {
+	position: relative;	
+}
+
+.mb2funfacts-icon,
+.mb2funfacts-number,
+.mb2funfacts-title,
+.mb2funfacts-desc {
+	display: block;
+	line-height: 1;
+}
+
+.mb2funfacts-icon {
+	margin-left: 0;	
+	margin-right: 0;	
+}
+
+.mb2funfacts-title {
+	padding-top: 7px;
+}
+
+.mb2funfacts-desc {
+	padding-top: 10px;	
+}
+
+/* Plus icon */
+
+.mb2_funfactsicon-plus {
+	position: relative;	
+	left: -12px;
+}
+
+.mb2_funfactsicon-plus:before {
+	font-size: 16px;
+	vertical-align: top;	
+}
+
+
+
+
+/* Other styles */
+
+.mb2funfacts-clr {
+	*zoom: 1;
+}
+
+.mb2funfacts-clr:before,
+.mb2funfacts-clr:after {
+	display: table;
+	content: "";
+	line-height: 0;
+}
+
+.mb2funfacts-clr:after {
+	clear: both;
+}
+
+
+
+
+/* ============================================== LAYOUT 1, 2 */
+
+.mb2funfacts.layout1 .mb2funfacts-icon,
+.mb2funfacts.layout2 .mb2funfacts-icon {
+	margin-bottom: 25px;	
+}
+
+
+.mb2funfacts.layout2 .mb2funfacts-item {
+	text-align: center;	
+}
+
+.mb2funfacts.layout2 .mb2funfacts-icon {
+	width: 100%;	
+	text-align: center;	
+}
+
+
+
+/* ============================================== LAYOUT 3 */
+
+.mb2funfacts.layout3 .mb2funfacts-number,
+.mb2funfacts.layout3 .mb2funfacts-title,
+.mb2funfacts.layout3 .mb2funfacts-desc {
+	padding-left: 65px;	
+}
+
+
+.mb2funfacts.layout3 .mb2funfacts-icon {
+	position: absolute;
+}
+
+
+
+
+@media only screen and (max-width:768px){
+	
+	.mb2funfacts.responsive .mb2funfacts-list {
+		margin-left: 0 !important;
+		margin-right: 0 !important;	
+	}
+	
+	.mb2funfacts.responsive .mb2funfacts-item {
+		width: 100%!important;	
+	}
+	
+	.mb2funfacts.responsive .mb2funfacts-item-inner {
+		margin-left: 0 !important;
+		margin-right: 0 !important;	
+	}
+	
+}

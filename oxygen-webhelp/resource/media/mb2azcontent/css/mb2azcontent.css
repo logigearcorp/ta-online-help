@@ -1,0 +1,242 @@
+/**
+ * @package		Mb2 A-Z Content
+ * @version		1.1.0
+ * @author		Mariusz Boloz (http://mb2extensions.com)
+ * @copyright	Copyright (C) 2016 Mariusz Boloz (http://mb2extensions.com). All rights reserved
+ * @license		Commercial (http://codecanyon.net/licenses)
+**/
+
+
+
+/*--------------------------------------------------------------*/
+/*	General styles
+/*--------------------------------------------------------------*/
+
+.mb2az *,
+.mb2az *:before,
+.mb2az *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;	
+}
+
+.mb2az {
+	position:relative;
+}
+
+
+
+/*--------------------------------------------------------------*/
+/*	Alphabet list
+/*--------------------------------------------------------------*/
+
+.mb2az-alphabet {
+	list-style: none;
+	padding: 0;	
+}
+
+.mb2az-alphabet li {
+	display: inline-block;	
+	margin: 0;
+}
+
+
+
+
+
+/*--------------------------------------------------------------*/
+/*	'Default' layout
+/*--------------------------------------------------------------*/
+
+/* Alphabet list */
+
+.mb2az-layout-default .mb2az-alphabet {
+	margin: 0 0 30px 0;	
+}
+
+.mb2az-layout-default .mb2az-alphabet li {
+	padding: 0 10px;
+	border-right: dotted 1px #d4d5d6;
+}
+
+.mb2az-layout-default .mb2az-alphabet li:last-child {
+	border-right: 0;	
+}
+
+.mb2az-layout-default .mb2az-alphabet li > span {
+	opacity: .4;	
+}
+
+
+
+
+
+/* Article list */
+
+.mb2az-articles,
+.mb2az-articles ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;		
+}
+
+.mb2az-articles > li {
+	margin-bottom: 30px;	
+}
+
+li.mb2az-letter-item {
+	border-top: dotted 1px #d4d5d6;
+	padding-top: 15px;	
+	position: relative;
+}
+
+
+/* Back to top link */
+
+.mb2az-back {
+	position: absolute;
+	right: 0;
+	top: 15px;	
+}
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------*/
+/*	'Square' layout
+/*--------------------------------------------------------------*/
+
+
+/* Alphabet list */
+
+.mb2az-layout-square .mb2az-alphabet {
+	margin: 0 0 40px 0;
+}
+
+.mb2az-layout-square .mb2az-alphabet li {
+	padding: 0;
+}
+
+.mb2az-layout-square .mb2az-alphabet li a,
+.mb2az-layout-square .mb2az-alphabet li span {
+	display: inline-block;
+	padding: 5px 15px;
+	margin: 0 10px 10px 0;
+}
+
+.mb2az-layout-square .mb2az-alphabet li span {
+	background-color: #f5f6f7;	
+}
+
+.mb2az-layout-square .mb2az-alphabet li a {
+	background-color: #6666ff;
+	color: #fff;
+	text-decoration: none; 	
+}
+
+.mb2az-layout-square .mb2az-alphabet li a:hover,
+.mb2az-layout-square .mb2az-alphabet li a:focus {
+	color: #fff;
+	text-decoration: none; 	
+}
+
+
+
+
+/* Items */
+
+.mb2az-article-item {
+	float: left;		
+}
+
+@media (max-width: 768px){	
+	
+	.mb2az-multicol .mb2az-article-item {
+		width: 50% !important;	
+	}
+	
+}
+
+
+@media (max-width: 480px){
+	
+	.mb2az-multicol .mb2az-article-item {
+		width: 100% !important;	
+	}
+		
+}
+
+
+.mb2az-article-item-inner {
+	position: relative;
+	min-height: 150px;	
+}
+
+.mb2az-article-item-inner2,
+.mb2az-article-item-link {
+	display: block;
+	position: absolute;	
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.mb2az-article-item-content {
+	display: table;
+	width: 100%;
+	height: 100%;	
+}
+
+
+
+/* Style for content items */
+
+.mb2az-article-item-content-inner {
+	display: table-cell;
+	vertical-align: bottom;	
+	background-color: rgba(0,0,0,.6);
+	opacity: 0;
+	-webkit-transition: all .15s ease-in-out;
+  	-moz-transition: all .15s ease-in-out;
+  	-o-transition: all .15s ease-in-out;
+  	transition: all .15s ease-in-out;
+}
+
+.mb2az-article-item-content-inner:hover {
+	opacity: 1;	
+}
+
+.mb2az-article-item-content-inner .mb2az-article-title {
+	color: #fff;
+	font-size: 1.2em;
+	margin: 0 15px 15px 15px;
+}
+
+.mb2az-article-item-link {
+	color: #fff;
+	text-decoration: none;	
+}
+
+.mb2az-article-item-link:hover,
+.mb2az-article-item-link:focus {
+	color: #fff;
+	text-decoration: none;	
+}
+
+
+
+/* Style for 'letter' items */
+
+.mb2az-letter-item .mb2az-article-item-content-inner {
+	background-color: #6666ff;
+	color: #fff;
+	vertical-align: middle;	
+	font-size: 2.5em;
+	text-align: center;
+	opacity: 1;
+}

@@ -1,0 +1,19 @@
+{
+	"predefined_styles": [{
+		"accent_color1": "#f0bc22",
+		"accent_color2": "#303031",
+		"text_color": "#666666",
+		"links_color": "#f0bc22",
+		"links_h_color": "#303031",
+		"headings_color": "#000000",
+		"border_color": "#e5e5e5"
+	}, {
+		"accent_color1": "#8cb202",
+		"accent_color2": "#303031",
+		"text_color": "#666666",
+		"links_color": "#8cb202",
+		"links_h_color": "#303031",
+		"headings_color": "#000000",
+		"border_color": "#e5e5e5"
+	}]
+}

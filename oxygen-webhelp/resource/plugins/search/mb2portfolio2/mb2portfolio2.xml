@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="search" method="upgrade">
+	<name>plg_search_mb2portfolio2</name>
+	<author>Mariusz Boloz</author>
+	<creationDate>January 2016</creationDate>
+	<copyright>Copyright (C) 2016 Mariusz Boloz (http://mb2extensions.com) All rights reserved.</copyright>
+	<license>Commercial (http://codecanyon.net/licenses)</license>
+	<authorEmail>mariuszboloz@gmail.com</authorEmail>
+	<authorUrl>www.mb2extensions.com</authorUrl>
+	<version>1.1.1</version>
+	<description>PLG_SEARCH_MB2PORTFOLIO2_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="mb2portfolio2">mb2portfolio2.php</filename>
+		<filename>index.html</filename>
+	</files>	
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_search_mb2portfolio2.ini</language>
+		<language tag="en-GB">en-GB.plg_search_mb2portfolio2.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="search_limit" type="text"
+					default="50"
+					description="PLG_SEARCH_MB2PORTFOLIO2_FIELD_SEARCHLIMIT_DESC"
+					label="PLG_SEARCH_MB2PORTFOLIO2_FIELD_SEARCHLIMIT_LABEL"
+					size="5"
+				/>
+
+				<field name="search_content" type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					description="PLG_SEARCH_MB2PORTFOLIO2_FIELD_CONTENT_DESC"
+					label="PLG_SEARCH_MB2PORTFOLIO2_FIELD_CONTENT_LABEL"
+				>
+					<option value="1">JON</option>
+					<option value="0">JOFF</option>
+				</field>
+
+				<!--<field name="search_archived" type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					description="PLG_SEARCH_MB2PORTFOLIO2_FIELD_ARCHIVED_DESC"
+					label="PLG_SEARCH_MB2PORTFOLIO2_FIELD_ARCHIVED_LABEL"
+				>
+					<option value="1">JON</option>
+					<option value="0">JOFF</option>
+				</field>-->
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>

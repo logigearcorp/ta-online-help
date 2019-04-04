@@ -1,0 +1,1873 @@
+
+<!DOCTYPE html
+  PUBLIC "" "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en-us" lang="en-us">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="description" content="Description Check a bitmap area of the AUT's current display against one or more stored baseline images. Result is Passed if the displayed image matches one of the baselines ; otherwise Failed . ..." /><meta name="copyright" content="(C) Copyright 2019" /><meta name="DC.rights.owner" content="(C) Copyright 2019" /><meta property="og:type" content="website" /><meta property="og:title" content="check picture" /><meta name="twitter:title" content="check picture" /><meta name="indexterms" content="built-in actions, check picture, check picture (action), iOS (action), check picture, Android (action), check picture" /><meta name="DC.subject" content="built-in actions, check picture, check picture (action), iOS (action), check picture, Android (action), check bitmap area against basedline image, check bitmap region against baseline image, check if any pictures in area match baseline one" /><meta name="keywords" content="built-in actions, check picture, check picture (action), iOS (action), check picture, Android (action), check bitmap area against basedline image, check bitmap region against baseline image, check if any pictures in area match baseline one" /><meta name="DC.Relation" scheme="URI" content="../../TA_Automation/Topics/bia_picture_handling.html" /><meta name="DC.Relation" scheme="URI" content="../../TA_Automation/Topics/bia_capture_screen.html" /><meta name="DC.Relation" scheme="URI" content="../../TA_Automation/Topics/bia_check_picture_exists.html" /><meta name="DC.Relation" scheme="URI" content="../../TA_Automation/Topics/bia_check_picture_exists.html" /><meta name="DC.Relation" scheme="URI" content="../../TA_Automation/Topics/bia_check_picture_not_exists.html" /><meta name="DC.Relation" scheme="URI" content="../../TA_Automation/Topics/bia_does_picture_exist.html" /><meta name="DC.Relation" scheme="URI" content="../../TA_Automation/Topics/aut_image_comparison_techniques.html" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="bia_check_picture" /><title>check picture</title><!--  Generated with Oxygen version 20.0-SNAPSHOT, build number 2018031511.  --><meta name="wh-path2root" content="../../" /><meta name="wh-toc-id" content="bia_check_picture-d46e38734" />
+        <script type="text/javascript">
+    <!--  
+     /* Include JavaScript code here. */
+     window.dataLayer = window.dataLayer || []; 
+
+     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MBWGFT'); 
+  -->
+</script>
+        
+
+<script type="text/javascript">
+
+<!--
+function $_GET(param) {
+         var vars = {};
+         window.location.href.replace( location.hash, '' ).replace(
+             /[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+             function( m, key, value ) { // callback
+                 vars[key] = value !== undefined ? value : '';
+             }
+         );
+
+         if ( param ) {
+             return vars[param] ? vars[param] : "none";
+         }
+         return vars;
+     }
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); 
+
+     var key = $_GET('trialkey');	 
+	 
+	 if (key=="none")
+	 {
+	
+		if (localStorage.trialkey) {
+            var key = localStorage["trialkey"];
+        } else {
+			var key = "none";            
+        }
+	 }
+	 
+	 localStorage.setItem("trialkey", key);
+     var dimensionValue = key;
+	 ga('create', 'UA-80132928-1', 'auto','webhelp');	 
+     ga('webhelp.set', 'dimension1', dimensionValue);	 
+     ga('webhelp.send', 'pageview');  
+--> 
+</script>
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- EXM-36950 - Expand the args.hdf parameter here -->
+        
+        
+<meta property="og:image" content="https://www.testarchitect.com/OnlineHelp/TA_Help/Images/ta-logo1.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://www.testarchitect.com/OnlineHelp/TA_Help/Images/ta-logo1.png" />
+<link href="../../oxygen-webhelp/resource/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<link href="../../oxygen-webhelp/resource/plugins/editors/jckeditor/typography/typography2.php" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/css/k2.fonts.css?v2.7.1" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/css/k2.css?v2.7.1" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2smpgallery/css/lightslider.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2smpgallery/css/mb2smpgallery.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2smpgallery/css/nivo-lightbox.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2smpgallery/css/nivo-lightbox-default.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2content/css/mb2content.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/plugins/content/fastsocialshare/style/style.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/plugins/content/jw_allvideos/jw_allvideos/tmpl/Classic/css/template.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/assets/glyphicon/css/glyphicon.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/assets/glyphicon/css/glyphicon.min.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/assets/lineicon/css/lineicon.min.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/assets/pe-icon-7-stroke/css/pe-icon-7-stroke.min.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/css/template_47.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2testimonials/css/mb2testimonials.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2ctmenu/css/mb2ctmenu.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" media="all" href="../../oxygen-webhelp/resource/templates/fruition/css/ta_custom.css" />
+<link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resource/templates/fruition/css/jquery.bing.translator.css" />
+ 
+
+        <!-- Latest compiled and minified Bootstrap CSS -->
+       <!--  <link rel="stylesheet"  type="text/css" 
+            href="${oxygen-webhelp-assets-dir}/lib/bootstrap/css/bootstrap.min.css" /> -->
+
+        <!-- Bootstrap Optional theme -->
+        <!-- <link rel="stylesheet"
+            href="${oxygen-webhelp-assets-dir}/lib/bootstrap/css/bootstrap-theme.min.css" /> -->
+        <link rel="stylesheet" href="../../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css" />
+
+        <!-- Template default styles  -->
+        <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/app/topic-page.css?buildId=2018031511" />
+        
+
+        <script type="text/javascript" src="../../oxygen-webhelp/lib/jquery/jquery-3.1.1.min.js"><!----></script>
+
+        <script data-main="../../oxygen-webhelp/app/topic-page.js" src="../../oxygen-webhelp/lib/requirejs/require.js"></script>
+           
+        <!-- Skin resources -->
+        <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/template/customstyle.css?buildId=2018031511" />
+    </head>
+
+    <body class="wh_topic_page frmBody" id="topic-page">
+        
+        <!-- Google Tag Manager iframe V.1.0.0 from Tools for Joomla --> 
+        <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MBWGFT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript> <!-- End Google Tag Manager iframe --> 
+
+        <div id="page-a" class="page ctype_content vtype_article item_1235 ltype_full fixed-nav fixed-nav-hide mpos_header header-white header-style1 width-desktop header-is-grid logo-left page-a hidden-print">
+   <div class="fixed-nav-element-offset"></div>
+   <header id="main-header" class="tsection">
+      <div class="tsection-inner">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="tlogo tcol col-sm-3 left">
+                  <div class="main-logo alignleft">
+                     <a href="https://www.testarchitect.com/">
+                        <img title="" src="https://www.testarchitect.com/images/HomePage/ta-logo.png" alt="" />
+                     </a>
+                  </div>
+               </div>
+               <div class="tcol col-sm-9">
+                  <div class="mod-block clearfix ta-header-main-menu">
+                     <div class="mb2ctm mb2ctm438 ta-header-main-menu is-bar is-button hover-mode mb2ctm-left" data-anim="2" data-anim_speed="350">
+                        <div class="mb2ctm-menu-link">
+                           <a class="mb2ctm-menu-open" href="#">
+                              <span class="mb2ctm-menu-icon mb2ctm_icon-menu"></span>
+                           </a>
+                        </div>
+                        <!-- end .mb2ctm-menu-bar -->
+                        <ul class="mb2ctm-list mb2ctm-clr" data-anim="2" data-anim_speed="350">
+                           
+                           <li class="mb2ctm-item mb2ctm-item-797 mb2ctm-stparent mb2ctm-isparent mb2ctm-dropdow mb2ctm-dd-right">
+                              <span class="mb2ctm-parent-open"></span>
+                              <a class="ta-menu" href="#">PRODUCTS</a>
+                              <div class="mb2ctm-smenu mb2ctm-smenu-panel mb2ctm-clr" style="right:auto;left:0;">
+                                 <div class="mb2ctm-smenu-inner mb2ctm-clr">
+                                    <ul class="mb2ctm-child-list1">
+                                       <li class="mb2ctm-item mb2ctm-item-1140 mb2ctm-isnoparent2">
+                                          <a href="https://www.testarchitect.com/product/testarchitect-team-and-testarchitect-enterprise">TestArchitect Team &amp; Enterprise</a>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1141 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="https://www.testarchitect.com/product/features-and-supported-platforms">Features &amp; Supported Platforms</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-1142">
+                                                <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-features">TestArchitect Features</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-1143 mb2ctm-stparent mb2ctm-isparent">
+                                                <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-supported-platforms">TestArchitect Supported Platforms</a>
+                                                <ul class="mb2ctm-child-list3">
+                                                   <li class="mb2ctm-item mb2ctm-item-1176">
+                                                      <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-supported-platforms/web-testing">Web Testing</a>
+                                                   </li>
+                                                   <li class="mb2ctm-item mb2ctm-item-1182">
+                                                      <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-supported-platforms/web-service-testing">Web Service &amp; API Testing</a>
+                                                   </li>
+                                                   <li class="mb2ctm-item mb2ctm-item-1177">
+                                                      <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-supported-platforms/mobile-testing">Mobile Testing</a>
+                                                   </li>
+                                                   <li class="mb2ctm-item mb2ctm-item-1178">
+                                                      <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-supported-platforms/desktop-testing">Desktop Testing</a>
+                                                   </li>
+                                                   <li class="mb2ctm-item mb2ctm-item-1180">
+                                                      <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-supported-platforms/more-automated-testing">More Automated Testing</a>
+                                                   </li>
+                                                </ul>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1144 mb2ctm-isnoparent2">
+                                          <a href="https://www.testarchitect.com/product/professional-services-and-training">Professional Services &amp; Training</a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <!-- end .mb2ctm-smenu-inner -->
+                              </div>
+                              <!-- end .mb2ctm-smenu -->
+                           </li>
+                           <li class="mb2ctm-item mb2ctm-item-814 mb2ctm-stparent mb2ctm-isparent mb2ctm-dropdow mb2ctm-dd-right">
+                              <span class="mb2ctm-parent-open"></span>
+                              <a class="ta-menu" href="#">RESOURCES</a>
+                              <div class="mb2ctm-smenu mb2ctm-smenu-panel mb2ctm-clr" style="right:auto;left:0;">
+                                 <div class="mb2ctm-smenu-inner mb2ctm-clr">
+                                    <ul class="mb2ctm-child-list1">
+                                       <li class="mb2ctm-item mb2ctm-item-1162 mb2ctm-isnoparent2">
+                                          <a href="https://www.testarchitect.com/resources/data-sheets">Data Sheets</a>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1163 mb2ctm-isnoparent2">
+                                          <a href="https://www.testarchitect.com/resources/case-studies">Case Studies</a>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1165 mb2ctm-isnoparent2">
+                                          <a href="https://www.testarchitect.com/resources/white-papers">White Papers</a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <!-- end .mb2ctm-smenu-inner -->
+                              </div>
+                              <!-- end .mb2ctm-smenu -->
+                           </li>
+                           <li class="mb2ctm-item mb2ctm-item-822 mb2ctm-stparent mb2ctm-isparent mb2ctm-mega mb2ctm-dd-right">
+                              <span class="mb2ctm-parent-open"></span>
+                              <a class="ta-menu" href="https://www.testarchitect.com/support">SUPPORT</a>
+                              <div class="mb2ctm-smenu mb2ctm-smenu-panel mb2ctm-clr" style="right:auto;left:0;">
+                                 <div class="mb2ctm-smenu-inner mb2ctm-clr">
+                                    <ul class="mb2ctm-child-list1">
+                                       <li class="mb2ctm-item mb2ctm-item-827 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="https://www.testarchitect.com/support/action-based-testing">ACTION BASED TESTING</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-828">
+                                                <a href="https://www.testarchitect.com/support/action-based-testing/abt-overview">Overview</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-829">
+                                                <a href="https://www.testarchitect.com/support/action-based-testing/how-to-write-test-module">Template</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-820">
+                                                <a href="https://www.testarchitect.com/support/action-based-testing/best-practices">Best Practices</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1008 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="#">DOCUMENTATION</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-1010">
+                                                <a href="https://www.testarchitect.com/support/documentation/get-started">Get Started</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-819">
+                                                <a href="https://www.testarchitect.com/support/documentation/tutorial-videos">Tutorial Videos</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-823">
+                                                <a href="https://www.testarchitect.com/OnlineHelp/">Online Help</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-821">
+                                                <a href="https://www.testarchitect.com/support/documentation/release-notes">Release Notes</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1011 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="#">SUPPORT PORTAL</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-825">
+                                                <a href="https://www.testarchitect.com/sso?host_url=support-ta.logigear.com" target="_blank">Login</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-787">
+                                                <a href="http://support-ta.logigear.com/support/discussions" target="_blank">Forum</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-1118">
+                                                <a href="https://www.testarchitect.com/support/support-portal/license-pricing-faq">License/Pricing FAQ</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-788">
+                                                <a href="http://support-ta.logigear.com/support/solutions" target="_blank">Knowledge Base</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-1012">
+                                                <a href="http://support-ta.logigear.com/support/tickets/new" target="_blank">Submit a Ticket</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <!-- end .mb2ctm-smenu-inner -->
+                              </div>
+                              <!-- end .mb2ctm-smenu -->
+                           </li>
+                           <li class="mb2ctm-item mb2ctm-item-318 mb2ctm-stparent mb2ctm-isparent mb2ctm-mega mb2ctm-dd-right">
+                              <span class="mb2ctm-parent-open"></span>
+                              <a class="ta-menu" href="#">COMPANY</a>
+                              <div class="mb2ctm-smenu mb2ctm-smenu-panel mb2ctm-clr" style="right:auto;left:0;">
+                                 <div class="mb2ctm-smenu-inner mb2ctm-clr">
+                                    <ul class="mb2ctm-child-list1">
+                                       <li class="mb2ctm-item mb2ctm-item-334 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="#">COMPANY</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-322">
+                                                <a href="https://www.testarchitect.com/company/logigear">About LogiGear</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-778 mb2ctm-stparent mb2ctm-isparent">
+                                                <a href="https://www.testarchitect.com/company/partners">Partners</a>
+                                                <ul class="mb2ctm-child-list3">
+                                                   <li class="mb2ctm-item mb2ctm-item-1131">
+                                                      <a class="ta-hide-menu" href="https://www.testarchitect.com/company/partners/become-a-partner">Become a Partner</a>
+                                                   </li>
+                                                   <li class="mb2ctm-item mb2ctm-item-1133">
+                                                      <a class="ta-hide-menu" href="https://www.testarchitect.com/company/partners/our-partners">Our Partners</a>
+                                                   </li>
+                                                </ul>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-779">
+                                                <a href="https://www.testarchitect.com/company/customers">Customers</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1184 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="#">CONTACT US</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-685">
+                                                <a href="https://www.testarchitect.com/company/contact-us">Leave A Message</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-1186">
+                                                <a href="https://www.testarchitect.com/product/testarchitect-team-and-testarchitect-enterprise/request-a-demo">Request A Demo</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-1195">
+                                                <a href="https://www.testarchitect.com/company/request-a-quote">Request A Quote</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-1185">
+                                                <a href="https://www.testarchitect.com/company/partners/become-a-partner">Become A Partner</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-336 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="#">NEWS</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-782">
+                                                <a href="https://www.testarchitect.com/company/news">News</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-784">
+                                                <a href="http://www.logigear.com/about-us/events.html" target="_blank">Events</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-785">
+                                                <a href="http://www.logigear.com/about-us/awards.html" target="_blank">Awards</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-786">
+                                                <a href="https://www.testarchitect.com/company/news/media-kit">Media Kit</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-332 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="#">SOCIAL MEDIA</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-792">
+                                                <a href="https://www.youtube.com/user/LogiGearCorporation" target="_blank">Youtube</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-793">
+                                                <a href="https://twitter.com/logigear" target="_blank">Twitter</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-794">
+                                                <a href="https://www.linkedin.com/company/logigear-corporation" target="_blank">Linkedin</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-795">
+                                                <a href="https://www.facebook.com/logigearcorporation/" target="_blank">Facebook</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-796">
+                                                <a href="https://plus.google.com/102920289935162355348" target="_blank">Google Plus</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <!-- end .mb2ctm-smenu-inner -->
+                              </div>
+                              <!-- end .mb2ctm-smenu -->
+                           </li>
+                           <li class="mb2ctm-item mb2ctm-item-855 mb2ctm-mega mb2ctm-dd-right">
+                              <a class="btn btn-primary ta-menu sf-with-ul free-download-menu" href="https://www.testarchitect.com/free-download">Free Download</a>
+                           </li>
+						   <li>
+								<div id="languagePicker"></div>
+						   </li>
+                        </ul>
+                        <!-- end .mb2ctm-list -->
+                     </div>
+                     <!-- end .mb2ctm -->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+</div>
+        <!-- EXM-36950 - Expand the args.hdr parameter here -->
+        
+       
+         <!-- config navbar and header -->
+<nav class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <a href="../../index.html" class=" wh_logo hidden-xs "></a>
+                    <div class=" wh_publication_title "><a href="../../index.html"><h1 class="ta-help-title" style="display:none;"><span class="title">TestArchitect Help</span></h1><span class="ta-help-title">TestArchitect</span><span class="ta-help-title" style="color:#f7d542"> Online Help</span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse">
+                
+                
+                <!-- <whc:webhelp_indexterms_link/> -->
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+        
+        
+        <div class="container-fluid">
+            <div class="row">
+
+                <nav class="wh_tools hidden-print">
+                    <!-- <whc:webhelp_breadcrumb/> -->
+                   <!--  <div class="wh_right_tools hidden-sm hidden-xs">
+                        <whc:webhelp_navigation_links/>
+                        <whc:webhelp_toggle_highlight/>
+                        <whc:webhelp_expand_collapse_sections/>
+                        <whc:webhelp_print_link class="print"/>
+                    </div> -->
+                </nav>
+            </div>
+
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <!-- <div id="title-container-left" class="hidden-print">
+                                <div class="header-container">
+                                    <h1 class="content-header">Content </h1> 
+                                </div>
+                                <whc:webhelp_indexterms_link/> 
+                           </div> -->
+                            <div id="topic-search-section">
+                            <div class=" wh_search_input "><form id="searchForm" method="get" action="../../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" /><button type="submit" class="wh_search_button"><span>Search</span></button></div><script><!--
+                                    $(document).ready(function () {
+                                        $('#searchForm').submit(function (e) {
+                                            if ($('.wh_search_textfield').val().length < 1) {
+                                                e.preventDefault();
+                                            }
+                                        });
+                                    });
+                                --></script></form></div> <!-- search btn -->
+                            <nav role="navigation" id="wh_publication_toc" class="navbar hidden-print">
+                                <div class=" wh_publication_toc " data-tooltip-position="right"><ul>
+   <li><span data-tocid="concept_e3v_dpb_cp-d46e15991" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_UsingHelpSystem/Topics/hs_using_help_system.html">Using the TestArchitect Help system</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The <span class="ph">TestArchitect</span> Help system is available in both   desktop (CHM) and web-based versions. This section describes the help viewers and how
+                  you can use   them to find the information you need.
+                  
+               </p>
+               </span></span></span></li>
+   <li><span data-tocid="idTutorials_Managing_Tests_with_TestArchitect-d46e16166" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Tutorials/Topics/Tutorials_Managing_Tests_with_TestArchitect.html">TestArchitect Tutorial</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Get started creating and managing your tests with TestArchitect by reviewing these             introductory lessons.     
+                  
+                  
+               </p>
+               </span></span></span></li>
+   <li><span data-tocid="User_guide-d46e17810" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/User_Guide_begin.html">User Guide</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">This guide provides instructions on using <span class="ph">TestArchitect</span>.   It also explains the environment requirements for <span class="ph">TestArchitect</span> and   describes the process of running tests and reviewing test results. 
+                  
+               </p>
+               </span></span></span></li>
+   <li><span data-tocid="Administration_guide-d46e30766" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Administration/Topics/Administration_Guide_begin.html">Administration Guide</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Learn how to set up and administrate the License Server, the Repository Server,   etc.</p>
+               </span></span></span></li>
+   <li><span data-tocid="Automation_guide-d46e34996" class="topicref" data-state="expanded"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/Automation_Guide_begin.html">Automation Guide</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">With <span class="ph">TestArchitect</span>, you can test apps running on various   environments, such as, desktop, web, mobile applications, etc.
+                  
+               </p>
+               </span></span></span><ul class="nav nav-list">
+         <li><span data-tocid="action_based_testing_language-d46e35018" class="topicref" data-state="expanded"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/Action_based_testing_language.html">Action-based testing language</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Action   Based Testing (ABT) is usually considered to be an automation technique. It is commonly positioned   as an advanced
+                        and practical alternative to other techniques like "record &amp; playback" or   "scripting". Much about ABT is discussed in the
+                        following pages.
+                        
+                     </p>
+                     </span></span></span><ul class="nav nav-list">
+               <li><span data-tocid="the_test_language-d46e35039" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/The_test_language.html">The test language</a><span class="wh-tooltip">
+                           
+                           <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Most   tests consist of a sequence of action lines, with their action keywords and arguments. Actions are   available as built-in
+                              actions, or can be created as user actions, implemented either with action   definitions or programmed in an automation harness.
+                              
+                              
+                           </p>
+                           </span></span></span></li>
+               <li><span data-tocid="bia_built_in_actions-d46e35944" class="topicref" data-state="expanded"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_Built_in_actions.html">  Built-in actions </a><span class="wh-tooltip">
+                           
+                           <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"><span class="ph">TestArchitect</span> includes a library of built-in actions to perform a myriad of 		functions.
+                              
+                           </p>
+                           </span></span></span><ul class="nav nav-list">
+                     <li><span data-tocid="bia_system-d46e35960" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_System.html">System actions</a><span class="wh-tooltip">
+                                 
+                                 <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">System built-in actions include those which allow your test to interact with the host operating system of your test automation,
+                                    and perform other miscellaneous functions.
+                                    
+                                 </p>
+                                 </span></span></span></li>
+                     <li><span data-tocid="bia_test_support-d46e36844" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_Test_Support.html">Test Support actions</a><span class="wh-tooltip">
+                                 
+                                 <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The Test Support category of built-in actions includes those actions which perform execution control, test resource declaration,
+                                    test documentation, and reporting.
+                                    
+                                 </p>
+                                 </span></span></span></li>
+                     <li><span data-tocid="bia_user_interface-d46e37839" class="topicref" data-state="expanded"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_User_Interface.html">User Interface actions</a><span class="wh-tooltip">
+                                 
+                                 <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">User interface actions include those automation actions which interact with the application under test.</p>
+                                 </span></span></span><ul class="nav nav-list">
+                           <li><span data-tocid="bia_browsing-d46e37850" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_browsing.html">Browsing</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">This section includes built-in actions which interact with browsers.</p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="bia_control_element-d46e38045" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_Control_Element.html">Control, Element</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">This section includes built-in actions which interact with general controls in         application under test.</p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="bia_list_table_grid-d46e38195" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_List_Table_Grid.html">List, Table, Grid</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">This section includes built-in actions which interact with lists, tables, and grids         in the application under test.</p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="bia_media_control-d46e38456" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_media_control.html">Media control</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The Media control actions include built-in actions which interact with the audio or     video controls.</p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="bia_OCR_actions-d46e38499" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_OCR.html">Optical Character Recognition</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The optical character recognition actions include built-in actions which use OCR to         discern text from bitmap images
+                                          captured from the AUT. 
+                                          
+                                       </p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="bia_picker_view_actions-d46e38622" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_Picker_view.html">Picker View</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">This section includes built-in actions which interact with a picker view control of         applications running on mobile
+                                          operating systems. 
+                                          
+                                       </p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="bia_picture_handling-d46e38713" class="topicref" data-state="expanded"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_picture_handling.html">Picture Handling</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Picture handling actions interact with captured and stored         images.</p>
+                                       </span></span></span><ul class="nav nav-list">
+                                 <li><span data-tocid="bia_capture_screen-d46e38726" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_capture_screen.html">capture screen</a></span></span></li>
+                                 <li class="active"><span data-tocid="bia_check_picture-d46e38734" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_check_picture.html">check picture</a></span></span></li>
+                                 <li><span data-tocid="bia_check_picture_exists-d46e38744" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_check_picture_exists.html">check picture exists</a></span></span></li>
+                                 <li><span data-tocid="bia_check_picture_not_exists-d46e38752" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_check_picture_not_exists.html">check picture not exists</a></span></span></li>
+                                 <li><span data-tocid="bia_click_picture-d46e38760" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_click_picture.html">click picture</a></span></span></li>
+                                 <li><span data-tocid="bia_does_picture_exist-d46e38768" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_does_picture_exist.html">does picture exist</a></span></span></li>
+                                 <li><span data-tocid="bia_export_baseline_picture-d46e38776" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_export_baseline_picture.html">export baseline picture</a></span></span></li>
+                                 <li><span data-tocid="bia_baseline_image_count-d46e38784" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_get_baseline_image_count.html">get baseline image count</a></span></span></li>
+                                 <li><span data-tocid="bia_get_picture_location-d46e38792" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_get_picture_location.html">get picture location</a></span></span></li>
+                                 <li><span data-tocid="bia_if_picture_exists-d46e38800" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_if_picture_exists.html">if picture exists</a></span></span></li>
+                                 <li><span data-tocid="bia_if_picture_not_exists-d46e38809" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_if_picture_not_exists.html">if picture not exists</a></span></span></li>
+                                 <li><span data-tocid="bia_set_picture_min_accuracy-d46e38817" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_set_picture_min_accuracy.html">set picture min accuracy</a></span></span></li>
+                              </ul>
+                           </li>
+                           <li><span data-tocid="bia_slider-d46e38827" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_Slider.html">Slider</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Actions which interact with a slider control in the AUT.</p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="bia_spinner-d46e38862" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_Spinner.html">Spin</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Actions which interact with spin box control in an AUT.</p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="bia_status_bar-d46e38889" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_Status_Bar.html">Status bar</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Actions which interact with the status bar control in an AUT. </p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="bia_stepper_actions-d46e38935" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_Stepper.html">Stepper</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Actions which interact with a stepper control of applications running on mobile         operating systems. </p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="bia_tab_controls-d46e38954" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_Tab_controls.html">Tab Controls</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Actions which interact with tab controls in an AUT. </p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="bia_table_view_actions-d46e39015" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_table_view.html">Table View</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Actions which interact with a table view control of applications running on mobile         operating systems. </p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="bia_text_box-d46e39120" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_Text_box.html">Text Box</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Actions which interact with text box controls in an AUT. </p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="bia_toolbar_menu_scrollbar-d46e39165" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_Toolbar_Menu_Scrollbar.html"><span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph">Toolbar,</span> Menu, Scrollbar
+                                       </a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Actions which interact with <span class="ph">toolbar,</span> menu,             scroll bar controls in an AUT.
+                                          
+                                       </p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="bia_tree_view-d46e39441" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_Tree_view.html">Tree View</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">This section includes built-in actions which interact with nodes in a tree structure in AUT.</p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="bia_window-d46e39574" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_Window.html">Window</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Built-in actions which interact with dialog boxes or windows in the AUT.</p>
+                                       </span></span></span></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </li>
+               <li><span data-tocid="bis_built_in_settings-d46e39706" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bis_Built_in_settings.html">Built-in settings</a><span class="wh-tooltip">
+                           
+                           <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"><span class="ph">TestArchitect</span> has a number of built-in       settings that control various runtime behaviors of <span class="ph">TestArchitect</span>.
+                              
+                           </p>
+                           </span></span></span></li>
+               <li><span data-tocid="abt_automation_classes-d46e40275" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/abt_automation_classes.html">TestArchitect Automation Classes</a><span class="wh-tooltip">
+                           
+                           <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Language independent syntax line notations, and basic functions in <span class="ph">TestArchitect</span> automation and engine classes.
+                              
+                           </p>
+                           </span></span></span></li>
+            </ul>
+         </li>
+         <li><span data-tocid="concept_o4w_rrq_4n-d46e43206" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/aut_Using_UIA.html">Microsoft UI Automation</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Microsoft UI Automation (UIA) is an accessibility framework for Microsoft Windows, and   is the successor to Microsoft Active
+                        Accessibility (MSAA). One of its purposes is to assist in   automated testing by providing programmatic access to UI controls.
+                        
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="concept_fbv_fy5_xn-d46e43322" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/aut_app_testing.html">Application testing</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"><span class="ph">TestArchitect</span> supports the testing of desktop, web and   mobile applications built with a variety of different technologies, and running
+                        on various   platforms. 
+                        
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="concept_vxp_m2t_tw-d46e46811" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/faq.automation_error.html">Diagnosing and resolving automation errors</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">This section describes possible errors that you might encounter during automation, their   common causes and possible solutions.</p>
+                     </span></span></span></li>
+      </ul>
+   </li>
+</ul></div>
+                            </nav>
+                            </div>
+                         </div> 
+                    
+                    
+                    <div id="wh_topic_body" class="col-lg-7 col-md-9 col-sm-9 col-xs-12">
+                         <div id="title-container-right">   
+                            <div class="title-container-right hidden-print hidden-sm"> 
+                                <a class="glyphicon glyphicon-share" title="Share" onclick="" href="javascript:sharePopUp()">
+                                    <p class="share-title">SHARE</p>
+                                </a>
+                                <a class="glyphicon glyphicon-envelope" title="Send Email" onclick="" href="javascript:sendMail()">
+                                    <p class="share-title">E-MAIL</p>
+                                </a>
+                                <div class=" wh_print_link print "><a href="javascript:window.print();" title="Print this page"><p class="share-title">PRINT</p></a></div>
+                            </div>
+                            <div class="wh_right_tools hidden-sm hidden-xs">  
+                            <div class=" wh_indexterms_link "><a href="../../indexTerms.html" title="Index"></a></div> <!--index btn -->    
+                            <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  
+<span class="navprev"><a class="link" href="../../TA_Automation/Topics/bia_capture_screen.html" title="capture screen"></a></span>  
+<span class="navnext"><a class="link" href="../../TA_Automation/Topics/bia_check_picture_exists.html" title="check picture exists"></a></span>  </span></div>
+                            <button class="wh_hide_highlight" title="Toggle search highlights"></button>
+                           <!--  <whc:webhelp_expand_collapse_sections/> -->
+                            </div>
+                         </div>
+                        <div id="breadscrumb"> <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol xmlns:html="http://www.w3.org/1999/xhtml" class="hidden-print"><li><span class="home"><a href="../../index.html"><span>Home</span></a></span></li>
+   <li><span class="topicref"><span class="title"><a href="../../TA_Automation/Topics/Automation_Guide_begin.html">Automation Guide</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">With <span class="ph">TestArchitect</span>, you can test apps running on various   environments, such as, desktop, web, mobile applications, etc.
+                  
+               </p>
+               </span></span></span></li>
+   <li><span class="topicref"><span class="title"><a href="../../TA_Automation/Topics/Action_based_testing_language.html">Action-based testing language</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Action   Based Testing (ABT) is usually considered to be an automation technique. It is commonly positioned   as an advanced
+                  and practical alternative to other techniques like "record &amp; playback" or   "scripting". Much about ABT is discussed in the
+                  following pages.
+                  
+               </p>
+               </span></span></span></li>
+   <li><span class="topicref"><span class="title"><a href="../../TA_Automation/Topics/bia_Built_in_actions.html">  Built-in actions </a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"><span class="ph">TestArchitect</span> includes a library of built-in actions to perform a myriad of 		functions.
+                  
+               </p>
+               </span></span></span></li>
+   <li><span class="topicref"><span class="title"><a href="../../TA_Automation/Topics/bia_User_Interface.html">User Interface actions</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">User interface actions include those automation actions which interact with the application under test.</p>
+               </span></span></span></li>
+   <li><span class="topicref"><span class="title"><a href="../../TA_Automation/Topics/bia_picture_handling.html">Picture Handling</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Picture handling actions interact with captured and stored         images.</p>
+               </span></span></span></li>
+   <li class="active"><span class="topicref"><span class="title"><a href="../../TA_Automation/Topics/bia_check_picture.html">check picture</a></span></span></li>
+</ol></div> </div>
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">check
+    picture</h1>
+
+  
+  <div class="body refbody">
+    <section class="section TARef-bia-desc"><h2 class="title sectiontitle">Description</h2>
+      <span class="ph" id="bia_check_picture__ph.bia.desc">Check a bitmap area of the AUT's current display against one or more stored
+        baseline images. <span class="ph">Result is
+                <samp class="ph systemoutput">Passed</samp> if </span>the
+        displayed image matches one of the baselines<span class="ph">; otherwise
+              <samp class="ph systemoutput">Failed</samp>.</span>
+      </span>
+    </section>
+
+    <section class="section TARef-bia-args"><h2 class="title sectiontitle">Arguments</h2>
+      
+      <dl class="dl parml">
+        
+          <dt class="dt pt dlterm">window</dt>
+
+          <dd class="dd pd">(Optional) TA name of the window.</dd>
+
+        
+        
+          <dt class="dt pt dlterm">control</dt>
+
+          <dd class="dd pd">(Optional) TA name of the control.</dd>
+
+        
+        
+          <dt class="dt pt dlterm">name</dt>
+
+          <dd class="dd pd">Identifying name of a <span class="ph">regular or shared
+              </span><a class="xref" href="../../reuse/../TA_Help/Topics/Projects_and_tests_picture_check.html" title="A picture check is used to store image bitmaps, known as baseline pictures, which can be compared during testing against bitmaps produced by the AUT.">picture check</a>, a collection of one or more
+            baseline images to be used for comparison with the AUT display.</dd>
+
+        
+        
+          <dt class="dt pt dlterm">question</dt>
+
+          <dd class="dd pd">(Optional) A question for the tester who will use it, when warranted, to visually
+            verify the contents of the image under test.</dd>
+
+        
+        
+          <dt class="dt pt dlterm">left</dt>
+
+          <dd class="dd pd">(Optional) Specifies the left border of a rectangular area (referred to as the
+              <span class="keyword parmname">rect</span> area), relative to the left edge of the active UI element
+            (which is a window, control, or the entire screen, depending on the presence or absence
+            of values in the <span class="keyword parmname">window</span> and <span class="keyword parmname">control</span>
+            arguments). The <span class="keyword parmname">rect</span> area determines the <dfn class="term">active area</dfn>
+            (see
+              <a class="xref" href="#bia_check_picture__li.note.active_area"><span class="ph filepath">related
+              notes</span></a> below). Scanning for a match with the baseline image is
+            limited to this area. (Units: pixels; default=0)</dd>
+
+        
+        
+          <dt class="dt pt dlterm">top</dt>
+
+          <dd class="dd pd">(Optional) Specifies the top border of the <span class="keyword parmname">rect</span> area, relative to
+            the top edge of the active UI element. (Units: pixels; default=0)</dd>
+
+        
+        
+          <dt class="dt pt dlterm">width</dt>
+
+          <dd class="dd pd">(Optional) Specifies the width of the <span class="keyword parmname">rect</span> area. (Units: pixels;
+            the default is that value which causes the right border of the rect area to coincide
+            with the right border of the active UI element.)</dd>
+
+        
+        
+          <dt class="dt pt dlterm">height</dt>
+
+          <dd class="dd pd">(Optional) Specifies the height of the <span class="keyword parmname">rect</span> area. (Units: pixels;
+            the default is that value which causes the lower border of the <span class="keyword parmname">rect</span>
+            area to coincide with the lower border of the active UI element.)</dd>
+
+        
+      </dl>
+
+    </section>
+
+    <section class="section TARef-bia-contexts"><h2 class="title sectiontitle">Valid contexts</h2>
+      <span class="ph" id="bia_check_picture__d11e710">This action may be used within the
+        following project items: </span>test modules and user-defined actions. </section>
+
+    <section class="section TARef-bia-notes"><h2 class="title sectiontitle">Notes</h2>
+      
+      <ul class="ul">
+        <li class="li"><span class="ph" id="bia_check_picture__d11e2441">Built-in UI actions applied to iOS
+            devices specify screen coordinates in points rather than pixels. (For further details,
+            refer to the built-in action <a class="xref" href="../../reuse/../TA_Automation/Topics/bia_get_screen_resolution.html#bia_get_screen_resolution__li.ios.get_screen_resolution">
+              <span class="keyword apiname">get screen resolution</span></a>.)</span></li>
+
+        <li class="li">This built-in action always applies a <a class="xref" href="aut_image_comparison_techniques.html" title="TestArchitect offers you two methods for verifying the correctness of images produced by a tested application: pixel-by-pixel comparison and keypoint detection."><dfn class="term">pixel-by-pixel image
+            comparison</dfn></a> technique.<span class="ph"> Keypoint detection is not available
+            to <span class="keyword apiname">check picture</span>.</span></li>
+
+        <li class="li"><span class="keyword apiname">check picture</span> looks for an exact match between a stored baseline
+          image and the designated active area of the AUT display. <span class="ph">To search for
+            the presence of a baseline image <em class="ph i">within</em> the active area, use the action <a class="xref" href="bia_check_picture_exists.html"><span class="keyword apiname">check picture
+            exists</span></a>.</span></li>
+
+        <li class="li">Note that if the referenced picture check
+          holds multiple baseline images, each one is tested against the AUT bitmap until (and if) a
+          match is found. Only a single <span class="q">“hit”</span> is required for a match to be considered
+          found.</li>
+
+        <li class="li"><span class="ph">As a convenience when editing, you may drag
+            the appropriate picture check node from the <span class="ph uicontrol">Picture Checks</span> folder
+            (in the <span class="ph">TestArchitect explorer tree</span>) into this action's
+            </span><span class="keyword parmname">name</span> argument.</li>
+
+        <li class="li">A normative outcome of <span class="keyword apiname">check picture</span> execution is one of
+          the following:
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="bia_check_picture__table_yws_h5y_hp" class="table" frame="border" border="1" rules="all"><colgroup><col style="width:30.21346469622332%" /><col style="width:16.420361247947454%" /><col style="width:53.36617405582923%" /></colgroup><thead class="thead" style="text-align:left;">
+                <tr>
+                  <th class="entry nocellnorowborder" id="d339781e310">Check result</th>
+
+                  <th class="entry nocellnorowborder" id="d339781e313">Condition</th>
+
+                  <th class="entry cell-norowborder" id="d339781e316">Description</th>
+
+                </tr>
+
+              </thead>
+<tbody class="tbody">
+                <tr>
+                  <td class="entry nocellnorowborder" headers="d339781e310 "><samp class="ph systemoutput">Passed</samp></td>
+
+                  <td class="entry nocellnorowborder" headers="d339781e313 ">pictures match </td>
+
+                  <td class="entry cell-norowborder" headers="d339781e316 ">Referenced picture check holds a baseline image that matches the displayed
+                    test image.</td>
+
+                </tr>
+
+                <tr>
+                  <td class="entry nocellnorowborder" headers="d339781e310 "><samp class="ph systemoutput">Failed</samp> with unverified picture check</td>
+
+                  <td class="entry nocellnorowborder" headers="d339781e313 ">no match</td>
+
+                  <td class="entry cell-norowborder" headers="d339781e316 ">Referenced picture check holds no baseline image that matches the displayed
+                    test image.</td>
+
+                </tr>
+
+                <tr>
+                  <td class="entry row-nocellborder" headers="d339781e310 "><samp class="ph systemoutput">Warning</samp> with unverified picture check</td>
+
+                  <td class="entry row-nocellborder" headers="d339781e313 ">missing picture check</td>
+
+                  <td class="entry cellrowborder" headers="d339781e316 ">The <span class="keyword apiname">check picture</span>'s <span class="keyword parmname">name</span> argument
+                    specifies a picture check that does not exist.</td>
+
+                </tr>
+
+              </tbody>
+</table>
+</div>
+Note that <samp class="ph systemoutput">Failed</samp> and
+            <samp class="ph systemoutput">Warning</samp> results are tentative, and that each one is
+          associated with an <dfn class="term">unverified picture check</dfn>. Upon completion of the test run,
+          each unverified picture check may be manually accessed and resolved in a way that modifies
+          the final check result. (Alternatively, no further action need be taken on an unverified
+          picture check – that is, you can simply allow its associated test result to stand.) </li>
+
+        <li class="li" id="bia_check_picture__li.note.picture_check_dlgs.two_types">Results with unverified picture
+          checks may be resolved at test run completion by means of a <span class="keyword wintitle">Picture
+            Check</span> dialog box, of which there are two varieties:<ul class="ul">
+            <li class="li"><samp class="ph systemoutput">Failed</samp> results with unverified picture checks can be
+              resolved through the <a class="xref" href="#bia_check_picture__section_lbw_3zj_vq"><span class="keyword wintitle">Picture Check - Changed Picture</span></a> dialog box, which
+              allows for the possibility of adding the captured test image to the associated picture
+              check as a new baseline picture.</li>
+
+            <li class="li"><samp class="ph systemoutput">Warning</samp> results with unverified picture checks are
+              resolvable through the <a class="xref" href="#bia_check_picture__section_z53_zwj_vq"><span class="keyword wintitle">Picture Check - New Picture</span></a> dialog box, which allows
+              for adding a new picture check (with its name taken from the <span class="keyword parmname">name</span>
+              argument), with the captured test image as its baseline picture.</li>
+
+          </ul>
+</li>
+
+        <li class="li" id="bia_check_picture__li.note.offline_picture_check">It should be noted that the suggested method for
+          adding picture checks and baseline pictures is to do it <span class="q">“offline”</span>, by means of the
+            <a class="xref" href="../../TA_Help/Topics/Additional_features_image_capturing_tool.html" title="The Picture Capturing tool lets you instantly capture the screen images of your test machines.">Picture Capturing Tool</a><span class="ph"><span class="xref"><span class="ph menucascade"><span class="ph uicontrol">Add</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Picture Check</span></span> option available on the Picture Checks folder in Solution
+              Explorer</span>
+          </span>. Adding baseline pictures as a consequence of unverified picture checks during
+          testing is primarily intended for cases of unexpected <span class="keyword apiname">check picture</span>
+          failures occurring during testing.</li>
+
+        <li class="li">The means by which the <span class="keyword wintitle">Picture Check</span> dialog boxes are presented
+          upon test completion is determined by the built-in setting <a class="xref" href="bis_verify_picture.html"><span class="keyword parmname">verify picture</span></a>. With
+            <span class="keyword parmname">verify picture</span> set to <span class="keyword option">yes</span>, (<span class="keyword option">verify
+            mode</span>) any unverified picture checks occurring during the test automatically
+          prompt a series of <span class="keyword wintitle">Picture Check</span> dialog boxes to appear upon
+          completion of the test run session. With the setting set to <span class="keyword option">no</span>
+            (<span class="keyword option">non-verify mode</span>), the dialog boxes do not automatically appear, but
+          can be summoned by manual means subsequent to the test session. <span class="keyword option">Non-verify
+            mode</span> (setting <span class="keyword parmname">verify picture</span> to <span class="keyword option">no</span>) is
+          recommended for unattended <a class="xref" href="../../TA_Glossary/Topics/glossarySerialTestRun.html">serial test runs</a>
+          under batch file control; this avoids the possibility of some tests inhibiting subsequent
+          ones from running due to the need for manual intervention.</li>
+
+        <li class="li">An unverified picture check remains unverified until one of two things
+          occurs: its status is resolved via a <span class="keyword wintitle">Picture Check</span> dialog box
+          (discussed above), or the associated local <span class="ph uicontrol">Results</span> item is moved to
+          the repository. Once a <span class="ph uicontrol">Results</span> item is moved to the repository,
+          tentative <samp class="ph systemoutput">Failed</samp> and <samp class="ph systemoutput">Warning</samp>
+          results associated with unverified picture checks are locked in as
+            <samp class="ph systemoutput">Failed</samp> and <samp class="ph systemoutput">Warning</samp>,
+          respectively, and any unverified picture checks are discarded.</li>
+
+        
+        <li class="li" id="bia_check_picture__li.note.active_area">
+          <div class="p">This action is applied to that part of the captured bitmap identified as the
+              <dfn class="term">active area</dfn>, with the remainder of the image ignored. The <dfn class="term">active
+              area</dfn> is determined by
+            the
+            four arguments (<span class="keyword parmname">left</span>, <span class="keyword parmname">top</span>,
+              <span class="keyword parmname">width</span> and <span class="keyword parmname">height</span>) that define the
+              <span class="keyword parmname">rect</span> area. To begin with, <span class="keyword parmname">window</span> and
+              <span class="keyword parmname">control</span> determine the <dfn class="term">active UI element</dfn>, which can
+            be a control, window, or the full screen, as follows: 
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><colgroup><col style="width:18.76172607879925%" /><col style="width:18.76172607879925%" /><col style="width:62.476547842401494%" /></colgroup><thead class="thead" style="text-align:left;">
+                <tr>
+                  <th class="entry nocellnorowborder" id="d339781e564"><span class="keyword parmname">window</span> argument</th>
+
+                  <th class="entry nocellnorowborder" id="d339781e569"><span class="keyword parmname">control</span> argument</th>
+
+                  <th class="entry cell-norowborder" id="d339781e574"> active UI element is...</th>
+
+                </tr>
+
+              </thead>
+<tbody class="tbody">
+                <tr>
+                  <td class="entry nocellnorowborder" headers="d339781e564 ">omitted</td>
+
+                  <td class="entry nocellnorowborder" headers="d339781e569 ">omitted</td>
+
+                  <td class="entry cell-norowborder" headers="d339781e574 ">entire screen (i.e., entire captured test image</td>
+
+                </tr>
+
+                <tr>
+                  <td class="entry nocellnorowborder" headers="d339781e564 ">specified</td>
+
+                  <td class="entry nocellnorowborder" headers="d339781e569 ">omitted</td>
+
+                  <td class="entry cell-norowborder" headers="d339781e574 ">entire application window</td>
+
+                </tr>
+
+                <tr>
+                  <td class="entry row-nocellborder" headers="d339781e564 ">specified</td>
+
+                  <td class="entry row-nocellborder" headers="d339781e569 ">specified</td>
+
+                  <td class="entry cellrowborder" headers="d339781e574 ">specified control</td>
+
+                </tr>
+
+              </tbody>
+</table>
+</div>
+</div>
+
+          <p class="p">With the <dfn class="term">active UI element</dfn> established, the optional
+              <span class="keyword parmname">rect</span> area, if defined, specifies a rectangular area relative to
+            the top-left corner of the <dfn class="term">active UI element</dfn>. (If none of the four
+              <span class="keyword parmname">rect</span> arguments are specified, the <dfn class="term">active area</dfn> is the
+              <dfn class="term">active UI element</dfn> itself.)</p>
+
+          <div class="p"><br /><img class="image" id="bia_check_picture__image_gnt_ssp_hq" src="../Images/picture_check_area.png" /><br />The above figure illustrates the <dfn class="term">active area</dfn> that applies when both the
+              <span class="keyword parmname">window</span> and <span class="keyword parmname">control</span> arguments have been
+            specified, establishing the picture control (with the 12 cars) as the <dfn class="term">active UI
+              element</dfn>. The <span class="keyword parmname">rect</span> area itself, specified by
+              <span class="keyword parmname">left</span>, <span class="keyword parmname">top</span>, <span class="keyword parmname">width</span> and
+              <span class="keyword parmname">height</span>, is the <dfn class="term">active area</dfn>.<div class="note important"><span class="importanttitle">Important:</span> The rule to determine the <dfn class="term">active area</dfn> of the <span class="keyword apiname">picture
+                check</span> built-in action is different from the one of other <a class="xref" href="bia_picture_handling.html" title="Picture handling actions interact with captured and stored images.">Picture Handling</a> built-in actions, such as,
+                <a class="xref" href="bia_check_picture_exists.html"><span class="keyword apiname">check picture
+                exists</span></a>, <a class="xref" href="bia_click_picture.html"><span class="keyword apiname">click
+                  picture</span></a>.</div>
+</div>
+
+        </li>
+
+        
+        
+        <li class="li" id="bia_check_picture__li.bia.ocr_actions.note.search_area_defined"> In all cases, the
+            <span class="keyword parmname">rect</span> area itself, if specified, is the <dfn class="term">active area</dfn>.
+          The following three images illustrate the cases for how the <dfn class="term">active area</dfn> is
+          determined when the four values (<span class="keyword parmname">left</span>, <span class="keyword parmname">top</span>,
+            <span class="keyword parmname">width</span>, <span class="keyword parmname">height</span>) of the
+            <span class="keyword parmname">rect</span> area are specified.<br /><img class="image" id="bia_check_picture__image_ufd_t2g_3w" src="../Images/ocr_area_specs_check_picture.png" /><br /> The general rule for determining the <dfn class="term">active area</dfn> is
+          as follows: 
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="bia_check_picture__table_mqn_yfh_gp" class="table" frame="border" border="1" rules="all"><colgroup><col style="width:43.47826086956522%" /><col style="width:56.52173913043479%" /></colgroup><thead class="thead" style="text-align:left;">
+                <tr>
+                  <th class="entry nocellnorowborder" id="d339781e749"><span class="keyword parmname">rect</span> area:</th>
+
+                  <th class="entry cell-norowborder" id="d339781e754">resulting active area:</th>
+
+                </tr>
+
+              </thead>
+<tbody class="tbody">
+                <tr>
+                  <td class="entry nocellnorowborder" headers="d339781e749 ">not specified</td>
+
+                  <td class="entry cell-norowborder" headers="d339781e754 ">the <dfn class="term">active UI element</dfn></td>
+
+                </tr>
+
+                <tr>
+                  <td class="entry nocellnorowborder" headers="d339781e749 ">overlaps the <dfn class="term">active UI element</dfn></td>
+
+                  <td class="entry cell-norowborder" headers="d339781e754 ">the <span class="keyword parmname">rect</span> area</td>
+
+                </tr>
+
+                <tr>
+                  <td class="entry row-nocellborder" headers="d339781e749 ">no overlap with <dfn class="term">active UI element</dfn></td>
+
+                  <td class="entry cellrowborder" headers="d339781e754 ">the <span class="keyword parmname">rect</span> area</td>
+
+                </tr>
+
+              </tbody>
+</table>
+</div>
+
+        </li>
+
+        <li class="li"><strong class="ph b">Android:</strong> This built-in
+          action, <span class="ph">when applied to a connected Android device,
+            requires that the <a class="xref" href="../../reuse/../Android/Topics/Android_TA_agent.html" title="TestArchitect Agent is an essential component in allowing TestArchitect to communicate with Android devices during automated testing."><span class="ph">TestArchitect Agent</span> service</a> be running. Note also that, if
+            and when an Android device is restarted, <span class="ph">TestArchitect Agent</span> is
+            then stopped. Should this be the case, it is essential that you reactivate the service
+            by observing the following steps:</span>
+          <ol class="ol">
+            <li class="li">Connect the Android device to the test controller through a USB cable (not Wi-Fi),
+              if not already so connected.</li>
+
+            <li class="li">Open the <a class="xref" href="../../reuse/../Android/Topics/Android_Instrumentation_tool.html" title="The Android Instrumentation Tool or AIT is the central command for managing target devices and the testable applications on those devices."><span class="keyword wintitle">Android
+                  Instrumentation Tool</span></a> dialog box.</li>
+
+            <li class="li">Click the <span class="ph uicontrol">Refresh devices list</span>
+              <img class="image" id="bia_check_picture__d258e696" src="../../reuse/../Android/Images/Refresh_device_list_btn.png" /> button.</li>
+
+          </ol>
+
+        </li>
+
+        <li class="li">This action supports the <a class="xref" href="../../reuse/../TA_Automation/Topics/Ignoring_action.html" title="When the ignore modifier (the string “ignore”, surrounded by angle brackets) is used as an argument value in supported actions, TestArchitect bypasses that action during test execution and continues at the subsequent action line.">&lt;ignore&gt;</a> modifier. If the string
+            <code class="ph codeph">&lt;ignore&gt;</code> is present as the value of any of the arguments, or any
+          argument contains an expression that evaluates to <code class="ph codeph">&lt;ignore&gt;</code>, the action
+          is skipped during execution.</li>
+
+      </ul>
+
+    </section>
+
+    
+    <section class="section TARef-bia-appsettings"><h2 class="title sectiontitle">Applicable Built-In Settings</h2>
+      
+      <p class="p"><span class="ph">The following settings are applicable to this action:
+          </span><a class="xref" href="bis_case_sensitive.html">case
+          sensitive</a>,<a class="xref" href="bis_verify_picture.html">verify picture</a><span class="ph">, <a class="xref" href="bis_remove_double_quotes_from_cells.html">remove double quotes from
+            cells</a>, <a class="xref" href="bis_standard_ASCII_only.html">standard ASCII only</a>, <a class="xref" href="bis_object_wait.html">object wait</a>, <a class="xref" href="bis_window_wait.html">window
+            wait</a>, <a class="xref" href="bis_load_invisible_controls.html">load invisible
+          controls</a></span>.</p>
+
+    </section>
+
+    <section class="section TARef-bia-example"><h2 class="title sectiontitle">Example</h2><div class="p">In this example
+        we create a test to verify that the correct car picture is displayed in the <span class="ph filepath">Car
+          Rental</span> application when we select a car from the program's catalog. The action
+        lines below launch the application, navigate to the <span class="keyword wintitle">View Cars</span> window,
+        and select the node for <span class="ph uicontrol">Chevrolet Monte Carlo</span> from the tree view,
+        which should result in the following display:<br /><img class="image" id="bia_check_picture__image_o4j_xxq_hq" src="../Images/bia_check_picture_aut_18.png" /><br />Our last step in the action lines is to
+        verify that the correct picture is displayed:</div>
+<strong class="ph b">Action Lines</strong><br /><img class="image" src="../Images/bia_check_picture_pgm.01.png" /><br /><div class="note note"><span class="notetitle">Note:</span> We've omitted the
+        positional arguments of <span class="keyword parmname">left</span>, <span class="keyword parmname">top</span>,
+          <span class="keyword parmname">width</span> and <span class="keyword parmname">height</span> from the <span class="keyword apiname">check
+          picture</span> action line, meaning that the active area of the picture check
+        corresponds to the entire <span class="ph uicontrol">car image</span> control.</div>
+</section>
+
+    <section class="section" id="bia_check_picture__section_z53_zwj_vq"><h2 class="title sectiontitle">Verifying the picture</h2>
+      
+      <p class="p">Note that the <span class="keyword apiname">check picture</span> action line in the test assumes that we
+        already have a picture check with a name of <span class="keyword option">chevrolet</span> in existence. In this
+        case, we don't – at least not yet. But <a class="xref" href="#bia_check_picture__li.note.picture_check_dlgs.two_types">as mentioned</a>, when a
+          <span class="keyword apiname">check picture</span> execution runs up against a nonexistent picture check,
+        the result is a suppressed warning and creation of an unverified picture check. And since
+        the built-in setting <span class="keyword parmname">verify picture</span> has been set to
+          <span class="keyword option">yes</span>, the unverified picture check prompts a <span class="keyword wintitle">Picture Check – New
+          Picture</span> dialog box to appear upon completion of the test: </p>
+
+      <br /><img class="image" id="bia_check_picture__image_az3_zwj_vq" src="../Images/bia_check_picture_aut_3.png" /><br />
+      <div class="p" id="bia_check_picture__p_slm_pmj_mk1">Based on the question displayed, <em class="ph i">"Is it a yellow chevrolet?"</em>, the
+        tester does one of the following:<ul class="ul" id="bia_check_picture__ul_mqz_lpv_2n1">
+          <li class="li">if the correct picture is not displayed in the <span class="ph uicontrol">Current</span> tab,
+            click <span class="ph uicontrol">Fail</span>.</li>
+
+          <li class="li">if the picture is correct, click <span class="ph uicontrol">Pass</span>. </li>
+
+        </ul>
+</div>
+
+      <p class="p">As the picture is indeed correct, we would expect our tester to click
+          <span class="ph uicontrol">Pass</span>, which has the following effects:</p>
+
+      <ul class="ul" id="bia_check_picture__ul_i1j_zwj_vq">
+        <li class="li"> The newly-captured picture is saved as a baseline reference in the
+            <span class="keyword option">chevrolet</span> picture check, to be available for future test executions.
+          The picture now becomes visible in the <span class="ph uicontrol">Baseline</span> tab on the
+            <span class="keyword wintitle">Picture Check – New Picture</span> dialog box.<br /><img class="image" id="bia_check_picture__image_qbj_zwj_vq" src="../Images/bia_check_picture_aut_5.png" /><br /></li>
+
+        <li class="li">The icon for the node in the picture explorer tree (top-left of the dialog box) is
+          changed to a green check mark <img class="image" id="bia_check_picture__image_xbn_xkb_fn1" src="../Images/ug_interface_definition45.png" width="22" height="21" />, indicating a passed
+          picture check. <br /><img class="image" id="bia_check_picture__image_mcj_zwj_vq" src="../Images/bia_check_picture_aut_4.png" /><br /></li>
+
+        
+      </ul>
+
+      <p class="p">Finally, clicking <span class="ph uicontrol">Submit</span> completes the picture verification. </p>
+
+      <div class="note note"><span class="notetitle">Note:</span> 
+        <ul class="ul" id="bia_check_picture__ul_atm_xs1_55">
+          <li class="li">Whichever option (that is, <span class="keyword option">Pass</span> or <span class="keyword option">Fail</span>) is selected
+            in this dialog box is stored only in temporary memory, and is not saved to the
+            repository, until you click the <span class="ph uicontrol">Submit</span> button.</li>
+
+          <li class="li">The <span class="ph uicontrol">Close</span> button discards the changes (if any) and then closes
+            the dialog box.</li>
+
+          <li class="li">
+            <p class="p"><strong class="ph b">Multiple baselines</strong>:</p>
+
+            <p class="p">A picture check is not limited to a single baseline image. Instead, one picture check
+              can store multiple baselines. This is important for those cases in which more than a
+              single bitmap presented by the AUT may be considered acceptable for a given picture
+              check. (Note that one common reason for a picture check having multiple baselines is
+              that a given picture file may be rendered in slightly different ways on different
+              hardware.) When multiple baselines exist for a given picture check, <span class="ph">TestArchitect</span>'s criterion for a passed check is that
+              any one of the stored baselines match the test picture.</p>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+    <section class="section" id="bia_check_picture__section_lbw_3zj_vq"><h2 class="title sectiontitle">Subsequent <span class="keyword parmname">check picture</span> executions - matches and
+        non-matches</h2>
+      
+      <p class="p">After storage of the baseline picture (or, eventually, multiple baseline pictures) in the
+          <span class="keyword option">chevrolet</span> picture check, we may continue to perform test runs. Subsequent
+        executions of the <span class="keyword apiname">check picture</span> at line 30 perform a capture of the AUT
+        image, then compare it with the picture check's baseline(s). If the automation finds a
+        match, the result is <samp class="ph systemoutput">Passed</samp>, with no manual verification
+        required. </p>
+
+      
+      <br /><img class="image" id="bia_check_picture__image_tdw_3zj_vq" src="../Images/bia_check_picture_res.png" /><br />
+      
+      <p class="p">If, on the other hand, the newly captured test image does not match the baseline, a new
+        dialog box, <span class="keyword wintitle">Picture Check – Change Picture</span>, appears upon test
+        completion:</p>
+
+      <br /><img class="image" id="bia_check_picture__image_s2w_3zj_vq" src="../Images/bia_check_picture_aut_9.png" /><br />
+      <div class="p">In this dialog box, we can again observe the test picture. We also have the option of
+        either comparing it with the test question, or against the existing baseline picture (or
+        pictures), which can be observed by clicking the <span class="ph uicontrol">Baseline</span> subtab. Our
+        options are now:<ul class="ul" id="bia_check_picture__ul_ofw_3zj_vq">
+          
+          <li class="li" id="bia_check_picture__li.Fail"><span class="ph" id="bia_check_picture__ph.fail"><span class="ph uicontrol">Fail</span>: Report this check as having
+                <samp class="ph systemoutput">Failed</samp>. (That is, the image under test is not one that
+              the AUT was expected to display, nor should have displayed, at the time of execution
+              of this <span class="keyword apiname">check picture</span> action.)</span></li>
+
+         
+          <li class="li" id="bia_check_picture__li.Pass_new_baseline"><span class="ph" id="bia_check_picture__ph.Pass_new_baseline"><span class="ph uicontrol">Pass, this is the
+                new baseline</span>: Report this check as <samp class="ph systemoutput">Passed</samp>,
+              remove all existing baseline images, and save the test image as the
+              baseline.</span><div class="note warning"><span class="warningtitle">Warning:</span> If the current picture check has multiple baseline
+              pictures, this option removes all of them.</div>
+</li>
+
+          <li class="li" id="bia_check_picture__li.Pass_keep_original"><span class="ph" id="bia_check_picture__ph.Pass_keep_original"><span class="ph uicontrol">Pass, but keep
+                the original</span>: Report this check as <samp class="ph systemoutput">Passed</samp>,
+              but keep the original existing baselines. The test image is discarded.</span></li>
+
+          <li class="li" id="bia_check_picture__li.Pass_new_baselines"><span class="ph" id="bia_check_picture__ph.Pass_new_baselines"><span class="ph uicontrol">Pass, save as a
+                baseline variation</span>: Report this check as
+                <samp class="ph systemoutput">Passed</samp>, and save the test image as an additional
+            baseline.</span></li>
+ 
+          
+          
+          
+          
+        </ul>
+</div>
+
+      <div class="note tip"><span class="tiptitle">Tip:</span> In the event that a test run results in multiple unverified picture checks, a
+        separate <span class="keyword wintitle">Picture Check</span> dialog box is available to resolve each one.
+        From any one of the dialog boxes, you can use the following buttons to navigate between
+          them.<br /><img class="image" id="bia_check_picture__image_xt5_qzv_2n" src="../Images/btn_navigation_multiple_picture_check.png" /><br /></div>
+
+      <div class="p">Click the <span class="ph uicontrol">Save</span> button to save your decision. <div class="note note"><span class="notetitle">Note:</span> The option
+            (<span class="keyword option">Fail</span>, <span class="keyword option">Pass, this is the new baseline</span>, <span class="keyword option">Pass,
+            but keep the original</span>, or <span class="keyword option">Pass, save as a baseline variation</span>)
+          selected in the dialog box is only stored in temporary memory, that is, other your team
+          members will not see the changes in the repository, until you click the
+            <span class="ph uicontrol">Submit</span> button.</div>
+</div>
+
+      <div class="p">Finally, click the <span class="ph uicontrol">Submit</span> button to complete the picture
+        verification process.<div class="note note"><span class="notetitle">Note:</span>  The <span class="ph uicontrol">Close</span> button discards the changes (if
+          any) and then closes the dialog box. </div>
+</div>
+
+    </section>
+
+    <section class="section"><h2 class="title sectiontitle">Automation mode</h2>
+      
+      <p class="p">It has been mentioned that test runs with picture checks may be run in either an
+          <span class="keyword option">automated</span> or <span class="keyword option">semi-automated</span> mode. So far, we have looked
+        at semi-automated test runs, in which manual intervention is required at the end of each
+        run. In a production test environment, it is frequently necessary to run tests, often in
+        series, without stopping for human input. </p>
+
+      <p class="p">In a production test environment, it is frequently necessary to run serial tests under
+        batch control, without stopping for human input. Under batch file control, however, each
+        test module in a serial batch run is invoked as a separate test run session. The upshot is
+        that, when in semi-automated mode, any single test module with unverified picture checks
+        results in a requirement for human intervention when that test module completes its
+        execution, regardless of whether it is part of a serial test run. To avoid this
+        interruption, ensure that such batch runs are performed in automated mode, thus allowing you
+        to determine if and when manual picture check verifications take place.</p>
+
+      <div class="p">
+        <div class="note tip"><span class="tiptitle">Tip:</span> To set up test runs in automation mode, refer to the <a class="xref" href="bis_verify_picture.html"><span class="keyword apiname">verify picture</span></a> built-in
+          setting.</div>
+
+      </div>
+
+    </section>
+
+    
+    
+    
+    <section class="section"><h2 class="title sectiontitle">Accessing the <span class="keyword wintitle">Picture Check</span> dialog box</h2>
+      
+      <p class="p">We have seen how the <span class="keyword wintitle">Picture Check</span> dialog box is the means by which
+        new images are designated as baselines. We have also seen that the <span class="keyword wintitle">Picture
+          Check</span> dialog box appears automatically at the end of a
+          <span class="keyword option">semi-automated</span> test run, and does not appear at all after an
+          <span class="keyword option">automated</span> test run. </p>
+
+      <p class="p">The obvious question here is <em class="ph i">"What happens when a new image – a baseline candidate – is
+          encountered during an automated run? Is there any way to tell the system to accept that
+          image as a baseline after the fact?"</em>. The answer is <em class="ph i">Yes</em>. </p>
+
+      <div class="p">
+        <ul class="ul" id="bia_check_picture__ul_qct_nnn_gn">
+          <li class="li">As with <span class="keyword option">semi-automated</span> runs, this is achieved by accessing the
+              <span class="keyword wintitle">Picture Check</span> dialog box after the test run has completed.</li>
+
+          <li class="li">As with <span class="keyword option">automated</span> runs:<ul class="ul" id="bia_check_picture__ul_slk_bwf_dy">
+              
+              <li class="li">For each results report for a test containing picture checks, <span class="ph">TestArchitect</span> maintains records, including images
+                captured from the AUT of every unverified picture check that was conducted during
+                the test run. The icon for the test result that has unverified picture checks has a
+                  <strong class="ph b">U</strong> overlaid on it. Once you resolve the unverified picture checks. the test
+                result loses its designation. <br /><img class="image" id="bia_check_picture__image_xtv_dxf_dy" src="../../TA_Help/Images/test_result_unverified_node.png" /><br /><div class="note tip"><span class="tiptitle">Tip:</span> In order to resolve unverified picture checks, refer to this
+                    <a class="xref" href="../../TA_Help/Topics/ug_Resolving_unverfied_picture_checks.html" title="Explains step-by-steps procedures to resolve unverified picture checks.">topic</a>. </div>
+</li>
+
+              <li class="li">An unverified picture check is one that: <ul class="ul">
+                    <li class="li">failed to find a match at the time of a <a class="xref" href="../../TA_Help/Topics/../../TA_Automation/Topics/bia_check_picture.html"><span class="keyword apiname">check picture</span></a> execution, either due to a
+                        non-existing named picture check or non-matching pictures, and</li>
+
+                    <li class="li">has not yet had a human review and resolve the check (by selecting a
+                            <samp class="ph systemoutput">Pass</samp> or <samp class="ph systemoutput">Fail</samp>
+                        option) through its associated <span class="keyword wintitle">Picture Check</span> dialog
+                        box. </li>
+
+                </ul>
+</li>
+
+            </ul>
+</li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+    
+    
+    <section class="section TARef-bia-example"><h2 class="title sectiontitle">Example</h2>
+      <strong class="ph b">Action Lines</strong><br /><img class="image" src="../Images/bia_check_picture_ta4vs_pgm.png" /><br />The checked image
+      appears as follows: <br /><img class="image" src="../Images/bia_check_picture_aut_ta4vs_1.png" /><br /><p class="p">At the first run if there is no retained image for this check (that
+        is, no baseline), the <span class="keyword wintitle">Picture Check</span> dialog box appears upon completion
+        of test execution: </p>
+<br /><img class="image" src="../Images/Picture_Check_dlg.png" /><br />
+      <div class="note note"><span class="notetitle">Note:</span> 
+        <ul class="ul" id="bia_check_picture__ul_vh4_xbb_mn">
+          <li class="li"> In the <span class="keyword wintitle">Picture Check</span> dialog box, there are three possible icons
+            representing picture checks and their current status: 
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><colgroup><col /><col /></colgroup><tbody class="tbody">
+                  <tr>
+                    <td class="entry nocellnorowborder"><img class="image" src="../Images/check_picture_pass_icon.png" /></td>
+
+                    <td class="entry cell-norowborder">Passed picture check</td>
+
+                  </tr>
+
+                  <tr>
+                    <td class="entry nocellnorowborder"><img class="image" src="../Images/check_picture_fail_icon.png" /></td>
+
+                    <td class="entry cell-norowborder">Failed picture check</td>
+
+                  </tr>
+
+                  <tr>
+                    <td class="entry row-nocellborder"><img class="image" src="../Images/check_picture_unverified_icon.png" /></td>
+
+                    <td class="entry cellrowborder">Unverified picture check</td>
+
+                  </tr>
+
+                </tbody>
+</table>
+</div>
+</li>
+
+          <li class="li">The question, <em class="ph i">"Are there 4 buttons on the toolbar?"</em>, is taken from the
+              <span class="keyword parmname">question</span> argument passed to the <span class="keyword apiname">check picture</span>
+              action:<ul class="ul" id="bia_check_picture__ul_e55_xbb_mn">
+              <li class="li">If the correct image is not displayed in the <span class="keyword wintitle">Current</span> panel,
+                tester selects the <span class="ph uicontrol">Fail</span> radio button, then clicks
+                  <span class="ph uicontrol">Submit</span>.</li>
+
+              <li class="li">If the image is correct, tester selects <span class="ph uicontrol">Pass</span>, then clicks
+                  <span class="ph uicontrol">Submit</span>.</li>
+
+            </ul>
+</li>
+
+        </ul>
+
+      </div>
+
+      <div class="p">Clicking <span class="ph uicontrol">Pass</span> has the following effects: <ul class="ul" id="bia_check_picture__ul_z5v_mzl_3n">
+          <li class="li"> The newly-captured picture is saved as a baseline reference for future test
+            executions. It becomes visible in the <span class="ph uicontrol">Baseline</span> tab on the
+              <span class="keyword wintitle">Picture Check</span> dialog box.<br /><img class="image" id="bia_check_picture__image_gvv_mzl_3n" src="../Images/bia_check_picture_aut_ta4vs_5.png" /><br /></li>
+
+          <li class="li">The icon for the node in the picture explorer tree (top-left of the dialog box) is
+            changed to a green check mark <img class="image" src="../Images/ug_interface_definition45.png" width="22" height="21" />, indicating a passed picture check. <br /><img class="image" id="bia_check_picture__image_hvv_mzl_3n" src="../Images/bia_check_picture_aut_ta4vs_4.png" /><br /></li>
+
+        </ul>
+</div>
+
+      <p class="p">Finally, clicking <span class="ph uicontrol">Close</span> closes the <span class="keyword wintitle">Picture
+          Check</span> dialog box and completes the picture verification.</p>
+<div class="p">The generated
+        test result for this particular check action displays a status of
+          <samp class="ph systemoutput">Passed</samp>: <br /><img class="image" id="bia_check_picture__image_ivv_mzl_3n" src="../Images/check_picture_res_new_baseline.png" /><br /></div>
+<div class="note note"><span class="notetitle">Note:</span> <strong class="ph b">Multiple baselines</strong><p class="p">A picture check is not limited to a single baseline image.
+          Instead, one picture check can store multiple baselines. This is important for those cases
+          in which more than a single bitmap presented by the AUT may be considered acceptable for
+          the picture check, as it is often the case that a given picture file may be rendered with
+          different resolutions on different sets of hardware. When multiple baselines exist for a
+          given picture check, <span class="ph">TestArchitect</span>'s criterion for a passed
+          check is that any one of the stored baselines match the presented picture.</p>
+</div>
+</section>
+
+    <section class="section"><h2 class="title sectiontitle"><span class="keyword parmname">check picture</span> test execution</h2>
+      
+      <p class="p">After storage of the baseline picture (or multiple baseline pictures) in the given picture
+        check, you can perform test runs. Subsequent executions of <span class="keyword apiname">check picture</span>
+        that specify that picture check perform a capture of the AUT image, then compare it with the
+        picture check's baseline(s). If a match is found, the result is
+          <samp class="ph systemoutput">Passed</samp>, with no need to verify the test image visually.</p>
+
+      <p class="p"> If, on the other hand, the newly captured test image does not match the baseline, the
+          <span class="keyword wintitle">Picture Check</span> dialog box appears:</p>
+
+      <br /><img class="image" src="../Images/bia_check_picture_aut_ta4vs_9.png" /><br />
+      <div class="p">In this dialog box, you can select one of the following verification options:<ul class="ul">
+          <li class="li"><span class="ph" id="bia_check_picture__ph_hrc_v3k_fn"><span class="ph uicontrol">Fail</span>: Report this check as having
+                <samp class="ph systemoutput">Failed</samp>. (That is, the image under test is not one that
+              the AUT was expected to display, nor should have displayed, at the time of execution
+              of this <span class="keyword apiname">check picture</span> action.)</span></li>
+
+          <li class="li"><span class="ph" id="bia_check_picture__ph_yzd_1jk_fn"><span class="ph uicontrol">Pass, this is the new baseline</span>: Report
+              this check as <samp class="ph systemoutput">Passed</samp>, remove all existing baseline
+              images, and save the test image as the baseline.</span></li>
+
+          <li class="li"><span class="ph" id="bia_check_picture__ph_qk3_1jk_fn"><span class="ph uicontrol">Pass, but keep the original</span>: Report this
+              check as <samp class="ph systemoutput">Passed</samp>, but keep the original existing
+              baselines. The test image is discarded.</span></li>
+
+          <li class="li"><span class="ph" id="bia_check_picture__ph_msl_1jk_fn"><span class="ph uicontrol">Pass, save as a baseline variation</span>:
+              Report this check as <samp class="ph systemoutput">Passed</samp>, and save the test image as
+              an additional baseline.</span></li>
+
+        </ul>
+</div>
+
+      <div class="p">
+        <div class="note note"><span class="notetitle">Note:</span> 
+          <ul class="ul" id="bia_check_picture__ul_ffm_ytg_ln">
+            <li class="li">If you select a baseline image node, the <span class="ph" id="bia_check_picture__ph_yid_1jk_fnx"><span class="ph uicontrol">Pass,
+                  overwrite this baseline</span> check box appears. Selecting this check box
+                reports the check as <samp class="ph systemoutput">Passed</samp> and replaces the selected
+                baseline node with the current test image.</span><img class="image" id="bia_check_picture__image_iyg_1sg_ln" src="../Images/bia_check_picture_select_baseline.png" /></li>
+
+            <li class="li">To highlight differences between the baseline picture against the current picture,
+              select the <span class="ph uicontrol">Highlight Differences</span> check box. </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+      <p class="p">Finally, click the <span class="ph uicontrol">Submit</span> button to store your decision on the image
+        verification, then click <span class="ph uicontrol">Close</span> to close the <span class="keyword wintitle">Picture
+          Check</span> dialog box.</p>
+
+    </section>
+
+    <section class="section"><h2 class="title sectiontitle">Non-verify mode</h2>
+      
+      <p class="p">It has been mentioned that test runs with picture checks may be run in either
+          <span class="keyword option">semi-automated</span> or <span class="keyword option">automated</span> mode. So far, we have looked
+        at test runs in <span class="keyword option">semi-automated</span> mode, in which manual intervention is
+        required at the end of each run.</p>
+
+      <p class="p">In a production test environment, it is frequently necessary to run tests, often in series,
+        without stopping for human input. </p>
+
+      <p class="p">To set up test runs in <span class="keyword option">automated</span> mode, refer to the <a class="xref" href="bis_verify_picture.html"><span class="keyword apiname">verify picture</span></a> built-in
+        setting.</p>
+
+    </section>
+
+    <section class="section"><h2 class="title sectiontitle">Accessing
+        the <span class="keyword wintitle">Picture Check</span> dialog box</h2>
+      
+      <p class="p">We have seen how the <span class="keyword wintitle">Picture Check</span> dialog box is the means by which
+        new images are designated as baselines. We have also seen that the <span class="keyword wintitle">Picture
+          Check</span> dialog box appears automatically at the end of a test run in
+          <span class="keyword option">semi-automated</span> mode, and does not appear at all after a test run in
+          <span class="keyword option">automated</span> mode. </p>
+
+      <p class="p">The obvious question here is <em class="ph i">"What happens when a new image, one that fails to match any
+          baseline of the picture check, is encountered during an automated test run? Is there any
+          way to tell the system, after the fact, to accept that image as a new baseline?"</em>. The
+        answer is <em class="ph i">Yes</em>, and this applies to test runs in both <span class="keyword option">verify</span> and
+          <span class="keyword option">non-verify</span> modes.</p>
+
+      <div class="p">
+        <ul class="ul">
+          <li class="li">For test runs in <span class="keyword option">semi-automated</span> mode, this is achieved by accessing
+            the <span class="keyword wintitle">Picture Check</span> dialog box after the test run has completed.</li>
+
+          <li class="li">For test runs in <span class="keyword option">automated</span> mode:<ul class="ul" id="bia_check_picture__ul_wgk_tnn_gn">
+              <li class="li">
+                <p class="p">For each results report for a test containing picture checks, <span class="ph">TestArchitect</span> maintains records, including images captured from
+        the AUT of every <dfn class="term">unverified picture check</dfn> that was conducted during the test
+        run. These unverified picture checks are stored in the <span class="ph uicontrol">Unverified
+          Results</span> node.</p>
+
+              </li>
+
+              <li class="li">
+                <div class="p">An <dfn class="term">unverified picture check</dfn> is one that:<ol class="ol" id="bia_check_picture__d2330e109">
+          <li class="li">failed to find a match at the time of the test, either due to a non-existing baseline
+            or non-matching image, and</li>
+
+          <li class="li">has not yet been reviewed by a human to determine the proper course of action. <br /><img class="image" id="bia_check_picture__d2330e116" src="../../TA4VS_Help/Topics/../Images/test_result_unverified_node.png" /><br /></li>
+
+        </ol>
+</div>
+
+              </li>
+
+              <li class="li">In order to resolve unverified picture checks, refer to <span class="xref">Resolving unverified picture
+                  checks</span>. </li>
+
+            </ul>
+</li>
+
+          <li class="li">
+            <div class="note restriction"><span class="restrictiontitle">Restriction:</span> You will not be able to verify test results if you have
+              executed tests from the command line or Microsoft Test Manager.</div>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+  </div>
+
+
+
+</article></main></div>
+                        
+                        <div class=" wh_related_links "><nav role="navigation" class="related-links"><div class="linklist linklist relinfo relconcepts"><strong>Related concepts</strong><br /><div class="related_link"><a class="navheader_parent_path" href="../../TA_Automation/Topics/aut_image_comparison_techniques.html" title="TestArchitect offers you two methods for verifying the correctness of images produced by a tested application: pixel-by-pixel comparison and keypoint detection.">Image comparison techniques</a></div></div><div class="linklist linklist relinfo relref"><strong>Related reference</strong><br /><div class="related_link"><a class="navheader_parent_path" href="../../TA_Automation/Topics/bia_check_picture_exists.html" title="check picture exists">check picture exists</a></div><div class="related_link"><a class="navheader_parent_path" href="../../TA_Automation/Topics/bia_check_picture_not_exists.html" title="check picture not exists">check picture not exists</a></div><div class="related_link"><a class="navheader_parent_path" href="../../TA_Automation/Topics/bia_does_picture_exist.html" title="does picture exist">does picture exist</a></div></div></nav></div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div> <nav class="navbar navbar-default wh_footer">
+ <!--  <div class=" footer-container text-center ">
+    <whc:include_html href="${webhelp.fragment.footer}"/>
+  </div> -->
+</nav>
+
+        
+        <div id="go2top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close glyphicon glyphicon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" />
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        <script src="../../oxygen-webhelp/lib/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        
+        
+<div id="bottom-3" class="tsection hidden-print">
+ <div class="tsection-inner">
+ 	<div class="tcol col-sm-no-grid">
+      <div class="mod-block clearfix">
+      	<div class="mb2pb-section clearfix light section_5abb0c9af2a15" style="">
+      		<div class="mb2pb-section-inner clearfix" style="padding-top:0px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+      			<div class="mb2pb-row clearfix dark-gray hpadding-normal row_5abb0c9af2a15" style="">
+      				<div class="mb2pb-row-inner clearfix" style="padding-top:70px;padding-bottom:70px;background-color:rgb(8, 8, 8);">
+      					<div class="container-fluid" style="">
+      						<div class="row">
+      							<div class="mb2pb-column col-sm-5 cnoempty light cnoheight" style="">
+                                   <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                   	 <div style="" class="mb2pb-text pos-left">
+                                   	 	<div class="moduletable">
+                                   	 		<div class="mb2pb-section clearfix light section_5abb0c9af2a15" style="">
+                                   	 			<div class="mb2pb-section-inner clearfix" style="padding-top:0px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+                                   	 				<div class="mb2pb-row clearfix dark-gray hpadding-normal row_5abb0c9b024dd" style="">
+                                   	 					<div class="mb2pb-row-inner clearfix" style="padding-top:20px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+                                                      		<div class="container-fluid" style="">
+                                                         		<div class="row">
+                                                         			<div class="mb2pb-column col-sm-6 cnoempty light cnoheight" style="">
+		                                                               <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+		                                                                  <div class="border-hor border1" style="border-bottom-color:rgba(255, 255, 255, 0.1);border-bottom-style:solid;border-bottom-width:1px;"></div>
+		                                                                  <div class="mb2pb-gap gap clearfix" style="height:45px;"></div>
+		                                                                  <div style="padding:0px 0px 20px 0px;" class="mb2pb-text pos-left">
+		                                                                     <h4 class="title">Contact Us</h4>
+		                                                                     <ul class="list list2 list-left">
+		                                                                        <li><a href="https://www.testarchitect.com/company/contact-us" target="_self">Leave A Message</a></li>
+		                                                                        <li><a href="https://www.testarchitect.com/product/testarchitect-team-and-testarchitect-enterprise/request-a-demo" target="_self">Request A Demo</a></li>
+		                                                                        <li><a href="https://www.testarchitect.com/company/request-a-quote" target="_self">Request A Quote</a></li>
+		                                                                        <li><a href="https://www.testarchitect.com/company/partners/become-a-partner" target="_self">Become A Partner</a></li>
+		                                                                     </ul>
+		                                                                  </div>
+		                                                               </div>
+		                                                            </div>	
+		                                                            <div class="mb2pb-column col-sm-6 cnoempty light cnoheight" style="">
+		                                                               <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+		                                                                  <div class="border-hor border1" style="border-bottom-color:rgba(255, 255, 255, 0.1);border-bottom-style:solid;border-bottom-width:1px;"></div>
+		                                                                  <div class="mb2pb-gap gap clearfix" style="height:45px;"></div>
+		                                                                  <div style="padding:0px 0px 20px 0px;" class="mb2pb-text pos-left">
+		                                                                     <h4 class="title">TestArchitect</h4>
+		                                                                     <ul class="list list2 list-left">
+		                                                                        <li><a href="https://www.testarchitect.com/" target="_self">Home</a></li>
+		                                                                        <li><a href="https://www.testarchitect.com/why-testarchitect" target="_self">Why TestArchitect</a></li>
+		                                                                        <li><a href="https://www.testarchitect.com/product/features-and-supported-platforms" target="_self">Products</a></li>
+		                                                                        <li><a href="https://www.testarchitect.com/product/professional-services-and-training" target="_self">Services</a></li>
+		                                                                     </ul>
+		                                                                  </div>
+		                                                               </div>
+		                                                            </div>
+                                                         		</div>
+                                                         	</div>
+                                                         </div>			
+
+                                   	 				</div>
+                                   	 			</div>	
+                                   	 		</div>
+                                   	 	</div>	
+                                   	 </div>
+                                   </div>
+      							</div>	
+      							<div class="mb2pb-column col-sm-2 cnoempty light cnoheight" style="">
+                                 <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                    <div style="" class="mb2pb-text pos-left">
+                                       <div class="moduletable">
+                                          <div class="mb2pb-section clearfix light section_5abb0c9b024dd" style="">
+                                             <div class="mb2pb-section-inner clearfix" style="padding-top:0px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+                                                <div class="mb2pb-row clearfix dark-gray hpadding-normal row_5abb0c9b024dd" style="">
+                                                   <div class="mb2pb-row-inner clearfix" style="padding-top:20px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+                                                      <div class="container-fluid" style="">
+                                                         <div class="row">
+                                                            <div class="mb2pb-column col-sm-12 cnoempty light cnoheight" style="">
+                                                               <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                                                  <div class="border-hor border1" style="border-bottom-color:rgba(255, 255, 255, 0.1);border-bottom-style:solid;border-bottom-width:1px;"></div>
+                                                                  <div class="mb2pb-gap gap clearfix" style="height:45px;"></div>
+                                                                  <div style="padding:0px 0px 20px 0px;" class="mb2pb-text pos-left">
+                                                                     <h4 class="title">Resources</h4>
+                                                                     <ul class="list list2 list-left">
+                                                                        <li><a href="https://www.testarchitect.com/resources/data-sheets" target="_self">Data Sheets</a></li>
+                                                                        <li><a href="https://www.testarchitect.com/resources/case-studies" target="_self">Case Studies</a></li>
+                                                                        <li><a href="https://www.testarchitect.com/resources/white-papers" target="_self">White Papers</a></li>
+                                                                        <li><a href="https://www.testarchitect.com/support/documentation/tutorial-videos" target="_self">Tutorial Videos</a></li>
+                                                                     </ul>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="mb2pb-column col-sm-5 cnoempty light cnoheight" style="">
+                                 <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                    <div style="" class="mb2pb-text pos-left">
+                                       <div class="moduletable">
+                                          <div class="mb2pb-section clearfix light section_5abb0c9b061e6" style="">
+                                             <div class="mb2pb-section-inner clearfix" style="padding-top:0px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+                                                <div class="mb2pb-row clearfix dark-gray hpadding-normal row_5abb0c9b061e6" style="">
+                                                   <div class="mb2pb-row-inner clearfix" style="padding-top:20px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+                                                      <div class="container-fluid" style="">
+                                                         <div class="row">
+                                                            <div class="mb2pb-column col-sm-6 cnoempty light cnoheight" style="">
+                                                               <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                                                  <div class="border-hor border1" style="border-bottom-color:rgba(255, 255, 255, 0.1);border-bottom-style:solid;border-bottom-width:1px;"></div>
+                                                                  <div class="mb2pb-gap gap clearfix" style="height:45px;"></div>
+                                                                  <div style="padding:0px 0px 20px 0px;" class="mb2pb-text pos-left">
+                                                                     <h4 class="title">Support</h4>
+                                                                     <ul class="list list2 list-left">
+                                                                        <li><a href="http://testarchitect.com/onlinehelp" target="_blank">Online Help</a></li>
+                                                                        <li><a href="http://support-ta.logigear.com/support/tickets/new" target="_blank">Submit A Ticket</a></li>
+                                                                        <li><a href="http://testarchitect.com/sso?host_url=support-ta.logigear.com" target="_blank">Login</a></li>
+                                                                        <li><a href="https://www.testarchitect.com/support/documentation/release-notes" target="_self">Release Notes</a></li>
+                                                                     </ul>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                            <div class="mb2pb-column col-sm-6 cnoempty light cnoheight" style="">
+                                                               <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                                                  <div class="border-hor border1" style="border-bottom-color:rgba(255, 255, 255, 0.1);border-bottom-style:solid;border-bottom-width:1px;"></div>
+                                                                  <div class="mb2pb-gap gap clearfix" style="height:45px;"></div>
+                                                                  <div style="padding:0px 0px 20px 0px;" class="mb2pb-text pos-left">
+                                                                     <h4 class="title">Community</h4>
+                                                                     <ul class="list list2 list-left">
+                                                                        <li><a href="http://support-ta.logigear.com/support/discussions" target="_blank">Forums</a></li>
+                                                                        <li><a href="http://support-ta.logigear.com/support/solutions" target="_blank">Knowledge Base</a></li>
+                                                                        <li><a href="http://www.logigear.com/blog" target="_blank">LogiGear Blog</a></li>
+                                                                        <li><a href="http://www.logigear.com/Magazine" target="_blank">LogiGear Magazine</a></li>
+                                                                     </ul>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+      						</div>	
+      					</div>
+      				</div>
+      			</div>
+      		</div>	
+      		<!-- END FOOTER ITEMS-->
+            <!-- START SOCIAL NETWORK-->
+      		<div class="mb2pb-section clearfix light section_5abb0c9af2a15" style="">
+               <div class="mb2pb-section-inner clearfix" style="padding-top:0px;padding-bottom:0px;">
+                  <div class="mb2pb-row clearfix light hpadding-normal row_5abb0c9af2a15" style="">
+                     <div class="mb2pb-row-inner clearfix" style="padding-top:px;padding-bottom:px;background-color:rgba(0, 0, 0, 0.83);">
+                        <div class="container-fluid" style="">
+                           <div class="row">
+                              <div class="mb2pb-column col-sm-4 cnoempty light cnoheight" style="">
+                                 <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                    <div style="" class="mb2pb-text pos-left">
+                                       <h6 style="color: white;">Powered by<!-- &nbsp; --> 
+                                       	<img style="vertical-align: middle;" src="https://www.testarchitect.com/images/gallery/other/logigear-logo.png" alt="" width="108" height="31" /> 
+                                       	</h6>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="mb2pb-column col-sm-8 cnoempty light cnoheight" style="">
+                                 <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                    <div style="" class="mb2pb-text pos-left">
+                                       <h6 style="color: white;">
+                                       <strong>STAY IN TOUCH</strong><!-- &nbsp; --> 
+                                       <a href="https://www.facebook.com/logigearcorporation/" target="_blank">
+                                       <img style="vertical-align: middle; margin-left: 5px; margin-right: 5px;" src="https://www.testarchitect.com/images/gallery/other/fb-icon.png" alt="" width="30" height="30" />
+                                       </a>
+                                       <a href="https://twitter.com/logigear" target="_blank">
+                                       <img class="" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;" src="https://www.testarchitect.com/images/gallery/other/twitter.png" alt="" width="30" height="30" />
+                                       </a>
+                                       <a href="https://www.linkedin.com/company/logigear-corporation" target="_blank">
+                                       <img class="" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;" src="https://www.testarchitect.com/images/gallery/other/linked-in-icon.png" alt="" width="30" height="30" />
+                                       </a>
+                                       <a href="https://www.youtube.com/user/LogiGearCorporation" target="_blank">
+                                       <img class="" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;" src="https://www.testarchitect.com/images/gallery/other/youtube-icon.png" alt="" width="30" height="30" />
+                                       </a>
+                                       <a href="https://plus.google.com/102920289935162355348" target="_blank">
+                                       <img class="" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;" src="https://www.testarchitect.com/images/gallery/other/g+-icon.png" alt="" width="30" height="30" />
+                                       </a>
+                                       <a href="mailto:sales@logigear.com?Subject=" target="_top">
+                                       <img class="" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;" src="https://www.testarchitect.com/images/gallery/other/email-icon.png" alt="" width="30" height="30" />
+                                       </a>
+                                   		</h6>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+      	</div>
+      </div>
+    </div>  	
+ </div>	
+</div>	
+   <footer id="footer" class="tsection hidden-print">
+      <div class="tsection-inner">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="tfooter tcol col-sm-12">
+                  <div style="float:left; padding:0">
+                     © 2019 LogiGear Corporation. All rights reserved. 
+                  </div>
+                  <div id="footer-url">
+                     <a href="https://www.testarchitect.com/legal/privacy-policy">
+                     Security Policy
+                     </a>
+                     <a href="https://www.testarchitect.com/legal/eula">
+                     Terms of Use
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+<script src="../../oxygen-webhelp/resource/media/jui/js/jquery.min.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/templates/fruition/js/jui/bootstrap.min.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/templates/fruition/assets/tooltipsy.min.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/templates/fruition/js/template.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/media/mb2ctmenu/js/superfish.custom.min.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/media/mb2ctmenu/js/mb2ctmenu.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/custom-script.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/jquery.bing.translator.js" type="text/javascript"> </script>
+<script src="https://apis.google.com/js/platform.js"></script>
+<script type="text/javascript">
+		$(document).ready(function(){
+    		$('#languagePicker').languagePicker({mode:'auto',delay:1000});
+		});
+		</script>
+		<script type="text/javascript">
+		    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		    try {
+		      var pageTracker = _gat._getTracker("UA-56756158-1");
+		    pageTracker._trackPageview();
+		    } catch(err) {}
+		</script>
+<!--
+<script type="text/javascript">
+	function setDefault(){
+	
+		document.getElementsByClassName('goog-te-menu-frame')[1].contentDocument.body.getElementsByClassName('text')[0].click();
+	}
+	
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
+    }
+
+	function triggerHtmlEvent(element, eventName) {
+	  var event;
+	  if (document.createEvent) {
+		event = document.createEvent('HTMLEvents');
+		event.initEvent(eventName, true, true);
+		element.dispatchEvent(event);
+	  } else {
+		event = document.createEventObject();
+		event.eventType = eventName;
+		element.fireEvent('on' + event.eventType, event);
+	  }
+	}
+
+	jQuery('.lang-select').click(function() {
+	  var theLang = jQuery(this).attr('data-lang');
+	  jQuery('.goog-te-combo').val(theLang);
+
+	  //alert(jQuery(this).attr('href'));
+	  window.location = jQuery(this).attr('href');
+	  location.reload();
+
+	});
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+-->
+
+        <div id="cover">
+            <div id="social-button">
+            <div class="share-social">
+            <h4 class="share-via-title">Share Via...</h4>
+            <div class="x-button"> 
+                <a href="javascript:turnOffPopUp()" class="glyphicon glyphicon-remove-sign"></a>
+            </div>
+            <div id="button-group">
+            <div class="social-button-popup"><a title="Facebook" href="javascript:fbshareCurrentPage()" alt="Facebook"> Facebook </a></div>
+            <div class="social-button-popup"><a title="Twitter" href="javascript:tweetCurrentPage()" alt="Twitter"> Twitter </a></div>
+            <div class="social-button-popup"><a title="LinkedIn" href="javascript:linkedinCurrentPage()" alt="LinkedIn"> LinkedIn </a></div>
+            <div class="social-button-popup" style="border: none;"><a title="Google+" href="javascript:gplusShare()" alt="Google+"> Google+ </a></div>
+            </div>
+            <div id="content-group">
+            </div>    
+            
+            </div>
+           <!--  <div class="g-plus" data-action="share"></div> -->
+        </div>        
+        </div>
+        
+    </body>
+</html>

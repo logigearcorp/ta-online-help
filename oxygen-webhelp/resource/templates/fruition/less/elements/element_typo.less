@@ -1,0 +1,198 @@
+
+/* Page builder text */
+
+.mb2pb-text {
+	position: relative;	
+	max-width: 100%;
+}
+
+
+
+
+/* Headings styles */
+
+h1,h2,h3,h4,h5,h6{
+ 	color: @mb2_color_headings;
+	font-family: @mb2_font_family_base;
+	margin-bottom: 20px;
+	margin-top: 0;
+}
+
+h1 {
+	font-size: @mb2_font_size_h1;
+}
+
+h2 {
+	font-size: @mb2_font_size_h2;
+}
+
+h3 {
+	font-size: @mb2_font_size_h3;
+}
+
+h4 {
+	font-size: @mb2_font_size_h4;
+}
+
+h5 {
+	font-size: @mb2_font_size_h5;
+}
+
+h6 {
+	font-size: @mb2_font_size_h6;
+}
+
+
+
+
+/* Paragraph marggin */
+
+p {
+	margin-bottom: 15px;
+	margin-top: 0;	
+}
+
+
+/* Hightlight */
+
+.highlight {	
+	padding: 1px 10px;
+	background-color: @mb2_color_bg_accent1;
+	color: #fff;
+		
+}
+.highlight1 {}
+
+.highlight2 {
+	background-color: @mb2_color_bg_accent2;
+}
+
+.highlight3 {	
+	border:solid 1px @mb2_color_bg_accent1;	
+	background-color: transparent;
+	color: @mb2_color_text_base;
+}
+
+
+
+/* Dropcaps */
+
+.dropcap {
+	background-color: @mb2_color_bg_accent1;
+	color: #fff;
+	display: block;
+	float: left;
+	width: 42px;
+	height: 42px;
+	line-height: 42px;
+	text-align: center;
+	font-size: 18px;
+	margin-right: 15px;
+	font-weight: bold;	
+}
+
+.dropcap2 {
+	background-color: @mb2_color_bg_accent2;	
+}
+
+.dropcap3 {
+	color: @mb2_color_headings;
+	background-color: @mb2_color_bg_gray1;	
+}
+
+
+/* Text alignment */
+
+.text-align-right {
+	text-align: right;	
+}
+
+.text-align-center {
+	text-align: center;	
+}
+
+
+
+/* Strong element */
+
+.strong {
+	font-weight: bold;	
+}
+
+
+
+
+.align-right {
+	float: right;	
+}
+
+
+
+
+
+/* Pre element */
+
+pre {
+	.mb2_border_radius(0);
+	border-color: @mb2_border_color_base;
+	background-color: @mb2_color_bg_gray2;
+	color: @mb2_color_text_darken;	
+}
+
+
+
+
+/* Small fonts */
+small,
+.small {
+	font-size: @mb2_font_size_small;	
+}
+
+
+
+
+
+/* Text shortcode */
+
+.text.lg {
+	font-size: 1.3em;
+	line-height: 1.3em;	
+}
+
+.text.xlg {
+	font-size: 5.5em;	
+}
+
+.text.xxlg {
+	font-size: 7.5em;	
+}
+
+
+
+/* Quote text */
+
+.quote {
+	font-size: @mb2_font_size_large;
+	font-style: italic;	
+}
+
+
+
+
+/* Color */
+
+.tmpl-color {
+	color: @mb2_color_bg_accent1;	
+}
+
+
+
+@media (max-width: @mb2_screen_tablet){
+	
+	
+	.text-align-right {
+		text-align: center;	
+	}
+	
+	
+}

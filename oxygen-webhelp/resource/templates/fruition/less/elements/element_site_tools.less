@@ -1,0 +1,218 @@
+
+/* Site tools styles */
+
+
+/* Display inline site phone and email */
+
+.site-phone,
+.site-email,
+.site-login,
+.site-language {
+	display: inline !important;	
+	margin: 0 5px;
+}
+
+
+
+.site-phone > i,
+.site-email > i,
+.site-login > i,
+.site-language > i {
+	font-size: 98%;
+	line-height: 1;
+	position: relative;
+	top: -1px;
+	margin-right: 5px;
+	vertical-align: middle;
+	color: #000;
+}
+
+
+
+
+/* In darken sections */
+
+.dark .site-phone > i,
+.dark .site-email > i,
+.dark .site-login > i,
+.dark .site-language > i,
+.dark-gray .site-phone > i,
+.dark-gray .site-email > i,
+.dark-gray .site-login > i,
+.dark-gray .site-language > i {
+	color: #fff;	
+}
+
+
+
+
+/* Scroll to top */
+
+.scroll-to-top {
+	position: fixed;
+	right: 25px;
+	bottom: 25px;
+	border: solid 2px @mb2_color_bg_accent1;
+	width: 45px;
+	height: 45px;
+	text-align: center;
+	line-height: 45px;
+	font-size: 24px;
+	color: @mb2_color_bg_accent1;
+	display: none;
+	z-index: 999;
+	opacity: .7;
+	vertical-align: middle;
+	.mb2_transition1(all, .15s);
+	.mb2_border_radius(2px);	
+}
+
+
+
+.scroll-to-top:hover,
+.scroll-to-top:focus {
+	color: @mb2_color_bg_accent1;
+	opacity: 1;		
+}
+
+
+
+
+
+/* Add relative position for items with dropdown list */
+
+.site-login,
+.site-language  {
+	display: inline-block;
+	position: relative;
+	z-index: 999!important;	
+}
+
+
+
+
+/*  Dropdown container */
+
+.mod-dd-container {
+	display: none;
+	position: absolute;
+	top: 150%;	
+	width: 260px;
+	left: 50%;
+	margin-left:-130px;
+	color: @mb2_color_text_base;
+	font-size: @mb2_font_size_base;
+	text-align: left;
+}
+
+.mod-dd-container a {
+	color: @mb2_color_links_base;	
+}
+
+.mod-dd-container a:hover,
+.mod-dd-container a:focus {
+	color: @mb2_color_links_hover_base;
+}
+
+.mod-dd-container > div {
+	position: relative;
+	padding: 20px;
+	background-color: @mb2_color_bg_gray2;
+	.mb2_box_shadow(0 3px 3px, rgba(0,0,0,.2));	
+}
+
+.mod-dd-container > div:before {
+	content:'';	
+	display: block;
+	border: solid 10px transparent;
+	border-bottom-color: @mb2_color_bg_gray2;
+	position: absolute;
+	top: -20px;	
+	left: 50%;
+	margin-left: -10px;
+}
+
+
+/* Dropdown container in 'languages' module */
+
+.site-language .mod-dd-container {
+	width: 180px;
+	margin-left: -90px;	
+}
+
+
+
+
+
+
+/* Login module in dropdown container */
+
+.mod-dd-container .login-greeting {
+	margin-bottom: 20px;	
+}
+
+
+
+/* Language switcher */
+
+.tmpl-languages {
+	display: inline-block;
+	position: relative;
+	z-index: 26;
+}
+
+.tmpl-languages-list {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: -15px;
+	z-index: 50;
+	width: 120px;
+	background-color: @mb2_color_bg_gray2;	
+	.mb2_box_shadow(0 3px 3px, rgba(0,0,0,.2));
+}
+
+
+.tmpl-languages-list:before {
+	display: block;
+	position: absolute;
+	top: -12px;
+	left: 20px;
+	content: '';
+	border: solid 6px transparent;	
+	border-bottom-color: @mb2_color_bg_gray2;
+}
+
+.tmpl-languages:hover .tmpl-languages-list {
+	display: block;	
+}
+
+.tmpl-languages a {
+	display: inline-block;
+	text-decoration: none;
+	color: @mb2_color_text_base;
+	font-size: @mb2_font_size_small;
+}
+
+.tmpl-languages a:hover,
+.tmpl-languages a:focus {
+	text-decoration: none;
+	color: @mb2_color_text_base;	
+}
+
+
+.tmpl-languages-list a {
+	color: @mb2_color_text_base !important;	
+}
+
+.tmpl-languages a img {
+	display: inline-block;	
+	margin-bottom: 3px;
+	margin-right: 5px;
+}
+
+.tmpl-languages-list a {
+	padding: 6px 15px;	
+}
+
+

@@ -1,0 +1,1140 @@
+
+<!DOCTYPE html
+  PUBLIC "" "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en-us" lang="en-us">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="description" content="Error code: 0x80012001L Problem This happens because a given UI-interactive built-in action selects an item identified by its index in a spin box control. Solution Select the item identified by its ..." /><meta name="copyright" content="(C) Copyright 2019" /><meta name="DC.rights.owner" content="(C) Copyright 2019" /><meta property="og:type" content="website" /><meta property="og:title" content="Selecting by index is not supported on this spin box type." /><meta name="twitter:title" content="Selecting by index is not supported on this spin box type." /><meta name="indexterms" content="automation errors, 0x80012001L" /><meta name="DC.subject" content="automation errors, 0x80012001L" /><meta name="keywords" content="automation errors, 0x80012001L" /><meta name="DC.Relation" scheme="URI" content="../../TA_FAQ/Topics/faq.automation_error.html" /><meta name="DC.Relation" scheme="URI" content="../../TA_FAQ/Topics/0x8001042AL-1.html" /><meta name="DC.Relation" scheme="URI" content="../../TA_FAQ/Topics/0x80010404L.html" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="reference_0x80012001L" /><title>Selecting by index is not supported on this spin box type.</title><!--  Generated with Oxygen version 20.0-SNAPSHOT, build number 2018031511.  --><meta name="wh-path2root" content="../../" /><meta name="wh-toc-id" content="reference_0x80012001L-d46e47989" />
+        <script type="text/javascript">
+    <!--  
+     /* Include JavaScript code here. */
+     window.dataLayer = window.dataLayer || []; 
+
+     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MBWGFT'); 
+  -->
+</script>
+        
+
+<script type="text/javascript">
+
+<!--
+function $_GET(param) {
+         var vars = {};
+         window.location.href.replace( location.hash, '' ).replace(
+             /[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+             function( m, key, value ) { // callback
+                 vars[key] = value !== undefined ? value : '';
+             }
+         );
+
+         if ( param ) {
+             return vars[param] ? vars[param] : "none";
+         }
+         return vars;
+     }
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); 
+
+     var key = $_GET('trialkey');	 
+	 
+	 if (key=="none")
+	 {
+	
+		if (localStorage.trialkey) {
+            var key = localStorage["trialkey"];
+        } else {
+			var key = "none";            
+        }
+	 }
+	 
+	 localStorage.setItem("trialkey", key);
+     var dimensionValue = key;
+	 ga('create', 'UA-80132928-1', 'auto','webhelp');	 
+     ga('webhelp.set', 'dimension1', dimensionValue);	 
+     ga('webhelp.send', 'pageview');  
+--> 
+</script>
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- EXM-36950 - Expand the args.hdf parameter here -->
+        
+        
+<meta property="og:image" content="https://www.testarchitect.com/OnlineHelp/TA_Help/Images/ta-logo1.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://www.testarchitect.com/OnlineHelp/TA_Help/Images/ta-logo1.png" />
+<link href="../../oxygen-webhelp/resource/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<link href="../../oxygen-webhelp/resource/plugins/editors/jckeditor/typography/typography2.php" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/css/k2.fonts.css?v2.7.1" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/css/k2.css?v2.7.1" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2smpgallery/css/lightslider.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2smpgallery/css/mb2smpgallery.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2smpgallery/css/nivo-lightbox.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2smpgallery/css/nivo-lightbox-default.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2content/css/mb2content.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/plugins/content/fastsocialshare/style/style.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/plugins/content/jw_allvideos/jw_allvideos/tmpl/Classic/css/template.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/assets/glyphicon/css/glyphicon.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/assets/glyphicon/css/glyphicon.min.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/assets/lineicon/css/lineicon.min.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/assets/pe-icon-7-stroke/css/pe-icon-7-stroke.min.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/css/template_47.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2testimonials/css/mb2testimonials.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2ctmenu/css/mb2ctmenu.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" media="all" href="../../oxygen-webhelp/resource/templates/fruition/css/ta_custom.css" />
+<link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resource/templates/fruition/css/jquery.bing.translator.css" />
+ 
+
+        <!-- Latest compiled and minified Bootstrap CSS -->
+       <!--  <link rel="stylesheet"  type="text/css" 
+            href="${oxygen-webhelp-assets-dir}/lib/bootstrap/css/bootstrap.min.css" /> -->
+
+        <!-- Bootstrap Optional theme -->
+        <!-- <link rel="stylesheet"
+            href="${oxygen-webhelp-assets-dir}/lib/bootstrap/css/bootstrap-theme.min.css" /> -->
+        <link rel="stylesheet" href="../../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css" />
+
+        <!-- Template default styles  -->
+        <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/app/topic-page.css?buildId=2018031511" />
+        
+
+        <script type="text/javascript" src="../../oxygen-webhelp/lib/jquery/jquery-3.1.1.min.js"><!----></script>
+
+        <script data-main="../../oxygen-webhelp/app/topic-page.js" src="../../oxygen-webhelp/lib/requirejs/require.js"></script>
+           
+        <!-- Skin resources -->
+        <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/template/customstyle.css?buildId=2018031511" />
+    </head>
+
+    <body class="wh_topic_page frmBody" id="topic-page">
+        
+        <!-- Google Tag Manager iframe V.1.0.0 from Tools for Joomla --> 
+        <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MBWGFT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript> <!-- End Google Tag Manager iframe --> 
+
+        <div id="page-a" class="page ctype_content vtype_article item_1235 ltype_full fixed-nav fixed-nav-hide mpos_header header-white header-style1 width-desktop header-is-grid logo-left page-a hidden-print">
+   <div class="fixed-nav-element-offset"></div>
+   <header id="main-header" class="tsection">
+      <div class="tsection-inner">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="tlogo tcol col-sm-3 left">
+                  <div class="main-logo alignleft">
+                     <a href="https://www.testarchitect.com/">
+                        <img title="" src="https://www.testarchitect.com/images/HomePage/ta-logo.png" alt="" />
+                     </a>
+                  </div>
+               </div>
+               <div class="tcol col-sm-9">
+                  <div class="mod-block clearfix ta-header-main-menu">
+                     <div class="mb2ctm mb2ctm438 ta-header-main-menu is-bar is-button hover-mode mb2ctm-left" data-anim="2" data-anim_speed="350">
+                        <div class="mb2ctm-menu-link">
+                           <a class="mb2ctm-menu-open" href="#">
+                              <span class="mb2ctm-menu-icon mb2ctm_icon-menu"></span>
+                           </a>
+                        </div>
+                        <!-- end .mb2ctm-menu-bar -->
+                        <ul class="mb2ctm-list mb2ctm-clr" data-anim="2" data-anim_speed="350">
+                           
+                           <li class="mb2ctm-item mb2ctm-item-797 mb2ctm-stparent mb2ctm-isparent mb2ctm-dropdow mb2ctm-dd-right">
+                              <span class="mb2ctm-parent-open"></span>
+                              <a class="ta-menu" href="#">PRODUCTS</a>
+                              <div class="mb2ctm-smenu mb2ctm-smenu-panel mb2ctm-clr" style="right:auto;left:0;">
+                                 <div class="mb2ctm-smenu-inner mb2ctm-clr">
+                                    <ul class="mb2ctm-child-list1">
+                                       <li class="mb2ctm-item mb2ctm-item-1140 mb2ctm-isnoparent2">
+                                          <a href="https://www.testarchitect.com/product/testarchitect-team-and-testarchitect-enterprise">TestArchitect Team &amp; Enterprise</a>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1141 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="https://www.testarchitect.com/product/features-and-supported-platforms">Features &amp; Supported Platforms</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-1142">
+                                                <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-features">TestArchitect Features</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-1143 mb2ctm-stparent mb2ctm-isparent">
+                                                <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-supported-platforms">TestArchitect Supported Platforms</a>
+                                                <ul class="mb2ctm-child-list3">
+                                                   <li class="mb2ctm-item mb2ctm-item-1176">
+                                                      <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-supported-platforms/web-testing">Web Testing</a>
+                                                   </li>
+                                                   <li class="mb2ctm-item mb2ctm-item-1182">
+                                                      <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-supported-platforms/web-service-testing">Web Service &amp; API Testing</a>
+                                                   </li>
+                                                   <li class="mb2ctm-item mb2ctm-item-1177">
+                                                      <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-supported-platforms/mobile-testing">Mobile Testing</a>
+                                                   </li>
+                                                   <li class="mb2ctm-item mb2ctm-item-1178">
+                                                      <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-supported-platforms/desktop-testing">Desktop Testing</a>
+                                                   </li>
+                                                   <li class="mb2ctm-item mb2ctm-item-1180">
+                                                      <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-supported-platforms/more-automated-testing">More Automated Testing</a>
+                                                   </li>
+                                                </ul>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1144 mb2ctm-isnoparent2">
+                                          <a href="https://www.testarchitect.com/product/professional-services-and-training">Professional Services &amp; Training</a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <!-- end .mb2ctm-smenu-inner -->
+                              </div>
+                              <!-- end .mb2ctm-smenu -->
+                           </li>
+                           <li class="mb2ctm-item mb2ctm-item-814 mb2ctm-stparent mb2ctm-isparent mb2ctm-dropdow mb2ctm-dd-right">
+                              <span class="mb2ctm-parent-open"></span>
+                              <a class="ta-menu" href="#">RESOURCES</a>
+                              <div class="mb2ctm-smenu mb2ctm-smenu-panel mb2ctm-clr" style="right:auto;left:0;">
+                                 <div class="mb2ctm-smenu-inner mb2ctm-clr">
+                                    <ul class="mb2ctm-child-list1">
+                                       <li class="mb2ctm-item mb2ctm-item-1162 mb2ctm-isnoparent2">
+                                          <a href="https://www.testarchitect.com/resources/data-sheets">Data Sheets</a>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1163 mb2ctm-isnoparent2">
+                                          <a href="https://www.testarchitect.com/resources/case-studies">Case Studies</a>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1165 mb2ctm-isnoparent2">
+                                          <a href="https://www.testarchitect.com/resources/white-papers">White Papers</a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <!-- end .mb2ctm-smenu-inner -->
+                              </div>
+                              <!-- end .mb2ctm-smenu -->
+                           </li>
+                           <li class="mb2ctm-item mb2ctm-item-822 mb2ctm-stparent mb2ctm-isparent mb2ctm-mega mb2ctm-dd-right">
+                              <span class="mb2ctm-parent-open"></span>
+                              <a class="ta-menu" href="https://www.testarchitect.com/support">SUPPORT</a>
+                              <div class="mb2ctm-smenu mb2ctm-smenu-panel mb2ctm-clr" style="right:auto;left:0;">
+                                 <div class="mb2ctm-smenu-inner mb2ctm-clr">
+                                    <ul class="mb2ctm-child-list1">
+                                       <li class="mb2ctm-item mb2ctm-item-827 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="https://www.testarchitect.com/support/action-based-testing">ACTION BASED TESTING</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-828">
+                                                <a href="https://www.testarchitect.com/support/action-based-testing/abt-overview">Overview</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-829">
+                                                <a href="https://www.testarchitect.com/support/action-based-testing/how-to-write-test-module">Template</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-820">
+                                                <a href="https://www.testarchitect.com/support/action-based-testing/best-practices">Best Practices</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1008 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="#">DOCUMENTATION</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-1010">
+                                                <a href="https://www.testarchitect.com/support/documentation/get-started">Get Started</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-819">
+                                                <a href="https://www.testarchitect.com/support/documentation/tutorial-videos">Tutorial Videos</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-823">
+                                                <a href="https://www.testarchitect.com/OnlineHelp/">Online Help</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-821">
+                                                <a href="https://www.testarchitect.com/support/documentation/release-notes">Release Notes</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1011 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="#">SUPPORT PORTAL</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-825">
+                                                <a href="https://www.testarchitect.com/sso?host_url=support-ta.logigear.com" target="_blank">Login</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-787">
+                                                <a href="http://support-ta.logigear.com/support/discussions" target="_blank">Forum</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-1118">
+                                                <a href="https://www.testarchitect.com/support/support-portal/license-pricing-faq">License/Pricing FAQ</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-788">
+                                                <a href="http://support-ta.logigear.com/support/solutions" target="_blank">Knowledge Base</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-1012">
+                                                <a href="http://support-ta.logigear.com/support/tickets/new" target="_blank">Submit a Ticket</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <!-- end .mb2ctm-smenu-inner -->
+                              </div>
+                              <!-- end .mb2ctm-smenu -->
+                           </li>
+                           <li class="mb2ctm-item mb2ctm-item-318 mb2ctm-stparent mb2ctm-isparent mb2ctm-mega mb2ctm-dd-right">
+                              <span class="mb2ctm-parent-open"></span>
+                              <a class="ta-menu" href="#">COMPANY</a>
+                              <div class="mb2ctm-smenu mb2ctm-smenu-panel mb2ctm-clr" style="right:auto;left:0;">
+                                 <div class="mb2ctm-smenu-inner mb2ctm-clr">
+                                    <ul class="mb2ctm-child-list1">
+                                       <li class="mb2ctm-item mb2ctm-item-334 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="#">COMPANY</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-322">
+                                                <a href="https://www.testarchitect.com/company/logigear">About LogiGear</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-778 mb2ctm-stparent mb2ctm-isparent">
+                                                <a href="https://www.testarchitect.com/company/partners">Partners</a>
+                                                <ul class="mb2ctm-child-list3">
+                                                   <li class="mb2ctm-item mb2ctm-item-1131">
+                                                      <a class="ta-hide-menu" href="https://www.testarchitect.com/company/partners/become-a-partner">Become a Partner</a>
+                                                   </li>
+                                                   <li class="mb2ctm-item mb2ctm-item-1133">
+                                                      <a class="ta-hide-menu" href="https://www.testarchitect.com/company/partners/our-partners">Our Partners</a>
+                                                   </li>
+                                                </ul>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-779">
+                                                <a href="https://www.testarchitect.com/company/customers">Customers</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1184 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="#">CONTACT US</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-685">
+                                                <a href="https://www.testarchitect.com/company/contact-us">Leave A Message</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-1186">
+                                                <a href="https://www.testarchitect.com/product/testarchitect-team-and-testarchitect-enterprise/request-a-demo">Request A Demo</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-1195">
+                                                <a href="https://www.testarchitect.com/company/request-a-quote">Request A Quote</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-1185">
+                                                <a href="https://www.testarchitect.com/company/partners/become-a-partner">Become A Partner</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-336 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="#">NEWS</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-782">
+                                                <a href="https://www.testarchitect.com/company/news">News</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-784">
+                                                <a href="http://www.logigear.com/about-us/events.html" target="_blank">Events</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-785">
+                                                <a href="http://www.logigear.com/about-us/awards.html" target="_blank">Awards</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-786">
+                                                <a href="https://www.testarchitect.com/company/news/media-kit">Media Kit</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-332 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="#">SOCIAL MEDIA</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-792">
+                                                <a href="https://www.youtube.com/user/LogiGearCorporation" target="_blank">Youtube</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-793">
+                                                <a href="https://twitter.com/logigear" target="_blank">Twitter</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-794">
+                                                <a href="https://www.linkedin.com/company/logigear-corporation" target="_blank">Linkedin</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-795">
+                                                <a href="https://www.facebook.com/logigearcorporation/" target="_blank">Facebook</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-796">
+                                                <a href="https://plus.google.com/102920289935162355348" target="_blank">Google Plus</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <!-- end .mb2ctm-smenu-inner -->
+                              </div>
+                              <!-- end .mb2ctm-smenu -->
+                           </li>
+                           <li class="mb2ctm-item mb2ctm-item-855 mb2ctm-mega mb2ctm-dd-right">
+                              <a class="btn btn-primary ta-menu sf-with-ul free-download-menu" href="https://www.testarchitect.com/free-download">Free Download</a>
+                           </li>
+						   <li>
+								<div id="languagePicker"></div>
+						   </li>
+                        </ul>
+                        <!-- end .mb2ctm-list -->
+                     </div>
+                     <!-- end .mb2ctm -->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+</div>
+        <!-- EXM-36950 - Expand the args.hdr parameter here -->
+        
+       
+         <!-- config navbar and header -->
+<nav class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <a href="../../index.html" class=" wh_logo hidden-xs "></a>
+                    <div class=" wh_publication_title "><a href="../../index.html"><h1 class="ta-help-title" style="display:none;"><span class="title">TestArchitect Help</span></h1><span class="ta-help-title">TestArchitect</span><span class="ta-help-title" style="color:#f7d542"> Online Help</span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse">
+                
+                
+                <!-- <whc:webhelp_indexterms_link/> -->
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+        
+        
+        <div class="container-fluid">
+            <div class="row">
+
+                <nav class="wh_tools hidden-print">
+                    <!-- <whc:webhelp_breadcrumb/> -->
+                   <!--  <div class="wh_right_tools hidden-sm hidden-xs">
+                        <whc:webhelp_navigation_links/>
+                        <whc:webhelp_toggle_highlight/>
+                        <whc:webhelp_expand_collapse_sections/>
+                        <whc:webhelp_print_link class="print"/>
+                    </div> -->
+                </nav>
+            </div>
+
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <!-- <div id="title-container-left" class="hidden-print">
+                                <div class="header-container">
+                                    <h1 class="content-header">Content </h1> 
+                                </div>
+                                <whc:webhelp_indexterms_link/> 
+                           </div> -->
+                            <div id="topic-search-section">
+                            <div class=" wh_search_input "><form id="searchForm" method="get" action="../../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" /><button type="submit" class="wh_search_button"><span>Search</span></button></div><script><!--
+                                    $(document).ready(function () {
+                                        $('#searchForm').submit(function (e) {
+                                            if ($('.wh_search_textfield').val().length < 1) {
+                                                e.preventDefault();
+                                            }
+                                        });
+                                    });
+                                --></script></form></div> <!-- search btn -->
+                            <nav role="navigation" id="wh_publication_toc" class="navbar hidden-print">
+                                <div class=" wh_publication_toc " data-tooltip-position="right"><ul>
+   <li><span data-tocid="concept_e3v_dpb_cp-d46e15991" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_UsingHelpSystem/Topics/hs_using_help_system.html">Using the TestArchitect Help system</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The <span class="ph">TestArchitect</span> Help system is available in both   desktop (CHM) and web-based versions. This section describes the help viewers and how
+                  you can use   them to find the information you need.
+                  
+               </p>
+               </span></span></span></li>
+   <li><span data-tocid="idTutorials_Managing_Tests_with_TestArchitect-d46e16166" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Tutorials/Topics/Tutorials_Managing_Tests_with_TestArchitect.html">TestArchitect Tutorial</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Get started creating and managing your tests with TestArchitect by reviewing these             introductory lessons.     
+                  
+                  
+               </p>
+               </span></span></span></li>
+   <li><span data-tocid="User_guide-d46e17810" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/User_Guide_begin.html">User Guide</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">This guide provides instructions on using <span class="ph">TestArchitect</span>.   It also explains the environment requirements for <span class="ph">TestArchitect</span> and   describes the process of running tests and reviewing test results. 
+                  
+               </p>
+               </span></span></span></li>
+   <li><span data-tocid="Administration_guide-d46e30766" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Administration/Topics/Administration_Guide_begin.html">Administration Guide</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Learn how to set up and administrate the License Server, the Repository Server,   etc.</p>
+               </span></span></span></li>
+   <li><span data-tocid="Automation_guide-d46e34996" class="topicref" data-state="expanded"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/Automation_Guide_begin.html">Automation Guide</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">With <span class="ph">TestArchitect</span>, you can test apps running on various   environments, such as, desktop, web, mobile applications, etc.
+                  
+               </p>
+               </span></span></span><ul class="nav nav-list">
+         <li><span data-tocid="action_based_testing_language-d46e35018" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/Action_based_testing_language.html">Action-based testing language</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Action   Based Testing (ABT) is usually considered to be an automation technique. It is commonly positioned   as an advanced
+                        and practical alternative to other techniques like "record &amp; playback" or   "scripting". Much about ABT is discussed in the
+                        following pages.
+                        
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="concept_o4w_rrq_4n-d46e43206" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/aut_Using_UIA.html">Microsoft UI Automation</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Microsoft UI Automation (UIA) is an accessibility framework for Microsoft Windows, and   is the successor to Microsoft Active
+                        Accessibility (MSAA). One of its purposes is to assist in   automated testing by providing programmatic access to UI controls.
+                        
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="concept_fbv_fy5_xn-d46e43322" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/aut_app_testing.html">Application testing</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"><span class="ph">TestArchitect</span> supports the testing of desktop, web and   mobile applications built with a variety of different technologies, and running
+                        on various   platforms. 
+                        
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="concept_vxp_m2t_tw-d46e46811" class="topicref" data-state="expanded"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/faq.automation_error.html">Diagnosing and resolving automation errors</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">This section describes possible errors that you might encounter during automation, their   common causes and possible solutions.</p>
+                     </span></span></span><ul class="nav nav-list">
+               <li><span data-tocid="reference_0x8001044AL-d46e46822" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001044AL.html">Invalid value for argument <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;argumentName&gt;</em>. Indexes must start from 1.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010011L-d46e46833" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010011L.html">TestArchitect does not support this action for the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;typeName&gt;</em> control. Please use another applicable action.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010018L-d46e46844" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010018L.html">TestArchitect does not support action <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;actionName&gt;</em> for the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;typeName&gt;</em> control since its native class has been mapped to an inappropriate class. Please remap its native class to another class,
+                           and then try again
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80013001L-d46e46858" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80013001L.html">Unable to connect to device <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;logicalName&gt;</em>. Please check to ensure that the device is connected to the test controller machine.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80015001L-d46e46869" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80015001L.html">Could not detect your <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;logicalName&gt;</em> device. Either it is currently locked or the re-signed app is inactive.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010001L-d46e46880" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010001L.html">Please add action <span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="keyword apiname">'use interface'</span> to specify the interface in use.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010004L-d46e46891" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010004L.html">No window found matching <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> within the timeout of <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;value&gt;</em> seconds. Please check the interface definition for <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em>, or set a longer timeout with the <span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="keyword apiname">"window wait"</span> setting.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010004L_1-d46e46911" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010004L-1.html">No window found matching <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em>, defined by <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowDefinition&gt;</em>, within the timeout of <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;value&gt;</em> seconds. Please check the interface definition for <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em>, or set a longer timeout with the <span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="keyword apiname">"window wait"</span> setting.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010005L-d46e46934" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010005L.html">The specifications for interface entity <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> match <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;number&gt;</em> open windows. Please check the specifications, or use the <span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="keyword apiname">'identify windows'</span> built-in action to assign a unique physical ID to the desired window.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010005L_1-d46e46951" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010005L-1.html">The specifications for interface entity <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em>, defined by <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowDefinition&gt;</em>, match <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;number&gt;</em> open windows. Please check the specifications, or use the <span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="keyword apiname">'identify windows'</span> built-in action to assign a unique physical ID to the desired window.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010007L-d46e46972" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010007L.html">The argument <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;argumentName&gt;</em> cannot be empty. Please input valid data. 
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010007L-1-d46e46983" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010007L-1.html">A <span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="keyword parmname">control</span> argument cannot be specified without a <span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="keyword parmname">window</span> argument. Please input valid data. 
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010016L-d46e46997" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010016L.html">Argument header(s) <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;headerName&gt;</em> is invalid. Please look up or retype the action to determine the correct header name(s). 
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x8001000AL-d46e47008" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001000AL.html">There is more than one matching UI object for <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em>. Please check the interface definition for <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em></a></span></span></li>
+               <li><span data-tocid="reference_0x8001000AL-d46e47021" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001000AL-1.html">There is more than one matching UI object for <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em>, defined by <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlDefinition&gt;</em>. Please check the interface definition for <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em>.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010009L-d46e47038" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010009L.html">No matching UI object found for <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> within the timeout of <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;value&gt;</em> seconds. Please check the interface definition for <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em>, or set a longer timeout with the "<span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="keyword apiname">object wait</span>" setting.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010009L-d46e47058" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010009L-1.html">No matching UI object found for <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em>, defined by <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlDefinition&gt;</em>, within the timeout of <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;value&gt;</em> seconds. Please check the interface definition for <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em>, or set a longer timeout with the <span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="keyword apiname">object wait</span> setting.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010003L-d46e47081" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010003L.html">Interface element <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> was not defined in interface entity <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em>. Please define the interface element. 
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010008L-d46e47095" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010008L.html">The argument <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;argumentName&gt;</em> cannot be empty. Please input valid data.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80020001L-d46e47106" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80020001L.html">UI Automation is only supported on Microsoft .NET framework 4.0 or higher. Install Microsoft .NET framework 4.0 or higher
+                           to use this feature.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010015L-d46e47114" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010015L.html">Argument header(s) <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;headerName&gt;</em> is invalid. Please look up or retype the action to determine the correct header name(s).
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80020003L-d46e47126" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80020003L.html">Chrome was not configured in the correct manner. Please refer to web testing section in TestArchitect Help to learn how to
+                           reconfigure Chrome for testing.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80020004L-d46e47134" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80020004L.html">Invalid interface element: <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em>. An interface element cannot be identified by both its 'xpath' and other properties.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80020005L-d46e47145" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80020005L.html">The <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;propertyName&gt;</em> property is deprecated and not supported in <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;platformName&gt;</em>. Please ensure that your UI controls are not identified by the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;propertyName&gt;</em> property, and then try again.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80016002L-d46e47162" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80016002L.html">The device ID <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;deviceID&gt;</em> is not connected. Connect the device with the ID <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;deviceID&gt;</em> or update the unique ID.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010038L-d46e47176" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010038L.html">The <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;actionName&gt;</em> action is not supported on the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;operatingSystemName&gt;</em> platform. Please use another applicable action.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80016003L-d46e47190" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80016003L.html"> TestArchitect is unable to retrieve clipboard.</a></span></span></li>
+               <li><span data-tocid="reference_0x80010002L-d46e47198" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010002L.html">No settings ('title', 'doc title' or 'handle', etc.) defined for interface entity <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em>. Please check if the correct interface is currently in use, or define the interface entity.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010407L-d46e47209" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010407L.html">TestArchitect is unable to find the specified column header. Please check that the column header <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;index&gt;</em> in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window, exists.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010407L-1-d46e47226" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010407L-1.html">TestArchitect is unable to find the specified column header. Please check that the column header <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;headerName&gt;</em> in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window, exists.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x8001040AL-d46e47243" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001040AL.html">Item index <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;index&gt;</em> out of range.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x8001040AL-1-d46e47254" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001040AL-1.html">Row or column index is out of range. Note that valid indexes must start from 1.</a></span></span></li>
+               <li><span data-tocid="reference_0x8001040AL_2-d46e47263" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001040AL-2.html">TestArchitect is unable to locate the header at index position <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;index&gt;</em>. The index value is out of range. 
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010801L-d46e47274" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010801L.html">TestArchitect is unable to locate the header at index position <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;index&gt;</em>. The index value is out of range.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010801L-1-d46e47285" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010801L-1.html">Column is out of range.</a></span></span></li>
+               <li><span data-tocid="reference_0x80016004L-d46e47293" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80016004L.html">TestArchitect is unable to find the specified column header. Please check the that column header at position <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;headerPosition&gt;</em> in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window, exists.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80016005L-d46e47310" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80016005L.html">Invalid input value of '<span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="keyword parmname">index'</span>. Index value must be a number greater than 0.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010701L-d46e47321" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010701L.html">TestArchitect is unable to identify the specified menu item. Please check that the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;itemName&gt;</em> menu item in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window, exists.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010701L_1-d46e47338" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010701L-1.html">TestArchitect is unable to identify the specified menu item. Please check that the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;itemName&gt;</em> menu item, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window, exists.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x8001000DL-d46e47352" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001000DL.html">The argument <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;argumentName&gt;</em> cannot be empty. Please input valid data.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x8001000DL-1-d46e47363" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001000DL-1.html">The argument <span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="keyword parmname">"value"</span> cannot be empty. Please input a number in the range of 0 to 100.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010203L-d46e47374" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010203L.html">The <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;propertyName&gt;</em> property of the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;TAClass&gt;</em> class in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control does not exist. Please specify another property, or check if the previous action line was executed successfully.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80016006L-d46e47391" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80016006L.html">TestArchitect is unable to retrieve tooltip of the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window, at <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;X- Coordinate, Y-Coordinate&gt;</em>.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010402L-d46e47409" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010402L.html">TestArchitect is unable to find the specified item. Please check the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;itemName&gt;</em> item in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window, exists.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010402L-1-d46e47426" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010402L-1.html">TestArchitect is unable to find the specified item. Please check the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;itemName&gt;</em> item in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window, exists.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010402L-2-d46e47443" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010402L-2.html">TestArchitect is unable to locate the cell at row <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;rowLocation&gt;</em> / column <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;columnLocation&gt;</em>. One or both values are out of range.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x8001000EL-d46e47457" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001000EL.html">Invalid value for argument <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;argumentNalue&gt;</em>. Please input valid data.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x8001000EL-1-d46e47468" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001000EL-1.html">The number of specified variables exceeds the number of actual popups.</a></span></span></li>
+               <li><span data-tocid="reference_0x8001000EL-2-d46e47476" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001000EL-2.html">Argument header <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;headerName&gt;</em> is either missing or in incorrect column. Please look up or retype the action to determine the correct position.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x8001000EL-3-d46e47487" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001000EL-3.html">Argument header <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;headerName&gt;</em> is invalid. Please look up or retype the action to determine the correct header name(s).
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x8001000EL-4-d46e47498" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001000EL-4.html">Invalid value for argument <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;argumentName&gt;</em>. Valid input data must conform to the default format <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;value&gt;</em>, or the format specified by the '<span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="keyword apiname">date format</span>' built-in setting.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x8001000EL-5-d46e47515" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001000EL-5.html">Invalid value for argument <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;argumentName&gt;</em>. Valid input data is a Boolean value, e.g. <span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="keyword option">on</span>/<span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="keyword option">off</span>.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x8001000EL-6-d46e47532" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001000EL-6.html">Invalid value for argument "value". Please input a number in the range of 0 to 100.</a></span></span></li>
+               <li><span data-tocid="reference_0x8001000EL-7-d46e47540" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001000EL-7.html">The argument 'baseline' cannot be empty. Please input valid data.</a></span></span></li>
+               <li><span data-tocid="reference_0x8001000EL-8-d46e47549" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001000EL-8.html">Invalid data. The value of 'picture' argument cannot contain 'high ASCII' characters or any of the following character:\\/:*?\"&amp;#60;&amp;#62;|#=[];%%.</a></span></span></li>
+               <li><span data-tocid="reference_0x80010010L-d46e47557" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010010L.html">There are not enough arguments for this action. Please look up or retype the action to determine the correct number of argument(s).</a></span></span></li>
+               <li><span data-tocid="reference_0x80010401L-d46e47565" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010401L.html">TestArchitect is unable to retrieve the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;itemValue&gt;</em> item text in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010020L-d46e47582" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010020L.html">TestArchitect could not detect the specified popup.</a></span></span></li>
+               <li><span data-tocid="reference_0x80010020L-1-d46e47590" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010020L-1.html">TestArchitect could not detect the specified prompt popup.</a></span></span></li>
+               <li><span data-tocid="reference_0x80010019L-d46e47598" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010019L.html">Message <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;messageText&gt;</em> does not exist. TestArchitect could not detect the message.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010019L-1-d46e47609" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010019L-1.html">Message <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;messageText&gt;</em> does not exist on any prompt popup. TestArchitect could not detect the message.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80016007L-d46e47620" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80016007L.html">The action <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;actionName&gt;</em> is not supported on current platform.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80016008L-d46e47631" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80016008L.html">Invalid value for argument <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;argumentName&gt;</em>. The value must be a positive integer starting from 1.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80016009L-d46e47642" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80016009L.html">TestArchitect is unable to run action <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;actionName&gt;</em> since focus could not be placed on the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control of type <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlType&gt;</em>. Please manually check whether the control accepts focus.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010303L-d46e47659" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010303L.html">TestArchitect is unable to find the specified tree node. Please check that the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;path&gt;</em> tree node in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window, exists.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010302L-d46e47677" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010302L.html">TestArchitect is unable to retrieve status of the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;path&gt;</em> tree node in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x8001000CL-d46e47694" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001000CL.html">The <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window did not disappear within the timeout of <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;value&gt;</em> seconds. Please adjust the timeout value.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010204L-d46e47708" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010204L.html">TestArchitect is unable to set the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;newValue&gt;</em> value for the given control. Please check if the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window, is disabled.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010204L-1-d46e47725" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010204L-1.html">TestArchitect is unable to click the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> from the given control. Please check if the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em>, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em>, is disabled.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010204L-2-d46e47742" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010204L-2.html">TestArchitect is unable to select any items from the given control. Please check if the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window, is disabled.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010504L-d46e47756" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010504L.html">Unable to delete cookies. Please close all processes of the test browser and try again.</a></span></span></li>
+               <li><span data-tocid="reference_0x80010012L-d46e47764" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010012L.html">Some elements do not meet the requirements for obtaining the encrypted password. The value of 'value' argument that you entered
+                           was used as an actual unencrypted password. 
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010207L-d46e47772" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010207L.html">TestArchitect is unable to set the &lt;newValue&gt; value for the given control. Please check the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window, is editable.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010206L-d46e47786" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010206L.html">TestArchitect is unable to set focus on the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control of type <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;TAClass&gt;</em>, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window. Please manually check whether the control accepts focus.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80016000L-d46e47803" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80016000L.html">Variable names must not start with a number, please choose a different one.</a></span></span></li>
+               <li><span data-tocid="reference_0x8001600AL-d46e47811" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001600AL.html">No item selected No item is selected in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010502L-d46e47826" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010502L.html">TestArchitect is unable to retrieve text in the status bar, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x8001600BL-d46e47837" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001600BL.html">TestArchitect is unable to retrieve double-click time of the system.</a></span></span></li>
+               <li><span data-tocid="reference_0x80010D04L-d46e47845" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010D04L.html">TestArchitect is unable to find the specified baseline picture. Please check the baseline picture <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;pictureName&gt;</em> exists.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010A02L-d46e47856" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010A02L.html">TestArchitect is unable to find the specified menu item. Please check that the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;itemValue&gt;</em> menu item in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window, exists.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010A02L_1-d46e47873" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010A02L-1.html">TestArchitect is unable to find the specified menu item. Please check that the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;itemValue&gt;</em> menu item, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window, exists.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010301L-d46e47887" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010301L.html">TestArchitect is unable to retrieve state of the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;path&gt;</em> tree node in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x8001600CL-d46e47904" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001600CL.html">Action <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;actionName&gt;</em> only supports testing on web browsers. Please use another applicable action.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x8001600DL-d46e47915" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001600DL.html">This setting does not support the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;browserType&gt;</em> browser. Please use the "<span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="keyword apiname">use browser</span>" setting to set Chrome as the default browser. 
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010406L-d46e47929" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010406L.html">The <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> list, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window, is empty. TestArchitect is unable to select any items in the list.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010408L-d46e47943" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010408L.html">TestArchitect is unable to select multiple items on a single-selection control <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em>, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window. Please ensure that only a single item is selected on the control.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x8001042AL-d46e47957" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001042AL.html">TestArchitect is unable to select the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;itemValue&gt;</em> item(s) in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x8001042AL-d46e47975" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001042AL-1.html">TestArchitect is unable to select the specified items in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window, since the control does not enable item selection.
+                           </a></span></span></li>
+               <li class="active"><span data-tocid="reference_0x80012001L-d46e47989" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80012001L.html">Selecting by index is not supported on this spin box type.</a></span></span></li>
+               <li><span data-tocid="reference_0x80010404L-d46e47997" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010404L.html">TestArchitect is unable to deselect all items in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010404L-1-d46e48011" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010404L-1.html">TestArchitect is unable to find the specified control. Please check that the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window, exists.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010403L-d46e48025" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010403L.html">TestArchitect is unable to retrieve status of the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;itemName&gt;</em> item in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010409L-d46e48042" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010409L.html">TestArchitect is unable to select the specified item. Please check the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;itemName&gt;</em> item in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window, is not disabled.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010405L-d46e48059" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010405L.html">TestArchitect is unable to select the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;itemName&gt;</em> item in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x8001600EL-d46e48076" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001600EL.html">This action only supports testing on Chrome browser.</a></span></span></li>
+               <li><span data-tocid="reference_0x8001000BL-d46e48084" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001000BL.html">Invalid value for argument <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;argumentName&gt;</em>. Valid input data is an integer in the range of <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;minNumber&gt;</em> to <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;maxNumber&gt;</em></a></span></span></li>
+               <li><span data-tocid="reference_0x8001600FL-d46e48100" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x8001600FL.html">Invalid value for argument <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;argumentName&gt;</em>. Valid input data is an integer starting from 0.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80016010L-d46e48111" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80016010L.html">The <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em>, continued to exist after the timeout of <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;value&gt;</em> seconds. Please adjust the timeout value.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80016011L-d46e48129" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80016011L.html">TestArchitect is unable to set the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;newValue&gt;</em> value for the cell at row <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;rowLocation&gt;</em> / column <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;columnLocation&gt;</em>.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80016012L-d46e48146" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80016012L.html">Invalid input value of <span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="keyword parmname">row</span>, <span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="keyword parmname">column</span> argument. Valid input should be a number greater than 0.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010021L-d46e48160" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010021L.html">TestArchitect could not identify any <span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="keyword parmname">&lt;form&gt;</span> containing the given control.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010D05L-d46e48171" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010D05L.html">TestArchitect is unable to find the specified picture. Please check that the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;pictureName&gt;</em> picture is available in the baseline.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010D06L-d46e48182" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010D06L.html">The argument '<span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="keyword parmname">picture</span>' cannot be empty. Please input valid data.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80016013L-d46e48193" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80016013L.html">The value for argument <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;argumentName&gt;</em> might be invalid or out of range. It must be a positive integer starting from 1 or an existing column header name.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80017001L-d46e48204" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80017001L.html">No HTTP request found. Please declare a 'create http request' built-in action to instantiate a new HTTP request before using
+                           this action.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80017002L-d46e48212" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80017002L.html">The expected status code <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;codeID&gt;</em> does not match with the returned code <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;codeID&gt;</em>.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80017003L-d46e48226" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80017003L.html">Unexpected error has occurred. Error Detail: <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;Exceptions caught by RestAssured&gt;</em></a></span></span></li>
+               <li><span data-tocid="reference_0x80018011L-d46e48236" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80018011L.html">TestArchitect currently supports running tests only on a single cloud-based device at a time. Support for parallel execution
+                           or multi-station execution will be introduced in the coming releases of TestArchitect.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80018010L-d46e48244" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80018010L.html">Unable to obtain session ID of the currently connected device.</a></span></span></li>
+               <li><span data-tocid="reference_0x80018009L-d46e48253" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80018009L.html">Unable to disconnect the device.</a></span></span></li>
+               <li><span data-tocid="reference_0x80018007L-d46e48261" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80018007L.html">The device is currently in use.</a></span></span></li>
+               <li><span data-tocid="reference_0x80018006L-d46e48269" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80018006L.html">Unable to find the cloud device, as specified by its session ID.</a></span></span></li>
+               <li><span data-tocid="reference_0x80018004L-d46e48277" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80018004L.html">The device is already connected.</a></span></span></li>
+               <li><span data-tocid="reference_0x80018003L-d46e48285" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80018003L.html">Could not detect your <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;logicalDeviceName&gt;</em> device because it is not assigned yet.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80018002L-d46e48296" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80018002L.html">The specified capability is not a valid JSON. Please ensure that the valid JSON format is provided.</a></span></span></li>
+               <li><span data-tocid="reference_0x80018001L-d46e48304" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80018001L.html">The URL Appium server is invalid. Please input a valid URL.</a></span></span></li>
+               <li><span data-tocid="reference_0x80010B07L-d46e48312" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010B07L.html">The argument <span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="keyword parmname">"tick"</span> cannot be empty. The tick count number must be larger than 0.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80010304L-d46e48323" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80010304L.html">TestArchitect is unable to expand the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;path&gt;</em> tree node in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;controlName&gt;</em> control, which resides in the <em xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph i">&lt;windowName&gt;</em> window.
+                           </a></span></span></li>
+               <li><span data-tocid="reference_0x80020006L-d46e48340" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80020006L.html">Syntax error in entity dynamic identifiers</a></span></span></li>
+               <li><span data-tocid="reference_0x80020006L_1-d46e48348" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80020006L-1.html">Syntax error in element dynamic identifiers</a></span></span></li>
+               <li><span data-tocid="reference_0x16896-d46e48357" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80020008L.html">'Navigate' fails to open additional tabs with WebDriver on Edge</a><span class="wh-tooltip">
+                           
+                           <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"></p>
+                           </span></span></span></li>
+               <li><span data-tocid="reference_0x16896b-d46e48367" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/0x80020009L.html">Navigate fails to open additional tabs with WebDriver on Internet Explorer</a><span class="wh-tooltip">
+                           
+                           <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"></p>
+                           </span></span></span></li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+</ul></div>
+                            </nav>
+                            </div>
+                         </div> 
+                    
+                    
+                    <div id="wh_topic_body" class="col-lg-7 col-md-9 col-sm-9 col-xs-12">
+                         <div id="title-container-right">   
+                            <div class="title-container-right hidden-print hidden-sm"> 
+                                <a class="glyphicon glyphicon-share" title="Share" onclick="" href="javascript:sharePopUp()">
+                                    <p class="share-title">SHARE</p>
+                                </a>
+                                <a class="glyphicon glyphicon-envelope" title="Send Email" onclick="" href="javascript:sendMail()">
+                                    <p class="share-title">E-MAIL</p>
+                                </a>
+                                <div class=" wh_print_link print "><a href="javascript:window.print();" title="Print this page"><p class="share-title">PRINT</p></a></div>
+                            </div>
+                            <div class="wh_right_tools hidden-sm hidden-xs">  
+                            <div class=" wh_indexterms_link "><a href="../../indexTerms.html" title="Index"></a></div> <!--index btn -->    
+                            <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  
+<span class="navprev"><a class="link" href="../../TA_FAQ/Topics/0x8001042AL-1.html" title="TestArchitect is unable to select the specified items in the &lt;controlName&gt; control, which resides in the &lt;windowName&gt; window, since the control does not enable item selection."></a></span>  
+<span class="navnext"><a class="link" href="../../TA_FAQ/Topics/0x80010404L.html" title="TestArchitect is unable to deselect all items in the &lt;controlName&gt; control, which resides in the &lt;windowName&gt; window."></a></span>  </span></div>
+                            <button class="wh_hide_highlight" title="Toggle search highlights"></button>
+                           <!--  <whc:webhelp_expand_collapse_sections/> -->
+                            </div>
+                         </div>
+                        <div id="breadscrumb"> <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol xmlns:html="http://www.w3.org/1999/xhtml" class="hidden-print"><li><span class="home"><a href="../../index.html"><span>Home</span></a></span></li>
+   <li><span class="topicref"><span class="title"><a href="../../TA_Automation/Topics/Automation_Guide_begin.html">Automation Guide</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">With <span class="ph">TestArchitect</span>, you can test apps running on various   environments, such as, desktop, web, mobile applications, etc.
+                  
+               </p>
+               </span></span></span></li>
+   <li><span class="topicref"><span class="title"><a href="../../TA_FAQ/Topics/faq.automation_error.html">Diagnosing and resolving automation errors</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">This section describes possible errors that you might encounter during automation, their   common causes and possible solutions.</p>
+               </span></span></span></li>
+   <li class="active"><span class="topicref"><span class="title"><a href="../../TA_FAQ/Topics/0x80012001L.html">Selecting by index is not supported on this spin box type.</a></span></span></li>
+</ol></div> </div>
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Selecting by index is not supported on this spin box type.</h1>
+
+  
+  <div class="body refbody">
+    <section class="section">Error code: <samp class="ph systemoutput">0x80012001L</samp></section>
+
+    <section class="section"><h2 class="title sectiontitle">Problem</h2>
+      
+      <p class="p">This happens because a given UI-interactive built-in action selects an item identified by
+        its index in a spin box control.</p>
+
+    </section>
+
+    <section class="section"><h2 class="title sectiontitle">Solution</h2>
+      
+      <p class="p">Select the item identified by its text value, and then re-run the test.</p>
+
+    </section>
+
+  </div>
+
+</article></main></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div> <nav class="navbar navbar-default wh_footer">
+ <!--  <div class=" footer-container text-center ">
+    <whc:include_html href="${webhelp.fragment.footer}"/>
+  </div> -->
+</nav>
+
+        
+        <div id="go2top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close glyphicon glyphicon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" />
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        <script src="../../oxygen-webhelp/lib/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        
+        
+<div id="bottom-3" class="tsection hidden-print">
+ <div class="tsection-inner">
+ 	<div class="tcol col-sm-no-grid">
+      <div class="mod-block clearfix">
+      	<div class="mb2pb-section clearfix light section_5abb0c9af2a15" style="">
+      		<div class="mb2pb-section-inner clearfix" style="padding-top:0px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+      			<div class="mb2pb-row clearfix dark-gray hpadding-normal row_5abb0c9af2a15" style="">
+      				<div class="mb2pb-row-inner clearfix" style="padding-top:70px;padding-bottom:70px;background-color:rgb(8, 8, 8);">
+      					<div class="container-fluid" style="">
+      						<div class="row">
+      							<div class="mb2pb-column col-sm-5 cnoempty light cnoheight" style="">
+                                   <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                   	 <div style="" class="mb2pb-text pos-left">
+                                   	 	<div class="moduletable">
+                                   	 		<div class="mb2pb-section clearfix light section_5abb0c9af2a15" style="">
+                                   	 			<div class="mb2pb-section-inner clearfix" style="padding-top:0px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+                                   	 				<div class="mb2pb-row clearfix dark-gray hpadding-normal row_5abb0c9b024dd" style="">
+                                   	 					<div class="mb2pb-row-inner clearfix" style="padding-top:20px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+                                                      		<div class="container-fluid" style="">
+                                                         		<div class="row">
+                                                         			<div class="mb2pb-column col-sm-6 cnoempty light cnoheight" style="">
+		                                                               <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+		                                                                  <div class="border-hor border1" style="border-bottom-color:rgba(255, 255, 255, 0.1);border-bottom-style:solid;border-bottom-width:1px;"></div>
+		                                                                  <div class="mb2pb-gap gap clearfix" style="height:45px;"></div>
+		                                                                  <div style="padding:0px 0px 20px 0px;" class="mb2pb-text pos-left">
+		                                                                     <h4 class="title">Contact Us</h4>
+		                                                                     <ul class="list list2 list-left">
+		                                                                        <li><a href="https://www.testarchitect.com/company/contact-us" target="_self">Leave A Message</a></li>
+		                                                                        <li><a href="https://www.testarchitect.com/product/testarchitect-team-and-testarchitect-enterprise/request-a-demo" target="_self">Request A Demo</a></li>
+		                                                                        <li><a href="https://www.testarchitect.com/company/request-a-quote" target="_self">Request A Quote</a></li>
+		                                                                        <li><a href="https://www.testarchitect.com/company/partners/become-a-partner" target="_self">Become A Partner</a></li>
+		                                                                     </ul>
+		                                                                  </div>
+		                                                               </div>
+		                                                            </div>	
+		                                                            <div class="mb2pb-column col-sm-6 cnoempty light cnoheight" style="">
+		                                                               <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+		                                                                  <div class="border-hor border1" style="border-bottom-color:rgba(255, 255, 255, 0.1);border-bottom-style:solid;border-bottom-width:1px;"></div>
+		                                                                  <div class="mb2pb-gap gap clearfix" style="height:45px;"></div>
+		                                                                  <div style="padding:0px 0px 20px 0px;" class="mb2pb-text pos-left">
+		                                                                     <h4 class="title">TestArchitect</h4>
+		                                                                     <ul class="list list2 list-left">
+		                                                                        <li><a href="https://www.testarchitect.com/" target="_self">Home</a></li>
+		                                                                        <li><a href="https://www.testarchitect.com/why-testarchitect" target="_self">Why TestArchitect</a></li>
+		                                                                        <li><a href="https://www.testarchitect.com/product/features-and-supported-platforms" target="_self">Products</a></li>
+		                                                                        <li><a href="https://www.testarchitect.com/product/professional-services-and-training" target="_self">Services</a></li>
+		                                                                     </ul>
+		                                                                  </div>
+		                                                               </div>
+		                                                            </div>
+                                                         		</div>
+                                                         	</div>
+                                                         </div>			
+
+                                   	 				</div>
+                                   	 			</div>	
+                                   	 		</div>
+                                   	 	</div>	
+                                   	 </div>
+                                   </div>
+      							</div>	
+      							<div class="mb2pb-column col-sm-2 cnoempty light cnoheight" style="">
+                                 <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                    <div style="" class="mb2pb-text pos-left">
+                                       <div class="moduletable">
+                                          <div class="mb2pb-section clearfix light section_5abb0c9b024dd" style="">
+                                             <div class="mb2pb-section-inner clearfix" style="padding-top:0px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+                                                <div class="mb2pb-row clearfix dark-gray hpadding-normal row_5abb0c9b024dd" style="">
+                                                   <div class="mb2pb-row-inner clearfix" style="padding-top:20px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+                                                      <div class="container-fluid" style="">
+                                                         <div class="row">
+                                                            <div class="mb2pb-column col-sm-12 cnoempty light cnoheight" style="">
+                                                               <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                                                  <div class="border-hor border1" style="border-bottom-color:rgba(255, 255, 255, 0.1);border-bottom-style:solid;border-bottom-width:1px;"></div>
+                                                                  <div class="mb2pb-gap gap clearfix" style="height:45px;"></div>
+                                                                  <div style="padding:0px 0px 20px 0px;" class="mb2pb-text pos-left">
+                                                                     <h4 class="title">Resources</h4>
+                                                                     <ul class="list list2 list-left">
+                                                                        <li><a href="https://www.testarchitect.com/resources/data-sheets" target="_self">Data Sheets</a></li>
+                                                                        <li><a href="https://www.testarchitect.com/resources/case-studies" target="_self">Case Studies</a></li>
+                                                                        <li><a href="https://www.testarchitect.com/resources/white-papers" target="_self">White Papers</a></li>
+                                                                        <li><a href="https://www.testarchitect.com/support/documentation/tutorial-videos" target="_self">Tutorial Videos</a></li>
+                                                                     </ul>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="mb2pb-column col-sm-5 cnoempty light cnoheight" style="">
+                                 <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                    <div style="" class="mb2pb-text pos-left">
+                                       <div class="moduletable">
+                                          <div class="mb2pb-section clearfix light section_5abb0c9b061e6" style="">
+                                             <div class="mb2pb-section-inner clearfix" style="padding-top:0px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+                                                <div class="mb2pb-row clearfix dark-gray hpadding-normal row_5abb0c9b061e6" style="">
+                                                   <div class="mb2pb-row-inner clearfix" style="padding-top:20px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+                                                      <div class="container-fluid" style="">
+                                                         <div class="row">
+                                                            <div class="mb2pb-column col-sm-6 cnoempty light cnoheight" style="">
+                                                               <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                                                  <div class="border-hor border1" style="border-bottom-color:rgba(255, 255, 255, 0.1);border-bottom-style:solid;border-bottom-width:1px;"></div>
+                                                                  <div class="mb2pb-gap gap clearfix" style="height:45px;"></div>
+                                                                  <div style="padding:0px 0px 20px 0px;" class="mb2pb-text pos-left">
+                                                                     <h4 class="title">Support</h4>
+                                                                     <ul class="list list2 list-left">
+                                                                        <li><a href="http://testarchitect.com/onlinehelp" target="_blank">Online Help</a></li>
+                                                                        <li><a href="http://support-ta.logigear.com/support/tickets/new" target="_blank">Submit A Ticket</a></li>
+                                                                        <li><a href="http://testarchitect.com/sso?host_url=support-ta.logigear.com" target="_blank">Login</a></li>
+                                                                        <li><a href="https://www.testarchitect.com/support/documentation/release-notes" target="_self">Release Notes</a></li>
+                                                                     </ul>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                            <div class="mb2pb-column col-sm-6 cnoempty light cnoheight" style="">
+                                                               <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                                                  <div class="border-hor border1" style="border-bottom-color:rgba(255, 255, 255, 0.1);border-bottom-style:solid;border-bottom-width:1px;"></div>
+                                                                  <div class="mb2pb-gap gap clearfix" style="height:45px;"></div>
+                                                                  <div style="padding:0px 0px 20px 0px;" class="mb2pb-text pos-left">
+                                                                     <h4 class="title">Community</h4>
+                                                                     <ul class="list list2 list-left">
+                                                                        <li><a href="http://support-ta.logigear.com/support/discussions" target="_blank">Forums</a></li>
+                                                                        <li><a href="http://support-ta.logigear.com/support/solutions" target="_blank">Knowledge Base</a></li>
+                                                                        <li><a href="http://www.logigear.com/blog" target="_blank">LogiGear Blog</a></li>
+                                                                        <li><a href="http://www.logigear.com/Magazine" target="_blank">LogiGear Magazine</a></li>
+                                                                     </ul>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+      						</div>	
+      					</div>
+      				</div>
+      			</div>
+      		</div>	
+      		<!-- END FOOTER ITEMS-->
+            <!-- START SOCIAL NETWORK-->
+      		<div class="mb2pb-section clearfix light section_5abb0c9af2a15" style="">
+               <div class="mb2pb-section-inner clearfix" style="padding-top:0px;padding-bottom:0px;">
+                  <div class="mb2pb-row clearfix light hpadding-normal row_5abb0c9af2a15" style="">
+                     <div class="mb2pb-row-inner clearfix" style="padding-top:px;padding-bottom:px;background-color:rgba(0, 0, 0, 0.83);">
+                        <div class="container-fluid" style="">
+                           <div class="row">
+                              <div class="mb2pb-column col-sm-4 cnoempty light cnoheight" style="">
+                                 <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                    <div style="" class="mb2pb-text pos-left">
+                                       <h6 style="color: white;">Powered by<!-- &nbsp; --> 
+                                       	<img style="vertical-align: middle;" src="https://www.testarchitect.com/images/gallery/other/logigear-logo.png" alt="" width="108" height="31" /> 
+                                       	</h6>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="mb2pb-column col-sm-8 cnoempty light cnoheight" style="">
+                                 <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                    <div style="" class="mb2pb-text pos-left">
+                                       <h6 style="color: white;">
+                                       <strong>STAY IN TOUCH</strong><!-- &nbsp; --> 
+                                       <a href="https://www.facebook.com/logigearcorporation/" target="_blank">
+                                       <img style="vertical-align: middle; margin-left: 5px; margin-right: 5px;" src="https://www.testarchitect.com/images/gallery/other/fb-icon.png" alt="" width="30" height="30" />
+                                       </a>
+                                       <a href="https://twitter.com/logigear" target="_blank">
+                                       <img class="" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;" src="https://www.testarchitect.com/images/gallery/other/twitter.png" alt="" width="30" height="30" />
+                                       </a>
+                                       <a href="https://www.linkedin.com/company/logigear-corporation" target="_blank">
+                                       <img class="" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;" src="https://www.testarchitect.com/images/gallery/other/linked-in-icon.png" alt="" width="30" height="30" />
+                                       </a>
+                                       <a href="https://www.youtube.com/user/LogiGearCorporation" target="_blank">
+                                       <img class="" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;" src="https://www.testarchitect.com/images/gallery/other/youtube-icon.png" alt="" width="30" height="30" />
+                                       </a>
+                                       <a href="https://plus.google.com/102920289935162355348" target="_blank">
+                                       <img class="" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;" src="https://www.testarchitect.com/images/gallery/other/g+-icon.png" alt="" width="30" height="30" />
+                                       </a>
+                                       <a href="mailto:sales@logigear.com?Subject=" target="_top">
+                                       <img class="" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;" src="https://www.testarchitect.com/images/gallery/other/email-icon.png" alt="" width="30" height="30" />
+                                       </a>
+                                   		</h6>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+      	</div>
+      </div>
+    </div>  	
+ </div>	
+</div>	
+   <footer id="footer" class="tsection hidden-print">
+      <div class="tsection-inner">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="tfooter tcol col-sm-12">
+                  <div style="float:left; padding:0">
+                     © 2019 LogiGear Corporation. All rights reserved. 
+                  </div>
+                  <div id="footer-url">
+                     <a href="https://www.testarchitect.com/legal/privacy-policy">
+                     Security Policy
+                     </a>
+                     <a href="https://www.testarchitect.com/legal/eula">
+                     Terms of Use
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+<script src="../../oxygen-webhelp/resource/media/jui/js/jquery.min.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/templates/fruition/js/jui/bootstrap.min.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/templates/fruition/assets/tooltipsy.min.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/templates/fruition/js/template.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/media/mb2ctmenu/js/superfish.custom.min.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/media/mb2ctmenu/js/mb2ctmenu.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/custom-script.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/jquery.bing.translator.js" type="text/javascript"> </script>
+<script src="https://apis.google.com/js/platform.js"></script>
+<script type="text/javascript">
+		$(document).ready(function(){
+    		$('#languagePicker').languagePicker({mode:'auto',delay:1000});
+		});
+		</script>
+		<script type="text/javascript">
+		    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		    try {
+		      var pageTracker = _gat._getTracker("UA-56756158-1");
+		    pageTracker._trackPageview();
+		    } catch(err) {}
+		</script>
+<!--
+<script type="text/javascript">
+	function setDefault(){
+	
+		document.getElementsByClassName('goog-te-menu-frame')[1].contentDocument.body.getElementsByClassName('text')[0].click();
+	}
+	
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
+    }
+
+	function triggerHtmlEvent(element, eventName) {
+	  var event;
+	  if (document.createEvent) {
+		event = document.createEvent('HTMLEvents');
+		event.initEvent(eventName, true, true);
+		element.dispatchEvent(event);
+	  } else {
+		event = document.createEventObject();
+		event.eventType = eventName;
+		element.fireEvent('on' + event.eventType, event);
+	  }
+	}
+
+	jQuery('.lang-select').click(function() {
+	  var theLang = jQuery(this).attr('data-lang');
+	  jQuery('.goog-te-combo').val(theLang);
+
+	  //alert(jQuery(this).attr('href'));
+	  window.location = jQuery(this).attr('href');
+	  location.reload();
+
+	});
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+-->
+
+        <div id="cover">
+            <div id="social-button">
+            <div class="share-social">
+            <h4 class="share-via-title">Share Via...</h4>
+            <div class="x-button"> 
+                <a href="javascript:turnOffPopUp()" class="glyphicon glyphicon-remove-sign"></a>
+            </div>
+            <div id="button-group">
+            <div class="social-button-popup"><a title="Facebook" href="javascript:fbshareCurrentPage()" alt="Facebook"> Facebook </a></div>
+            <div class="social-button-popup"><a title="Twitter" href="javascript:tweetCurrentPage()" alt="Twitter"> Twitter </a></div>
+            <div class="social-button-popup"><a title="LinkedIn" href="javascript:linkedinCurrentPage()" alt="LinkedIn"> LinkedIn </a></div>
+            <div class="social-button-popup" style="border: none;"><a title="Google+" href="javascript:gplusShare()" alt="Google+"> Google+ </a></div>
+            </div>
+            <div id="content-group">
+            </div>    
+            
+            </div>
+           <!--  <div class="g-plus" data-action="share"></div> -->
+        </div>        
+        </div>
+        
+    </body>
+</html>

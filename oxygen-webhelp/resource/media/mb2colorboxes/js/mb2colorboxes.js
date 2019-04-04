@@ -1,0 +1,8 @@
+/**
+ * @package		Mb2 Color Boxes
+ * @version		1.1.1
+ * @author		Mariusz Boloz (http://mb2extensions.com)
+ * @copyright	Copyright (C) 2015 - 2016 Mariusz Boloz (http://mb2extensions.com). All rights reserved
+ * @license		Commercial (http://codecanyon.net/licenses)
+**/
+"use strict";!function(t,e,i,o){function n(e,i){this.element=e,this.options=t.extend({},p,i),this.init()}var a="simpleParallax",s=t(e).height(),p={speed:.25,lpos:"left"};n.prototype={init:function(){var e=this,o=e.element,n={speed:t(o).data("speed")||e.options.speed},a=t.extend(e.options,n);t(i).on({scroll:function(){e.setYposition(o,a)}}),e.setYposition(o,a)},setYposition:function(i,o){var n=t(e).scrollTop(),a=t(i).offset().top,p=t(i).outerHeight(),r=Math.round((a-n)*o.speed);n>=a+p||a>=n+s||t(i).css({"background-attachment":"fixed","background-repeat":"no-repeat",position:"relative","background-position":o.lpos+" "+r+"px"})}},t.fn[a]=function(e){return this.each(function(){t.data(this,new n(this,e))})}}(jQuery,window,document),jQuery(document).ready(function(t){t(".mb2cboxes").each(function(){var e=t(this),i=e.data("htop"),o=t(this).find(".mb2cboxes-item");o.hover(function(){t(this).stop().animate({top:0},150),t(this).find(".mb2cboxes-article-introtext").stop().animate({marginTop:0},250)},function(){t(this).stop().animate({top:i+"px"},150),t(this).find(".mb2cboxes-article-introtext").stop().animate({marginTop:"200px"},250)});var n=/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);if(!n&&t(this).hasClass("mb2cboxes-parallax")){var a=e.data("speed"),s=e.data("lbg");t(".mb2cboxes-parallax").simpleParallax({speed:a,lpos:s})}})});

@@ -1,0 +1,137 @@
+
+/* Module titles */
+
+.module-heading,
+.mb2pb-text > .title {
+	margin-bottom: 25px;	
+}
+
+.module-heading h3 {
+	margin: 0;	
+}
+
+
+
+/* Set margin for modules in sidebar */
+
+.sidebar-col .mod-block {
+	margin-bottom: 60px;
+}
+
+.sidebar-col .mod-block:last-child {
+	margin-bottom: 0;	
+}
+
+
+.module-title {
+	position: relative;	
+}
+
+
+
+
+
+
+/* Module style 'center' */
+
+.center {
+	text-align: center;
+}
+
+
+
+/* Login module */
+
+#login-form ul.unstyled {
+	padding: 0;
+	list-style: none;	
+}
+
+#login-form .checkbox {
+	margin-bottom: 15px;	
+}
+
+.mod-dd-container #login-form input[type="text"],
+.mod-dd-container #login-form input[type="password"] {
+	width: 100%;	
+}
+
+
+
+
+
+/* ================================== MODULE STYLES */
+
+
+
+.mod-block.color-1,
+.mod-block.color-2,
+.mod-block.border-1,
+.mod-block.border-2,
+.mod-block.border-3,
+.mod-block.color-info,
+.mod-block.color-success,
+.mod-block.color-danger,
+.mod-block.color-warning {
+	padding: 30px;
+	.mb2_border_radius(2px);	
+}
+
+
+.mod-block.color-1 {
+	background-color: @mb2_color_bg_accent1;	
+}
+
+.mod-block.color-2 {
+	background-color: @mb2_color_bg_accent2;	
+}
+
+.mod-block.color-info {background-color: @mb2_color_bg_info;}
+.mod-block.color-success {background-color: @mb2_color_bg_success;}
+.mod-block.color-danger {background-color: @mb2_color_bg_danger;}
+.mod-block.color-warning {background-color: @mb2_color_bg_warning;}
+
+
+.mod-block.border-1,
+.mod-block.border-2,
+.mod-block.border-3 {
+	border: solid 1px @mb2_border_color_base;	
+}
+
+
+.mod-block.border-2 {
+	border-style: dotted;
+	border-color: darken(@mb2_border_color_base,5%);	
+}
+
+.mod-block.border-3 {
+	border-style: dashed;
+	border-color: darken(@mb2_border_color_base,5%);	
+}
+
+
+
+/* Module 1 */
+
+.mod-block.module1 {
+	position: relative;
+	border-top: solid 1px @mb2_border_color_base;
+	padding-top: 30px;		
+}
+
+.mod-block.module1:before {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 80px;
+	height: 1px;
+	top: -4px;
+	left: 0;
+	border-top: solid 1px @mb2_color_bg_accent1;	
+}
+
+
+.dark .mod-block.module1,
+.dark-gray .mod-block.module1 {
+	border-top-color: rgba(255,255,255, .1);	
+}

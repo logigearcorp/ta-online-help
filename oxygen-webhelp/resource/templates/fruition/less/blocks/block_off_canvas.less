@@ -1,0 +1,250 @@
+
+/* Mobile navigation bar */
+
+
+@media (max-width: @mb2_screen_tablet){
+	
+	.off-canvas-on  {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.off-canvas-on.scroll-on {
+		overflow-y: scroll;	
+	}
+
+}
+
+
+.off-canvas-overlay {
+	z-index: 999;	
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: fade(@mb2_color_bg_accent2,60%);
+	display: none;
+}
+
+.off-canvas-panel {
+	position: fixed;	
+	top: 0;
+	bottom: 0;
+	width: 300px;
+	background-color: @mb2_color_bg_accent2;
+	z-index: 9999;
+	overflow: hidden;	
+}
+
+.off-canvas-panel.light {
+	background-color: @mb2_color_bg_gray1;	
+}
+
+.off-canvas-panel > div {
+	height: 100%;
+	overflow-y: scroll;
+	width: 330px;	
+}
+
+.off-canvas-panel > div > div {
+	position: relative;
+	width: 260px;
+	margin-left: 20px;
+	padding-top: 50px;	
+}
+
+
+
+
+
+
+
+/* Close button */
+
+.off-canvas-panel .off-canvas-open {
+	position: absolute;
+	top: 5px;
+	right: -15px;
+	display: block;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	color: @mb2_color_bg_accent1;
+	text-decoration: none;
+	font-size: 52px;
+}
+
+.off-canvas-panel .off-canvas-open:hover,
+.off-canvas-panel .off-canvas-open:focus {
+	color: @mb2_color_bg_accent1;
+	text-decoration: none;	
+}
+
+
+
+/* Panel left and right */
+
+.off-canvas-panel.off-canvas-left {
+	left: -300px;	
+}
+
+.off-canvas-panel.off-canvas-right {
+	right: -300px;	
+}
+
+
+
+
+/*========================================== OFF OPEN LINK */
+
+.logo-left .off-canvas-link-wrap {
+	float: right;
+	margin-left: 20px;
+}
+
+.logo-right .off-canvas-link-wrap {
+	float: left;
+	margin-right: 20px;
+}
+
+.logo-center .off-canvas-link-wrap {
+	float: none;
+	text-align: center;
+}
+
+.logo-center .off-canvas-link-wrap > a {
+	height: auto !important;
+	line-height: normal !important;		
+}
+
+.off-canvas-link-wrap > a {
+	display: inline-block;
+	color: @mb2_color_bg_accent1;
+}
+
+.off-canvas-link-wrap > a:hover,
+.off-canvas-link-wrap > a:focus {
+	color: @mb2_color_bg_accent1;	
+}
+
+.off-canvas-link-wrap > a > i {
+	line-height: inherit;
+	vertical-align: middle;	
+}
+
+.off-canvas-link-wrap > a > span {
+	line-height: inherit;	
+	display: inline-block;
+}
+
+
+@media (max-width: @mb2_screen_tablet){
+	
+	.header-is-grid .off-canvas-link-wrap {
+		float: none;
+		width: 100%;
+		text-align: center;	
+		margin-left: 0;
+		margin-right: 0;
+	}
+	
+	.header-is-grid .off-canvas-link-wrap > a {
+		height: auto !important;
+		line-height: normal !important;	
+	}
+	
+	.header-no-grid.logo-center .off-canvas-link-wrap,
+	.header-is-grid .off-canvas-link-wrap {
+		margin-bottom: 30px;
+	}
+	
+	
+}
+
+
+
+
+
+/*========================================== OFF CANVAS MENU */
+
+
+/* General style */
+
+.off-canvas-panel .menu li {
+	margin: 0;	
+}
+
+.off-canvas-panel .menu li > a {
+	line-height: 1;		
+}
+
+
+
+/* Accordion icons */
+
+.accordion-btn {}
+
+.accordion-btn i {
+	position: relative;
+	left: 12px;
+}
+
+
+
+/* First level menu */
+
+
+.off-canvas-panel .menu > li {
+	border-bottom: dotted 1px rgba(255,255,255,.15);	
+}
+
+.off-canvas-panel.light .menu > li {
+	border-bottom-color: darken(@mb2_border_color_base,15%);	
+}
+
+.off-canvas-panel .menu > li:last-child {
+	border: 0;	
+}
+
+.off-canvas-panel .menu li a {
+	color: lighten(@mb2_color_text_base,20%);	
+}
+
+.off-canvas-panel.light .menu li a {
+	color: @mb2_color_text_base;	
+}
+
+.off-canvas-panel .menu li a:hover,
+.off-canvas-panel .menu li a:focus,
+.off-canvas-panel .menu li.active > a,
+.off-canvas-panel .menu li.selected > a {
+	color: @mb2_color_bg_accent1;	
+}
+
+.off-canvas-panel .menu > li > a {
+	padding: 20px 0;
+	font-size: @mb2_font_size_large;		
+}
+
+.off-canvas-panel .menu > li > .accordion-btn-wrap .accordion-btn i {
+	font-size: 21px;
+	top: 3px;	
+}
+
+
+/* Next levels */
+
+.off-canvas-panel .menu > li > ul {
+	margin-bottom: 20px;
+}
+
+.off-canvas-panel .menu > li li a {
+	padding: 15px 0;	
+}
+
+.off-canvas-panel .menu > li li .accordion-btn-wrap .accordion-btn i {
+	font-size: 14px;	
+}

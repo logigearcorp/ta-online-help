@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+	<name>plg_system_mb2shortcodes</name>
+	<author>Mariusz Boloz</author>
+	<creationDate>May 2013</creationDate>
+	<copyright>Copyright (C) 2013 - 2016 Mariusz Boloz (http://mb2extensions.com) All rights reserved.</copyright>
+	<license>GNU/GPL (http://www.gnu.org/copyleft/gpl.html)</license>
+	<authorEmail>mariuszboloz@gmail.com</authorEmail>
+	<authorUrl>www.mb2extensions.com</authorUrl>
+	<version>4.0.2</version>
+	<description>PLG_SYSTEM_MB2SHORTCODES_XML_DESCRIPTION</description>
+	<media destination="mb2shortcodes" folder="media">
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<filename>index.html</filename>
+	</media>
+	<files>
+		<filename plugin="mb2shortcodes">mb2shortcodes.php</filename>
+		<filename>generator.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_system_mb2shortcodes.ini</language>
+		<language tag="en-GB">en-GB.plg_system_mb2shortcodes.sys.ini</language>
+	</languages>
+</extension>

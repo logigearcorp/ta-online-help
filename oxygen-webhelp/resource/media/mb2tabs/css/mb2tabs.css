@@ -1,0 +1,807 @@
+/**
+ * @package		Mb2 Tabs
+ * @version		1.0.0
+ * @author		Mariusz Boloz (http://mb2extensions.com)
+ * @copyright	Copyright (C) 2015 Mariusz Boloz (http://mb2extensions.com). All rights reserved
+ * @license		Commercial (http://codecanyon.net/licenses)
+**/
+
+
+
+
+.mb2tbs *,
+.mb2tbs *:before,
+.mb2tbs *:after
+{
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+    box-sizing: content-box;	
+}
+
+
+
+/* General accordion style */
+
+.mb2tbs-accordion {
+	width: 100%;
+}
+ 
+ 
+/* Accordion panel */
+
+.mb2tbs-panel-group {
+	margin: 0 0 3px 0;
+}
+
+
+.mb2tbs-panel-heading {
+	margin: 0;
+	padding: 0;
+	cursor: pointer;	
+}
+
+.mb2tbs-panel-heading span {
+	display: block;		
+}
+
+.mb2tbs-panel-heading span span {
+	font-weight: normal;
+	line-height: 1.5;
+	padding: 12px 15px;		
+}
+
+
+
+
+
+/* General tabs style */
+
+.mb2tbs-tabs {
+	position: relative;	
+}
+
+/* Tabs list */
+.mb2tbs-tabs-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: normal;	
+}
+
+
+
+/* Tabs align */
+
+.mb2tbs-align-right .mb2tbs-tabs-list {
+	text-align: right;	
+}
+
+
+
+.mb2tbs-align-center .mb2tbs-tabs-list {
+	text-align: center;	
+}
+
+
+
+.mb2tbs-tabs-list li {
+	margin: 0;
+	padding: 0;
+	display: inline-block;	
+}
+
+
+/* Tabs tsyle - normal state */
+
+.mb2tbs-tabs-list li a {
+	display: inline-block;
+	padding: 12px 15px;
+	text-decoration: none;
+}
+
+.mb2tbs-tabs-list li a:focus {
+	outline: none;	
+}
+
+
+
+
+
+
+/* Tabs left and right position */
+
+.tabs-left .mb2tbs-tabs-links,
+.tabs-right .mb2tbs-tabs-links {
+	position: absolute;
+	top: 0;	
+	width: 180px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+
+.tabs-left .mb2tbs-tabs-list li,
+.tabs-right .mb2tbs-tabs-list li {
+	display: block;
+	float: none;
+	margin: 0 0 2px 0;	
+}
+
+
+
+.tabs-left .mb2tbs-tabs-list li a,
+.tabs-right .mb2tbs-tabs-list li a {
+	display: block;	
+}
+
+
+
+
+
+/* Tabs left position */
+
+.tabs-left .mb2tbs-tabs-links {
+	left: 0;
+}
+
+
+
+.tabs-left .mb2tbs-tabs-list li a {
+	text-align: right;	
+}
+
+
+
+.tabs-left .mb2tbs-tabs-content {
+	margin-left: 180px;	
+}
+
+
+
+
+
+
+/* Tabs right position */
+
+.tabs-right .mb2tbs-tabs-links {
+	right: 0;
+}
+
+
+
+
+.tabs-right .mb2tbs-tabs-content {
+	margin-right: 180px;	
+}
+
+
+
+
+
+
+
+/* Tabs and accordions size */
+
+.mb2tbs-size-xsmall .mb2tbs-tabs-list li a,
+.mb2tbs-size-xsmall .mb2tbs-panel-heading span span  {
+	padding:0 8px;
+	font-size: 83%;
+}
+
+.mb2tbs-size-small .mb2tbs-tabs-list li a,
+.mb2tbs-size-small .mb2tbs-panel-heading span span  {
+	padding: 5px 10px;
+	font-size: 90%;
+}
+
+.mb2tbs-size-large .mb2tbs-tabs-list li a,
+.mb2tbs-size-large .mb2tbs-panel-heading span span  {
+	padding: 20px 25px;
+	font-size: 115%;
+}
+
+.mb2tbs-size-xlarge .mb2tbs-tabs-list li a,
+.mb2tbs-size-xlarge .mb2tbs-panel-heading span span {
+	padding: 30px 35px;
+	font-size: 130%;
+}
+
+
+
+
+
+
+
+
+
+/* text color on colored backgrounds */
+
+.mb2tbs-cbg .mb2tbs-panel-content-inner,
+.mb2tbs-cbg .mb2tbs-panel-content-inner h1,
+.mb2tbs-cbg .mb2tbs-panel-content-inner h2,
+.mb2tbs-cbg .mb2tbs-panel-content-inner h3,
+.mb2tbs-cbg .mb2tbs-panel-content-inner h4,
+.mb2tbs-cbg .mb2tbs-panel-content-inner h5,
+.mb2tbs-cbg .mb2tbs-panel-content-inner h6,
+.mb2tbs-cbg .mb2tbs-tab-content-inner,
+.mb2tbs-cbg .mb2tbs-tab-content-inner h1,
+.mb2tbs-cbg .mb2tbs-tab-content-inner h2,
+.mb2tbs-cbg .mb2tbs-tab-content-inner h3,
+.mb2tbs-cbg .mb2tbs-tab-content-inner h4,
+.mb2tbs-cbg .mb2tbs-tab-content-inner h5,
+.mb2tbs-cbg .mb2tbs-tab-content-inner h6 {
+	color: #fff;
+}
+
+
+
+
+
+
+
+/* Additional style */
+
+.mb2tbs-clr {
+	*zoom: 1;
+}
+.mb2tbs-clr:before,
+.mb2tbs-clr:after {
+	display: table;
+	content: "";
+	line-height: 0;
+}
+.mb2tbs-clr:after {
+	clear: both;
+}
+
+
+
+.mb2moduleintabs a:focus {
+	outline: none;	
+}
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------- Style 1 --------------------------- */
+
+/* Accordion */
+
+.mb2tbs-style-1 .mb2tbs-panel-heading {
+	background-color: #f4f5f6;
+	color: #999;
+	font-size: 14px;	
+	-moz-box-shadow: 0 1px 1px rgba(0,0,0,.2);
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.2);
+	-ms-box-shadow: 0 1px 1px rgba(0,0,0,.2);
+	-o-box-shadow: 0 1px 1px rgba(0,0,0,.2);
+	box-shadow: 0 1px 1px rgba(0,0,0,.2);
+}
+
+.mb2tbs-style-1 .mb2tbs-panel-heading:hover {
+	color: #555;
+}
+
+
+
+/* Accordion item - active state */
+
+.mb2tbs-style-1 .active .mb2tbs-panel-heading {
+	background-color: #0099ff;
+	color: #fff;
+}
+
+
+
+
+
+/* Normal tabs */
+
+.mb2tbs-style-1 .mb2tbs-tabs-list-item a {
+	color: #999;
+	text-decoration: none;	
+	background-color: #f4f5f6;
+}
+
+.mb2tbs-style-1 .mb2tbs-tabs-list-item a:hover {
+	color: #555;	
+}
+
+
+/* Active tabs */
+
+
+.mb2tbs-style-1 .mb2tbs-tabs-list-item .active {
+	background-color: #0099ff;
+	color: #fff !important;	
+}
+
+
+/* Tabs top position */
+
+.mb2tbs-style-1 .tabs-top .mb2tbs-tabs-list {
+	margin-bottom: -1px;
+}
+
+.mb2tbs-style-1 .tabs-top .mb2tbs-tabs-list-item a,
+.mb2tbs-style-1 .tabs-top .mb2tbs-tabs-links {
+	border-bottom: solid 1px #0099ff;	
+}
+
+
+/* Tabs left position */
+
+.mb2tbs-style-1 .tabs-left .mb2tbs-tabs-list {
+	margin-right: -1px;
+}
+
+.mb2tbs-style-1 .tabs-left .mb2tbs-tabs-list-item a,
+.mb2tbs-style-1 .tabs-left .mb2tbs-tabs-links {
+	border-right: solid 1px #0099ff;
+		
+}
+
+
+/* Tabs right position */
+
+.mb2tbs-style-1 .tabs-right .mb2tbs-tabs-list {
+	margin-left: -1px;
+}
+
+
+.mb2tbs-style-1 .tabs-right .mb2tbs-tabs-list-item a, 
+.mb2tbs-style-1 .tabs-right .mb2tbs-tabs-links {
+	border-left: solid 1px #0099ff;
+		
+}
+
+
+/* Tabs bottom position */
+
+.mb2tbs-style-1 .tabs-bottom .mb2tbs-tabs-list {
+	margin-top: -1px;
+}
+
+
+.mb2tbs-style-1 .tabs-bottom .mb2tbs-tabs-list-item a,
+.mb2tbs-style-1 .tabs-bottom .mb2tbs-tabs-links {
+	border-top: solid 1px #0099ff;
+		
+}
+
+
+
+
+
+
+/* ------------------------------------- Style 2 (normal style 2) --------------------------- */
+
+/* Accordion */
+
+.mb2tbs-style-2 .mb2tbs-panel-heading {	
+	border: solid 1px #eaeaea;
+	color: #999;
+	font-size: 14px;
+}
+
+.mb2tbs-style-2 .mb2tbs-panel-heading:hover {
+	color: #555;	
+}
+
+
+
+/* Accordion item - active state */
+
+.mb2tbs-style-2 .active .mb2tbs-panel-heading {
+	border-color: #0099ff;
+	color: #555;
+}
+
+
+
+/* Normal tabs */
+
+.mb2tbs-style-2 .mb2tbs-tabs-list-item a {
+	border: solid 1px rgba(255,255,255,0);	
+	color: #aaa;
+}
+
+.mb2tbs-style-2 .mb2tbs-tabs-list-item a:hover {
+	color: #555;	
+}
+
+
+
+/* Active tabs */
+
+.mb2tbs-style-2 .mb2tbs-tabs-list-item .active {
+	border-color: #0099ff;
+	color: #555;	
+}
+
+
+
+/* Tabs top position */
+
+.mb2tbs-style-2 .tabs-top .mb2tbs-tabs-links {
+	border-bottom: solid 1px #0099ff;		
+}
+
+.mb2tbs-style-2 .tabs-top .mb2tbs-tabs-list-item a {
+	border-bottom-color: rgba(255,255,255,0);
+	margin-bottom: -1px;	
+}
+
+.mb2tbs-style-2 .tabs-top .mb2tbs-tabs-list-item .active {
+	border-bottom-color: #fff;
+	
+}
+
+
+
+/* Tabs left position */
+
+.mb2tbs-style-2 .tabs-left .mb2tbs-tabs-links {
+	border-right: solid 1px #0099ff;		
+}
+
+.mb2tbs-style-2 .tabs-left .mb2tbs-tabs-list-item a {
+	border-right-color: rgba(255,255,255,0);
+	margin-right: -1px;	
+}
+
+.mb2tbs-style-2 .tabs-left .mb2tbs-tabs-list-item .active {
+	border-right-color: #fff;
+}
+
+
+
+/* Tabs right position */
+
+.mb2tbs-style-2 .tabs-right .mb2tbs-tabs-links {
+	border-left: solid 1px #0099ff;		
+}
+
+.mb2tbs-style-2 .tabs-right .mb2tbs-tabs-list-item a {
+	border-left-color: rgba(255,255,255,0);
+	margin-left: -1px;	
+}
+
+.mb2tbs-style-2 .tabs-right .mb2tbs-tabs-list-item .active {
+	border-left-color: #fff;
+}
+
+
+
+/* Tabs bottom position */
+
+.mb2tbs-style-2 .tabs-bottom .mb2tbs-tabs-links {
+	border-top: solid 1px #0099ff;		
+}
+
+.mb2tbs-style-2 .tabs-bottom .mb2tbs-tabs-list-item a {
+	border-top-color: rgba(255,255,255,0);
+	margin-top: -1px;		
+}
+
+.mb2tbs-style-2 .tabs-bottom .mb2tbs-tabs-list-item .active {
+	border-top-color: #fff;
+}
+
+
+
+
+
+/* ------------------------------------- Style 4 (normal style 3) --------------------------- */
+
+
+
+/* Accordion */
+
+.mb2tbs-style-4 .mb2tbs-panel-heading {	
+	border: solid 1px #0099ff;
+	color: #0099ff;
+	font-size: 14px;
+}
+
+.mb2tbs-style-4 .active .mb2tbs-panel-heading {
+	background-color: #0099ff;
+	color: #fff !important;
+}
+
+
+
+/* Normal tabs */
+
+.mb2tbs-style-4 .mb2tbs-tabs-list-item a {
+	border: solid 1px #0099ff;	
+	color: #0099ff;
+}
+
+
+
+/* Active tabs */
+
+.mb2tbs-style-4 .mb2tbs-tabs-list-item .active {
+	background-color: #0099ff;
+	color: #fff !important;	
+	position: relative;
+}
+
+.mb2tbs-style-4 .mb2tbs-tabs-list-item .active:after {
+	content: '';
+	display: block;
+	position: absolute;
+	border: solid 5px rgba(255,255,255,0);	
+	border-width: 10px;
+}
+
+.mb2tbs-size-xlarge.mb2tbs-style-4 .mb2tbs-tabs-list-item .active:after {
+	border-width: 20px;	
+}
+
+.mb2tbs-size-large.mb2tbs-style-4 .mb2tbs-tabs-list-item .active:after {
+	border-width: 13px;	
+}
+
+.mb2tbs-size-small.mb2tbs-style-4 .mb2tbs-tabs-list-item .active:after {
+	border-width: 8px;	
+}
+
+.mb2tbs-size-xsmall.mb2tbs-style-4 .mb2tbs-tabs-list-item .active:after {
+	border-width: 5px;	
+}
+
+
+
+/* Tabs top and bottom  position */
+
+.mb2tbs-style-4 .tabs-top .mb2tbs-tabs-list-item a,
+.mb2tbs-style-4 .tabs-bottom .mb2tbs-tabs-list-item a {
+	margin-right: 3px;	
+}
+
+.mb2tbs-style-4 .tabs-top .mb2tbs-tabs-list-item .active:after,
+.mb2tbs-style-4 .tabs-bottom .mb2tbs-tabs-list-item .active:after {
+	left: 50%;
+	margin-left: -10px;	
+}
+
+.mb2tbs-size-xlarge.mb2tbs-style-4 .tabs-top .mb2tbs-tabs-list-item .active:after,
+.mb2tbs-size-xlarge.mb2tbs-style-4 .tabs-bottom .mb2tbs-tabs-list-item .active:after {
+	margin-left: -20px;
+}
+
+.mb2tbs-size-large.mb2tbs-style-4 .tabs-top .mb2tbs-tabs-list-item .active:after,
+.mb2tbs-size-large.mb2tbs-style-4 .tabs-bottom .mb2tbs-tabs-list-item .active:after {
+	margin-left: -13px;
+}
+
+.mb2tbs-size-small.mb2tbs-style-4 .tabs-top .mb2tbs-tabs-list-item .active:after,
+.mb2tbs-size-small.mb2tbs-style-4 .tabs-bottom .mb2tbs-tabs-list-item .active:after {
+	margin-left: -8px;
+}
+
+.mb2tbs-size-xsmall.mb2tbs-style-4 .tabs-top .mb2tbs-tabs-list-item .active:after,
+.mb2tbs-size-xsmall.mb2tbs-style-4 .tabs-bottom .mb2tbs-tabs-list-item .active:after {
+	margin-left: -5px;
+}
+
+
+
+/* Tabs top position */
+
+.mb2tbs-style-4 .tabs-top .mb2tbs-tabs-list-item .active:after {
+	top: 100%;	
+	border-top-color: #0099ff;
+	
+}
+
+
+
+/* Tabs bottom position */
+
+.mb2tbs-style-4 .tabs-bottom .mb2tbs-tabs-list-item .active:after {
+	bottom: 100%;	
+	border-bottom-color: #0099ff;	
+}
+
+
+
+/* Tabs left and right position */
+
+.mb2tbs-style-4 .tabs-left .mb2tbs-tabs-list-item a,
+.mb2tbs-style-4 .tabs-right .mb2tbs-tabs-list-item a {
+	margin-bottom: 3px;	
+}
+
+.mb2tbs-style-4 .tabs-left .mb2tbs-tabs-links,
+.mb2tbs-style-4 .tabs-right .mb2tbs-tabs-links {
+	padding-top: 0;
+	padding-bottom: 0;		
+}
+
+.mb2tbs-style-4 .tabs-left .mb2tbs-tabs-list-item a.active:after,
+.mb2tbs-style-4 .tabs-right .mb2tbs-tabs-list-item a.active:after {
+	top: 50%;
+	margin-top: -10px;
+}
+
+.mb2tbs-size-xlarge.mb2tbs-style-4 .tabs-left .mb2tbs-tabs-list-item .active:after,
+.mb2tbs-size-xlarge.mb2tbs-style-4 .tabs-right .mb2tbs-tabs-list-item .active:after {
+	margin-top: -20px;
+}
+
+.mb2tbs-size-large.mb2tbs-style-4 .tabs-left .mb2tbs-tabs-list-item .active:after,
+.mb2tbs-size-large.mb2tbs-style-4 .tabs-right .mb2tbs-tabs-list-item .active:after {
+	margin-top: -13px;
+}
+
+.mb2tbs-size-small.mb2tbs-style-4 .tabs-left .mb2tbs-tabs-list-item .active:after,
+.mb2tbs-size-small.mb2tbs-style-4 .tabs-right .mb2tbs-tabs-list-item .active:after {
+	margin-top: -8px;
+}
+
+.mb2tbs-size-xsmall.mb2tbs-style-4 .tabs-left .mb2tbs-tabs-list-item .active:after,
+.mb2tbs-size-xsmall.mb2tbs-style-4 .tabs-right .mb2tbs-tabs-list-item .active:after {
+	margin-top: -5px;
+}
+
+
+/* Tabs left position */
+
+.mb2tbs-style-4 .tabs-left .mb2tbs-tabs-list-item a.active:after {
+	left: 100%;
+	border-left-color: #0099ff;
+}
+
+
+/* Tabs right position */
+
+.mb2tbs-style-4 .tabs-right .mb2tbs-tabs-list-item a.active:after {
+	right: 100%;
+	border-right-color: #0099ff;
+}
+
+
+
+
+/* ------------------------------------- Style 3 (color style 1) --------------------------- */
+
+/* Accordion */
+
+.mb2tbs-style-3 .mb2tbs-panel-heading {	
+	background-color: #f4f5f6;
+	font-size: 14px;
+	color: #999;
+}
+
+.mb2tbs-style-3 .mb2tbs-panel-heading:hover {
+	color: #555;	
+}
+
+
+
+/* Accordion item - active state */
+
+.mb2tbs-style-3 .active .mb2tbs-panel-heading {
+	background-color: #0099ff;
+	color: #fff !important;
+	border-bottom: solid 1px rgba(255,255,255,.2);
+}
+
+
+
+
+/* Normal tabs */
+
+.mb2tbs-style-3 .mb2tbs-tabs-list-item a {
+	color: #fff;
+	opacity: .8;
+}
+
+.mb2tbs-style-3 .mb2tbs-tabs-list-item a:hover,
+.mb2tbs-style-3 .mb2tbs-tabs-list-item a.active {
+	opacity: 1;	
+}
+
+.mb2tbs-style-3 .mb2tbs-tabs-links {
+	background-color: #0099ff;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+
+
+
+/*--------------------------------------------------------------*/
+/*	Resposive style
+/*--------------------------------------------------------------*/	
+@media only screen and (max-width:768px){
+	
+	
+	/* ------------- Resposive tabs style */	
+	
+	.mb2tbs-tabs .mb2tbs-tabs-links {
+		border: 0 !important;
+		position: static;
+		width: 100% !important;	/* Add important beacuse use may use custom width of left or right tabs */
+		padding: 0;
+	}	
+	
+	.mb2tbs-tabs .mb2tbs-tabs-list li {
+		width: 100%;
+		margin: 0 0 3px 0;
+		display: block;
+		float: none;			
+	}	
+	
+	.mb2tbs-tabs .mb2tbs-tabs-list li a {
+		margin: 0 !important;
+		text-align: center;	
+		display: block;	
+	}	
+	
+	.mb2tbs-tabs .mb2tbs-tabs-content {
+		margin: 0 !important; /* Add important beacuse use may use custom margin left or right for tabs content div */
+	}	
+	
+	
+	
+	
+	/* ------------- Resposive accordion style */
+	
+	.mb2tbs-panel-group .mb2tbs-panel-heading {
+		text-align: center;	
+	}
+	
+	
+	
+	
+	/* ------------- Style 1 */	
+	
+	.mb2tbs-style-1 .mb2tbs-tabs-list-item a,
+	.mb2tbs-style-1 .mb2tbs-tabs-list-item a.active  {
+		border-color: rgba(255,255,255,0) !important;	
+	}
+	
+	
+	
+	
+	
+	
+	/* ------------- Style 2 */
+	
+	/* Override white border color for normal tabs */
+	
+	.mb2tbs-style-2 .mb2tbs-tabs-list-item a {
+		border-color: #ddd !important;	
+	}	
+	
+	
+	
+	/* Override white border color for active tabs */
+	
+	.mb2tbs-style-2 .mb2tbs-tabs-list-item .active {
+		border-color: #0099ff !important;	
+	}
+	
+	
+	
+	/* ------------- Style 4 (normal 3) */
+	
+	.mb2tbs-style-4 .mb2tbs-tabs-list-item a.active:after {
+		display: none;	
+	}	
+	
+	
+		
+	
+	
+}

@@ -1,0 +1,1 @@
+define({"topics" : [{"title":"GetMousePosition","id":"abt_GetMousePosition_2","href":"TA_Automation\/Topics\/abt_GetMousePosition_2.html","menu": {"hasChildren":false,},"tocID":"abt_GetMousePosition_2-d46e41305","topics":[]}]});

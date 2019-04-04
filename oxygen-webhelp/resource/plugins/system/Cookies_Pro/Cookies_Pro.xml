@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="2.5.0" group="system" method="upgrade">    
+    <name>Cookies Pro</name> 
+    <author>Pixelpro</author> 
+    <creationDate>2013-9-20</creationDate> 
+    <copyright>All rights reserved by pixelpro.es 2013.</copyright> 
+    <license>GPL 1.0</license> 
+    <authorEmail>guru@pixelpro.es</authorEmail> 
+    <authorUrl>www.pixelpro.es</authorUrl> 
+    <version>1.1.0</version> 
+    <description>DESCRIPCTION_PLUGINS</description>
+    <files>
+        <filename plugin="Cookies_Pro">Cookies_Pro.php</filename>
+        <filename>Cookies_Pro/images/info_icon.png</filename>
+        <filename>Cookies_Pro/images/continue_button.png</filename>
+        <filename>Cookies_Pro/jquery.cookie.js</filename>
+        <filename>Cookies_Pro/Cookies_Pro.js</filename>
+        <filename>Cookies_Pro/Cookies_Pro.css</filename>
+    </files> 
+    <languages>
+	<language tag="es-ES">languages/es-ES.plg_system_Cookies_Pro.sys.ini</language>
+        <language tag="en-GB">languages/en-GB.plg_system_Cookies_Pro.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params" label="PIXEL_INITIAL_PARAMETERS">
+            <fieldset name="basic">
+		<field name="mensaje" type="textarea" rows="12" cols="80" default="PIXEL_TEXT_LEGAL" label="PIXEL_LABEL_MSG_BANNER" description="PIXEL_DESC_MSG_BANNER" />
+                <field type="radio" name="agreeCookies" default="No" label="PIXEL_AGREE_COOKIES" description="PIXEL_AGREE_DESC_COOKIES">
+                    <option value="Yes">PIXEL_DELETE_COOKIES_YES</option>
+                    <option value="No">PIXEL_DELETE_COOKIES_NO</option>
+                </field>
+		<field type="radio" name="agreeAnalitycs" default="No" label="PIXEL_AGREE_ANALITYC_COOKIES" description="PIXEL_AGREE_DESC_COOKIES_ANALITYCS">
+                    <option value="Yes">PIXEL_AGREE_COOKIES_ANALITYCS_YES</option>
+                    <option value="No">PIXEL_AGREE_COOKIES_ANALITYCS_NO</option>
+                </field>				
+                <field name="buttomText" type="text" rows="12" cols="80" default="PIXEL_BUTTON_TEXT" label="PIXEL_BUTTON_TEXT_LABEL_BANNER" description="BUTTON_TEXT_DESC_BANNER" />
+                <field name="urlLegal" type="text" rows="12" cols="80" default="#" label="PIXEL_URL_LABEL_BANNER" description="PIXEL_URL_DESC_BANNER" />
+                <field name="urlLegalText" type="text" rows="12" cols="80" default="PIXEL_LINK_LEGAL_TEXT" label="PIXEL_URL_TEXT_LABEL_BANNER" description="URL_TEXT_DESC_BANNER" />
+                <field name="ancho" type="text" rows="12" cols="80" default="0" label="PIXEL_LABEL_ANCHO_BANNER" description="PIXEL_DESC_ANCHO_BANNER" />
+                <field name="background" type="text" rows="8" cols="80" default="#000" label="PIXEL_BACK_LABEL_BANNER" description="PIXEL_BACK_DESC_BANNER" />
+                <field name="color" type="text" rows="12" cols="80" default="#FFF" label="PIXEL_TEXT_LABEL_BANNER" description="PIXEL_BACK_TEXT_DESC_BANNER" />
+                <field name="pading_top" type="text" rows="12" cols="80" default="4" label="PIXEL_PADING_TOP_LABEL_BANNER" description="PIXEL_PADING_TOP_DESC_BANNER" />
+                <field name="pading_bottom" type="text" rows="12" cols="80" default="4" label="PIXEL_PADING_BOTTOM_LABEL_BANNER" description="PIXEL_PADING_BOTTOM_DESC_BANNER" />
+                <field type="radio" name="posicion" default="bottom" label="PIXEL_POSITION_LABEL_BANNER" description="PIXEL_POSITION_DESC_BANNER">
+                    <option value="bottom">Bottom</option>
+                    <option value="top">Top</option>
+                </field>
+                <field type="list" name="button_style" default="bottom" label="PIXEL_STYLE_BUTTON_LABEL_BANNER" description="PIXEL_STYLE_BUTTON_DESC_BANNER">
+                    <option value="butonDefecto">PIXEL_STYLE_0</option>
+                    <option value="BotonUno">PIXEL_STYLE_1</option>
+                    <option value="BotonDos">PIXEL_STYLE_2</option>
+                    <option value="BotonTres">PIXEL_STYLE_3</option>
+                </field>
+                <field type="list" name="jquery_charge" default="si" label="PIXEL_JQUERY_LABEL_BANNER" description="PIXEL_JQUERY_DESC_BANNER">
+                    <option value="si">PIXEL_JQUERY_YES</option>
+                    <option value="no">PIXEL_JQUERY_NO</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    
+</extension>

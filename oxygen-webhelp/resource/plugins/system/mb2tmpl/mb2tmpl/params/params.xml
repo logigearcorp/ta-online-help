@@ -1,0 +1,1438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params" addfieldpath="/plugins/system/mb2tmpl/mb2tmpl/libs/fields/">
+	   <fieldset name="mb2-mb2tmpl-params" label="PLG_SYSTEM_MB2TMPL_TAB_LABEL"> 
+	   		
+			<field type="mb2admin" label="" title="" />	
+			
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_SECTIONS" />				
+			
+				
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_SECTIONS_ORDERING" desc="" />			
+				<field name="sections_order"  type="list" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_ORDER" description="" >	
+					<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+					<option value="1">PLG_SYSTEM_MB2TMPL_SET_CUSTOM_ORDER</option>
+				</field>
+				<field name="sections" 
+					type="mb2sorder"
+					label=""
+					sections="Before Content 1,Before Content 2,Before Content 3,Main Content,After Content 1,After Content 2,After Content 3,Bottom 1,Bottom 2,Bottom 3" 
+				/>
+			<field type="mb2enditem" label="" />
+			
+			
+			
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_SECTION_TOP_BAR" desc="" />
+			
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_GRID" />				
+					<field name="top_grid" type="list" default="" label="PLG_SYSTEM_MB2TMPL_GRID" description="PLG_SYSTEM_MB2TMPL_GRID_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="top_fwidth"  type="list" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_FULL_WIDTH" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>		
+				<field type="mb2enditem" label="" />
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_STYLE" />			
+					<field name="top_vertical_align" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN" description="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>			
+					<field name="top_padding" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_PADDING" description="PLG_SYSTEM_MB2TMPL_SECTION_PADDING_DESC" />
+					<field name="top_mod_margin" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN" description="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN_DESC" />				
+					<field name="top_ccss" type="mb2toggletext" label="" />
+				<field type="mb2enditem" label="" />		
+			
+			<field type="mb2enditem" label="" />
+			
+			
+			
+			
+			
+			
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_HEADER" desc="" />
+				
+				
+				<field name="main_header" type="list"  default="" label="PLG_SYSTEM_MB2TMPL_MAIN_HEADER_ON" description="" >	
+					<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+						
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_GRID" />			
+					<field name="main_header_grid" type="list" default="" label="PLG_SYSTEM_MB2TMPL_GRID" description="PLG_SYSTEM_MB2TMPL_GRID_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="main_header_fwidth"  type="list" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_FULL_WIDTH" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_STYLE" />
+					<field name="main_header_style" type="groupedlist" default="" label="PLG_SYSTEM_MB2TMPL_HEADER_STYLE" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>		
+						<group label="PLG_SYSTEM_MB2TMPL_HEADER_STYLE_NORMAL">
+							<option value="1">PLG_SYSTEM_MB2TMPL_HEADER_STYLE_OPT_1</option>
+							<option value="2">PLG_SYSTEM_MB2TMPL_HEADER_STYLE_OPT_2</option>
+							<!--<option value="11">PLG_SYSTEM_MB2TMPL_HEADER_STYLE_OPT_11</option>-->
+						</group>
+						<group label="PLG_SYSTEM_MB2TMPL_HEADER_STYLE_DARK">
+							<option value="5">PLG_SYSTEM_MB2TMPL_HEADER_STYLE_OPT_5</option>
+						</group>
+						<group label="PLG_SYSTEM_MB2TMPL_HEADER_STYLE_TRANSPARENT">
+							<option value="3">PLG_SYSTEM_MB2TMPL_HEADER_STYLE_OPT_3</option>
+							<!--<option value="4">PLG_SYSTEM_MB2TMPL_HEADER_STYLE_OPT_4</option>-->
+							<option value="6">PLG_SYSTEM_MB2TMPL_HEADER_STYLE_OPT_6</option>
+							<option value="7">PLG_SYSTEM_MB2TMPL_HEADER_STYLE_OPT_7</option>
+							<option value="8">PLG_SYSTEM_MB2TMPL_HEADER_STYLE_OPT_8</option>
+							<option value="9">PLG_SYSTEM_MB2TMPL_HEADER_STYLE_OPT_9</option>
+							<option value="10">PLG_SYSTEM_MB2TMPL_HEADER_STYLE_OPT_10</option>
+						</group>
+					</field>				
+					<field name="main_header_fixw"  type="list" default="" label="PLG_SYSTEM_MB2TMPL_HEADER_FIX_WIDTH" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>			
+					<field name="main_header_vertical_align" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN" description="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>			
+					<field name="main_header_padding" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_PADDING" description="PLG_SYSTEM_MB2TMPL_SECTION_PADDING_DESC" />			
+					<field name="main_header_mod_margin" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN" description="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN_DESC" />						
+					<field name="main_header_ccss" type="mb2toggletext" label="" />
+				<field type="mb2enditem" label="" />
+			<field type="mb2enditem" label="" />		
+			
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_SECTION_SHOWCASE" desc="" />	
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_GRID" />
+					<field name="showcase_grid" type="list" default="" label="PLG_SYSTEM_MB2TMPL_GRID" description="PLG_SYSTEM_MB2TMPL_GRID_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="showcase_fwidth"  type="list" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_FULL_WIDTH" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />		
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_STYLE" />			
+					<field name="showcase_vertical_align" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN" description="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="showcase_padding" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_PADDING" description="PLG_SYSTEM_MB2TMPL_SECTION_PADDING_DESC" />
+					<field name="showcase_mod_margin" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN" description="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN_DESC" />			
+					<field name="showcase_color_sheme" type="list" default="" label="PLG_SYSTEM_MB2TMPL_COLOR_SHEME" description="" >
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="light">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_LIGHT</option>
+						<!-- <option value="dark-gray">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK_GRAY</option> -->
+						<option value="dark">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK</option>
+					</field>			
+					<field name="showcase_cls" type="groupedlist" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_CLS" description="" >
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_PREDEFINED">
+							<option value="dark-section">PLG_SYSTEM_MB2TMPL_SECTION_DARK</option>
+						</group>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_CUSTOM">
+							<option value="custom-section1">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE1</option>
+							<option value="custom-section2">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE2</option>
+							<option value="custom-section3">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE3</option>
+							<option value="custom-section4">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE4</option>
+							<option value="custom-section5">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE5</option>
+							<option value="custom-section6">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE6</option>
+							<option value="custom-section7">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE7</option>
+						</group>				
+					</field>
+					<field name="showcase_ccss" type="mb2toggletext" label="" />
+				<field type="mb2enditem" label="" />		
+			
+			<field type="mb2enditem" label="" />	
+			
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_PAGE_TITLE" desc="" />
+		
+				<field name="mb2_page_title" type="list" default="" label="PLG_SYSTEM_MB2TMPL_PAGE_TITLE" description="" >	
+					<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+				<field name="page_title_fwidth"  type="list" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_FULL_WIDTH" description="" >	
+					<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_STYLE" />			
+					<field name="page_title_vertical_align" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN" description="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="page_title_padding" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_PADDING" description="PLG_SYSTEM_MB2TMPL_SECTION_PADDING_DESC" />
+					<field name="page_title_mod_margin" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN" description="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN_DESC" />				
+					<field name="page_title_color_sheme" type="list" default="" label="PLG_SYSTEM_MB2TMPL_COLOR_SHEME" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="light">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_LIGHT</option>
+						<!-- <option value="dark-gray">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK_GRAY</option> -->
+						<option value="dark">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK</option>
+					</field>				
+					<field name="page_title_cls" type="groupedlist" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_CLS" description="" >
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_PREDEFINED">
+							<option value="dark-section">PLG_SYSTEM_MB2TMPL_SECTION_DARK</option>
+						</group>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_CUSTOM">
+							<option value="custom-section1">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE1</option>
+							<option value="custom-section2">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE2</option>
+							<option value="custom-section3">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE3</option>
+							<option value="custom-section4">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE4</option>
+							<option value="custom-section5">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE5</option>
+							<option value="custom-section6">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE6</option>
+							<option value="custom-section7">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE7</option>
+						</group>				
+					</field>
+					<field name="page-title_ccss" type="mb2toggletext" label="" />
+				<field type="mb2enditem" label="" />
+			<field type="mb2enditem" label="" />	
+			
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_SECTION_BEFORE_CONTENT_1" desc="" />		
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_GRID" />
+					<field name="before_content_1_grid" type="list" default="" label="PLG_SYSTEM_MB2TMPL_GRID" description="PLG_SYSTEM_MB2TMPL_GRID_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="before_content_1_fwidth"  type="list" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_FULL_WIDTH" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_STYLE" />			
+					<field name="before_content_1_vertical_align" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN" description="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="before_content_1_padding" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_PADDING" description="PLG_SYSTEM_MB2TMPL_SECTION_PADDING_DESC" />
+					<field name="before_content_1_mod_margin" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN" description="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN_DESC" />			
+					<field name="before_content_1_color_sheme" type="list" default="" label="PLG_SYSTEM_MB2TMPL_COLOR_SHEME" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="light">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_LIGHT</option>
+						<!-- <option value="dark-gray">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK_GRAY</option> -->
+						<option value="dark">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK</option>
+					</field>			
+					<field name="before_content_1_cls" type="groupedlist" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_CLS" description="" >
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_PREDEFINED">
+							<option value="dark-section">PLG_SYSTEM_MB2TMPL_SECTION_DARK</option>
+						</group>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_CUSTOM">
+							<option value="custom-section1">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE1</option>
+							<option value="custom-section2">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE2</option>
+							<option value="custom-section3">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE3</option>
+							<option value="custom-section4">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE4</option>
+							<option value="custom-section5">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE5</option>
+							<option value="custom-section6">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE6</option>
+							<option value="custom-section7">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE7</option>
+						</group>				
+					</field>			
+					<field name="before_content_1_ccss" type="mb2toggletext" label="" />
+				<field type="mb2enditem" label="" />			
+			
+			<field type="mb2enditem" label="" />		
+			
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_SECTION_BEFORE_CONTENT_2" desc="" />		
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_GRID" />	
+					<field name="before_content_2_grid" type="list" default="" label="PLG_SYSTEM_MB2TMPL_GRID" description="PLG_SYSTEM_MB2TMPL_GRID_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="before_content_2_fwidth"  type="list" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_FULL_WIDTH" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_STYLE" />	
+					<field name="before_content_2_vertical_align" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN" description="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="before_content_2_padding" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_PADDING" description="PLG_SYSTEM_MB2TMPL_SECTION_PADDING_DESC" />
+					<field name="before_content_2_mod_margin" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN" description="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN_DESC" />				
+					<field name="before_content_2_color_sheme" type="list" default="" label="PLG_SYSTEM_MB2TMPL_COLOR_SHEME" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="light">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_LIGHT</option>
+						<!-- <option value="dark-gray">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK_GRAY</option> -->
+						<option value="dark">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK</option>
+					</field>				
+					<field name="before_content_2_cls" type="groupedlist" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_CLS" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_PREDEFINED">
+							<option value="dark-section">PLG_SYSTEM_MB2TMPL_SECTION_DARK</option>
+						</group>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_CUSTOM">
+							<option value="custom-section1">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE1</option>
+							<option value="custom-section2">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE2</option>
+							<option value="custom-section3">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE3</option>
+							<option value="custom-section4">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE4</option>
+							<option value="custom-section5">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE5</option>
+							<option value="custom-section6">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE6</option>
+							<option value="custom-section7">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE7</option>
+						</group>				
+					</field>			
+					<field name="before_content_2_ccss" type="mb2toggletext" label="" />
+				<field type="mb2enditem" label="" />	
+			
+			<field type="mb2enditem" label="" />
+			
+			
+			
+			
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_SECTION_BEFORE_CONTENT_3" desc="" />		
+			
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_GRID" />	
+					<field name="before_content_3_grid" type="list" default="" label="PLG_SYSTEM_MB2TMPL_GRID" description="PLG_SYSTEM_MB2TMPL_GRID_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="before_content_3_fwidth"  type="list" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_FULL_WIDTH" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_STYLE" />				
+					<field name="before_content_3_vertical_align" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN" description="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="before_content_3_padding" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_PADDING" description="PLG_SYSTEM_MB2TMPL_SECTION_PADDING_DESC" />
+					<field name="before_content_3_mod_margin" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN" description="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN_DESC" />			
+					<field name="before_content_3_color_sheme" type="list" default="" label="PLG_SYSTEM_MB2TMPL_COLOR_SHEME" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="light">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_LIGHT</option>
+						<!-- <option value="dark-gray">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK_GRAY</option> -->
+						<option value="dark">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK</option>
+					</field>			
+					<field name="before_content_3_cls" type="groupedlist" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_CLS" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_PREDEFINED">
+							<option value="dark-section">PLG_SYSTEM_MB2TMPL_SECTION_DARK</option>
+						</group>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_CUSTOM">
+							<option value="custom-section1">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE1</option>
+							<option value="custom-section2">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE2</option>
+							<option value="custom-section3">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE3</option>
+							<option value="custom-section4">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE4</option>
+							<option value="custom-section5">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE5</option>
+							<option value="custom-section6">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE6</option>
+							<option value="custom-section7">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE7</option>
+						</group>				
+					</field>			
+					<field name="before_content_3_ccss" type="mb2toggletext" label="" />
+				<field type="mb2enditem" label="" />	
+			
+			<field type="mb2enditem" label="" />
+			
+			
+			
+					
+			
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_SECTION_MAIN_CONTENT"  desc=""/>				
+				
+				<field name="main_content" type="list"  default="" label="PLG_SYSTEM_MB2TMPL_MAIN_CONTENT_ON" description="" >	
+					<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_GRID" />			
+					<field name="main_content_grid" type="list" default="" label="PLG_SYSTEM_MB2TMPL_GRID" description="PLG_SYSTEM_MB2TMPL_GRID_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="main_content_fwidth"  type="list" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_FULL_WIDTH" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_STYLE" />			
+					<field name="main_content_vertical_align" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN" description="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="main_content_padding" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_PADDING" description="PLG_SYSTEM_MB2TMPL_SECTION_PADDING_DESC" />	
+					<!--<field name="main_content_mod_margin" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN" description="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN_DESC" />-->				
+					<field name="main_content_color_sheme" type="list" default="" label="PLG_SYSTEM_MB2TMPL_COLOR_SHEME" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="light">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_LIGHT</option>
+						<!-- <option value="dark-gray">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK_GRAY</option> -->
+						<option value="dark">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK</option>
+					</field>				
+					<field name="main_content_cls" type="groupedlist" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_CLS" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_PREDEFINED">
+							<option value="dark-section">PLG_SYSTEM_MB2TMPL_SECTION_DARK</option>
+						</group>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_CUSTOM">
+							<option value="custom-section1">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE1</option>
+							<option value="custom-section2">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE2</option>
+							<option value="custom-section3">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE3</option>
+							<option value="custom-section4">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE4</option>
+							<option value="custom-section5">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE5</option>
+							<option value="custom-section6">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE6</option>
+							<option value="custom-section7">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE7</option>
+						</group>				
+					</field>	
+					<field name="main_content_ccss" type="mb2toggletext" label="" />
+				<field type="mb2enditem" label="" />	
+			
+			<field type="mb2enditem" label="" />		
+			
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_SECTION_AFTER_CONTENT_1" desc="" />
+			
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_GRID" />
+					<field name="after_content_1_grid" type="list" default="" label="PLG_SYSTEM_MB2TMPL_GRID" description="PLG_SYSTEM_MB2TMPL_GRID_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>	
+					<field name="after_content_1_fwidth"  type="list" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_FULL_WIDTH" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_STYLE" />
+					<field name="after_content_1_vertical_align" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN" description="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="after_content_1_padding" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_PADDING" description="PLG_SYSTEM_MB2TMPL_SECTION_PADDING_DESC" />			
+					<field name="after_content_1_mod_margin" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN" description="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN_DESC" />			
+					<field name="after_content_1_color_sheme" type="list" default="" label="PLG_SYSTEM_MB2TMPL_COLOR_SHEME" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="light">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_LIGHT</option>
+						<!-- <option value="dark-gray">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK_GRAY</option> -->
+						<option value="dark">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK</option>
+					</field>			
+					<field name="after_content_1_cls" type="groupedlist" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_CLS" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_PREDEFINED">
+							<option value="dark-section">PLG_SYSTEM_MB2TMPL_SECTION_DARK</option>
+						</group>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_CUSTOM">
+							<option value="custom-section1">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE1</option>
+							<option value="custom-section2">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE2</option>
+							<option value="custom-section3">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE3</option>
+							<option value="custom-section4">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE4</option>
+							<option value="custom-section5">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE5</option>
+							<option value="custom-section6">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE6</option>
+							<option value="custom-section7">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE7</option>
+						</group>				
+					</field>			
+					<field name="after_content_1_ccss" type="mb2toggletext" label="" />	
+				<field type="mb2enditem" label="" />			
+				
+			<field type="mb2enditem" label="" />		
+			
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_SECTION_AFTER_CONTENT_2" desc="" />		
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_GRID" />
+					<field name="after_content_2_grid" type="list" default="" label="PLG_SYSTEM_MB2TMPL_GRID" description="PLG_SYSTEM_MB2TMPL_GRID_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>	
+					<field name="after_content_2_fwidth"  type="list" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_FULL_WIDTH" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />		
+				
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_STYLE" />			
+					<field name="after_content_2_vertical_align" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN" description="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="after_content_2_padding" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_PADDING" description="PLG_SYSTEM_MB2TMPL_SECTION_PADDING_DESC" />			
+					<field name="after_content_2_mod_margin" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN" description="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN_DESC" />			
+					<field name="after_content_2_color_sheme" type="list" default="" label="PLG_SYSTEM_MB2TMPL_COLOR_SHEME" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="light">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_LIGHT</option>
+						<!-- <option value="dark-gray">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK_GRAY</option> -->
+						<option value="dark">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK</option>
+					</field>
+					<field name="after_content_2_cls" type="groupedlist" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_CLS" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_PREDEFINED">
+							<option value="dark-section">PLG_SYSTEM_MB2TMPL_SECTION_DARK</option>
+						</group>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_CUSTOM">
+							<option value="custom-section1">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE1</option>
+							<option value="custom-section2">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE2</option>
+							<option value="custom-section3">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE3</option>
+							<option value="custom-section4">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE4</option>
+							<option value="custom-section5">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE5</option>
+							<option value="custom-section6">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE6</option>
+							<option value="custom-section7">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE7</option>
+						</group>				
+					</field>			
+					<field name="after_content_2_ccss" type="mb2toggletext" label="" />
+				<field type="mb2enditem" label="" />			
+			
+			<field type="mb2enditem" label="" />
+			
+			
+			
+			
+			
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_SECTION_AFTER_CONTENT_3" desc="" />		
+			
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_GRID" />
+					<field name="after_content_3_grid" type="list" default="" label="PLG_SYSTEM_MB2TMPL_GRID" description="PLG_SYSTEM_MB2TMPL_GRID_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>	
+					<field name="after_content_3_fwidth"  type="list" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_FULL_WIDTH" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />		
+				
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_STYLE" />			
+					<field name="after_content_3_vertical_align" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN" description="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="after_content_3_padding" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_PADDING" description="PLG_SYSTEM_MB2TMPL_SECTION_PADDING_DESC" />			
+					<field name="after_content_3_mod_margin" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN" description="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN_DESC" />			
+					<field name="after_content_3_color_sheme" type="list" default="" label="PLG_SYSTEM_MB2TMPL_COLOR_SHEME" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="light">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_LIGHT</option>
+						<!-- <option value="dark-gray">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK_GRAY</option> -->
+						<option value="dark">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK</option>
+					</field>			
+					<field name="after_content_3_cls" type="groupedlist" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_CLS" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_PREDEFINED">
+							<option value="dark-section">PLG_SYSTEM_MB2TMPL_SECTION_DARK</option>
+						</group>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_CUSTOM">
+							<option value="custom-section1">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE1</option>
+							<option value="custom-section2">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE2</option>
+							<option value="custom-section3">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE3</option>
+							<option value="custom-section4">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE4</option>
+							<option value="custom-section5">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE5</option>
+							<option value="custom-section6">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE6</option>
+							<option value="custom-section7">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE7</option>
+						</group>				
+					</field>			
+					<field name="after_content_3_ccss" type="mb2toggletext" label="" />
+				<field type="mb2enditem" label="" />		
+			
+			<field type="mb2enditem" label="" />
+			
+				
+			
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_SECTION_BOTTOM_1"  desc="" />	
+		
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_GRID" />
+					<field name="bottom_1_grid" type="list" default="" label="PLG_SYSTEM_MB2TMPL_GRID" description="PLG_SYSTEM_MB2TMPL_GRID_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>	
+					<field name="bottom_1_fwidth"  type="list" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_FULL_WIDTH" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />			
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_STYLE" />			
+					<field name="bottom_1_vertical_align" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN" description="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="bottom_1_padding" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_PADDING" description="PLG_SYSTEM_MB2TMPL_SECTION_PADDING_DESC" />			
+					<field name="bottom_1_mod_margin" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN" description="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN_DESC" />			
+					<field name="bottom_1_color_sheme" type="list" default="" label="PLG_SYSTEM_MB2TMPL_COLOR_SHEME" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="light">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_LIGHT</option>
+						<!-- <option value="dark-gray">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK_GRAY</option> -->
+						<option value="dark">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK</option>
+					</field>			
+					<field name="bottom_1_cls" type="groupedlist" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_CLS" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_PREDEFINED">
+							<option value="dark-section">PLG_SYSTEM_MB2TMPL_SECTION_DARK</option>
+						</group>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_CUSTOM">
+							<option value="custom-section1">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE1</option>
+							<option value="custom-section2">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE2</option>
+							<option value="custom-section3">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE3</option>
+							<option value="custom-section4">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE4</option>
+							<option value="custom-section5">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE5</option>
+							<option value="custom-section6">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE6</option>
+							<option value="custom-section7">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE7</option>
+						</group>				
+					</field>		
+					<field name="bottom_1_ccss" type="mb2toggletext" label="" />
+				<field type="mb2enditem" label="" />		
+			
+			<field type="mb2enditem" label="" />	
+			
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_SECTION_BOTTOM_2" desc="" />
+			
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_GRID" />
+					<field name="bottom_2_grid" type="list" default="" label="PLG_SYSTEM_MB2TMPL_GRID" description="PLG_SYSTEM_MB2TMPL_GRID_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="bottom_2_fwidth"  type="list" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_FULL_WIDTH" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />			
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_STYLE" />			
+					<field name="bottom_2_vertical_align" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN" description="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="bottom_2_padding" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_PADDING" description="PLG_SYSTEM_MB2TMPL_SECTION_PADDING_DESC" />			
+					<field name="bottom_2_mod_margin" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN" description="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN_DESC" />			
+					<field name="bottom_2_color_sheme" type="list" default="" label="PLG_SYSTEM_MB2TMPL_COLOR_SHEME" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="light">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_LIGHT</option>
+						<!-- <option value="dark-gray">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK_GRAY</option> -->
+						<option value="dark">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK</option>
+					</field>			
+					<field name="bottom_2_cls" type="groupedlist" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_CLS" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_PREDEFINED">
+							<option value="dark-section">PLG_SYSTEM_MB2TMPL_SECTION_DARK</option>
+						</group>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_CUSTOM">
+							<option value="custom-section1">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE1</option>
+							<option value="custom-section2">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE2</option>
+							<option value="custom-section3">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE3</option>
+							<option value="custom-section4">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE4</option>
+							<option value="custom-section5">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE5</option>
+							<option value="custom-section6">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE6</option>
+							<option value="custom-section7">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE7</option>
+						</group>				
+					</field>			
+					<field name="bottom_2_ccss" type="mb2toggletext" label="" />
+				<field type="mb2enditem" label="" />
+				
+			<field type="mb2enditem" label="" />
+	
+			
+			
+			
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_SECTION_BOTTOM_3" desc="" />
+			
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_GRID" />	
+					<field name="bottom_3_grid" type="list" default="" label="PLG_SYSTEM_MB2TMPL_GRID" description="PLG_SYSTEM_MB2TMPL_GRID_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>	
+					<field name="bottom_3_fwidth"  type="list" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_FULL_WIDTH" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />			
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_STYLE" />				
+					<field name="bottom_3_vertical_align" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN" description="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="bottom_3_padding" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_PADDING" description="PLG_SYSTEM_MB2TMPL_SECTION_PADDING_DESC" />			
+					<field name="bottom_3_mod_margin" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN" description="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN_DESC" />			
+					<field name="bottom_3_color_sheme" type="list" default="" label="PLG_SYSTEM_MB2TMPL_COLOR_SHEME" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="light">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_LIGHT</option>
+						<!-- <option value="dark-gray">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK_GRAY</option> -->
+						<option value="dark">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK</option>
+					</field>			
+					<field name="bottom_3_cls" type="groupedlist" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_CLS" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_PREDEFINED">
+							<option value="dark-section">PLG_SYSTEM_MB2TMPL_SECTION_DARK</option>
+						</group>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_CUSTOM">
+							<option value="custom-section1">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE1</option>
+							<option value="custom-section2">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE2</option>
+							<option value="custom-section3">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE3</option>
+							<option value="custom-section4">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE4</option>
+							<option value="custom-section5">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE5</option>
+							<option value="custom-section6">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE6</option>
+							<option value="custom-section7">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE7</option>
+						</group>				
+					</field>			
+					<field name="bottom_3_ccss" type="mb2toggletext" label="" />
+				<field type="mb2enditem" label="" />
+				
+			<field type="mb2enditem" label="" />
+			
+						
+			
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_FOOTER"  desc="" />		
+				
+				<field name="footer" type="list"  default="" label="PLG_SYSTEM_MB2TMPL_FOOTER_ON" description="" >	
+					<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>					
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_GRID" />			
+					<field name="footer_grid" type="list" default="" label="PLG_SYSTEM_MB2TMPL_GRID" description="PLG_SYSTEM_MB2TMPL_GRID_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>	
+					<field name="footer_fwidth"  type="list" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_FULL_WIDTH" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>					
+				<field type="mb2enditem" label="" />			
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_STYLE" />			
+					<field name="footer_vertical_align" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN" description="PLG_SYSTEM_MB2TMPL_VERTICAL_ALIGN_DESC" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="footer_padding" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_PADDING" description="PLG_SYSTEM_MB2TMPL_SECTION_PADDING_DESC" />
+					<field name="footer_mod_margin" type="mb2mp" defmp=",,,,px" label="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN" description="PLG_SYSTEM_MB2TMPL_SECTION_MOD_MARGIN_DESC" />				
+					<field name="footer_color_sheme" type="list" default="" label="PLG_SYSTEM_MB2TMPL_COLOR_SHEME" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="light">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_LIGHT</option>
+						<!-- <option value="dark-gray">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK_GRAY</option> -->
+						<option value="dark">PLG_SYSTEM_MB2TMPL_COLOR_SHEME_DARK</option>
+					</field>		
+					<field name="footer_cls" type="groupedlist" default="" label="PLG_SYSTEM_MB2TMPL_SECTION_CLS" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_PREDEFINED">
+							<option value="dark-section">PLG_SYSTEM_MB2TMPL_SECTION_DARK</option>
+						</group>
+						<group label="PLG_SYSTEM_MB2TMPL_SECTION_STYLE_CUSTOM">
+							<option value="custom-section1">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE1</option>
+							<option value="custom-section2">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE2</option>
+							<option value="custom-section3">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE3</option>
+							<option value="custom-section4">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE4</option>
+							<option value="custom-section5">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE5</option>
+							<option value="custom-section6">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE6</option>
+							<option value="custom-section7">PLG_SYSTEM_MB2TMPL_SECTION_CUSTOM_STYLE7</option>
+						</group>				
+					</field>		
+					<field name="footer_ccss" type="mb2toggletext" label="" />
+				<field type="mb2enditem" label="" />	
+				
+			<field type="mb2enditem" label="" />
+			
+			<field type="mb2enditem" label="" />
+			
+			
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_CUSTOM_SECTION_STYLES" />
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_CUSTOM_SECTION1" />		
+			
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_COLOR" />			
+					<field name="custom_section1_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_TEXT_COLOR" description=""  />
+					<field name="custom_section1_h_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_HEADINGS_COLOR" description=""  />
+					<field name="custom_section1_l_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_LINKS_COLOR" description=""  />
+					<field name="custom_section1_lh_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_LINKS_HOVER_COLOR" description=""  />
+				<field type="mb2enditem" label="" />		
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_BG" />			
+					<field name="custom_section1_bg_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_BG_COLOR" description=""  />		
+					<field name="custom_section1_bg_image" type="media" default="" label="PLG_SYSTEM_MB2TMPL_CUSTOM_BG_IMAGE" description=""  />
+					<field name="custom_section1_bg_repeat" type="list" default="" label="PLG_SYSTEM_MB2TMPL_BG_REPEAT" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="repeat">PLG_SYSTEM_MB2TMPL_REPEAT</option>
+						<option value="repeat-x">PLG_SYSTEM_MB2TMPL_REPEAT_X</option>
+						<option value="repeat-y">PLG_SYSTEM_MB2TMPL_REPEAT_Y</option>
+						<option value="no-repeat">PLG_SYSTEM_MB2TMPL_NO_REPEAT</option>
+					</field>
+					<field name="custom_section1_bg_position" type="list" default="" label="PLG_SYSTEM_MB2TMPL_BG_POSITION" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="left top">PLG_SYSTEM_MB2TMPL_LEFT_TOP</option>
+						<option value="left bottom">PLG_SYSTEM_MB2TMPL_LEFT_BOTTOM</option>
+						<option value="left center">PLG_SYSTEM_MB2TMPL_LEFT_CENTER</option>
+						<option value="right top">PLG_SYSTEM_MB2TMPL_RIGHT_TOP</option>
+						<option value="right bottom">PLG_SYSTEM_MB2TMPL_RIGHT_BOTTOM</option>
+						<option value="right center">PLG_SYSTEM_MB2TMPL_RIGHT_CENTER</option>
+						<option value="center top">PLG_SYSTEM_MB2TMPL_CENTER_TOP</option>
+						<option value="center bottom">PLG_SYSTEM_MB2TMPL_CENTER_BOTTOM</option>
+						<option value="center center">PLG_SYSTEM_MB2TMPL_CENTER</option>
+					</field>
+					<field name="custom_section1_attachment" type="list" default="" label="PLG_SYSTEM_MB2TMPL_BG_ATTACHMENT" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="scroll">PLG_SYSTEM_MB2TMPL_SCROLL</option>
+						<option value="fixed">PLG_SYSTEM_MB2TMPL_FIXED</option>
+					</field>
+					<field name="custom_section1_bg_scale" type="list" default="" label="PLG_SYSTEM_MB2TMPL_SCALE_BG" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />			
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_PARALLAX" />			
+					<field name="custom_section1_parallax" type="list" default="" label="PLG_SYSTEM_MB2TMPL_PARALLAX" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>	
+					<field name="custom_section1_parallax_speed" type="text" default="" label="PLG_SYSTEM_MB2TMPL_PARALLAX_SPEED" description=""  />
+				<field type="mb2enditem" label="" />				
+			
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_BGSLIDER" />			
+					<field name="custom_section1_cerousel_dir" type="text" default="" label="PLG_SYSTEM_MB2TMPL_CAROUSEL_DIR" description=""  />			
+					<field name="custom_section1_cerousel_duration" type="text" default="" label="PLG_SYSTEM_MB2TMPL_CAROUSEL_DURATION" description=""  />
+					<field name="custom_section1_cerousel_fade" type="text" default="" label="PLG_SYSTEM_MB2TMPL_CAROUSEL_FADE" description=""  />
+				<field type="mb2enditem" label="" />
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_VIDEOBG" />			
+					<field name="custom_section1_videoid" type="text" default="" label="PLG_SYSTEM_MB2TMPL_YT_VIDOID" description=""  />
+					<field name="custom_section1_videoquality" type="list" default="" label="PLG_SYSTEM_MB2TMPL_YT_VIDOQUALITY" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="default">PLG_SYSTEM_MB2TMPL_DEFAULT_OPT</option>
+						<option value="small">PLG_SYSTEM_MB2TMPL_SMALL_OPT</option>
+						<option value="medium">PLG_SYSTEM_MB2TMPL_MEDIUM_OPT</option>
+						<option value="large">PLG_SYSTEM_MB2TMPL_LARGE_OPT</option>
+						<option value="hd720">HD 720</option>
+						<option value="hd1080">HD 1080</option>
+						<option value="highres">PLG_SYSTEM_MB2TMPL_HIGHRES_OPT</option>
+					</field>
+					<field name="custom_section1_videoloop" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VIDEOLOOP" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section1_videoautoplay" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VIDEOAUTOPLAY" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section1_videostoponblur" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VIDEOSTOPONBLUR" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section1_videobg" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_YT_VIDOOVERLAYBG" description=""  />
+				<field type="mb2enditem" label="" />		
+		
+			<field type="mb2enditem" label="" />
+			
+			
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_CUSTOM_SECTION2" />		
+			
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_COLOR" />			
+					<field name="custom_section2_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_TEXT_COLOR" description=""  />
+					<field name="custom_section2_h_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_HEADINGS_COLOR" description=""  />
+					<field name="custom_section2_l_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_LINKS_COLOR" description=""  />
+					<field name="custom_section2_lh_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_LINKS_HOVER_COLOR" description=""  />
+				<field type="mb2enditem" label="" />		
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_BG" />			
+					<field name="custom_section2_bg_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_BG_COLOR" description=""  />		
+					<field name="custom_section2_bg_image" type="media" default="" label="PLG_SYSTEM_MB2TMPL_CUSTOM_BG_IMAGE" description=""  />
+					<field name="custom_section2_bg_repeat" type="list" default="" label="PLG_SYSTEM_MB2TMPL_BG_REPEAT" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="repeat">PLG_SYSTEM_MB2TMPL_REPEAT</option>
+						<option value="repeat-x">PLG_SYSTEM_MB2TMPL_REPEAT_X</option>
+						<option value="repeat-y">PLG_SYSTEM_MB2TMPL_REPEAT_Y</option>
+						<option value="no-repeat">PLG_SYSTEM_MB2TMPL_NO_REPEAT</option>
+					</field>
+					<field name="custom_section2_bg_position" type="list" default="" label="PLG_SYSTEM_MB2TMPL_BG_POSITION" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="left top">PLG_SYSTEM_MB2TMPL_LEFT_TOP</option>
+						<option value="left bottom">PLG_SYSTEM_MB2TMPL_LEFT_BOTTOM</option>
+						<option value="left center">PLG_SYSTEM_MB2TMPL_LEFT_CENTER</option>
+						<option value="right top">PLG_SYSTEM_MB2TMPL_RIGHT_TOP</option>
+						<option value="right bottom">PLG_SYSTEM_MB2TMPL_RIGHT_BOTTOM</option>
+						<option value="right center">PLG_SYSTEM_MB2TMPL_RIGHT_CENTER</option>
+						<option value="center top">PLG_SYSTEM_MB2TMPL_CENTER_TOP</option>
+						<option value="center bottom">PLG_SYSTEM_MB2TMPL_CENTER_BOTTOM</option>
+						<option value="center center">PLG_SYSTEM_MB2TMPL_CENTER</option>
+					</field>
+					<field name="custom_section2_attachment" type="list" default="" label="PLG_SYSTEM_MB2TMPL_BG_ATTACHMENT" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="scroll">PLG_SYSTEM_MB2TMPL_SCROLL</option>
+						<option value="fixed">PLG_SYSTEM_MB2TMPL_FIXED</option>
+					</field>
+					<field name="custom_section2_bg_scale" type="list" default="" label="PLG_SYSTEM_MB2TMPL_SCALE_BG" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />			
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_PARALLAX" />			
+					<field name="custom_section2_parallax" type="list" default="" label="PLG_SYSTEM_MB2TMPL_PARALLAX" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>	
+					<field name="custom_section2_parallax_speed" type="text" default="" label="PLG_SYSTEM_MB2TMPL_PARALLAX_SPEED" description=""  />
+				<field type="mb2enditem" label="" />				
+			
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_BGSLIDER" />			
+					<field name="custom_section2_cerousel_dir" type="text" default="" label="PLG_SYSTEM_MB2TMPL_CAROUSEL_DIR" description=""  />			
+					<field name="custom_section2_cerousel_duration" type="text" default="" label="PLG_SYSTEM_MB2TMPL_CAROUSEL_DURATION" description=""  />
+					<field name="custom_section2_cerousel_fade" type="text" default="" label="PLG_SYSTEM_MB2TMPL_CAROUSEL_FADE" description=""  />
+				<field type="mb2enditem" label="" />
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_VIDEOBG" />			
+					<field name="custom_section2_videoid" type="text" default="" label="PLG_SYSTEM_MB2TMPL_YT_VIDOID" description=""  />
+					<field name="custom_section2_videoquality" type="list" default="" label="PLG_SYSTEM_MB2TMPL_YT_VIDOQUALITY" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="default">PLG_SYSTEM_MB2TMPL_DEFAULT_OPT</option>
+						<option value="small">PLG_SYSTEM_MB2TMPL_SMALL_OPT</option>
+						<option value="medium">PLG_SYSTEM_MB2TMPL_MEDIUM_OPT</option>
+						<option value="large">PLG_SYSTEM_MB2TMPL_LARGE_OPT</option>
+						<option value="hd720">HD 720</option>
+						<option value="hd1080">HD 1080</option>
+						<option value="highres">PLG_SYSTEM_MB2TMPL_HIGHRES_OPT</option>
+					</field>
+					<field name="custom_section2_videoloop" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VIDEOLOOP" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section2_videoautoplay" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VIDEOAUTOPLAY" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section2_videostoponblur" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VIDEOSTOPONBLUR" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section2_videobg" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_YT_VIDOOVERLAYBG" description=""  />
+				<field type="mb2enditem" label="" />		
+		
+			<field type="mb2enditem" label="" />
+			
+			
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_CUSTOM_SECTION3" />		
+			
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_COLOR" />			
+					<field name="custom_section3_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_TEXT_COLOR" description=""  />
+					<field name="custom_section3_h_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_HEADINGS_COLOR" description=""  />
+					<field name="custom_section3_l_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_LINKS_COLOR" description=""  />
+					<field name="custom_section3_lh_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_LINKS_HOVER_COLOR" description=""  />
+				<field type="mb2enditem" label="" />		
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_BG" />			
+					<field name="custom_section3_bg_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_BG_COLOR" description=""  />		
+					<field name="custom_section3_bg_image" type="media" default="" label="PLG_SYSTEM_MB2TMPL_CUSTOM_BG_IMAGE" description=""  />
+					<field name="custom_section3_bg_repeat" type="list" default="" label="PLG_SYSTEM_MB2TMPL_BG_REPEAT" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="repeat">PLG_SYSTEM_MB2TMPL_REPEAT</option>
+						<option value="repeat-x">PLG_SYSTEM_MB2TMPL_REPEAT_X</option>
+						<option value="repeat-y">PLG_SYSTEM_MB2TMPL_REPEAT_Y</option>
+						<option value="no-repeat">PLG_SYSTEM_MB2TMPL_NO_REPEAT</option>
+					</field>
+					<field name="custom_section3_bg_position" type="list" default="" label="PLG_SYSTEM_MB2TMPL_BG_POSITION" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="left top">PLG_SYSTEM_MB2TMPL_LEFT_TOP</option>
+						<option value="left bottom">PLG_SYSTEM_MB2TMPL_LEFT_BOTTOM</option>
+						<option value="left center">PLG_SYSTEM_MB2TMPL_LEFT_CENTER</option>
+						<option value="right top">PLG_SYSTEM_MB2TMPL_RIGHT_TOP</option>
+						<option value="right bottom">PLG_SYSTEM_MB2TMPL_RIGHT_BOTTOM</option>
+						<option value="right center">PLG_SYSTEM_MB2TMPL_RIGHT_CENTER</option>
+						<option value="center top">PLG_SYSTEM_MB2TMPL_CENTER_TOP</option>
+						<option value="center bottom">PLG_SYSTEM_MB2TMPL_CENTER_BOTTOM</option>
+						<option value="center center">PLG_SYSTEM_MB2TMPL_CENTER</option>
+					</field>
+					<field name="custom_section3_attachment" type="list" default="" label="PLG_SYSTEM_MB2TMPL_BG_ATTACHMENT" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="scroll">PLG_SYSTEM_MB2TMPL_SCROLL</option>
+						<option value="fixed">PLG_SYSTEM_MB2TMPL_FIXED</option>
+					</field>
+					<field name="custom_section3_bg_scale" type="list" default="" label="PLG_SYSTEM_MB2TMPL_SCALE_BG" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />			
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_PARALLAX" />			
+					<field name="custom_section3_parallax" type="list" default="" label="PLG_SYSTEM_MB2TMPL_PARALLAX" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>	
+					<field name="custom_section3_parallax_speed" type="text" default="" label="PLG_SYSTEM_MB2TMPL_PARALLAX_SPEED" description=""  />
+				<field type="mb2enditem" label="" />				
+			
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_BGSLIDER" />			
+					<field name="custom_section3_cerousel_dir" type="text" default="" label="PLG_SYSTEM_MB2TMPL_CAROUSEL_DIR" description=""  />			
+					<field name="custom_section3_cerousel_duration" type="text" default="" label="PLG_SYSTEM_MB2TMPL_CAROUSEL_DURATION" description=""  />
+					<field name="custom_section3_cerousel_fade" type="text" default="" label="PLG_SYSTEM_MB2TMPL_CAROUSEL_FADE" description=""  />
+				<field type="mb2enditem" label="" />
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_VIDEOBG" />			
+					<field name="custom_section3_videoid" type="text" default="" label="PLG_SYSTEM_MB2TMPL_YT_VIDOID" description=""  />
+					<field name="custom_section3_videoquality" type="list" default="" label="PLG_SYSTEM_MB2TMPL_YT_VIDOQUALITY" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="default">PLG_SYSTEM_MB2TMPL_DEFAULT_OPT</option>
+						<option value="small">PLG_SYSTEM_MB2TMPL_SMALL_OPT</option>
+						<option value="medium">PLG_SYSTEM_MB2TMPL_MEDIUM_OPT</option>
+						<option value="large">PLG_SYSTEM_MB2TMPL_LARGE_OPT</option>
+						<option value="hd720">HD 720</option>
+						<option value="hd1080">HD 1080</option>
+						<option value="highres">PLG_SYSTEM_MB2TMPL_HIGHRES_OPT</option>
+					</field>
+					<field name="custom_section3_videoloop" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VIDEOLOOP" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section3_videoautoplay" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VIDEOAUTOPLAY" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section3_videostoponblur" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VIDEOSTOPONBLUR" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section3_videobg" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_YT_VIDOOVERLAYBG" description=""  />
+				<field type="mb2enditem" label="" />		
+		
+			<field type="mb2enditem" label="" />
+			
+			
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_CUSTOM_SECTION4" />		
+			
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_COLOR" />			
+					<field name="custom_section4_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_TEXT_COLOR" description=""  />
+					<field name="custom_section4_h_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_HEADINGS_COLOR" description=""  />
+					<field name="custom_section4_l_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_LINKS_COLOR" description=""  />
+					<field name="custom_section4_lh_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_LINKS_HOVER_COLOR" description=""  />
+				<field type="mb2enditem" label="" />		
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_BG" />			
+					<field name="custom_section4_bg_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_BG_COLOR" description=""  />		
+					<field name="custom_section4_bg_image" type="media" default="" label="PLG_SYSTEM_MB2TMPL_CUSTOM_BG_IMAGE" description=""  />
+					<field name="custom_section4_bg_repeat" type="list" default="" label="PLG_SYSTEM_MB2TMPL_BG_REPEAT" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="repeat">PLG_SYSTEM_MB2TMPL_REPEAT</option>
+						<option value="repeat-x">PLG_SYSTEM_MB2TMPL_REPEAT_X</option>
+						<option value="repeat-y">PLG_SYSTEM_MB2TMPL_REPEAT_Y</option>
+						<option value="no-repeat">PLG_SYSTEM_MB2TMPL_NO_REPEAT</option>
+					</field>
+					<field name="custom_section4_bg_position" type="list" default="" label="PLG_SYSTEM_MB2TMPL_BG_POSITION" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="left top">PLG_SYSTEM_MB2TMPL_LEFT_TOP</option>
+						<option value="left bottom">PLG_SYSTEM_MB2TMPL_LEFT_BOTTOM</option>
+						<option value="left center">PLG_SYSTEM_MB2TMPL_LEFT_CENTER</option>
+						<option value="right top">PLG_SYSTEM_MB2TMPL_RIGHT_TOP</option>
+						<option value="right bottom">PLG_SYSTEM_MB2TMPL_RIGHT_BOTTOM</option>
+						<option value="right center">PLG_SYSTEM_MB2TMPL_RIGHT_CENTER</option>
+						<option value="center top">PLG_SYSTEM_MB2TMPL_CENTER_TOP</option>
+						<option value="center bottom">PLG_SYSTEM_MB2TMPL_CENTER_BOTTOM</option>
+						<option value="center center">PLG_SYSTEM_MB2TMPL_CENTER</option>
+					</field>
+					<field name="custom_section4_attachment" type="list" default="" label="PLG_SYSTEM_MB2TMPL_BG_ATTACHMENT" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="scroll">PLG_SYSTEM_MB2TMPL_SCROLL</option>
+						<option value="fixed">PLG_SYSTEM_MB2TMPL_FIXED</option>
+					</field>
+					<field name="custom_section4_bg_scale" type="list" default="" label="PLG_SYSTEM_MB2TMPL_SCALE_BG" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />			
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_PARALLAX" />			
+					<field name="custom_section4_parallax" type="list" default="" label="PLG_SYSTEM_MB2TMPL_PARALLAX" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>	
+					<field name="custom_section4_parallax_speed" type="text" default="" label="PLG_SYSTEM_MB2TMPL_PARALLAX_SPEED" description=""  />
+				<field type="mb2enditem" label="" />				
+			
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_BGSLIDER" />			
+					<field name="custom_section4_cerousel_dir" type="text" default="" label="PLG_SYSTEM_MB2TMPL_CAROUSEL_DIR" description=""  />			
+					<field name="custom_section4_cerousel_duration" type="text" default="" label="PLG_SYSTEM_MB2TMPL_CAROUSEL_DURATION" description=""  />
+					<field name="custom_section4_cerousel_fade" type="text" default="" label="PLG_SYSTEM_MB2TMPL_CAROUSEL_FADE" description=""  />
+				<field type="mb2enditem" label="" />
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_VIDEOBG" />			
+					<field name="custom_section4_videoid" type="text" default="" label="PLG_SYSTEM_MB2TMPL_YT_VIDOID" description=""  />
+					<field name="custom_section4_videoquality" type="list" default="" label="PLG_SYSTEM_MB2TMPL_YT_VIDOQUALITY" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="default">PLG_SYSTEM_MB2TMPL_DEFAULT_OPT</option>
+						<option value="small">PLG_SYSTEM_MB2TMPL_SMALL_OPT</option>
+						<option value="medium">PLG_SYSTEM_MB2TMPL_MEDIUM_OPT</option>
+						<option value="large">PLG_SYSTEM_MB2TMPL_LARGE_OPT</option>
+						<option value="hd720">HD 720</option>
+						<option value="hd1080">HD 1080</option>
+						<option value="highres">PLG_SYSTEM_MB2TMPL_HIGHRES_OPT</option>
+					</field>
+					<field name="custom_section4_videoloop" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VIDEOLOOP" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section4_videoautoplay" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VIDEOAUTOPLAY" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section4_videostoponblur" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VIDEOSTOPONBLUR" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section4_videobg" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_YT_VIDOOVERLAYBG" description=""  />
+				<field type="mb2enditem" label="" />		
+		
+			<field type="mb2enditem" label="" />	
+			
+			
+			
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_CUSTOM_SECTION5" />		
+			
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_COLOR" />			
+					<field name="custom_section5_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_TEXT_COLOR" description=""  />
+					<field name="custom_section5_h_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_HEADINGS_COLOR" description=""  />
+					<field name="custom_section5_l_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_LINKS_COLOR" description=""  />
+					<field name="custom_section5_lh_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_LINKS_HOVER_COLOR" description=""  />
+				<field type="mb2enditem" label="" />		
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_BG" />			
+					<field name="custom_section5_bg_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_BG_COLOR" description=""  />		
+					<field name="custom_section5_bg_image" type="media" default="" label="PLG_SYSTEM_MB2TMPL_CUSTOM_BG_IMAGE" description=""  />
+					<field name="custom_section5_bg_repeat" type="list" default="" label="PLG_SYSTEM_MB2TMPL_BG_REPEAT" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="repeat">PLG_SYSTEM_MB2TMPL_REPEAT</option>
+						<option value="repeat-x">PLG_SYSTEM_MB2TMPL_REPEAT_X</option>
+						<option value="repeat-y">PLG_SYSTEM_MB2TMPL_REPEAT_Y</option>
+						<option value="no-repeat">PLG_SYSTEM_MB2TMPL_NO_REPEAT</option>
+					</field>
+					<field name="custom_section5_bg_position" type="list" default="" label="PLG_SYSTEM_MB2TMPL_BG_POSITION" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="left top">PLG_SYSTEM_MB2TMPL_LEFT_TOP</option>
+						<option value="left bottom">PLG_SYSTEM_MB2TMPL_LEFT_BOTTOM</option>
+						<option value="left center">PLG_SYSTEM_MB2TMPL_LEFT_CENTER</option>
+						<option value="right top">PLG_SYSTEM_MB2TMPL_RIGHT_TOP</option>
+						<option value="right bottom">PLG_SYSTEM_MB2TMPL_RIGHT_BOTTOM</option>
+						<option value="right center">PLG_SYSTEM_MB2TMPL_RIGHT_CENTER</option>
+						<option value="center top">PLG_SYSTEM_MB2TMPL_CENTER_TOP</option>
+						<option value="center bottom">PLG_SYSTEM_MB2TMPL_CENTER_BOTTOM</option>
+						<option value="center center">PLG_SYSTEM_MB2TMPL_CENTER</option>
+					</field>
+					<field name="custom_section5_attachment" type="list" default="" label="PLG_SYSTEM_MB2TMPL_BG_ATTACHMENT" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="scroll">PLG_SYSTEM_MB2TMPL_SCROLL</option>
+						<option value="fixed">PLG_SYSTEM_MB2TMPL_FIXED</option>
+					</field>
+					<field name="custom_section5_bg_scale" type="list" default="" label="PLG_SYSTEM_MB2TMPL_SCALE_BG" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />			
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_PARALLAX" />			
+					<field name="custom_section5_parallax" type="list" default="" label="PLG_SYSTEM_MB2TMPL_PARALLAX" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>	
+					<field name="custom_section5_parallax_speed" type="text" default="" label="PLG_SYSTEM_MB2TMPL_PARALLAX_SPEED" description=""  />
+				<field type="mb2enditem" label="" />				
+			
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_BGSLIDER" />			
+					<field name="custom_section5_cerousel_dir" type="text" default="" label="PLG_SYSTEM_MB2TMPL_CAROUSEL_DIR" description=""  />			
+					<field name="custom_section5_cerousel_duration" type="text" default="" label="PLG_SYSTEM_MB2TMPL_CAROUSEL_DURATION" description=""  />
+					<field name="custom_section5_cerousel_fade" type="text" default="" label="PLG_SYSTEM_MB2TMPL_CAROUSEL_FADE" description=""  />
+				<field type="mb2enditem" label="" />
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_VIDEOBG" />			
+					<field name="custom_section5_videoid" type="text" default="" label="PLG_SYSTEM_MB2TMPL_YT_VIDOID" description=""  />
+					<field name="custom_section5_videoquality" type="list" default="" label="PLG_SYSTEM_MB2TMPL_YT_VIDOQUALITY" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="default">PLG_SYSTEM_MB2TMPL_DEFAULT_OPT</option>
+						<option value="small">PLG_SYSTEM_MB2TMPL_SMALL_OPT</option>
+						<option value="medium">PLG_SYSTEM_MB2TMPL_MEDIUM_OPT</option>
+						<option value="large">PLG_SYSTEM_MB2TMPL_LARGE_OPT</option>
+						<option value="hd720">HD 720</option>
+						<option value="hd1080">HD 1080</option>
+						<option value="highres">PLG_SYSTEM_MB2TMPL_HIGHRES_OPT</option>
+					</field>
+					<field name="custom_section5_videoloop" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VIDEOLOOP" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section5_videoautoplay" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VIDEOAUTOPLAY" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section5_videostoponblur" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VIDEOSTOPONBLUR" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section5_videobg" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_YT_VIDOOVERLAYBG" description=""  />
+				<field type="mb2enditem" label="" />		
+		
+			<field type="mb2enditem" label="" />	
+		
+			
+			
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_CUSTOM_SECTION6" />		
+			
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_COLOR" />			
+					<field name="custom_section6_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_TEXT_COLOR" description=""  />
+					<field name="custom_section6_h_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_HEADINGS_COLOR" description=""  />
+					<field name="custom_section6_l_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_LINKS_COLOR" description=""  />
+					<field name="custom_section6_lh_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_LINKS_HOVER_COLOR" description=""  />
+				<field type="mb2enditem" label="" />		
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_BG" />			
+					<field name="custom_section6_bg_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_BG_COLOR" description=""  />		
+					<field name="custom_section6_bg_image" type="media" default="" label="PLG_SYSTEM_MB2TMPL_CUSTOM_BG_IMAGE" description=""  />
+					<field name="custom_section6_bg_repeat" type="list" default="" label="PLG_SYSTEM_MB2TMPL_BG_REPEAT" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="repeat">PLG_SYSTEM_MB2TMPL_REPEAT</option>
+						<option value="repeat-x">PLG_SYSTEM_MB2TMPL_REPEAT_X</option>
+						<option value="repeat-y">PLG_SYSTEM_MB2TMPL_REPEAT_Y</option>
+						<option value="no-repeat">PLG_SYSTEM_MB2TMPL_NO_REPEAT</option>
+					</field>
+					<field name="custom_section6_bg_position" type="list" default="" label="PLG_SYSTEM_MB2TMPL_BG_POSITION" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="left top">PLG_SYSTEM_MB2TMPL_LEFT_TOP</option>
+						<option value="left bottom">PLG_SYSTEM_MB2TMPL_LEFT_BOTTOM</option>
+						<option value="left center">PLG_SYSTEM_MB2TMPL_LEFT_CENTER</option>
+						<option value="right top">PLG_SYSTEM_MB2TMPL_RIGHT_TOP</option>
+						<option value="right bottom">PLG_SYSTEM_MB2TMPL_RIGHT_BOTTOM</option>
+						<option value="right center">PLG_SYSTEM_MB2TMPL_RIGHT_CENTER</option>
+						<option value="center top">PLG_SYSTEM_MB2TMPL_CENTER_TOP</option>
+						<option value="center bottom">PLG_SYSTEM_MB2TMPL_CENTER_BOTTOM</option>
+						<option value="center center">PLG_SYSTEM_MB2TMPL_CENTER</option>
+					</field>
+					<field name="custom_section6_attachment" type="list" default="" label="PLG_SYSTEM_MB2TMPL_BG_ATTACHMENT" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="scroll">PLG_SYSTEM_MB2TMPL_SCROLL</option>
+						<option value="fixed">PLG_SYSTEM_MB2TMPL_FIXED</option>
+					</field>
+					<field name="custom_section6_bg_scale" type="list" default="" label="PLG_SYSTEM_MB2TMPL_SCALE_BG" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />			
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_PARALLAX" />			
+					<field name="custom_section6_parallax" type="list" default="" label="PLG_SYSTEM_MB2TMPL_PARALLAX" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>	
+					<field name="custom_section6_parallax_speed" type="text" default="" label="PLG_SYSTEM_MB2TMPL_PARALLAX_SPEED" description=""  />
+				<field type="mb2enditem" label="" />				
+			
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_BGSLIDER" />			
+					<field name="custom_section6_cerousel_dir" type="text" default="" label="PLG_SYSTEM_MB2TMPL_CAROUSEL_DIR" description=""  />			
+					<field name="custom_section6_cerousel_duration" type="text" default="" label="PLG_SYSTEM_MB2TMPL_CAROUSEL_DURATION" description=""  />
+					<field name="custom_section6_cerousel_fade" type="text" default="" label="PLG_SYSTEM_MB2TMPL_CAROUSEL_FADE" description=""  />
+				<field type="mb2enditem" label="" />
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_VIDEOBG" />			
+					<field name="custom_section6_videoid" type="text" default="" label="PLG_SYSTEM_MB2TMPL_YT_VIDOID" description=""  />
+					<field name="custom_section6_videoquality" type="list" default="" label="PLG_SYSTEM_MB2TMPL_YT_VIDOQUALITY" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="default">PLG_SYSTEM_MB2TMPL_DEFAULT_OPT</option>
+						<option value="small">PLG_SYSTEM_MB2TMPL_SMALL_OPT</option>
+						<option value="medium">PLG_SYSTEM_MB2TMPL_MEDIUM_OPT</option>
+						<option value="large">PLG_SYSTEM_MB2TMPL_LARGE_OPT</option>
+						<option value="hd720">HD 720</option>
+						<option value="hd1080">HD 1080</option>
+						<option value="highres">PLG_SYSTEM_MB2TMPL_HIGHRES_OPT</option>
+					</field>
+					<field name="custom_section6_videoloop" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VIDEOLOOP" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section6_videoautoplay" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VIDEOAUTOPLAY" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section6_videostoponblur" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VIDEOSTOPONBLUR" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section6_videobg" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_YT_VIDOOVERLAYBG" description=""  />
+				<field type="mb2enditem" label="" />		
+		
+			<field type="mb2enditem" label="" />
+		
+			
+			
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_CUSTOM_SECTION7" />		
+			
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_COLOR" />			
+					<field name="custom_section7_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_TEXT_COLOR" description=""  />
+					<field name="custom_section7_h_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_HEADINGS_COLOR" description=""  />
+					<field name="custom_section7_l_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_LINKS_COLOR" description=""  />
+					<field name="custom_section7_lh_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_LINKS_HOVER_COLOR" description=""  />
+				<field type="mb2enditem" label="" />		
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_BG" />			
+					<field name="custom_section7_bg_color" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_BG_COLOR" description=""  />		
+					<field name="custom_section7_bg_image" type="media" default="" label="PLG_SYSTEM_MB2TMPL_CUSTOM_BG_IMAGE" description=""  />
+					<field name="custom_section7_bg_repeat" type="list" default="" label="PLG_SYSTEM_MB2TMPL_BG_REPEAT" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="repeat">PLG_SYSTEM_MB2TMPL_REPEAT</option>
+						<option value="repeat-x">PLG_SYSTEM_MB2TMPL_REPEAT_X</option>
+						<option value="repeat-y">PLG_SYSTEM_MB2TMPL_REPEAT_Y</option>
+						<option value="no-repeat">PLG_SYSTEM_MB2TMPL_NO_REPEAT</option>
+					</field>
+					<field name="custom_section7_bg_position" type="list" default="" label="PLG_SYSTEM_MB2TMPL_BG_POSITION" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="left top">PLG_SYSTEM_MB2TMPL_LEFT_TOP</option>
+						<option value="left bottom">PLG_SYSTEM_MB2TMPL_LEFT_BOTTOM</option>
+						<option value="left center">PLG_SYSTEM_MB2TMPL_LEFT_CENTER</option>
+						<option value="right top">PLG_SYSTEM_MB2TMPL_RIGHT_TOP</option>
+						<option value="right bottom">PLG_SYSTEM_MB2TMPL_RIGHT_BOTTOM</option>
+						<option value="right center">PLG_SYSTEM_MB2TMPL_RIGHT_CENTER</option>
+						<option value="center top">PLG_SYSTEM_MB2TMPL_CENTER_TOP</option>
+						<option value="center bottom">PLG_SYSTEM_MB2TMPL_CENTER_BOTTOM</option>
+						<option value="center center">PLG_SYSTEM_MB2TMPL_CENTER</option>
+					</field>
+					<field name="custom_section7_attachment" type="list" default="" label="PLG_SYSTEM_MB2TMPL_BG_ATTACHMENT" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="scroll">PLG_SYSTEM_MB2TMPL_SCROLL</option>
+						<option value="fixed">PLG_SYSTEM_MB2TMPL_FIXED</option>
+					</field>
+					<field name="custom_section7_bg_scale" type="list" default="" label="PLG_SYSTEM_MB2TMPL_SCALE_BG" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />			
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_PARALLAX" />			
+					<field name="custom_section7_parallax" type="list" default="" label="PLG_SYSTEM_MB2TMPL_PARALLAX" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>	
+					<field name="custom_section7_parallax_speed" type="text" default="" label="PLG_SYSTEM_MB2TMPL_PARALLAX_SPEED" description=""  />
+				<field type="mb2enditem" label="" />				
+			
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_BGSLIDER" />			
+					<field name="custom_section7_cerousel_dir" type="text" default="" label="PLG_SYSTEM_MB2TMPL_CAROUSEL_DIR" description=""  />			
+					<field name="custom_section7_cerousel_duration" type="text" default="" label="PLG_SYSTEM_MB2TMPL_CAROUSEL_DURATION" description=""  />
+					<field name="custom_section7_cerousel_fade" type="text" default="" label="PLG_SYSTEM_MB2TMPL_CAROUSEL_FADE" description=""  />
+				<field type="mb2enditem" label="" />
+				
+				<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_HEADING_VIDEOBG" />			
+					<field name="custom_section7_videoid" type="text" default="" label="PLG_SYSTEM_MB2TMPL_YT_VIDOID" description=""  />
+					<field name="custom_section7_videoquality" type="list" default="" label="PLG_SYSTEM_MB2TMPL_YT_VIDOQUALITY" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="default">PLG_SYSTEM_MB2TMPL_DEFAULT_OPT</option>
+						<option value="small">PLG_SYSTEM_MB2TMPL_SMALL_OPT</option>
+						<option value="medium">PLG_SYSTEM_MB2TMPL_MEDIUM_OPT</option>
+						<option value="large">PLG_SYSTEM_MB2TMPL_LARGE_OPT</option>
+						<option value="hd720">HD 720</option>
+						<option value="hd1080">HD 1080</option>
+						<option value="highres">PLG_SYSTEM_MB2TMPL_HIGHRES_OPT</option>
+					</field>
+					<field name="custom_section7_videoloop" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VIDEOLOOP" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section7_videoautoplay" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VIDEOAUTOPLAY" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section7_videostoponblur" type="list" default="" label="PLG_SYSTEM_MB2TMPL_VIDEOSTOPONBLUR" description="" >	
+						<option value="">PLG_SYSTEM_MB2TMPL_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section7_videobg" type="mb2color" default="" label="PLG_SYSTEM_MB2TMPL_YT_VIDOOVERLAYBG" description=""  />
+				<field type="mb2enditem" label="" />		
+		
+			<field type="mb2enditem" label="" />
+			<field type="mb2enditem" label="" />
+		
+			<field type="mb2startitem" label="" title="PLG_SYSTEM_MB2TMPL_CUSTOM_CSS" />
+			
+				<field name="custom_css" type="textarea" default="" cols="" rows="10" label="PLG_SYSTEM_MB2TMPL_CUSTOM_CSS" description="PLG_SYSTEM_MB2TMPL_CUSTOM_CSS_DESC" filter="string" class="my_textarea" />
+				
+			<field type="mb2enditem" label="" />
+			
+			
+			
+			
+						
+		</fieldset>
+	</fields>
+</form>

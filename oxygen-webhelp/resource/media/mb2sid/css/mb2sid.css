@@ -1,0 +1,294 @@
+/**
+ * @package		Mb2 Slider in Devices
+ * @version		1.0.1
+ * @author		Mariusz Boloz (http://mb2extensions.com)
+ * @copyright	Copyright (C) 2015 - 2016 Mariusz Boloz (http://mb2extensions.com). All rights reserved
+ * @license		Commercial (http://codecanyon.net/licenses)
+**/
+
+@font-face {
+  font-family: 'mb2sid_font';
+  src: url('../font/mb2sid_font.eot?91609996');
+  src: url('../font/mb2sid_font.eot?91609996#iefix') format('embedded-opentype'),
+       url('../font/mb2sid_font.woff?91609996') format('woff'),
+       url('../font/mb2sid_font.ttf?91609996') format('truetype'),
+       url('../font/mb2sid_font.svg?91609996#mb2sid_font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'mb2sid_font';
+    src: url('../font/mb2sid_font.svg?91609996#mb2sid_font') format('svg');
+  }
+}
+*/
+ 
+ [class^="mb2sid_icon-"]:before, [class*=" mb2sid_icon-"]:before {
+  font-family: "mb2sid_font";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.mb2sid_icon-right-open:before { content: '\e800'; } /* '' */
+.mb2sid_icon-left-open:before { content: '\e801'; } /* '' */
+.mb2sid_icon-down-open:before { content: '\e802'; } /* '' */
+.mb2sid_icon-up-open:before { content: '\e803'; } /* '' */
+
+
+
+
+/* Style for slider container */
+
+.mb2sid-slider {
+	position: relative;
+	width: 500px;
+	height: 923px;
+	max-width: 100%;
+	margin: 0 auto;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: cover;
+}
+
+.mb2sid *,
+.mb2sid *:before,
+.mb2sid *:after {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+    box-sizing: content-box;	
+}
+
+.mb2sid-inner {
+	position: absolute;
+	background-color: #000;
+	height: 673px;
+	width: 382px;
+	left: 52px;
+	top: 91px;
+}
+
+
+
+
+
+
+
+
+/* ============================== SLIDER LIST ============================== */
+
+.mb2sid-slide-list {
+	margin: 0;
+	padding: 0;	
+}
+
+.mb2sid-slide-list > li {
+	margin: 0;
+	padding: 0;
+	position: relative;	
+}
+
+
+
+/* ============================== DIRECTION NAVIGATION ============================== */
+
+.mb2sid .lSAction > a {
+	background: 0;
+	line-height: 32px;
+	text-align: center;
+	font-size: 22px;    
+    opacity: 0;
+	color: #fff;
+	text-decoration: none;
+	outline: none;
+	-webkit-transition: all 0.15s linear 0s;
+    transition: all 0.15s linear 0s;
+}
+
+.mb2sid-inner:hover .lSAction > a {
+	opacity: 1;	
+}
+
+.mb2sid .lSAction > a:hover,
+.mb2sid .lSAction > a:focus {
+	color: #fff;
+	text-decoration: none;	
+}
+
+.mb2sid .lSAction > .lSPrev {
+    left: 0;
+}
+.mb2sid .lSAction > .lSNext {
+    right: 0;
+}
+
+.mb2sid .lSSlideOuter.vertical .lSAction > .lSNext {
+	bottom: 0;	
+}
+
+.mb2sid .lSSlideOuter.vertical .lSAction > .lSPrev {
+	top: 0;	
+}
+
+
+
+/* ============================== CONTROL NAVIGATION ============================== */
+
+.mb2sid .lSPager.lSpg {
+	position: relative;
+	top: -40px;	
+}
+
+.mb2sid .lSSlideOuter .lSPager.lSpg > li a {
+	border: solid 1px rgba(255,255,255,0);
+	background-color: #fff;
+	-webkit-transition: all 0.15s linear 0s;
+    transition: all 0.15s linear 0s;
+	outline: none;
+}
+
+.mb2sid .lSSlideOuter .lSPager.lSpg > li a:hover {
+	background-color: #fff;	
+}
+
+.mb2sid .lSSlideOuter .lSPager.lSpg > li.active a  {
+	height: 12px;
+	width: 12px;
+	border-color: #fff;
+	background-color: rgba(255,255,255,0);
+}
+
+
+
+/* ============================== CAPTION ============================== */
+
+.mb2sid-caption {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	font-size: 12px;
+	line-height: 1.5;
+	color: #fff;	
+}
+
+.mb2sid-caption.hor-center {
+	text-align: center;	
+}
+
+.mb2sid-caption.hor-right {
+	text-align: right;	
+}
+
+.mb2sid-caption.hor-left {
+	text-align: left;	
+}
+
+.mb2sid-caption-content {
+	padding: 20px;
+}
+
+.mb2sid-title {
+	color: #fff;
+	font-size: 2em;	
+	margin: 0 0 0.8em 0;
+}
+
+.mb2sid-caption1 {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+.mb2sid-caption2 {
+	display: table-cell;
+}
+
+.ver-center .mb2sid-caption2 {	
+	vertical-align: middle;
+}
+
+.ver-top .mb2sid-caption2 {	
+	vertical-align: top;
+}
+
+.ver-bottom .mb2sid-caption2 {	
+	vertical-align: bottom;
+}
+
+
+
+/* ============================== VIDEO ============================== */
+
+.mb2sid-video {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+.mb2sid-video iframe,
+.mb2sid-video object,
+.mb2sid-video embed {
+    height: 100%;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+
+
+
+
+
+@media only screen and (max-width:768px){
+
+	.mb2sid .lSAction > .lSPrev {
+		left: 0!important;
+	}
+	.mb2sid .lSAction > .lSNext {
+		right: 0!important;	
+	}
+
+}
+
+
+
+
+
+
+

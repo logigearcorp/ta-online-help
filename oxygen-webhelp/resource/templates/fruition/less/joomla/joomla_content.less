@@ -1,0 +1,468 @@
+
+/* Style for Joomla article */
+
+
+
+/* Single article margin */
+
+.item-page {}
+
+
+
+
+/* Set margin for articles in blog list */
+
+.blog .article-inner {
+	margin: 0 0 60px 0;
+	padding: 0 0 60px 0;
+	border-bottom: solid 1px @mb2_border_color_base;
+}
+
+
+.items-leading .article-content {
+	font-size: @mb2_font_size_large;
+	line-height: @mb2_line_height_large;
+}
+
+
+
+/* Article columns */
+
+.cols-2,
+.cols-3,
+.cols-4,
+.cols-5 {
+	width: 104%;
+	margin-left: -4%;
+}
+
+
+
+.cols-2 .item,
+.cols-3 .item,
+.cols-4 .item,
+.cols-5 .item {
+	margin-left: 4%;
+	float: left;
+}
+
+
+
+.cols-2 .item .article-inner,
+.cols-3 .item .article-inner,
+.cols-4 .item .article-inner {
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+}
+
+
+
+
+/* 2 columns */
+
+.cols-2 .item {
+	width: 46%;
+}
+
+
+
+/* 3 columns */
+
+.cols-3 .item {
+	width: 29.33333333333%;
+}
+
+
+
+
+
+/* 4 columns */
+
+.cols-4 .item {
+	width: 21%;
+}
+
+
+
+
+
+/* 5 columns */
+
+.cols-5 .item {
+	width: 16%;
+}
+
+
+
+
+
+
+
+
+
+/* Article header */
+
+.page-header {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+
+
+/* Article title */
+
+.article-title a,
+.item-title a {
+	color: @mb2_color_headings;
+}
+
+.article-title a:hover,
+.article-title a:focus,
+.item-title a:hover,
+.item-title a:focus {
+	color: @mb2_color_links_base;
+}
+
+
+
+
+
+
+/* Article image */
+
+.article-image {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+
+
+
+
+
+/* Image caption */
+
+.img-caption,
+.img-credits {
+	font-size: @mb2_font_size_small;
+	color: @mb2_color_text_lighten;
+	margin: 0;
+	padding: 0;
+}
+
+.img-caption {
+	text-align: center;
+	font-style: italic;
+}
+
+.img-credits {
+	text-align: right;
+}
+
+
+
+
+
+
+
+
+/* Article date */
+
+.article-header .published,
+.page-header .published {
+	font-size: @mb2_font_size_xsmall;
+	text-transform: uppercase;
+	padding: 5px 10px 4px 10px;
+	line-height: normal;
+	display: inline-block;
+	font-weight: normal;
+	margin: 0 0 20px 0;
+	color: #fff;
+	background-color: @mb2_color_bg_accent1;
+	.mb2_border_radius(0);
+}
+
+
+
+
+/* Article info list */
+
+.article-info {
+	margin: -10px 0 20px 0;
+	font-size: @mb2_font_size_small;
+	color: @mb2_color_text_lighten;
+	position: relative;
+}
+
+.article-info-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.article-info-list li {
+	float: left;
+	margin: 0 10px 0 0;
+	padding: 0;
+}
+
+
+
+
+/* Icons in article info list */
+
+.article-icons {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+	position: absolute;
+	top: 1px;
+	right: 0;	
+}
+
+.article-icons i {
+	font-size: 15px;
+	color: @mb2_color_bg_accent1;
+}
+
+.article-icons li {
+	float: left;
+	margin: 0 3px 0 0;
+}
+
+
+
+
+
+
+
+
+/* Article info bottom */
+.article-info-bt {
+	margin: 0;
+	color: @mb2_color_text_lighten;
+	font-size: @mb2_font_size_small;
+}
+
+.article-info-bt-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.article-info-bt-list li {
+	float: left;
+	margin: 0 10px 0 0;
+	padding: 0;
+}
+
+
+
+
+
+
+/* Article navigation */
+
+.item-page .pagenav {
+	margin: 0 0 20px 0;
+	text-align: right;
+	width: 100%;
+}
+
+
+.item-page .pagenav li {
+	display: inline-block;
+}
+
+
+.item-page .pagenav li a {
+	.mb2_border_radius(0);
+	padding: 1px 10px;
+	font-size: @mb2_font_size_small;
+	color: @mb2_color_bg_accent1;
+	border: solid 1px @mb2_color_bg_accent1;
+}
+
+
+.item-page .pagenav li a:hover,
+.item-page .pagenav li a:focus {
+	color: #fff;
+	background-color: @mb2_color_bg_accent1;
+	border-color: @mb2_color_bg_accent1;
+}
+
+
+
+
+
+
+
+/* Article rating */
+
+.content_rating {
+	margin-bottom: 10px;
+}
+
+.content_rating .unseen {
+	float: left;
+	margin: 0 20px 0 0;
+}
+
+
+.content_vote {
+	display: block;
+	margin-bottom: 20px;
+}
+
+
+
+
+
+
+/* Article tags */
+
+.tags {
+	margin: 0;
+	padding: 20px 0 3px 0;
+	width: 100%;
+	list-style: none;
+}
+
+.tags li {
+	display: inline-block;	
+}
+
+
+.tags .label-info {
+	font-size: @mb2_font_size_xsmall;
+	background: 0;
+	border: solid 1px @mb2_color_bg_accent1;
+	.mb2_border_radius(2px);
+	color: @mb2_color_bg_accent1;
+	font-weight: normal;
+	margin: 0 5px 5px 0;
+	padding: 2px 10px;
+	line-height: 1;
+	.mb2_transition1(all, .15s);
+}
+
+
+.tags .label-info:hover,
+.tags .label-info:focus {
+	background-color: @mb2_color_bg_accent1;
+	border-color: @mb2_color_bg_accent1;
+	color: #fff;
+}
+
+
+
+
+
+
+/* Article links */
+
+.article-links {
+	margin: 0;
+	padding: 20px 0 0 0;
+	width: 100%;
+	color: @mb2_color_text_lighten;
+}
+
+
+.article-links-list {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+.article-links-list li {
+	float: left;
+	margin: 0 10px 0 0;
+	padding: 0;
+}
+
+
+
+
+
+/* Article readmore button */
+
+.readmore {
+	margin: 0;
+	padding: 20px 0 0 0;
+}
+
+
+
+
+
+
+
+
+/* List all categories */
+
+.categories-list > ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+
+.categories-list > ul > li {
+	margin: 60px 0 0 0;
+	padding: 60px 0 0 0;
+	border-top: solid 1px @mb2_border_color_base;
+}
+
+.categories-list > ul > li.first {
+	margin-top: 0;
+	padding-top: 0;
+	border-top: 0;	
+}
+
+
+
+.category-header h2 {
+	float: left;
+	margin-right: 15px;
+}
+
+
+.category-header span {
+	font-size: @mb2_font_size_small;
+	color: @mb2_color_text_lighten;
+	line-height: 39px;
+}
+
+
+
+
+
+/* Style for articles filter */
+
+.ctype_content.vtype_archive .filter-search,
+.ctype_content.vtype_category .display-limit {
+	margin: 0 0 60px 0;
+	padding: 15px;
+	background-color: @mb2_color_bg_gray3;
+}
+
+.ctype_content.vtype_archive .filter-search {
+	margin: 0;
+}	
+
+.ctype_content.vtype_archive .filter-search select {
+	margin-right: 10px;
+}
+
+.archive .article-inner {
+	margin: 60px 0 0 0;
+	padding: 60px 0 0 0;
+	border-top: solid 1px @mb2_border_color_base;	
+}

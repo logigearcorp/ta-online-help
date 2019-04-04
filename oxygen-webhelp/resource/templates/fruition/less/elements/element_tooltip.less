@@ -1,0 +1,108 @@
+
+/*========================================== TOOLTIPSY & BOOTSTRAP TOOLTIP */
+
+.popover,
+.tmpl-tt,
+.mb2pt-tt {
+    .mb2_border_radius(3px);
+	padding: 10px 15px;
+	font-size: @mb2_font_size_xsmall;
+	border: 0;
+	color: lighten(@mb2_color_text_base,20%);
+	max-width: 230px;
+	line-height: @mb2_line_height_small;
+	background-color: @mb2_color_bg_accent2;
+	.mb2_box_shadow(0 0 0, transparent);
+}
+
+.popover-title {
+	padding: 0;
+  	margin: 0 0 5px 0;
+  	font-size: @mb2_font_size_xsmall;
+  	line-height: @mb2_line_height_xsmall;
+  	background-color: transparent;
+  	border-bottom: 0;
+	color: #fff;
+}
+
+.popover-content {
+  	padding: 0;
+}
+
+.popover:after,
+.tmpl-tt:after,
+.mb2pt-tt:after {
+	display: block;
+	content: "";
+	position: absolute;
+	border: solid 6px transparent;	
+}
+
+.popover.top:after,
+.tmpl-tt.tt-top:after {
+	left: 50%;
+	bottom: -10px;
+	margin-left: -5px;	
+}
+
+.tmpl-tt.tt-bottom:after {
+	left: 50%;
+	top: -10px;
+	margin-left: -5px;	
+}
+
+.tmpl-tt.tt-right:after {
+	left: -10px;
+	top: 50%;
+	margin-top: -5px;	
+}
+
+.tmpl-tt.tt-left:after {
+	right: -10px;
+	top: 50%;
+	margin-top: -5px;	
+}
+
+
+/* Make tooltip element visible */
+
+.hasTooltip {
+	display: inline-block !important;	
+}
+
+
+.popover .arrow,
+.popover .arrow:after {
+  	display: none;
+}
+
+
+
+.popover.top:after,
+.tmpl-tt.tt-top:after {
+  border-top-color: @mb2_color_bg_accent2;
+}
+.tooltip.top-left .tooltip-arrow {
+  border-top-color: @mb2_color_bg_accent2;
+}
+.tooltip.top-right .tooltip-arrow {
+  border-top-color: @mb2_color_bg_accent2;
+}
+.popover.right:after,
+.tmpl-tt.tt-right:after {
+  border-right-color: @mb2_color_bg_accent2;
+}
+.popover.left:after,
+.tmpl-tt.tt-left:after {
+  border-left-color: @mb2_color_bg_accent2;
+}
+.popover.bottom:after,
+.tmpl-tt.tt-bottom:after {
+  border-bottom-color: @mb2_color_bg_accent2;
+}
+.tooltip.bottom-left .tooltip-arrow {
+  border-bottom-color: @mb2_color_bg_accent2;
+}
+.tooltip.bottom-right .tooltip-arrow {
+  border-bottom-color: @mb2_color_bg_accent2;
+}

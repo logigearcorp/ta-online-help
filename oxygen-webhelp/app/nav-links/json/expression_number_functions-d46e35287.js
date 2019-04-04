@@ -1,0 +1,1 @@
+define({"topics" : [{"title":"random","shortdesc":"\n                        <p class=\"shortdesc\">Return a random integer in the range, inclusive, of the given limits.</p>\n                     ","id":"random","href":"TA_Automation\/Topics\/Expressions_functions_random.html","menu": {"hasChildren":false,},"tocID":"random-d46e35298","topics":[]}]});

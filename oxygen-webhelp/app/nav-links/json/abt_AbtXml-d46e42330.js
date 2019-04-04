@@ -1,0 +1,1 @@
+define({"topics" : [{"title":"Query","id":"abt_Query","href":"TA_Automation\/Topics\/abt_Query.html","menu": {"hasChildren":false,},"tocID":"abt_Query-d46e42341","topics":[]}]});

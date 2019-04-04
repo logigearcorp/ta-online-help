@@ -1,0 +1,1181 @@
+
+<!DOCTYPE html
+  PUBLIC "" "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en-us" lang="en-us">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        
+      <meta name="copyright" content="(C) Copyright 2019" /><meta name="DC.rights.owner" content="(C) Copyright 2019" /><meta property="og:type" content="website" /><meta property="og:title" content="Testing the Car Rental application on Java" /><meta name="twitter:title" content="Testing the Car Rental application on Java" /><meta name="abstract" content="The Car Rental project in the TestArchitect Sample Repository includes test modules and other project items for demonstrating automated testing of the Car Rental application on the Java platform." /><meta property="og:description" content="The Car Rental project in the TestArchitect Sample Repository includes test modules and other project items for demonstrating automated testing of the Car Rental application on the Java platform." /><meta name="twitter:description" content="The Car Rental project in the TestArchitect Sample Repository includes test modules and other project items for demonstrating automated testing of the Car Rental application on the Java platform." /><meta name="description" content="The Car Rental project in the TestArchitect Sample Repository includes test modules and other project items for demonstrating automated testing of the Car Rental application on the Java platform." /><meta name="indexterms" content="sample scripting techniques, scripting, sample techniques" /><meta name="DC.subject" content="sample scripting techniques, scripting, sample techniques" /><meta name="keywords" content="sample scripting techniques, scripting, sample techniques" /><meta name="DC.Relation" scheme="URI" content="../../TA_Tutorials_Sample_App/Topics/SR_Sample_Repository_def.html" /><meta name="DC.Relation" scheme="URI" content="../../TA_Tutorials_Sample_App/Topics/SR_Sample_Repository_def.html" /><meta name="DC.Relation" scheme="URI" content="../../TA_Tutorials_Sample_App/Topics/SR_Car_Rental_mobile_def.html" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="Car_Rental_TA_Client_Java" /><title>Testing the Car Rental application on Java</title><!--  Generated with Oxygen version 20.0-SNAPSHOT, build number 2018031511.  --><meta name="wh-path2root" content="../../" /><meta name="wh-toc-id" content="Car_Rental_TA_Client_Java-d46e19914" />
+        <script type="text/javascript">
+    <!--  
+     /* Include JavaScript code here. */
+     window.dataLayer = window.dataLayer || []; 
+
+     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MBWGFT'); 
+  -->
+</script>
+        
+
+<script type="text/javascript">
+
+<!--
+function $_GET(param) {
+         var vars = {};
+         window.location.href.replace( location.hash, '' ).replace(
+             /[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+             function( m, key, value ) { // callback
+                 vars[key] = value !== undefined ? value : '';
+             }
+         );
+
+         if ( param ) {
+             return vars[param] ? vars[param] : "none";
+         }
+         return vars;
+     }
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); 
+
+     var key = $_GET('trialkey');	 
+	 
+	 if (key=="none")
+	 {
+	
+		if (localStorage.trialkey) {
+            var key = localStorage["trialkey"];
+        } else {
+			var key = "none";            
+        }
+	 }
+	 
+	 localStorage.setItem("trialkey", key);
+     var dimensionValue = key;
+	 ga('create', 'UA-80132928-1', 'auto','webhelp');	 
+     ga('webhelp.set', 'dimension1', dimensionValue);	 
+     ga('webhelp.send', 'pageview');  
+--> 
+</script>
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- EXM-36950 - Expand the args.hdf parameter here -->
+        
+        
+<meta property="og:image" content="https://www.testarchitect.com/OnlineHelp/TA_Help/Images/ta-logo1.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://www.testarchitect.com/OnlineHelp/TA_Help/Images/ta-logo1.png" />
+<link href="../../oxygen-webhelp/resource/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<link href="../../oxygen-webhelp/resource/plugins/editors/jckeditor/typography/typography2.php" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/css/k2.fonts.css?v2.7.1" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/css/k2.css?v2.7.1" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2smpgallery/css/lightslider.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2smpgallery/css/mb2smpgallery.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2smpgallery/css/nivo-lightbox.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2smpgallery/css/nivo-lightbox-default.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2content/css/mb2content.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/plugins/content/fastsocialshare/style/style.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/plugins/content/jw_allvideos/jw_allvideos/tmpl/Classic/css/template.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/assets/glyphicon/css/glyphicon.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/assets/glyphicon/css/glyphicon.min.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/assets/lineicon/css/lineicon.min.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/assets/pe-icon-7-stroke/css/pe-icon-7-stroke.min.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/css/template_47.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2testimonials/css/mb2testimonials.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2ctmenu/css/mb2ctmenu.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" media="all" href="../../oxygen-webhelp/resource/templates/fruition/css/ta_custom.css" />
+<link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resource/templates/fruition/css/jquery.bing.translator.css" />
+ 
+
+        <!-- Latest compiled and minified Bootstrap CSS -->
+       <!--  <link rel="stylesheet"  type="text/css" 
+            href="${oxygen-webhelp-assets-dir}/lib/bootstrap/css/bootstrap.min.css" /> -->
+
+        <!-- Bootstrap Optional theme -->
+        <!-- <link rel="stylesheet"
+            href="${oxygen-webhelp-assets-dir}/lib/bootstrap/css/bootstrap-theme.min.css" /> -->
+        <link rel="stylesheet" href="../../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css" />
+
+        <!-- Template default styles  -->
+        <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/app/topic-page.css?buildId=2018031511" />
+        
+
+        <script type="text/javascript" src="../../oxygen-webhelp/lib/jquery/jquery-3.1.1.min.js"><!----></script>
+
+        <script data-main="../../oxygen-webhelp/app/topic-page.js" src="../../oxygen-webhelp/lib/requirejs/require.js"></script>
+           
+        <!-- Skin resources -->
+        <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/template/customstyle.css?buildId=2018031511" />
+    </head>
+
+    <body class="wh_topic_page frmBody" id="topic-page">
+        
+        <!-- Google Tag Manager iframe V.1.0.0 from Tools for Joomla --> 
+        <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MBWGFT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript> <!-- End Google Tag Manager iframe --> 
+
+        <div id="page-a" class="page ctype_content vtype_article item_1235 ltype_full fixed-nav fixed-nav-hide mpos_header header-white header-style1 width-desktop header-is-grid logo-left page-a hidden-print">
+   <div class="fixed-nav-element-offset"></div>
+   <header id="main-header" class="tsection">
+      <div class="tsection-inner">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="tlogo tcol col-sm-3 left">
+                  <div class="main-logo alignleft">
+                     <a href="https://www.testarchitect.com/">
+                        <img title="" src="https://www.testarchitect.com/images/HomePage/ta-logo.png" alt="" />
+                     </a>
+                  </div>
+               </div>
+               <div class="tcol col-sm-9">
+                  <div class="mod-block clearfix ta-header-main-menu">
+                     <div class="mb2ctm mb2ctm438 ta-header-main-menu is-bar is-button hover-mode mb2ctm-left" data-anim="2" data-anim_speed="350">
+                        <div class="mb2ctm-menu-link">
+                           <a class="mb2ctm-menu-open" href="#">
+                              <span class="mb2ctm-menu-icon mb2ctm_icon-menu"></span>
+                           </a>
+                        </div>
+                        <!-- end .mb2ctm-menu-bar -->
+                        <ul class="mb2ctm-list mb2ctm-clr" data-anim="2" data-anim_speed="350">
+                           
+                           <li class="mb2ctm-item mb2ctm-item-797 mb2ctm-stparent mb2ctm-isparent mb2ctm-dropdow mb2ctm-dd-right">
+                              <span class="mb2ctm-parent-open"></span>
+                              <a class="ta-menu" href="#">PRODUCTS</a>
+                              <div class="mb2ctm-smenu mb2ctm-smenu-panel mb2ctm-clr" style="right:auto;left:0;">
+                                 <div class="mb2ctm-smenu-inner mb2ctm-clr">
+                                    <ul class="mb2ctm-child-list1">
+                                       <li class="mb2ctm-item mb2ctm-item-1140 mb2ctm-isnoparent2">
+                                          <a href="https://www.testarchitect.com/product/testarchitect-team-and-testarchitect-enterprise">TestArchitect Team &amp; Enterprise</a>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1141 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="https://www.testarchitect.com/product/features-and-supported-platforms">Features &amp; Supported Platforms</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-1142">
+                                                <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-features">TestArchitect Features</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-1143 mb2ctm-stparent mb2ctm-isparent">
+                                                <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-supported-platforms">TestArchitect Supported Platforms</a>
+                                                <ul class="mb2ctm-child-list3">
+                                                   <li class="mb2ctm-item mb2ctm-item-1176">
+                                                      <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-supported-platforms/web-testing">Web Testing</a>
+                                                   </li>
+                                                   <li class="mb2ctm-item mb2ctm-item-1182">
+                                                      <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-supported-platforms/web-service-testing">Web Service &amp; API Testing</a>
+                                                   </li>
+                                                   <li class="mb2ctm-item mb2ctm-item-1177">
+                                                      <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-supported-platforms/mobile-testing">Mobile Testing</a>
+                                                   </li>
+                                                   <li class="mb2ctm-item mb2ctm-item-1178">
+                                                      <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-supported-platforms/desktop-testing">Desktop Testing</a>
+                                                   </li>
+                                                   <li class="mb2ctm-item mb2ctm-item-1180">
+                                                      <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-supported-platforms/more-automated-testing">More Automated Testing</a>
+                                                   </li>
+                                                </ul>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1144 mb2ctm-isnoparent2">
+                                          <a href="https://www.testarchitect.com/product/professional-services-and-training">Professional Services &amp; Training</a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <!-- end .mb2ctm-smenu-inner -->
+                              </div>
+                              <!-- end .mb2ctm-smenu -->
+                           </li>
+                           <li class="mb2ctm-item mb2ctm-item-814 mb2ctm-stparent mb2ctm-isparent mb2ctm-dropdow mb2ctm-dd-right">
+                              <span class="mb2ctm-parent-open"></span>
+                              <a class="ta-menu" href="#">RESOURCES</a>
+                              <div class="mb2ctm-smenu mb2ctm-smenu-panel mb2ctm-clr" style="right:auto;left:0;">
+                                 <div class="mb2ctm-smenu-inner mb2ctm-clr">
+                                    <ul class="mb2ctm-child-list1">
+                                       <li class="mb2ctm-item mb2ctm-item-1162 mb2ctm-isnoparent2">
+                                          <a href="https://www.testarchitect.com/resources/data-sheets">Data Sheets</a>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1163 mb2ctm-isnoparent2">
+                                          <a href="https://www.testarchitect.com/resources/case-studies">Case Studies</a>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1165 mb2ctm-isnoparent2">
+                                          <a href="https://www.testarchitect.com/resources/white-papers">White Papers</a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <!-- end .mb2ctm-smenu-inner -->
+                              </div>
+                              <!-- end .mb2ctm-smenu -->
+                           </li>
+                           <li class="mb2ctm-item mb2ctm-item-822 mb2ctm-stparent mb2ctm-isparent mb2ctm-mega mb2ctm-dd-right">
+                              <span class="mb2ctm-parent-open"></span>
+                              <a class="ta-menu" href="https://www.testarchitect.com/support">SUPPORT</a>
+                              <div class="mb2ctm-smenu mb2ctm-smenu-panel mb2ctm-clr" style="right:auto;left:0;">
+                                 <div class="mb2ctm-smenu-inner mb2ctm-clr">
+                                    <ul class="mb2ctm-child-list1">
+                                       <li class="mb2ctm-item mb2ctm-item-827 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="https://www.testarchitect.com/support/action-based-testing">ACTION BASED TESTING</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-828">
+                                                <a href="https://www.testarchitect.com/support/action-based-testing/abt-overview">Overview</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-829">
+                                                <a href="https://www.testarchitect.com/support/action-based-testing/how-to-write-test-module">Template</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-820">
+                                                <a href="https://www.testarchitect.com/support/action-based-testing/best-practices">Best Practices</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1008 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="#">DOCUMENTATION</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-1010">
+                                                <a href="https://www.testarchitect.com/support/documentation/get-started">Get Started</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-819">
+                                                <a href="https://www.testarchitect.com/support/documentation/tutorial-videos">Tutorial Videos</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-823">
+                                                <a href="https://www.testarchitect.com/OnlineHelp/">Online Help</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-821">
+                                                <a href="https://www.testarchitect.com/support/documentation/release-notes">Release Notes</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1011 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="#">SUPPORT PORTAL</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-825">
+                                                <a href="https://www.testarchitect.com/sso?host_url=support-ta.logigear.com" target="_blank">Login</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-787">
+                                                <a href="http://support-ta.logigear.com/support/discussions" target="_blank">Forum</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-1118">
+                                                <a href="https://www.testarchitect.com/support/support-portal/license-pricing-faq">License/Pricing FAQ</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-788">
+                                                <a href="http://support-ta.logigear.com/support/solutions" target="_blank">Knowledge Base</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-1012">
+                                                <a href="http://support-ta.logigear.com/support/tickets/new" target="_blank">Submit a Ticket</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <!-- end .mb2ctm-smenu-inner -->
+                              </div>
+                              <!-- end .mb2ctm-smenu -->
+                           </li>
+                           <li class="mb2ctm-item mb2ctm-item-318 mb2ctm-stparent mb2ctm-isparent mb2ctm-mega mb2ctm-dd-right">
+                              <span class="mb2ctm-parent-open"></span>
+                              <a class="ta-menu" href="#">COMPANY</a>
+                              <div class="mb2ctm-smenu mb2ctm-smenu-panel mb2ctm-clr" style="right:auto;left:0;">
+                                 <div class="mb2ctm-smenu-inner mb2ctm-clr">
+                                    <ul class="mb2ctm-child-list1">
+                                       <li class="mb2ctm-item mb2ctm-item-334 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="#">COMPANY</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-322">
+                                                <a href="https://www.testarchitect.com/company/logigear">About LogiGear</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-778 mb2ctm-stparent mb2ctm-isparent">
+                                                <a href="https://www.testarchitect.com/company/partners">Partners</a>
+                                                <ul class="mb2ctm-child-list3">
+                                                   <li class="mb2ctm-item mb2ctm-item-1131">
+                                                      <a class="ta-hide-menu" href="https://www.testarchitect.com/company/partners/become-a-partner">Become a Partner</a>
+                                                   </li>
+                                                   <li class="mb2ctm-item mb2ctm-item-1133">
+                                                      <a class="ta-hide-menu" href="https://www.testarchitect.com/company/partners/our-partners">Our Partners</a>
+                                                   </li>
+                                                </ul>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-779">
+                                                <a href="https://www.testarchitect.com/company/customers">Customers</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1184 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="#">CONTACT US</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-685">
+                                                <a href="https://www.testarchitect.com/company/contact-us">Leave A Message</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-1186">
+                                                <a href="https://www.testarchitect.com/product/testarchitect-team-and-testarchitect-enterprise/request-a-demo">Request A Demo</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-1195">
+                                                <a href="https://www.testarchitect.com/company/request-a-quote">Request A Quote</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-1185">
+                                                <a href="https://www.testarchitect.com/company/partners/become-a-partner">Become A Partner</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-336 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="#">NEWS</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-782">
+                                                <a href="https://www.testarchitect.com/company/news">News</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-784">
+                                                <a href="http://www.logigear.com/about-us/events.html" target="_blank">Events</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-785">
+                                                <a href="http://www.logigear.com/about-us/awards.html" target="_blank">Awards</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-786">
+                                                <a href="https://www.testarchitect.com/company/news/media-kit">Media Kit</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-332 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="#">SOCIAL MEDIA</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-792">
+                                                <a href="https://www.youtube.com/user/LogiGearCorporation" target="_blank">Youtube</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-793">
+                                                <a href="https://twitter.com/logigear" target="_blank">Twitter</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-794">
+                                                <a href="https://www.linkedin.com/company/logigear-corporation" target="_blank">Linkedin</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-795">
+                                                <a href="https://www.facebook.com/logigearcorporation/" target="_blank">Facebook</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-796">
+                                                <a href="https://plus.google.com/102920289935162355348" target="_blank">Google Plus</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <!-- end .mb2ctm-smenu-inner -->
+                              </div>
+                              <!-- end .mb2ctm-smenu -->
+                           </li>
+                           <li class="mb2ctm-item mb2ctm-item-855 mb2ctm-mega mb2ctm-dd-right">
+                              <a class="btn btn-primary ta-menu sf-with-ul free-download-menu" href="https://www.testarchitect.com/free-download">Free Download</a>
+                           </li>
+						   <li>
+								<div id="languagePicker"></div>
+						   </li>
+                        </ul>
+                        <!-- end .mb2ctm-list -->
+                     </div>
+                     <!-- end .mb2ctm -->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+</div>
+        <!-- EXM-36950 - Expand the args.hdr parameter here -->
+        
+       
+         <!-- config navbar and header -->
+<nav class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <a href="../../index.html" class=" wh_logo hidden-xs "></a>
+                    <div class=" wh_publication_title "><a href="../../index.html"><h1 class="ta-help-title" style="display:none;"><span class="title">TestArchitect Help</span></h1><span class="ta-help-title">TestArchitect</span><span class="ta-help-title" style="color:#f7d542"> Online Help</span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse">
+                
+                
+                <!-- <whc:webhelp_indexterms_link/> -->
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+        
+        
+        <div class="container-fluid">
+            <div class="row">
+
+                <nav class="wh_tools hidden-print">
+                    <!-- <whc:webhelp_breadcrumb/> -->
+                   <!--  <div class="wh_right_tools hidden-sm hidden-xs">
+                        <whc:webhelp_navigation_links/>
+                        <whc:webhelp_toggle_highlight/>
+                        <whc:webhelp_expand_collapse_sections/>
+                        <whc:webhelp_print_link class="print"/>
+                    </div> -->
+                </nav>
+            </div>
+
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <!-- <div id="title-container-left" class="hidden-print">
+                                <div class="header-container">
+                                    <h1 class="content-header">Content </h1> 
+                                </div>
+                                <whc:webhelp_indexterms_link/> 
+                           </div> -->
+                            <div id="topic-search-section">
+                            <div class=" wh_search_input "><form id="searchForm" method="get" action="../../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" /><button type="submit" class="wh_search_button"><span>Search</span></button></div><script><!--
+                                    $(document).ready(function () {
+                                        $('#searchForm').submit(function (e) {
+                                            if ($('.wh_search_textfield').val().length < 1) {
+                                                e.preventDefault();
+                                            }
+                                        });
+                                    });
+                                --></script></form></div> <!-- search btn -->
+                            <nav role="navigation" id="wh_publication_toc" class="navbar hidden-print">
+                                <div class=" wh_publication_toc " data-tooltip-position="right"><ul>
+   <li><span data-tocid="concept_e3v_dpb_cp-d46e15991" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_UsingHelpSystem/Topics/hs_using_help_system.html">Using the TestArchitect Help system</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The <span class="ph">TestArchitect</span> Help system is available in both   desktop (CHM) and web-based versions. This section describes the help viewers and how
+                  you can use   them to find the information you need.
+                  
+               </p>
+               </span></span></span></li>
+   <li><span data-tocid="idTutorials_Managing_Tests_with_TestArchitect-d46e16166" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Tutorials/Topics/Tutorials_Managing_Tests_with_TestArchitect.html">TestArchitect Tutorial</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Get started creating and managing your tests with TestArchitect by reviewing these             introductory lessons.     
+                  
+                  
+               </p>
+               </span></span></span></li>
+   <li><span data-tocid="User_guide-d46e17810" class="topicref" data-state="expanded"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/User_Guide_begin.html">User Guide</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">This guide provides instructions on using <span class="ph">TestArchitect</span>.   It also explains the environment requirements for <span class="ph">TestArchitect</span> and   describes the process of running tests and reviewing test results. 
+                  
+               </p>
+               </span></span></span><ul class="nav nav-list">
+         <li><span data-tocid="concept_what_new_8.3_U3-d46e17851" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_ReleaseNotes/DITA_source/Whats_New.html">What's new in TestArchitect 8.4 Update 3</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Following are the new features and enhancements introduced in the latest version of <span class="ph">TestArchitect</span>.
+                        
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="concept_pmb_t3y_rn-d46e17901" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_ReleaseNotes/DITA_source/Version_History.html">Version history</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">This topic describes the changes made in  previous versions of <span class="ph">TestArchitect</span>.
+                        
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="getting_started-d46e18963" class="topicref" data-state="expanded"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/Getting_started.html">Getting started</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">This section guides you through the basics of starting to use your TestArchitect and the   License Server.</p>
+                     </span></span></span><ul class="nav nav-list">
+               <li><span data-tocid="getting_started_overview-d46e18974" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/Getting_started_overview.html">Overview</a><span class="wh-tooltip">
+                           
+                           <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The features of TestArchitect are built upon a framework that offers you a powerful tool   to integrate <strong class="ph b">Action Based Testing™</strong>(ABT) into your testing organization.
+                              
+                           </p>
+                           </span></span></span></li>
+               <li><span data-tocid="concept_yqb_yvf_pw-d46e18988" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_InstallationGuide/DITA_source/Topics/inst_TA.html">TestArchitect installation guide</a><span class="wh-tooltip">
+                           
+                           <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Recommended system requirements, software requirements, and instructions for installing   TestArchitect on Windows, Linux,
+                              and macOS operating systems.
+                              
+                           </p>
+                           </span></span></span></li>
+               <li><span data-tocid="TA_editions_features-d46e19129" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_ReleaseNotes/DITA_source/TA_Editions_features.html">TestArchitect editions</a><span class="wh-tooltip">
+                           
+                           <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"><span class="keyword option">TestArchitect Team</span>, and <span class="keyword option">TestArchitect       Enterprise</span> editions of <span class="ph">TestArchitect</span> offer a range of     capabilities tailored to meet the needs of your organization.
+                              
+                           </p>
+                           </span></span></span></li>
+               <li><span data-tocid="reference_wjy_xhx_cv-d46e19148" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_ReleaseNotes/DITA_source/Supported_platforms.html">Supported platforms</a><span class="wh-tooltip">
+                           
+                           <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">     <span class="ph">TestArchitect</span> provides support for testing a variety of     applications created using various languages.
+                              
+                           </p>
+                           </span></span></span></li>
+               <li><span data-tocid="concept_uh5_jbp_zw-d46e19162" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_InstallationGuide/DITA_source/Topics/inst_TA_components.html"><strong xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph b"><span class="ph" id="_Toc459281540">Overview of TestArchitect components</span></strong></a><span class="wh-tooltip">
+                           
+                           <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The basic TestArchitect infrastructure includes Repository Server, License Server,     client machines, and execution machines.</p>
+                           </span></span></span></li>
+               <li><span data-tocid="concept_hqp_lxf_pw-d46e19183" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_InstallationGuide/DITA_source/Topics/inst_TA_silent_mode.html">Installing TestArchitect in silent mode</a><span class="wh-tooltip">
+                           
+                           <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">In some cases, you may need to install <span class="ph">TestArchitect</span> in   silent mode. In this mode, the installation is performed automatically without any user   interaction.
+                              
+                           </p>
+                           </span></span></span></li>
+               <li><span data-tocid="concept_ggj_b4w_5w-d46e19242" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_InstallationGuide/DITA_source/Topics/uninst_TA_silent_mode.html">Uninstalling TestArchitect in silent mode</a><span class="wh-tooltip">
+                           
+                           <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">In some cases, you may need to uninstall the current version of <span class="ph">TestArchitect</span> in silent mode before installing the newer version. In   this mode, the uninstallation is performed automatically without
+                              any user interaction.
+                              
+                           </p>
+                           </span></span></span></li>
+               <li><span data-tocid="task_ltr_3rw_5w-d46e19301" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_InstallationGuide/DITA_source/Topics/inst_uninst_TA_silent_mode_batch_file.html">Using batch file to automate silent installation</a><span class="wh-tooltip">
+                           
+                           <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">In practice, there are occasions where you might need to write and schedule a batch             (<span class="ph filepath">.bat</span>) file to automate the tasks of silent <span class="ph">TestArchitect</span> uninstallation and installation. This topic         shows a basic template to follow.
+                              
+                           </p>
+                           </span></span></span></li>
+               <li><span data-tocid="getting_started_launching_the_TestArchitect_client-d46e19318" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/Getting_started_launching_the_testArchitect_client.html">Launching <span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph">TestArchitect Client</span> for the first time
+                           </a><span class="wh-tooltip">
+                           
+                           <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">         <span class="ph">TestArchitect Client</span> is the integrated test development and test         management environment of <span class="ph">TestArchitect</span>. 
+                              
+                           </p>
+                           </span></span></span></li>
+               <li><span data-tocid="getting_started_working_with_repositories-d46e19339" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/Getting_started_overview_working_with_repositories.html">Working with repositories</a><span class="wh-tooltip">
+                           
+                           <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"><span class="ph">TestArchitect</span> stores its information in a database         called a repository. 
+                              
+                           </p>
+                           </span></span></span></li>
+               <li><span data-tocid="getting_started_working_with_TestArchitect_client-d46e19411" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/Getting_started_overview_working_with_TestArchitect_client.html">Working with TestArchitect Client</a><span class="wh-tooltip">
+                           
+                           <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"><span class="ph">TestArchitect Client</span> provides you with an interface to create,   manage, and execute your automated tests.
+                              
+                           </p>
+                           </span></span></span></li>
+               <li><span data-tocid="getting_started_the_test_editor-d46e19818" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/Getting_started_overview_the_test_editor.html">The test editor</a><span class="wh-tooltip">
+                           
+                           <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"><span class="ph"><span class="ph">TestArchitect</span> provides you with a             worksheet-like test editor to let you view, create and modify action-based         tests.</span></p>
+                           </span></span></span></li>
+               <li><span data-tocid="SR_def-d46e19901" class="topicref" data-state="expanded"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Tutorials_Sample_App/Topics/SR_Sample_Repository_def.html">Sample Repository</a><span class="wh-tooltip">
+                           
+                           <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The sample repository contains projects with test modules and other items designed work   with sample applications (also provided)
+                              to demonstrate automated testing on a variety of   platforms.
+                              
+                           </p>
+                           </span></span></span><ul class="nav nav-list">
+                     <li class="active"><span data-tocid="Car_Rental_TA_Client_Java-d46e19914" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Tutorials_Sample_App/Topics/SR_Car_Rental_TA_client.html">Testing the Car Rental application on Java</a><span class="wh-tooltip">
+                                 
+                                 <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The Car Rental project in the <span class="ph">TestArchitect</span> Sample     Repository includes test modules and other project items for demonstrating automated testing of     the Car Rental
+                                    application on the Java platform.
+                                    
+                                 </p>
+                                 </span></span></span></li>
+                     <li><span data-tocid="SR_Car_Rental-d46e19928" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Tutorials_Sample_App/Topics/SR_Car_Rental_mobile_def.html">Car Rental mobile</a><span class="wh-tooltip">
+                                 
+                                 <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The sample Car Rental application for mobile platforms is part of <span class="ph">TestArchitect</span>'s automation sample test suite.    It runs on both Android   and iOS platforms.
+                                    
+                                 </p>
+                                 </span></span></span></li>
+                     <li><span data-tocid="Scipting_sample_TA_Client-d46e20151" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Tutorials_Sample_App/Topics/SR_sample_scripting_techniques.html">Testing sample scripting techniques</a><span class="wh-tooltip">
+                                 
+                                 <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"><span class="ph">TestArchitect</span> provides various testing samples to     illustrate additional techniques in comparing pictures, obtaining controls, using
+                                    wildcards, and     using inline data sets.
+                                    
+                                 </p>
+                                 </span></span></span></li>
+                     <li><span data-tocid="SR_Scrum_Board-d46e20174" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Tutorials_Sample_App/Topics/SR_Scrum_Board_def.html">Scrum Board</a><span class="wh-tooltip">
+                                 
+                                 <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The Scrum Board application, a part of the <span class="ph">TestArchitect</span>'s automation sample test suite, is a web application that manages software development based on   Scrum methodology.
+                                    
+                                 </p>
+                                 </span></span></span></li>
+                     <li><span data-tocid="Music_player_executing-d46e20463" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Tutorials_Sample_App/Topics/SR_Executing_Music_Library.html">Testing the Music Library</a><span class="wh-tooltip">
+                                 
+                                 <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The Music Library automated test project is provided in the Sample Repository to         demonstrate automated testing of
+                                    the <span class="ph filepath">Music Library</span> application, which         is based on Windows Presentation Foundation (WPF).
+                                    
+                                 </p>
+                                 </span></span></span></li>
+                  </ul>
+               </li>
+            </ul>
+         </li>
+         <li><span data-tocid="Projects_and_project_items-d46e20485" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/Projects_and_project_items.html">Projects and project items</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">A project consists of a collection of items called project items. <span class="ph"><span class="ph">TestArchitect</span></span> has the facility to view, create, edit, manage,   and, in the case of tests modules and actions, execute, project items.
+                        
+                        
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="Project_items_tests-d46e21896" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/Project_items_tests.html">Tests</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The purposes and goals of the test modules, test cases and test objectives.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="Creating_and_using_actions-d46e22264" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../reuse/reuse.Creating_and_using_actions.html">Actions</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Actions form the cornerstone of the Action Based Testing™ methodology upon which                 <span class="ph">TestArchitect</span> is based.
+                        
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="Interface_def-d46e22460" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/Interface_def.html">Interface definitions</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The process of how to capture an application's interface information, how to select only   those parts of it that you require
+                        for your project, and how to rename the elements of the   interface to make them easier to work with. 
+                        
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="Integration_def-d46e23699" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/Integration_def.html">Integration with third-party tools</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"><span class="ph">TestArchitect</span> seamlessly integrates with several powerful   third-party tools, to assist in application development, continuous integration,
+                        test management,   and bug tracking. Interfaces with    HP Quality Center®, Team Foundation Server-Microsoft Test    Manager®,
+                        Jenkins®, JIRA®, and Zephyr® are all available to extend TestArchitect's functionality and empower your and your   team.
+                        
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="variations-d46e26054" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/Variations.html">Variations</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Variations allow you to adapt your test project to any number of changes to, or versions of, an AUT or platform, while preserving
+                        the project's existing functionality.
+                        
+                        
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="Test_exec-d46e26425" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/Test_exec.html">Test execution</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">How   to execute a test on single device or multiple devices, remotely or   locally.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="concept.debugging_with_ta-d46e26832" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/Debugging_finding_bugs.html">Finding bugs with TestArchitect</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">TestArchitect offers two tools to aid    you in the quick identification of errors, warnings, and failures: the debugger,
+                        and screenshot    recording.
+                        
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="Test_exec_controller-d46e26973" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/Controller_management.html">Controller management</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Test automation is managed by the <span class="ph">TestArchitect Controller</span>   application, which interacts with and obtains vital test run information from the interpreter. A   machine on which <span class="ph">TestArchitect Controller</span> is running is referred to as a    <dfn class="term">controller</dfn>.
+                        
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="Test_result-d46e27073" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/Test_result.html">Working with test results</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"><span class="ph">TestArchitect</span> automatically generates a report containing     the results of an automated test after the test concludes. The test results
+                        are immediately     displayed in the main window of <span class="ph">TestArchitect Client</span>.
+                        
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="TA_command_line_tool-d46e27671" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/TA_command_line_tool.html">TestArchitect command line tool</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The TestArchitect command line tool is a Java program that enables you carry out some         directives on TestArchitect.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="Reporting_and_dashboard-d46e27729" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/Reporting_dashboard_def.html">Reporting and dashboard</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"><span class="ph">TestArchitect</span>'s dashboard tool allows you to create a wide range of   reports and provides you with the dashboard tool to help you manage
+                        and monitor your   projects.
+                        
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="Lab_manager-d46e28529" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/Lab_manager.html">Lab Manager</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"><span class="ph">TestArchitect</span>'s Lab Manager offers test managers the   ability to monitor, from a single location, the progress of all <span class="ph">TestArchitect</span> controllers and devices running tests. 
+                        
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="Android_tool_command_line-d46e28755" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/ug_export_import_tool.html"><span xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="ph filepath">Import/Export</span> command line tool
+                     </a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"><span class="ph">TestArchitect</span> allows you to import and export             repositories and individual project items from within the <span class="ph">TestArchitect Client</span> environment. In Windows, these tasks may also             be performed with command line commands.
+                        
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="Support-d46e28947" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/Support.html">Support</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">FAQs, a list of available hotkeys and a glossary.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="ABT-d46e30633" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/ABT.html">Introduction to Action Based Testing</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">A modern testing methodology which can be applied to both manual and automated   testing.</p>
+                     </span></span></span></li>
+         <li><span data-tocid="Legal_and_contact_Information-d46e30754" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/Legal_and_contact_information.html">Legal and usage information</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">LogiGear's copyright, permitted usage, and warranty disclaimer information.</p>
+                     </span></span></span></li>
+      </ul>
+   </li>
+   <li><span data-tocid="Administration_guide-d46e30766" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Administration/Topics/Administration_Guide_begin.html">Administration Guide</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Learn how to set up and administrate the License Server, the Repository Server,   etc.</p>
+               </span></span></span></li>
+   <li><span data-tocid="Automation_guide-d46e34996" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/Automation_Guide_begin.html">Automation Guide</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">With <span class="ph">TestArchitect</span>, you can test apps running on various   environments, such as, desktop, web, mobile applications, etc.
+                  
+               </p>
+               </span></span></span></li>
+</ul></div>
+                            </nav>
+                            </div>
+                         </div> 
+                    
+                    
+                    <div id="wh_topic_body" class="col-lg-7 col-md-9 col-sm-9 col-xs-12">
+                         <div id="title-container-right">   
+                            <div class="title-container-right hidden-print hidden-sm"> 
+                                <a class="glyphicon glyphicon-share" title="Share" onclick="" href="javascript:sharePopUp()">
+                                    <p class="share-title">SHARE</p>
+                                </a>
+                                <a class="glyphicon glyphicon-envelope" title="Send Email" onclick="" href="javascript:sendMail()">
+                                    <p class="share-title">E-MAIL</p>
+                                </a>
+                                <div class=" wh_print_link print "><a href="javascript:window.print();" title="Print this page"><p class="share-title">PRINT</p></a></div>
+                            </div>
+                            <div class="wh_right_tools hidden-sm hidden-xs">  
+                            <div class=" wh_indexterms_link "><a href="../../indexTerms.html" title="Index"></a></div> <!--index btn -->    
+                            <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  
+<span class="navprev"><a class="link" href="../../TA_Tutorials_Sample_App/Topics/SR_Sample_Repository_def.html" title="Sample Repository"></a></span>  
+<span class="navnext"><a class="link" href="../../TA_Tutorials_Sample_App/Topics/SR_Car_Rental_mobile_def.html" title="Car Rental mobile"></a></span>  </span></div>
+                            <button class="wh_hide_highlight" title="Toggle search highlights"></button>
+                           <!--  <whc:webhelp_expand_collapse_sections/> -->
+                            </div>
+                         </div>
+                        <div id="breadscrumb"> <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol xmlns:html="http://www.w3.org/1999/xhtml" class="hidden-print"><li><span class="home"><a href="../../index.html"><span>Home</span></a></span></li>
+   <li><span class="topicref"><span class="title"><a href="../../TA_Help/Topics/User_Guide_begin.html">User Guide</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">This guide provides instructions on using <span class="ph">TestArchitect</span>.   It also explains the environment requirements for <span class="ph">TestArchitect</span> and   describes the process of running tests and reviewing test results. 
+                  
+               </p>
+               </span></span></span></li>
+   <li><span class="topicref"><span class="title"><a href="../../TA_Help/Topics/Getting_started.html">Getting started</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">This section guides you through the basics of starting to use your TestArchitect and the   License Server.</p>
+               </span></span></span></li>
+   <li><span class="topicref"><span class="title"><a href="../../TA_Tutorials_Sample_App/Topics/SR_Sample_Repository_def.html">Sample Repository</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The sample repository contains projects with test modules and other items designed work   with sample applications (also provided)
+                  to demonstrate automated testing on a variety of   platforms.
+                  
+               </p>
+               </span></span></span></li>
+   <li class="active"><span class="topicref"><span class="title"><a href="../../TA_Tutorials_Sample_App/Topics/SR_Car_Rental_TA_client.html">Testing the Car Rental application on Java</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The Car Rental project in the <span class="ph">TestArchitect</span> Sample     Repository includes test modules and other project items for demonstrating automated testing of     the Car Rental
+                  application on the Java platform.
+                  
+               </p>
+               </span></span></span></li>
+</ol></div> </div>
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+ <h1 class="title topictitle1" id="ariaid-title1">Testing the Car Rental application on Java</h1>
+
+ 
+ 
+ <div class="body taskbody"><p class="shortdesc">The Car Rental project in the <span class="ph">TestArchitect</span> Sample
+    Repository includes test modules and other project items for demonstrating automated testing of
+    the Car Rental application on the Java platform.</p>
+
+  <div class="section prereq p">
+   <p class="p">Ensure that <span class="ph">TestArchitect Client</span> is installed on your system.</p>
+
+  </div>
+
+  <ol class="ol steps"><li class="li step stepexpand">
+                <span class="ph cmd" id="Car_Rental_TA_Client_Java__d231e41">With <span class="ph">TestArchitect</span> running, double-click the
+                        <span class="ph uicontrol">SampleRepository</span> node on the <span class="ph">TestArchitect explorer tree</span>.</span>
+                <div class="itemgroup stepresult">
+                    <br /><img class="image" id="Car_Rental_TA_Client_Java__d231e55" src="../../reuse/../TA_Tutorials/Images/tut.Login_Repository.png" /><br />
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd" id="Car_Rental_TA_Client_Java__d231e61">In the <span class="keyword wintitle">Log In
+                        Repository</span> dialog box, type <kbd class="ph userinput">administrator</kbd>
+                    in the <span class="ph uicontrol">User Name</span> box, leave the
+                        <span class="ph uicontrol">Password</span> box blank, and click
+                        <span class="ph uicontrol">OK</span>.</span>
+            </li>
+<li class="li step stepexpand">
+    <span class="ph cmd">Expand the <span class="ph uicontrol">Car Rental</span> project and its <span class="ph uicontrol">Tests</span>
+     node in the <span class="ph">TestArchitect explorer tree</span>.</span>
+   </li>
+<li class="li step stepexpand">
+    <span class="ph cmd">Select a sample test module (for example, <span class="ph uicontrol">Action Based Testing</span>)
+     inside the Car Rental <span class="ph uicontrol">Test</span> node that you want to execute.</span>
+   </li>
+<li class="li step stepexpand">
+    <span class="ph cmd">Click <span class="ph uicontrol">Execute</span>
+     <img class="image" src="../Images/btn.TAC_toolbar.Execute.png" /> on the toolbar to execute
+     the test.</span>
+   </li>
+<li class="li step stepexpand">
+                <span class="ph cmd" id="Car_Rental_TA_Client_Java__d231e236">In
+                    the <span class="keyword wintitle">Execute Test</span> dialog box, click
+                        <span class="ph uicontrol">Execute</span> to start the test.</span>
+                <div class="itemgroup info" id="Car_Rental_TA_Client_Java__d231e247">
+                    <div class="p">
+                        <div class="note important"><span class="importanttitle">Important:</span> Do not provide any user input while the test is being
+                            executed.</div>
+
+                    </div>
+
+                </div>
+                <div class="itemgroup stepresult" id="Car_Rental_TA_Client_Java__d231e256">
+                    <p class="p" id="Car_Rental_TA_Client_Java__d231e258">A status bar indicating the stages of
+                        the test is visible in the bottom-right corner of the <span class="ph">TestArchitect</span> window. During the initial
+                        compilation stage, all information required for execution is collected and
+                        made available for automation. Following compilation, <span class="ph">TestArchitect</span> invokes the playback tool for
+                        the execution stage of the test.</p>
+
+                </div>
+            </li>
+</ol>
+
+  <section class="section result" id="Car_Rental_TA_Client_Java__result_jdu3_mf7k">
+   <p class="p">At the end of the test run, <span class="ph">TestArchitect</span> displays a summary and detailed
+                    results of the run. See <a class="xref" href="../../reuse/../TA_Help/Topics/Test_result.html" title="TestArchitect automatically generates a report containing the results of an automated test after the test concludes. The test results are immediately displayed in the main window of TestArchitect Client.">Working with test results</a> for details regarding
+                    interpreting test results. </p>
+
+  </section>
+
+ </div>
+
+</article></main></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div> <nav class="navbar navbar-default wh_footer">
+ <!--  <div class=" footer-container text-center ">
+    <whc:include_html href="${webhelp.fragment.footer}"/>
+  </div> -->
+</nav>
+
+        
+        <div id="go2top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close glyphicon glyphicon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" />
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        <script src="../../oxygen-webhelp/lib/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        
+        
+<div id="bottom-3" class="tsection hidden-print">
+ <div class="tsection-inner">
+ 	<div class="tcol col-sm-no-grid">
+      <div class="mod-block clearfix">
+      	<div class="mb2pb-section clearfix light section_5abb0c9af2a15" style="">
+      		<div class="mb2pb-section-inner clearfix" style="padding-top:0px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+      			<div class="mb2pb-row clearfix dark-gray hpadding-normal row_5abb0c9af2a15" style="">
+      				<div class="mb2pb-row-inner clearfix" style="padding-top:70px;padding-bottom:70px;background-color:rgb(8, 8, 8);">
+      					<div class="container-fluid" style="">
+      						<div class="row">
+      							<div class="mb2pb-column col-sm-5 cnoempty light cnoheight" style="">
+                                   <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                   	 <div style="" class="mb2pb-text pos-left">
+                                   	 	<div class="moduletable">
+                                   	 		<div class="mb2pb-section clearfix light section_5abb0c9af2a15" style="">
+                                   	 			<div class="mb2pb-section-inner clearfix" style="padding-top:0px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+                                   	 				<div class="mb2pb-row clearfix dark-gray hpadding-normal row_5abb0c9b024dd" style="">
+                                   	 					<div class="mb2pb-row-inner clearfix" style="padding-top:20px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+                                                      		<div class="container-fluid" style="">
+                                                         		<div class="row">
+                                                         			<div class="mb2pb-column col-sm-6 cnoempty light cnoheight" style="">
+		                                                               <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+		                                                                  <div class="border-hor border1" style="border-bottom-color:rgba(255, 255, 255, 0.1);border-bottom-style:solid;border-bottom-width:1px;"></div>
+		                                                                  <div class="mb2pb-gap gap clearfix" style="height:45px;"></div>
+		                                                                  <div style="padding:0px 0px 20px 0px;" class="mb2pb-text pos-left">
+		                                                                     <h4 class="title">Contact Us</h4>
+		                                                                     <ul class="list list2 list-left">
+		                                                                        <li><a href="https://www.testarchitect.com/company/contact-us" target="_self">Leave A Message</a></li>
+		                                                                        <li><a href="https://www.testarchitect.com/product/testarchitect-team-and-testarchitect-enterprise/request-a-demo" target="_self">Request A Demo</a></li>
+		                                                                        <li><a href="https://www.testarchitect.com/company/request-a-quote" target="_self">Request A Quote</a></li>
+		                                                                        <li><a href="https://www.testarchitect.com/company/partners/become-a-partner" target="_self">Become A Partner</a></li>
+		                                                                     </ul>
+		                                                                  </div>
+		                                                               </div>
+		                                                            </div>	
+		                                                            <div class="mb2pb-column col-sm-6 cnoempty light cnoheight" style="">
+		                                                               <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+		                                                                  <div class="border-hor border1" style="border-bottom-color:rgba(255, 255, 255, 0.1);border-bottom-style:solid;border-bottom-width:1px;"></div>
+		                                                                  <div class="mb2pb-gap gap clearfix" style="height:45px;"></div>
+		                                                                  <div style="padding:0px 0px 20px 0px;" class="mb2pb-text pos-left">
+		                                                                     <h4 class="title">TestArchitect</h4>
+		                                                                     <ul class="list list2 list-left">
+		                                                                        <li><a href="https://www.testarchitect.com/" target="_self">Home</a></li>
+		                                                                        <li><a href="https://www.testarchitect.com/why-testarchitect" target="_self">Why TestArchitect</a></li>
+		                                                                        <li><a href="https://www.testarchitect.com/product/features-and-supported-platforms" target="_self">Products</a></li>
+		                                                                        <li><a href="https://www.testarchitect.com/product/professional-services-and-training" target="_self">Services</a></li>
+		                                                                     </ul>
+		                                                                  </div>
+		                                                               </div>
+		                                                            </div>
+                                                         		</div>
+                                                         	</div>
+                                                         </div>			
+
+                                   	 				</div>
+                                   	 			</div>	
+                                   	 		</div>
+                                   	 	</div>	
+                                   	 </div>
+                                   </div>
+      							</div>	
+      							<div class="mb2pb-column col-sm-2 cnoempty light cnoheight" style="">
+                                 <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                    <div style="" class="mb2pb-text pos-left">
+                                       <div class="moduletable">
+                                          <div class="mb2pb-section clearfix light section_5abb0c9b024dd" style="">
+                                             <div class="mb2pb-section-inner clearfix" style="padding-top:0px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+                                                <div class="mb2pb-row clearfix dark-gray hpadding-normal row_5abb0c9b024dd" style="">
+                                                   <div class="mb2pb-row-inner clearfix" style="padding-top:20px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+                                                      <div class="container-fluid" style="">
+                                                         <div class="row">
+                                                            <div class="mb2pb-column col-sm-12 cnoempty light cnoheight" style="">
+                                                               <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                                                  <div class="border-hor border1" style="border-bottom-color:rgba(255, 255, 255, 0.1);border-bottom-style:solid;border-bottom-width:1px;"></div>
+                                                                  <div class="mb2pb-gap gap clearfix" style="height:45px;"></div>
+                                                                  <div style="padding:0px 0px 20px 0px;" class="mb2pb-text pos-left">
+                                                                     <h4 class="title">Resources</h4>
+                                                                     <ul class="list list2 list-left">
+                                                                        <li><a href="https://www.testarchitect.com/resources/data-sheets" target="_self">Data Sheets</a></li>
+                                                                        <li><a href="https://www.testarchitect.com/resources/case-studies" target="_self">Case Studies</a></li>
+                                                                        <li><a href="https://www.testarchitect.com/resources/white-papers" target="_self">White Papers</a></li>
+                                                                        <li><a href="https://www.testarchitect.com/support/documentation/tutorial-videos" target="_self">Tutorial Videos</a></li>
+                                                                     </ul>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="mb2pb-column col-sm-5 cnoempty light cnoheight" style="">
+                                 <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                    <div style="" class="mb2pb-text pos-left">
+                                       <div class="moduletable">
+                                          <div class="mb2pb-section clearfix light section_5abb0c9b061e6" style="">
+                                             <div class="mb2pb-section-inner clearfix" style="padding-top:0px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+                                                <div class="mb2pb-row clearfix dark-gray hpadding-normal row_5abb0c9b061e6" style="">
+                                                   <div class="mb2pb-row-inner clearfix" style="padding-top:20px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+                                                      <div class="container-fluid" style="">
+                                                         <div class="row">
+                                                            <div class="mb2pb-column col-sm-6 cnoempty light cnoheight" style="">
+                                                               <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                                                  <div class="border-hor border1" style="border-bottom-color:rgba(255, 255, 255, 0.1);border-bottom-style:solid;border-bottom-width:1px;"></div>
+                                                                  <div class="mb2pb-gap gap clearfix" style="height:45px;"></div>
+                                                                  <div style="padding:0px 0px 20px 0px;" class="mb2pb-text pos-left">
+                                                                     <h4 class="title">Support</h4>
+                                                                     <ul class="list list2 list-left">
+                                                                        <li><a href="http://testarchitect.com/onlinehelp" target="_blank">Online Help</a></li>
+                                                                        <li><a href="http://support-ta.logigear.com/support/tickets/new" target="_blank">Submit A Ticket</a></li>
+                                                                        <li><a href="http://testarchitect.com/sso?host_url=support-ta.logigear.com" target="_blank">Login</a></li>
+                                                                        <li><a href="https://www.testarchitect.com/support/documentation/release-notes" target="_self">Release Notes</a></li>
+                                                                     </ul>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                            <div class="mb2pb-column col-sm-6 cnoempty light cnoheight" style="">
+                                                               <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                                                  <div class="border-hor border1" style="border-bottom-color:rgba(255, 255, 255, 0.1);border-bottom-style:solid;border-bottom-width:1px;"></div>
+                                                                  <div class="mb2pb-gap gap clearfix" style="height:45px;"></div>
+                                                                  <div style="padding:0px 0px 20px 0px;" class="mb2pb-text pos-left">
+                                                                     <h4 class="title">Community</h4>
+                                                                     <ul class="list list2 list-left">
+                                                                        <li><a href="http://support-ta.logigear.com/support/discussions" target="_blank">Forums</a></li>
+                                                                        <li><a href="http://support-ta.logigear.com/support/solutions" target="_blank">Knowledge Base</a></li>
+                                                                        <li><a href="http://www.logigear.com/blog" target="_blank">LogiGear Blog</a></li>
+                                                                        <li><a href="http://www.logigear.com/Magazine" target="_blank">LogiGear Magazine</a></li>
+                                                                     </ul>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+      						</div>	
+      					</div>
+      				</div>
+      			</div>
+      		</div>	
+      		<!-- END FOOTER ITEMS-->
+            <!-- START SOCIAL NETWORK-->
+      		<div class="mb2pb-section clearfix light section_5abb0c9af2a15" style="">
+               <div class="mb2pb-section-inner clearfix" style="padding-top:0px;padding-bottom:0px;">
+                  <div class="mb2pb-row clearfix light hpadding-normal row_5abb0c9af2a15" style="">
+                     <div class="mb2pb-row-inner clearfix" style="padding-top:px;padding-bottom:px;background-color:rgba(0, 0, 0, 0.83);">
+                        <div class="container-fluid" style="">
+                           <div class="row">
+                              <div class="mb2pb-column col-sm-4 cnoempty light cnoheight" style="">
+                                 <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                    <div style="" class="mb2pb-text pos-left">
+                                       <h6 style="color: white;">Powered by<!-- &nbsp; --> 
+                                       	<img style="vertical-align: middle;" src="https://www.testarchitect.com/images/gallery/other/logigear-logo.png" alt="" width="108" height="31" /> 
+                                       	</h6>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="mb2pb-column col-sm-8 cnoempty light cnoheight" style="">
+                                 <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                    <div style="" class="mb2pb-text pos-left">
+                                       <h6 style="color: white;">
+                                       <strong>STAY IN TOUCH</strong><!-- &nbsp; --> 
+                                       <a href="https://www.facebook.com/logigearcorporation/" target="_blank">
+                                       <img style="vertical-align: middle; margin-left: 5px; margin-right: 5px;" src="https://www.testarchitect.com/images/gallery/other/fb-icon.png" alt="" width="30" height="30" />
+                                       </a>
+                                       <a href="https://twitter.com/logigear" target="_blank">
+                                       <img class="" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;" src="https://www.testarchitect.com/images/gallery/other/twitter.png" alt="" width="30" height="30" />
+                                       </a>
+                                       <a href="https://www.linkedin.com/company/logigear-corporation" target="_blank">
+                                       <img class="" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;" src="https://www.testarchitect.com/images/gallery/other/linked-in-icon.png" alt="" width="30" height="30" />
+                                       </a>
+                                       <a href="https://www.youtube.com/user/LogiGearCorporation" target="_blank">
+                                       <img class="" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;" src="https://www.testarchitect.com/images/gallery/other/youtube-icon.png" alt="" width="30" height="30" />
+                                       </a>
+                                       <a href="https://plus.google.com/102920289935162355348" target="_blank">
+                                       <img class="" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;" src="https://www.testarchitect.com/images/gallery/other/g+-icon.png" alt="" width="30" height="30" />
+                                       </a>
+                                       <a href="mailto:sales@logigear.com?Subject=" target="_top">
+                                       <img class="" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;" src="https://www.testarchitect.com/images/gallery/other/email-icon.png" alt="" width="30" height="30" />
+                                       </a>
+                                   		</h6>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+      	</div>
+      </div>
+    </div>  	
+ </div>	
+</div>	
+   <footer id="footer" class="tsection hidden-print">
+      <div class="tsection-inner">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="tfooter tcol col-sm-12">
+                  <div style="float:left; padding:0">
+                     © 2019 LogiGear Corporation. All rights reserved. 
+                  </div>
+                  <div id="footer-url">
+                     <a href="https://www.testarchitect.com/legal/privacy-policy">
+                     Security Policy
+                     </a>
+                     <a href="https://www.testarchitect.com/legal/eula">
+                     Terms of Use
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+<script src="../../oxygen-webhelp/resource/media/jui/js/jquery.min.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/templates/fruition/js/jui/bootstrap.min.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/templates/fruition/assets/tooltipsy.min.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/templates/fruition/js/template.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/media/mb2ctmenu/js/superfish.custom.min.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/media/mb2ctmenu/js/mb2ctmenu.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/custom-script.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/jquery.bing.translator.js" type="text/javascript"> </script>
+<script src="https://apis.google.com/js/platform.js"></script>
+<script type="text/javascript">
+		$(document).ready(function(){
+    		$('#languagePicker').languagePicker({mode:'auto',delay:1000});
+		});
+		</script>
+		<script type="text/javascript">
+		    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		    try {
+		      var pageTracker = _gat._getTracker("UA-56756158-1");
+		    pageTracker._trackPageview();
+		    } catch(err) {}
+		</script>
+<!--
+<script type="text/javascript">
+	function setDefault(){
+	
+		document.getElementsByClassName('goog-te-menu-frame')[1].contentDocument.body.getElementsByClassName('text')[0].click();
+	}
+	
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
+    }
+
+	function triggerHtmlEvent(element, eventName) {
+	  var event;
+	  if (document.createEvent) {
+		event = document.createEvent('HTMLEvents');
+		event.initEvent(eventName, true, true);
+		element.dispatchEvent(event);
+	  } else {
+		event = document.createEventObject();
+		event.eventType = eventName;
+		element.fireEvent('on' + event.eventType, event);
+	  }
+	}
+
+	jQuery('.lang-select').click(function() {
+	  var theLang = jQuery(this).attr('data-lang');
+	  jQuery('.goog-te-combo').val(theLang);
+
+	  //alert(jQuery(this).attr('href'));
+	  window.location = jQuery(this).attr('href');
+	  location.reload();
+
+	});
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+-->
+
+        <div id="cover">
+            <div id="social-button">
+            <div class="share-social">
+            <h4 class="share-via-title">Share Via...</h4>
+            <div class="x-button"> 
+                <a href="javascript:turnOffPopUp()" class="glyphicon glyphicon-remove-sign"></a>
+            </div>
+            <div id="button-group">
+            <div class="social-button-popup"><a title="Facebook" href="javascript:fbshareCurrentPage()" alt="Facebook"> Facebook </a></div>
+            <div class="social-button-popup"><a title="Twitter" href="javascript:tweetCurrentPage()" alt="Twitter"> Twitter </a></div>
+            <div class="social-button-popup"><a title="LinkedIn" href="javascript:linkedinCurrentPage()" alt="LinkedIn"> LinkedIn </a></div>
+            <div class="social-button-popup" style="border: none;"><a title="Google+" href="javascript:gplusShare()" alt="Google+"> Google+ </a></div>
+            </div>
+            <div id="content-group">
+            </div>    
+            
+            </div>
+           <!--  <div class="g-plus" data-action="share"></div> -->
+        </div>        
+        </div>
+        
+    </body>
+</html>

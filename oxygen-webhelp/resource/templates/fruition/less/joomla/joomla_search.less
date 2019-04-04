@@ -1,0 +1,157 @@
+
+/* Style for search page results */
+
+.search #searchForm .btn-toolbar {
+	margin: 0 0 60px 0;	
+}
+
+.search #searchForm .btn-toolbar .btn-group {
+	margin: 0 15px 0 0;	
+}
+
+.search #searchForm .phrases {
+	margin: 0 0 60px 0;
+}
+
+.search #searchForm .phrases > legend,
+.search #searchForm .only > legend {
+	padding-bottom: 20px;
+}
+
+.search #searchForm .controls label,
+.search #searchForm .only label {
+	margin-right: 15px;	
+}
+
+.search #searchForm .controls label input,
+.search #searchForm .only label input {
+	margin-right: 5px;	
+}
+
+
+.search #searchForm .phrases .controls label,
+.search #searchForm .only label {
+	margin-left: 20px;		
+}
+
+.search #searchForm .phrases .ordering-box,
+.search #searchForm .form-limit {
+	padding-top: 20px;	
+}
+
+
+
+
+/* Search Form */
+
+.search-base-form {}
+
+.search-result-info,
+.search-result-error,
+.search-advanced-link {
+	display: inline-block;
+	margin-top: 30px;	
+}
+
+
+
+.search-input {}
+
+.search-input input[type="text"],
+.search-input input[type="submit"] {
+	height: 60px;
+	margin: 0;
+	vertical-align: top;
+	display: block;
+	float: left;	
+}
+
+.search-input input[type="text"] {
+	width: 75%;	
+	.mb2_border_radius(2px 0 0 2px);
+}
+
+.search-input input[type="submit"] {	
+	margin-left: -1px;
+	padding-left: 0;
+	padding-right: 0;
+	width: 25%;
+	.mb2_border_radius(0 2px 2px 0);
+}
+
+
+
+
+
+/* Hide js select and show normal select form */
+
+.search-advanced-form  #ordering_chzn {
+	display: none!important;	
+}
+
+.search-advanced-form #ordering {
+	display: block!important;	
+}
+
+.search-advanced-form {
+	display: none;
+	margin-top: 60px;
+}
+
+
+
+
+
+/* Search results */
+
+.search-results {
+	padding-top: 60px;	
+}
+
+
+.search-results .result-title {
+	margin-top: 60px;	
+	padding-top: 60px;
+	border-top: solid 1px @mb2_border_color_base;
+}
+
+.search-results .result-category,
+.search-results .result-created {	
+	color: @mb2_color_text_lighten;
+}
+
+.search-results .result-category {
+	margin-bottom: 10px;	
+}
+
+.search-results .result-created {
+	margin-top: 10px;
+	font-size: @mb2_font_size_small;	
+}
+
+
+
+/* Smart search */
+
+#search-query-explained {
+	padding: 30px 0 0 0;	
+}
+
+.search-results.list-striped {
+	margin: 0;
+	padding: 0;
+	list-style: none;	
+}
+
+.result-url {
+	color: @mb2_color_text_lighten;	
+}
+
+
+
+
+/* Search module */
+
+.mod-block .search input[name="searchword"] {
+	width: 98%;	
+}

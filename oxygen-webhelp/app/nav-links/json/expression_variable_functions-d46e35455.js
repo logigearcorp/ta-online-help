@@ -1,0 +1,1 @@
+define({"topics" : [{"title":"getglobal(variable)","shortdesc":"\n                        <p class=\"shortdesc\">Retrieve an existing global variable’s value.</p>\n                     ","id":"getglobal","href":"TA_Automation\/Topics\/Expressions_functions_getglobal.html","menu": {"hasChildren":false,},"tocID":"getglobal-d46e35469","topics":[]}]});

@@ -1,0 +1,184 @@
+
+/* Style for joomla menus (custom menu list) */
+
+ul.menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;	
+}
+
+ul.menu ul {
+	margin: 0;
+	padding: 0 0 0 10px;
+	list-style: none;	
+}
+
+ul.menu li,
+ul.menu li li {
+	margin: 0;
+	padding: 0;	
+}
+
+ul.menu li li a {
+	font-size: @mb2_font_size_small;	
+}
+
+ul.menu > li > ul > li li {}
+
+ul.menu li a {
+	position: relative;
+	color: @mb2_color_text_base;
+	padding: 8px 0;
+	display: block;	
+	.mb2_transition1(all, 0.15s);
+	.mb2_border_radius(3px);
+}
+
+.dark ul.menu li a {
+	color: #fff;	
+}
+
+ul.menu li a:hover,
+ul.menu li a:focus,
+ul.menu li.selected > a {
+	color: @mb2_color_bg_accent1;	
+}
+
+
+
+/* Menu 1 and 2 and 3 and 4 and 5 */
+
+ul.menu1 > li,
+ul.menu2 > li,
+ul.menu3 > li {
+	border-top: solid 1px @mb2_border_color_base;	
+}
+
+.dark-gray ul.menu1 > li,
+.dark-gray ul.menu2 > li,
+.dark-gray ul.menu3 > li {
+	border-color: rgba(255,255,255, .2);	
+}
+
+ul.menu1 > li:first-child,
+ul.menu2 > li:first-child,
+ul.menu3 > li:first-child {
+	border: 0;	
+}
+
+ul.menu2 > li > a:after,
+ul.menu3 > li > a:before,
+ul.menu4 > li > a:after,
+ul.menu5 > li > a:before {
+	content: "\f105";
+	display: inline-block;
+  	font: normal normal normal 14px/1 FontAwesome;
+  	font-size: inherit;
+  	text-rendering: auto;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;	
+}
+
+ul.menu2 > li > a:after,
+ul.menu4 > li > a:after {
+	display: block;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	text-align: center;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -8px; 	
+}
+
+ul.menu3 > li > a:before,
+ul.menu5 > li > a:before  {
+	margin-right: 5px;
+}
+
+
+
+/* Menu 6 and 7 */
+
+ul.menu6 > li > a,
+ul.menu7 > li > a {
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: @mb2_color_bg_gray3;	
+}
+
+.dark-gray ul.menu6 > li > a,
+.dark-gray ul.menu7 > li > a {
+	background-color: rgba(255,255,255,.1);	
+}
+
+ul.menu7 > li > a:hover,
+ul.menu7 > li > a:focus,
+ul.menu7 > li.selected > a {
+	color: #fff !important;
+	background-color: @mb2_color_bg_accent1;
+}
+
+
+
+/* Center module */
+
+.center {
+	text-align: center	
+}
+
+
+
+/* Horizontal menu style */
+
+ul.horizontal {
+	margin-top: 0;	
+}
+
+ul.horizontal li {
+	display: inline-block;
+	margin: 0 20px 0 0;
+}
+
+ul.horizontal li a {
+	display: inline;	
+}
+
+
+
+
+/* Horizontal - align right */
+
+ul.horizontal.right {
+	text-align: right;	
+}
+
+ul.horizontal.right li {
+	margin: 0 0 0 20px;
+}
+
+
+
+
+
+@media (max-width: @mb2_screen_tablet){
+
+	ul.horizontal.right {
+		text-align: left;	
+	}
+	
+	ul.horizontal.right li {
+		margin: 0 20px 0 0;	
+	}
+
+}
+
+
+
+
+/* Horizontal - align center */
+
+ul.horizontal.center li {
+	margin: 0 10px;
+}

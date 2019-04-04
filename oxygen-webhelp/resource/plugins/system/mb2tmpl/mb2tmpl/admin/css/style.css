@@ -1,0 +1,113 @@
+
+
+
+/*-----------------------------------------------------------*/
+/*	Accordion items
+/*-----------------------------------------------------------*/
+/* General style for section item */
+
+.mb2sections-item {	
+	margin-bottom: -20px;
+	position: relative;
+	top: -30px;	
+	max-width: 800px;
+}
+
+
+
+/* Style for heading and content */
+
+.mb2sections-heading,
+.mb2sections-content {
+	padding: 20px;	
+}
+
+
+
+/* Style for heading */
+
+.mb2sections-heading {
+	padding: 15px 20px;
+	margin: 0;
+	font-size: 100%;
+	line-height: 1;	
+	cursor: pointer;
+	background-color: #e7e8e9;
+	color: #656565;
+	position: relative;
+}
+
+
+/* Queston icon */
+.mb2sections-desc {
+	display: none;
+	width: 300px;
+	height: auto;
+	padding: 10px;
+	position: absolute;
+	right: 0;
+	bottom: 110%;
+	background-color: rgba(0,0,0,.8);
+	color: #fff;
+	font-weight: normal;
+	-moz-border-radius: 3px;	
+	-webkit-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.mb2sections-desc:after {
+	content: '';
+	display: block;
+	position: absolute;
+	right: 15px;
+	bottom: -10px;
+	border: solid 5px rgba(255,255,255,0);
+	border-top-color: rgba(0,0,0,.8)	
+}
+
+.mb2sections-question {
+	display: block;
+	position: absolute;
+	right: 10px;
+	top: 12px;
+	font-size: 12px;
+	text-align: center;
+	line-height: 20px;
+	width: 20px;
+	height: 20px;
+	color: #fff;
+	font-weight: normal;
+	background-color: rgba(0,0,0,.1);
+	-moz-border-radius: 999px;	
+	-webkit-border-radius: 999px;
+	-ms-border-radius: 999px;
+	-o-border-radius: 999px;
+	border-radius: 999px;	
+}
+
+.mb2sections-heading:hover,
+.mb2sections-heading.active {
+	background-color: #f1f2f3;
+}
+
+
+/* Style for content */
+
+.mb2sections-content {
+	display: none;
+	border: solid 1px #e7e8e9;
+	border-top: 0;	
+}
+
+
+
+/* Custom color for super sections */
+
+.section_header,
+.section_footer,
+.section_main_content {
+	color: #5bb75b;	
+}
+

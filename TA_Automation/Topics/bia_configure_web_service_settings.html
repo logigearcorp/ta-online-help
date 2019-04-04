@@ -1,0 +1,2035 @@
+
+<!DOCTYPE html
+  PUBLIC "" "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en-us" lang="en-us">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="description" content="Description Send JSON string request to a web service in order to apply new configuration settings. Arguments values Send JSON string request to a web service in order to apply new configuration ..." /><meta name="copyright" content="(C) Copyright 2019" /><meta name="DC.rights.owner" content="(C) Copyright 2019" /><meta property="og:type" content="website" /><meta property="og:title" content="configure web service settings" /><meta name="twitter:title" content="configure web service settings" /><meta name="indexterms" content="built-in actions, configure web service settings, configure web service settings (action)" /><meta name="DC.subject" content="built-in actions, configure web service settings, configure web service settings (action), configure web service settings, web service settings, web service configuration, configure web service, web service configuration settings" /><meta name="keywords" content="built-in actions, configure web service settings, configure web service settings (action), configure web service settings, web service settings, web service configuration, configure web service, web service configuration settings" /><meta name="DC.Relation" scheme="URI" content="../../TA_Automation/Topics/bia_web_services.html" /><meta name="DC.Relation" scheme="URI" content="../../TA_Automation/Topics/bia_authenticate.html" /><meta name="DC.Relation" scheme="URI" content="../../TA_Automation/Topics/bia_create_http_request.html" /><meta name="DC.Relation" scheme="URI" content="../../TA_Automation/Topics/aut_testing_web_service.html" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="bia_configure_web_service_settings" /><title>configure web service settings</title><!--  Generated with Oxygen version 20.0-SNAPSHOT, build number 2018031511.  --><meta name="wh-path2root" content="../../" /><meta name="wh-toc-id" content="bia_configure_web_service_settings-d46e36812" />
+        <script type="text/javascript">
+    <!--  
+     /* Include JavaScript code here. */
+     window.dataLayer = window.dataLayer || []; 
+
+     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MBWGFT'); 
+  -->
+</script>
+        
+
+<script type="text/javascript">
+
+<!--
+function $_GET(param) {
+         var vars = {};
+         window.location.href.replace( location.hash, '' ).replace(
+             /[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+             function( m, key, value ) { // callback
+                 vars[key] = value !== undefined ? value : '';
+             }
+         );
+
+         if ( param ) {
+             return vars[param] ? vars[param] : "none";
+         }
+         return vars;
+     }
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); 
+
+     var key = $_GET('trialkey');	 
+	 
+	 if (key=="none")
+	 {
+	
+		if (localStorage.trialkey) {
+            var key = localStorage["trialkey"];
+        } else {
+			var key = "none";            
+        }
+	 }
+	 
+	 localStorage.setItem("trialkey", key);
+     var dimensionValue = key;
+	 ga('create', 'UA-80132928-1', 'auto','webhelp');	 
+     ga('webhelp.set', 'dimension1', dimensionValue);	 
+     ga('webhelp.send', 'pageview');  
+--> 
+</script>
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- EXM-36950 - Expand the args.hdf parameter here -->
+        
+        
+<meta property="og:image" content="https://www.testarchitect.com/OnlineHelp/TA_Help/Images/ta-logo1.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://www.testarchitect.com/OnlineHelp/TA_Help/Images/ta-logo1.png" />
+<link href="../../oxygen-webhelp/resource/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<link href="../../oxygen-webhelp/resource/plugins/editors/jckeditor/typography/typography2.php" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/css/k2.fonts.css?v2.7.1" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/css/k2.css?v2.7.1" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2smpgallery/css/lightslider.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2smpgallery/css/mb2smpgallery.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2smpgallery/css/nivo-lightbox.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2smpgallery/css/nivo-lightbox-default.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2content/css/mb2content.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/plugins/content/fastsocialshare/style/style.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/plugins/content/jw_allvideos/jw_allvideos/tmpl/Classic/css/template.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/assets/glyphicon/css/glyphicon.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/assets/glyphicon/css/glyphicon.min.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/assets/lineicon/css/lineicon.min.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/assets/pe-icon-7-stroke/css/pe-icon-7-stroke.min.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/templates/fruition/css/template_47.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2testimonials/css/mb2testimonials.css" rel="stylesheet" type="text/css" />
+<link href="../../oxygen-webhelp/resource/media/mb2ctmenu/css/mb2ctmenu.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" media="all" href="../../oxygen-webhelp/resource/templates/fruition/css/ta_custom.css" />
+<link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/resource/templates/fruition/css/jquery.bing.translator.css" />
+ 
+
+        <!-- Latest compiled and minified Bootstrap CSS -->
+       <!--  <link rel="stylesheet"  type="text/css" 
+            href="${oxygen-webhelp-assets-dir}/lib/bootstrap/css/bootstrap.min.css" /> -->
+
+        <!-- Bootstrap Optional theme -->
+        <!-- <link rel="stylesheet"
+            href="${oxygen-webhelp-assets-dir}/lib/bootstrap/css/bootstrap-theme.min.css" /> -->
+        <link rel="stylesheet" href="../../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css" />
+
+        <!-- Template default styles  -->
+        <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/app/topic-page.css?buildId=2018031511" />
+        
+
+        <script type="text/javascript" src="../../oxygen-webhelp/lib/jquery/jquery-3.1.1.min.js"><!----></script>
+
+        <script data-main="../../oxygen-webhelp/app/topic-page.js" src="../../oxygen-webhelp/lib/requirejs/require.js"></script>
+           
+        <!-- Skin resources -->
+        <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/template/customstyle.css?buildId=2018031511" />
+    </head>
+
+    <body class="wh_topic_page frmBody" id="topic-page">
+        
+        <!-- Google Tag Manager iframe V.1.0.0 from Tools for Joomla --> 
+        <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MBWGFT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript> <!-- End Google Tag Manager iframe --> 
+
+        <div id="page-a" class="page ctype_content vtype_article item_1235 ltype_full fixed-nav fixed-nav-hide mpos_header header-white header-style1 width-desktop header-is-grid logo-left page-a hidden-print">
+   <div class="fixed-nav-element-offset"></div>
+   <header id="main-header" class="tsection">
+      <div class="tsection-inner">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="tlogo tcol col-sm-3 left">
+                  <div class="main-logo alignleft">
+                     <a href="https://www.testarchitect.com/">
+                        <img title="" src="https://www.testarchitect.com/images/HomePage/ta-logo.png" alt="" />
+                     </a>
+                  </div>
+               </div>
+               <div class="tcol col-sm-9">
+                  <div class="mod-block clearfix ta-header-main-menu">
+                     <div class="mb2ctm mb2ctm438 ta-header-main-menu is-bar is-button hover-mode mb2ctm-left" data-anim="2" data-anim_speed="350">
+                        <div class="mb2ctm-menu-link">
+                           <a class="mb2ctm-menu-open" href="#">
+                              <span class="mb2ctm-menu-icon mb2ctm_icon-menu"></span>
+                           </a>
+                        </div>
+                        <!-- end .mb2ctm-menu-bar -->
+                        <ul class="mb2ctm-list mb2ctm-clr" data-anim="2" data-anim_speed="350">
+                           
+                           <li class="mb2ctm-item mb2ctm-item-797 mb2ctm-stparent mb2ctm-isparent mb2ctm-dropdow mb2ctm-dd-right">
+                              <span class="mb2ctm-parent-open"></span>
+                              <a class="ta-menu" href="#">PRODUCTS</a>
+                              <div class="mb2ctm-smenu mb2ctm-smenu-panel mb2ctm-clr" style="right:auto;left:0;">
+                                 <div class="mb2ctm-smenu-inner mb2ctm-clr">
+                                    <ul class="mb2ctm-child-list1">
+                                       <li class="mb2ctm-item mb2ctm-item-1140 mb2ctm-isnoparent2">
+                                          <a href="https://www.testarchitect.com/product/testarchitect-team-and-testarchitect-enterprise">TestArchitect Team &amp; Enterprise</a>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1141 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="https://www.testarchitect.com/product/features-and-supported-platforms">Features &amp; Supported Platforms</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-1142">
+                                                <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-features">TestArchitect Features</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-1143 mb2ctm-stparent mb2ctm-isparent">
+                                                <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-supported-platforms">TestArchitect Supported Platforms</a>
+                                                <ul class="mb2ctm-child-list3">
+                                                   <li class="mb2ctm-item mb2ctm-item-1176">
+                                                      <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-supported-platforms/web-testing">Web Testing</a>
+                                                   </li>
+                                                   <li class="mb2ctm-item mb2ctm-item-1182">
+                                                      <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-supported-platforms/web-service-testing">Web Service &amp; API Testing</a>
+                                                   </li>
+                                                   <li class="mb2ctm-item mb2ctm-item-1177">
+                                                      <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-supported-platforms/mobile-testing">Mobile Testing</a>
+                                                   </li>
+                                                   <li class="mb2ctm-item mb2ctm-item-1178">
+                                                      <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-supported-platforms/desktop-testing">Desktop Testing</a>
+                                                   </li>
+                                                   <li class="mb2ctm-item mb2ctm-item-1180">
+                                                      <a href="https://www.testarchitect.com/product/features-and-supported-platforms/testarchitect-supported-platforms/more-automated-testing">More Automated Testing</a>
+                                                   </li>
+                                                </ul>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1144 mb2ctm-isnoparent2">
+                                          <a href="https://www.testarchitect.com/product/professional-services-and-training">Professional Services &amp; Training</a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <!-- end .mb2ctm-smenu-inner -->
+                              </div>
+                              <!-- end .mb2ctm-smenu -->
+                           </li>
+                           <li class="mb2ctm-item mb2ctm-item-814 mb2ctm-stparent mb2ctm-isparent mb2ctm-dropdow mb2ctm-dd-right">
+                              <span class="mb2ctm-parent-open"></span>
+                              <a class="ta-menu" href="#">RESOURCES</a>
+                              <div class="mb2ctm-smenu mb2ctm-smenu-panel mb2ctm-clr" style="right:auto;left:0;">
+                                 <div class="mb2ctm-smenu-inner mb2ctm-clr">
+                                    <ul class="mb2ctm-child-list1">
+                                       <li class="mb2ctm-item mb2ctm-item-1162 mb2ctm-isnoparent2">
+                                          <a href="https://www.testarchitect.com/resources/data-sheets">Data Sheets</a>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1163 mb2ctm-isnoparent2">
+                                          <a href="https://www.testarchitect.com/resources/case-studies">Case Studies</a>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1165 mb2ctm-isnoparent2">
+                                          <a href="https://www.testarchitect.com/resources/white-papers">White Papers</a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <!-- end .mb2ctm-smenu-inner -->
+                              </div>
+                              <!-- end .mb2ctm-smenu -->
+                           </li>
+                           <li class="mb2ctm-item mb2ctm-item-822 mb2ctm-stparent mb2ctm-isparent mb2ctm-mega mb2ctm-dd-right">
+                              <span class="mb2ctm-parent-open"></span>
+                              <a class="ta-menu" href="https://www.testarchitect.com/support">SUPPORT</a>
+                              <div class="mb2ctm-smenu mb2ctm-smenu-panel mb2ctm-clr" style="right:auto;left:0;">
+                                 <div class="mb2ctm-smenu-inner mb2ctm-clr">
+                                    <ul class="mb2ctm-child-list1">
+                                       <li class="mb2ctm-item mb2ctm-item-827 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="https://www.testarchitect.com/support/action-based-testing">ACTION BASED TESTING</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-828">
+                                                <a href="https://www.testarchitect.com/support/action-based-testing/abt-overview">Overview</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-829">
+                                                <a href="https://www.testarchitect.com/support/action-based-testing/how-to-write-test-module">Template</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-820">
+                                                <a href="https://www.testarchitect.com/support/action-based-testing/best-practices">Best Practices</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1008 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="#">DOCUMENTATION</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-1010">
+                                                <a href="https://www.testarchitect.com/support/documentation/get-started">Get Started</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-819">
+                                                <a href="https://www.testarchitect.com/support/documentation/tutorial-videos">Tutorial Videos</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-823">
+                                                <a href="https://www.testarchitect.com/OnlineHelp/">Online Help</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-821">
+                                                <a href="https://www.testarchitect.com/support/documentation/release-notes">Release Notes</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1011 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="#">SUPPORT PORTAL</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-825">
+                                                <a href="https://www.testarchitect.com/sso?host_url=support-ta.logigear.com" target="_blank">Login</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-787">
+                                                <a href="http://support-ta.logigear.com/support/discussions" target="_blank">Forum</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-1118">
+                                                <a href="https://www.testarchitect.com/support/support-portal/license-pricing-faq">License/Pricing FAQ</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-788">
+                                                <a href="http://support-ta.logigear.com/support/solutions" target="_blank">Knowledge Base</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-1012">
+                                                <a href="http://support-ta.logigear.com/support/tickets/new" target="_blank">Submit a Ticket</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <!-- end .mb2ctm-smenu-inner -->
+                              </div>
+                              <!-- end .mb2ctm-smenu -->
+                           </li>
+                           <li class="mb2ctm-item mb2ctm-item-318 mb2ctm-stparent mb2ctm-isparent mb2ctm-mega mb2ctm-dd-right">
+                              <span class="mb2ctm-parent-open"></span>
+                              <a class="ta-menu" href="#">COMPANY</a>
+                              <div class="mb2ctm-smenu mb2ctm-smenu-panel mb2ctm-clr" style="right:auto;left:0;">
+                                 <div class="mb2ctm-smenu-inner mb2ctm-clr">
+                                    <ul class="mb2ctm-child-list1">
+                                       <li class="mb2ctm-item mb2ctm-item-334 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="#">COMPANY</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-322">
+                                                <a href="https://www.testarchitect.com/company/logigear">About LogiGear</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-778 mb2ctm-stparent mb2ctm-isparent">
+                                                <a href="https://www.testarchitect.com/company/partners">Partners</a>
+                                                <ul class="mb2ctm-child-list3">
+                                                   <li class="mb2ctm-item mb2ctm-item-1131">
+                                                      <a class="ta-hide-menu" href="https://www.testarchitect.com/company/partners/become-a-partner">Become a Partner</a>
+                                                   </li>
+                                                   <li class="mb2ctm-item mb2ctm-item-1133">
+                                                      <a class="ta-hide-menu" href="https://www.testarchitect.com/company/partners/our-partners">Our Partners</a>
+                                                   </li>
+                                                </ul>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-779">
+                                                <a href="https://www.testarchitect.com/company/customers">Customers</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-1184 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="#">CONTACT US</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-685">
+                                                <a href="https://www.testarchitect.com/company/contact-us">Leave A Message</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-1186">
+                                                <a href="https://www.testarchitect.com/product/testarchitect-team-and-testarchitect-enterprise/request-a-demo">Request A Demo</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-1195">
+                                                <a href="https://www.testarchitect.com/company/request-a-quote">Request A Quote</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-1185">
+                                                <a href="https://www.testarchitect.com/company/partners/become-a-partner">Become A Partner</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-336 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="#">NEWS</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-782">
+                                                <a href="https://www.testarchitect.com/company/news">News</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-784">
+                                                <a href="http://www.logigear.com/about-us/events.html" target="_blank">Events</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-785">
+                                                <a href="http://www.logigear.com/about-us/awards.html" target="_blank">Awards</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-786">
+                                                <a href="https://www.testarchitect.com/company/news/media-kit">Media Kit</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li class="mb2ctm-item mb2ctm-item-332 mb2ctm-stparent mb2ctm-isparent mb2ctm-isparent2">
+                                          <a href="#">SOCIAL MEDIA</a>
+                                          <ul class="mb2ctm-child-list2">
+                                             <li class="mb2ctm-item mb2ctm-item-792">
+                                                <a href="https://www.youtube.com/user/LogiGearCorporation" target="_blank">Youtube</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-793">
+                                                <a href="https://twitter.com/logigear" target="_blank">Twitter</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-794">
+                                                <a href="https://www.linkedin.com/company/logigear-corporation" target="_blank">Linkedin</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-795">
+                                                <a href="https://www.facebook.com/logigearcorporation/" target="_blank">Facebook</a>
+                                             </li>
+                                             <li class="mb2ctm-item mb2ctm-item-796">
+                                                <a href="https://plus.google.com/102920289935162355348" target="_blank">Google Plus</a>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <!-- end .mb2ctm-smenu-inner -->
+                              </div>
+                              <!-- end .mb2ctm-smenu -->
+                           </li>
+                           <li class="mb2ctm-item mb2ctm-item-855 mb2ctm-mega mb2ctm-dd-right">
+                              <a class="btn btn-primary ta-menu sf-with-ul free-download-menu" href="https://www.testarchitect.com/free-download">Free Download</a>
+                           </li>
+						   <li>
+								<div id="languagePicker"></div>
+						   </li>
+                        </ul>
+                        <!-- end .mb2ctm-list -->
+                     </div>
+                     <!-- end .mb2ctm -->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+</div>
+        <!-- EXM-36950 - Expand the args.hdr parameter here -->
+        
+       
+         <!-- config navbar and header -->
+<nav class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <a href="../../index.html" class=" wh_logo hidden-xs "></a>
+                    <div class=" wh_publication_title "><a href="../../index.html"><h1 class="ta-help-title" style="display:none;"><span class="title">TestArchitect Help</span></h1><span class="ta-help-title">TestArchitect</span><span class="ta-help-title" style="color:#f7d542"> Online Help</span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse">
+                
+                
+                <!-- <whc:webhelp_indexterms_link/> -->
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+        
+        
+        <div class="container-fluid">
+            <div class="row">
+
+                <nav class="wh_tools hidden-print">
+                    <!-- <whc:webhelp_breadcrumb/> -->
+                   <!--  <div class="wh_right_tools hidden-sm hidden-xs">
+                        <whc:webhelp_navigation_links/>
+                        <whc:webhelp_toggle_highlight/>
+                        <whc:webhelp_expand_collapse_sections/>
+                        <whc:webhelp_print_link class="print"/>
+                    </div> -->
+                </nav>
+            </div>
+
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <!-- <div id="title-container-left" class="hidden-print">
+                                <div class="header-container">
+                                    <h1 class="content-header">Content </h1> 
+                                </div>
+                                <whc:webhelp_indexterms_link/> 
+                           </div> -->
+                            <div id="topic-search-section">
+                            <div class=" wh_search_input "><form id="searchForm" method="get" action="../../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" /><button type="submit" class="wh_search_button"><span>Search</span></button></div><script><!--
+                                    $(document).ready(function () {
+                                        $('#searchForm').submit(function (e) {
+                                            if ($('.wh_search_textfield').val().length < 1) {
+                                                e.preventDefault();
+                                            }
+                                        });
+                                    });
+                                --></script></form></div> <!-- search btn -->
+                            <nav role="navigation" id="wh_publication_toc" class="navbar hidden-print">
+                                <div class=" wh_publication_toc " data-tooltip-position="right"><ul>
+   <li><span data-tocid="concept_e3v_dpb_cp-d46e15991" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_UsingHelpSystem/Topics/hs_using_help_system.html">Using the TestArchitect Help system</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The <span class="ph">TestArchitect</span> Help system is available in both   desktop (CHM) and web-based versions. This section describes the help viewers and how
+                  you can use   them to find the information you need.
+                  
+               </p>
+               </span></span></span></li>
+   <li><span data-tocid="idTutorials_Managing_Tests_with_TestArchitect-d46e16166" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Tutorials/Topics/Tutorials_Managing_Tests_with_TestArchitect.html">TestArchitect Tutorial</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Get started creating and managing your tests with TestArchitect by reviewing these             introductory lessons.     
+                  
+                  
+               </p>
+               </span></span></span></li>
+   <li><span data-tocid="User_guide-d46e17810" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Help/Topics/User_Guide_begin.html">User Guide</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">This guide provides instructions on using <span class="ph">TestArchitect</span>.   It also explains the environment requirements for <span class="ph">TestArchitect</span> and   describes the process of running tests and reviewing test results. 
+                  
+               </p>
+               </span></span></span></li>
+   <li><span data-tocid="Administration_guide-d46e30766" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Administration/Topics/Administration_Guide_begin.html">Administration Guide</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Learn how to set up and administrate the License Server, the Repository Server,   etc.</p>
+               </span></span></span></li>
+   <li><span data-tocid="Automation_guide-d46e34996" class="topicref" data-state="expanded"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/Automation_Guide_begin.html">Automation Guide</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">With <span class="ph">TestArchitect</span>, you can test apps running on various   environments, such as, desktop, web, mobile applications, etc.
+                  
+               </p>
+               </span></span></span><ul class="nav nav-list">
+         <li><span data-tocid="action_based_testing_language-d46e35018" class="topicref" data-state="expanded"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/Action_based_testing_language.html">Action-based testing language</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Action   Based Testing (ABT) is usually considered to be an automation technique. It is commonly positioned   as an advanced
+                        and practical alternative to other techniques like "record &amp; playback" or   "scripting". Much about ABT is discussed in the
+                        following pages.
+                        
+                     </p>
+                     </span></span></span><ul class="nav nav-list">
+               <li><span data-tocid="the_test_language-d46e35039" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/The_test_language.html">The test language</a><span class="wh-tooltip">
+                           
+                           <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Most   tests consist of a sequence of action lines, with their action keywords and arguments. Actions are   available as built-in
+                              actions, or can be created as user actions, implemented either with action   definitions or programmed in an automation harness.
+                              
+                              
+                           </p>
+                           </span></span></span></li>
+               <li><span data-tocid="bia_built_in_actions-d46e35944" class="topicref" data-state="expanded"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_Built_in_actions.html">  Built-in actions </a><span class="wh-tooltip">
+                           
+                           <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"><span class="ph">TestArchitect</span> includes a library of built-in actions to perform a myriad of 		functions.
+                              
+                           </p>
+                           </span></span></span><ul class="nav nav-list">
+                     <li><span data-tocid="bia_system-d46e35960" class="topicref" data-state="expanded"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_System.html">System actions</a><span class="wh-tooltip">
+                                 
+                                 <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">System built-in actions include those which allow your test to interact with the host operating system of your test automation,
+                                    and perform other miscellaneous functions.
+                                    
+                                 </p>
+                                 </span></span></span><ul class="nav nav-list">
+                           <li><span data-tocid="bia_clipboard-d46e35971" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_clipboard.html">Clipboard</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Clipboard built-in actions include those actions which allow your test to interact         with the short-term data storage
+                                          of the host system clipboard.
+                                          
+                                       </p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="bia_CLI-d46e36006" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_Command_line.html">Command Line</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Command line actions are those built-in actions which interact with the host         computer's operating system through the
+                                          command line interface (CLI).
+                                          
+                                       </p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="reference_qc4_jnc_rp-d46e36033" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_Database.html">Database</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">This section includes built-in actions that connect to and run queries on database     management systems (DBMSs) or Microsoft
+                                          Excel data sources.
+                                          
+                                       </p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="bia_device-d46e36084" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_device.html">Device</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Device built-in actions communicate with mobile devices attached to your test         machines.</p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="bia_file_and_folder-d46e36323" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_file_and_folder.html">File and Folder</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">File         and folder built-in actions provide a comprehensive way to work with text files, and         folders.</p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="concept_mq5_s2m_1y-d46e36505" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_JSON.html">JSON</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">This section contains information on JSON automation.</p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="bia_keyboard-d46e36532" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_keyboard.html">Keyboard</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">This category consists of a single built-in action, <span class="keyword apiname">type</span>, which         can simulate the pressing of keys such as <kbd class="ph userinput">Enter</kbd>,             <kbd class="ph userinput">Spacebar</kbd>, <kbd class="ph userinput">Backspace</kbd>, all arrow keys, and         function keys ( <kbd class="ph userinput">F1</kbd>, <kbd class="ph userinput">F2</kbd>, etc.), as well as key         combinations.
+                                          
+                                       </p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="bia_mouse_events-d46e36588" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_mouse_events.html">Mouse</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Mouse built-in actions are used to mimic mouse events<span class="ph">, such as clicks, moves, and             drags</span>.
+                                          
+                                       </p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="bia_operating_system-d46e36650" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_operating_system.html">Operating System</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Operating system built-in actions help you monitor and interact with desktop or         mobile operating systems on your test
+                                          machine(s). 
+                                          
+                                       </p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="bia_XML-d46e36733" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_XML.html">XML</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">This section contains information on XML automation.</p>
+                                       </span></span></span></li>
+                           <li><span data-tocid="reference_tmd_vv3_zx-d46e36761" class="topicref" data-state="expanded"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_web_services.html">Web services</a><span class="wh-tooltip">
+                                       
+                                       <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Web services are specific applications that can be published and called over the     Internet by client applications. This
+                                          section includes built-in actions that support functional     testing of web services.
+                                          
+                                       </p>
+                                       </span></span></span><ul class="nav nav-list">
+                                 <li><span data-tocid="bia_add_http_body-d46e36772" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_add_http_body.html">add http body</a></span></span></li>
+                                 <li><span data-tocid="bia_add_http_header-d46e36780" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_add_http_header.html">add http header</a></span></span></li>
+                                 <li><span data-tocid="reference_t5m_mt3_zx-d46e36788" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_add_http_parameter.html">add http parameter</a></span></span></li>
+                                 <li><span data-tocid="bia_attach_file-d46e36796" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_attach_file.html">attach file</a></span></span></li>
+                                 <li><span data-tocid="bia_authenticate-d46e36804" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_authenticate.html">authenticate</a></span></span></li>
+                                 <li class="active"><span data-tocid="bia_configure_web_service_settings-d46e36812" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_configure_web_service_settings.html">configure web service settings</a></span></span></li>
+                                 <li><span data-tocid="bia_create_http_request-d46e36820" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_create_http_request.html">create http request</a></span></span></li>
+                                 <li><span data-tocid="bia_send_http_request-d46e36828" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_send_http_request.html">send http request</a></span></span></li>
+                                 <li><span data-tocid="bia_parse_http_response-d46e36836" class="topicref" data-state="leaf"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_parse_http_response.html">parse http response</a></span></span></li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                     <li><span data-tocid="bia_test_support-d46e36844" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_Test_Support.html">Test Support actions</a><span class="wh-tooltip">
+                                 
+                                 <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">The Test Support category of built-in actions includes those actions which perform execution control, test resource declaration,
+                                    test documentation, and reporting.
+                                    
+                                 </p>
+                                 </span></span></span></li>
+                     <li><span data-tocid="bia_user_interface-d46e37839" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bia_User_Interface.html">User Interface actions</a><span class="wh-tooltip">
+                                 
+                                 <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">User interface actions include those automation actions which interact with the application under test.</p>
+                                 </span></span></span></li>
+                  </ul>
+               </li>
+               <li><span data-tocid="bis_built_in_settings-d46e39706" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/bis_Built_in_settings.html">Built-in settings</a><span class="wh-tooltip">
+                           
+                           <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"><span class="ph">TestArchitect</span> has a number of built-in       settings that control various runtime behaviors of <span class="ph">TestArchitect</span>.
+                              
+                           </p>
+                           </span></span></span></li>
+               <li><span data-tocid="abt_automation_classes-d46e40275" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/abt_automation_classes.html">TestArchitect Automation Classes</a><span class="wh-tooltip">
+                           
+                           <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Language independent syntax line notations, and basic functions in <span class="ph">TestArchitect</span> automation and engine classes.
+                              
+                           </p>
+                           </span></span></span></li>
+            </ul>
+         </li>
+         <li><span data-tocid="concept_o4w_rrq_4n-d46e43206" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/aut_Using_UIA.html">Microsoft UI Automation</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Microsoft UI Automation (UIA) is an accessibility framework for Microsoft Windows, and   is the successor to Microsoft Active
+                        Accessibility (MSAA). One of its purposes is to assist in   automated testing by providing programmatic access to UI controls.
+                        
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="concept_fbv_fy5_xn-d46e43322" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_Automation/Topics/aut_app_testing.html">Application testing</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"><span class="ph">TestArchitect</span> supports the testing of desktop, web and   mobile applications built with a variety of different technologies, and running
+                        on various   platforms. 
+                        
+                     </p>
+                     </span></span></span></li>
+         <li><span data-tocid="concept_vxp_m2t_tw-d46e46811" class="topicref" data-state="not-ready"><span class="wh-expand-btn"></span><span class="title"><a href="../../TA_FAQ/Topics/faq.automation_error.html">Diagnosing and resolving automation errors</a><span class="wh-tooltip">
+                     
+                     <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">This section describes possible errors that you might encounter during automation, their   common causes and possible solutions.</p>
+                     </span></span></span></li>
+      </ul>
+   </li>
+</ul></div>
+                            </nav>
+                            </div>
+                         </div> 
+                    
+                    
+                    <div id="wh_topic_body" class="col-lg-7 col-md-9 col-sm-9 col-xs-12">
+                         <div id="title-container-right">   
+                            <div class="title-container-right hidden-print hidden-sm"> 
+                                <a class="glyphicon glyphicon-share" title="Share" onclick="" href="javascript:sharePopUp()">
+                                    <p class="share-title">SHARE</p>
+                                </a>
+                                <a class="glyphicon glyphicon-envelope" title="Send Email" onclick="" href="javascript:sendMail()">
+                                    <p class="share-title">E-MAIL</p>
+                                </a>
+                                <div class=" wh_print_link print "><a href="javascript:window.print();" title="Print this page"><p class="share-title">PRINT</p></a></div>
+                            </div>
+                            <div class="wh_right_tools hidden-sm hidden-xs">  
+                            <div class=" wh_indexterms_link "><a href="../../indexTerms.html" title="Index"></a></div> <!--index btn -->    
+                            <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  
+<span class="navprev"><a class="link" href="../../TA_Automation/Topics/bia_authenticate.html" title="authenticate"></a></span>  
+<span class="navnext"><a class="link" href="../../TA_Automation/Topics/bia_create_http_request.html" title="create http request"></a></span>  </span></div>
+                            <button class="wh_hide_highlight" title="Toggle search highlights"></button>
+                           <!--  <whc:webhelp_expand_collapse_sections/> -->
+                            </div>
+                         </div>
+                        <div id="breadscrumb"> <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol xmlns:html="http://www.w3.org/1999/xhtml" class="hidden-print"><li><span class="home"><a href="../../index.html"><span>Home</span></a></span></li>
+   <li><span class="topicref"><span class="title"><a href="../../TA_Automation/Topics/Automation_Guide_begin.html">Automation Guide</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">With <span class="ph">TestArchitect</span>, you can test apps running on various   environments, such as, desktop, web, mobile applications, etc.
+                  
+               </p>
+               </span></span></span></li>
+   <li><span class="topicref"><span class="title"><a href="../../TA_Automation/Topics/Action_based_testing_language.html">Action-based testing language</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Action   Based Testing (ABT) is usually considered to be an automation technique. It is commonly positioned   as an advanced
+                  and practical alternative to other techniques like "record &amp; playback" or   "scripting". Much about ABT is discussed in the
+                  following pages.
+                  
+               </p>
+               </span></span></span></li>
+   <li><span class="topicref"><span class="title"><a href="../../TA_Automation/Topics/bia_Built_in_actions.html">  Built-in actions </a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc"><span class="ph">TestArchitect</span> includes a library of built-in actions to perform a myriad of 		functions.
+                  
+               </p>
+               </span></span></span></li>
+   <li><span class="topicref"><span class="title"><a href="../../TA_Automation/Topics/bia_System.html">System actions</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">System built-in actions include those which allow your test to interact with the host operating system of your test automation,
+                  and perform other miscellaneous functions.
+                  
+               </p>
+               </span></span></span></li>
+   <li><span class="topicref"><span class="title"><a href="../../TA_Automation/Topics/bia_web_services.html">Web services</a><span class="wh-tooltip">
+               
+               <p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml" class="shortdesc">Web services are specific applications that can be published and called over the     Internet by client applications. This
+                  section includes built-in actions that support functional     testing of web services.
+                  
+               </p>
+               </span></span></span></li>
+   <li class="active"><span class="topicref"><span class="title"><a href="../../TA_Automation/Topics/bia_configure_web_service_settings.html">configure web service settings</a></span></span></li>
+</ol></div> </div>
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">configure web service settings</h1>
+
+  
+  <div class="body refbody">
+    <section class="section TARef-bia-desc" id="bia_configure_web_service_settings__section_iyg_dsd_1y"><h2 class="title sectiontitle">Description</h2><span class="ph" id="bia_configure_web_service_settings__ph_description">Send JSON string request to a web service in order to apply new
+        configuration settings.</span></section>
+
+    <section class="section TARef-bia-args" id="bia_configure_web_service_settings__section_jyg_dsd_1y"><h2 class="title sectiontitle">Arguments</h2>
+      
+      <dl class="dl parml">
+        
+          <dt class="dt pt dlterm">values</dt>
+
+          <dd class="dd pd">Send JSON string request to a web service in order to apply new configuration
+            settings.</dd>
+
+          <dd class="dd pd ddexpand">
+            <div class="note important"><span class="importanttitle">Important:</span> Basic JSON syntax as required for creating profiles
+          is as follows:<ul class="ul" id="bia_configure_web_service_settings__d1132e75">
+            <li class="li">JSON data is written as name:value pairs. Example:
+              <pre class="pre codeblock"><code>"firstName" : "John"</code></pre></li>
+
+            <li class="li">A JSON object is written inside curly braces, and can contain multiple name:values
+              pairs, delimited by commas. Example:
+              <pre class="pre codeblock"><code>{ "firstName" : "John" , "lastName" : "Doe" }</code></pre></li>
+
+            <li class="li">JSON arrays (arrays of JSON objects) are written inside square brackets, and are
+              delimited by commas.
+              Example:<pre class="pre codeblock"><code>"employees":[
+    {"firstName":"John", "lastName":"Doe"}, 
+    {"firstName":"Anna", "lastName":"Smith"}, 
+    {"firstName":"Peter","lastName":"Jones"}
+]</code></pre></li>
+
+          </ul>
+Note that you can learn more about JSON syntax
+            <a class="xref" href="http://www.w3schools.com/js/js_json_syntax.asp" target="_blank">here</a>.</div>
+
+          </dd>
+
+        
+      </dl>
+
+    </section>
+
+    <section class="section TARef-bia-contexts" id="bia_configure_web_service_settings__section_kyg_dsd_1y"><h2 class="title sectiontitle">Valid contexts</h2>
+      <span class="ph" id="bia_configure_web_service_settings__d11e710">This action may be used within the
+        following project items: </span>test modules and user-defined actions. </section>
+
+    <section class="section" id="bia_configure_web_service_settings__section_lyg_dsd_1y"><h2 class="title sectiontitle">Notes</h2>
+      
+      <ul class="ul" id="bia_configure_web_service_settings__ul_myg_dsd_1y">
+        <li class="li">It is required that you declare <span class="keyword apiname">configure web service settings</span> with
+          its configurations, before using the <a class="xref" href="bia_create_http_request.html"><span class="keyword apiname">create
+              http request</span></a> built-in action. </li>
+
+        <li class="li">For a full list of web service's configurations, supported by <span class="ph">TestArchitect</span>, see "Supported web service's configurations"
+          below.</li>
+
+        <li class="li">You may either declare various web service's configurations in a single
+            <span class="keyword apiname">configure web service settings</span> action, or in multiple
+            <span class="keyword apiname">configure web service settings</span> actions. Note that, when identical
+          configurations are declared simultaneously, the latter configuration overrides the former
+          one.</li>
+
+      </ul>
+
+    </section>
+
+    <section class="section"><h2 class="title sectiontitle">Supported web service's configurations</h2>
+      
+      <div class="p">
+        <ol class="ol" id="bia_configure_web_service_settings__ul_jp1_p32_c1b">
+          <li class="li"><span class="keyword option">Proxy</span>: Defines a manual proxy server.<div class="note remember"><span class="remembertitle">Remember:</span> To specify
+              that the proxy is not in use, simply do not call <span class="keyword apiname">configure web service
+                settings</span> with proxy settings in your test procedures.</div>
+<ul class="ul" id="bia_configure_web_service_settings__ul_iyg_s32_c1b">
+              <li class="li">JSON string for manual proxy settings must be defined as follows.
+                  <pre class="pre codeblock"><code>{"proxy":{"hostname":"&lt;value&gt;","port":&lt;value&gt;,"scheme":"&lt;value&gt;","username":"&lt;value&gt;","password":"&lt;value&gt;"}}</code></pre>
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="bia_configure_web_service_settings__table_erb_3nq_n1b" class="table" frame="border" border="1" rules="all"><colgroup><col style="width:19.23076923076923%" /><col style="width:80.76923076923077%" /></colgroup><thead class="thead" style="text-align:left;">
+                      <tr>
+                        <th class="entry cellrowborder" id="d379206e184">Key</th>
+
+                        <th class="entry cellrowborder" id="d379206e187">Description</th>
+
+                      </tr>
+
+                    </thead>
+<tbody class="tbody">
+                      <tr>
+                        <td class="entry cellrowborder" headers="d379206e184 "><span class="keyword parmname">hostname</span></td>
+
+                        <td class="entry cellrowborder" headers="d379206e187 ">
+                          <div class="p">
+                            <ul class="ul" id="bia_configure_web_service_settings__ul_rdk_dcr_n1b">
+                              <li class="li">(Required) The proxy host to use.</li>
+
+                            </ul>
+
+                          </div>
+
+                        </td>
+
+                      </tr>
+
+                      <tr>
+                        <td class="entry cellrowborder" headers="d379206e184 "><span class="keyword parmname">port</span></td>
+
+                        <td class="entry cellrowborder" headers="d379206e187 ">
+                          <div class="p">
+                            <ul class="ul" id="bia_configure_web_service_settings__ul_sk4_dcr_n1b">
+                              <li class="li">(Required) The proxy port to use.</li>
+
+                            </ul>
+
+                          </div>
+
+                        </td>
+
+                      </tr>
+
+                      <tr>
+                        <td class="entry cellrowborder" headers="d379206e184 "><span class="keyword parmname">scheme</span></td>
+
+                        <td class="entry cellrowborder" headers="d379206e187 ">
+                          <ul class="ul" id="bia_configure_web_service_settings__ul_rht_dcr_n1b">
+                            <li class="li">(Optional) The scheme of the proxy.</li>
+
+                          </ul>
+
+                          <ul class="ul">
+                            <li class="li">When this key's value is empty, by default, the value of
+                                <span class="keyword option">HTTP</span> is used.</li>
+
+                            <li class="li">Supported scheme(s):<ul class="ul" id="bia_configure_web_service_settings__ul_bl5_j4q_n1b">
+                                <li class="li"><span class="keyword option">HTTP</span><div class="note restriction"><span class="restrictiontitle">Restriction:</span> <a class="xref" href="https://github.com/rest-assured/rest-assured" target="_blank">REST
+                                    Assured</a>, a Java framework for
+                                    simplifying testing of REST based services built on top of HTTP
+                                    Builder, and currently employed in <span class="ph">TestArchitect</span>, does not fully
+                                    support <span class="keyword option">HTTPS</span> connection over proxy
+                                    servers.</div>
+</li>
+
+                                
+                              </ul>
+</li>
+
+                          </ul>
+
+                        </td>
+
+                      </tr>
+
+                      <tr>
+                        <td class="entry cellrowborder" headers="d379206e184 "><span class="keyword parmname">username</span></td>
+
+                        <td class="entry cellrowborder" headers="d379206e187 ">
+                          <div class="p">
+                            <ul class="ul" id="bia_configure_web_service_settings__ul_ez3_2cr_n1b">
+                              <li class="li">(Optional) The username sent for proxy authentications.</li>
+
+                              <li class="li"><span class="ph">When this argument's key is empty,
+                                  this key is ignored during
+                                automation.</span></li>
+
+                            </ul>
+
+                          </div>
+
+                        </td>
+
+                      </tr>
+
+                      <tr>
+                        <td class="entry cellrowborder" headers="d379206e184 "><span class="keyword parmname">password</span></td>
+
+                        <td class="entry cellrowborder" headers="d379206e187 ">
+                          <div class="p">
+                            <ul class="ul" id="bia_configure_web_service_settings__ul_ixs_2cr_n1b">
+                              <li class="li">(Optional) The password sent for proxy authentications.</li>
+
+                              <li class="li"><span class="ph">When this argument's key is empty,
+                                  this key is ignored during
+                                automation.</span></li>
+
+                            </ul>
+
+                          </div>
+
+                        </td>
+
+                      </tr>
+
+                    </tbody>
+</table>
+</div>
+</li>
+
+              <li class="li">A sample JSON string might look like the following.<br /><img class="image" id="bia_configure_web_service_settings__image_mvq_1j2_c1b" src="../Images/JSON_proxy_configuration.png" /><br /></li>
+
+              <li class="li">To explicitly use system’s proxy, apply the value of <span class="keyword option">system</span> for
+                  <span class="keyword parmname">hostname</span> and
+                  <span class="keyword parmname">port</span>.<pre class="pre codeblock"><code>{"proxy":{"hostname":"system","port":"system","scheme":"&lt;value&gt;","username":"&lt;value&gt;","password":"&lt;value&gt;"}}</code></pre><br /><img class="image" id="bia_configure_web_service_settings__image_trp_2pq_n1b" src="../Images/JSON_proxy_configuration_system.png" /><br /><div class="note note"><span class="notetitle">Note:</span> 
+                  <ul class="ul" id="bia_configure_web_service_settings__ul_rk4_dqy_q1b">
+                    <li class="li">REST Assured automatically determines system proxy by looking at Java
+                      settings, environment variables, browser settings and operating system
+                      settings. </li>
+
+                    <li class="li"><span class="ph">TestArchitect</span> supports mixed mode. Specially,
+                      you might use the system hostname in combination with a user-defined port, or
+                      vice versa.</li>
+
+                  </ul>
+
+                </div>
+</li>
+
+            </ul>
+</li>
+
+          <li class="li"><span class="keyword option">SSL</span>: Defines SSL configurations. There are three supported modes in
+              <span class="ph">TestArchitect</span>.<ol class="ol" type="a" id="bia_configure_web_service_settings__ul_m23_crq_n1b">
+              <li class="li"><strong class="ph b">Server validation</strong>: Run HTTPS normally, the SSL validation is handled from
+                the server side.<ul class="ul" id="bia_configure_web_service_settings__ul_dhx_srq_n1b">
+                  <li class="li">JSON string defined: <pre class="pre codeblock"><code>{"ssl":"trusted"}</code></pre></li>
+
+                </ul>
+</li>
+
+              <li class="li"><strong class="ph b">No SSL validation</strong>: <span class="ph">TestArchitect</span> employs
+                  "<a class="xref" href="http://static.javadoc.io/io.rest-assured/rest-assured/3.0.1/io/restassured/config/SSLConfig.html#relaxedHTTPSValidation--" target="_blank">relaxed HTTP validation</a>", that is, skip SSL
+                validation. Trust all hosts regardless if the SSL certificate is invalid. By using
+                this mode, you don't need to specify a keystore or trust store.<ul class="ul" id="bia_configure_web_service_settings__ul_gcp_1sq_n1b">
+                  <li class="li">JSON string defined: <pre class="pre codeblock"><code>{"ssl":"skip"}</code></pre></li>
+
+                </ul>
+</li>
+
+              <li class="li"><strong class="ph b">SSL client validation</strong>: You can be more fine-grained and have Java keystore
+                file and use it with REST Assured.<ul class="ul" id="bia_configure_web_service_settings__ul_rws_bsq_n1b">
+                  <li class="li">JSON string must be defined as follows.
+                      <pre class="pre codeblock"><code>{"ssl":{"pathToKeyStore":"&lt;value&gt;","pathToTrustStore":"&lt;value&gt;","keyStorePassword":"&lt;value&gt;","trustStorePassword":"&lt;value&gt;","port":&lt;value&gt;}}</code></pre>
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="bia_configure_web_service_settings__table_sq2_dm2_c1b" class="table" frame="border" border="1" rules="all"><colgroup><col style="width:24.271844660194176%" /><col style="width:75.72815533980582%" /></colgroup><thead class="thead" style="text-align:left;">
+                          <tr>
+                            <th class="entry cellrowborder" id="d379206e423">Option</th>
+
+                            <th class="entry cellrowborder" id="d379206e426">Description</th>
+
+                          </tr>
+
+                        </thead>
+<tbody class="tbody">
+                          <tr>
+                            <td class="entry cellrowborder" headers="d379206e423 "><span class="keyword parmname">pathToKeyStore</span></td>
+
+                            <td class="entry cellrowborder" headers="d379206e426 ">
+                              <div class="p">
+                                <ul class="ul" id="bia_configure_web_service_settings__ul_nnh_mzq_n1b">
+                                  <li class="li">(Required) The path to the keystore to use when locating
+                                    client certificates<div class="note remember"><span class="remembertitle">Remember:</span> Please ensure that you
+                                      have the keystore file beforehand. Otherwise, please follow
+                                      this
+                                        <a class="xref" href="http://docs.oracle.com/javase/1.5.0/docs/tooldocs/solaris/keytool.html" target="_blank">link</a>, and read "Keystore Creation".
+                                    </div>
+</li>
+
+                                  <li class="li">Supported keystore types
+                                      (<a class="xref" href="http://docs.oracle.com/javase/6/docs/technotes/guides/security/StandardNames.html#KeyStore" target="_blank">learn more</a>):<dl class="dl parml">
+                                      
+                                        <dt class="dt pt dlterm">jceks</dt>
+
+                                        <dd class="dd pd">The proprietary keystore implementation provided by the
+                                          SunJCE provider.</dd>
+
+                                      
+                                      
+                                        <dt class="dt pt dlterm">jks</dt>
+
+                                        <dd class="dd pd">The proprietary keystore implementation provided by the
+                                          SUN provider.</dd>
+
+                                      
+                                      
+                                        <dt class="dt pt dlterm">pkcs12</dt>
+
+                                        <dd class="dd pd">The transfer syntax for personal identity information as
+                                          defined in PKCS12.</dd>
+
+                                      
+                                    </dl>
+</li>
+
+                                </ul>
+
+                              </div>
+
+                              <ul class="ul">
+                                <li class="li">To separate directories in JSON, use four consecutive
+                                  backslashes (\), or alternatively, use a single forward slash
+                                  (/).</li>
+
+                              </ul>
+
+                            </td>
+
+                          </tr>
+
+                          <tr>
+                            <td class="entry cellrowborder" headers="d379206e423 "><span class="keyword parmname">keyStorePassword</span></td>
+
+                            <td class="entry cellrowborder" headers="d379206e426 ">
+                              <div class="p">
+                                <ul class="ul" id="bia_configure_web_service_settings__ul_smq_mzq_n1b">
+                                  <li class="li">(Optional) The password for the keystore.</li>
+
+                                </ul>
+
+                              </div>
+
+                            </td>
+
+                          </tr>
+
+                          <tr>
+                            <td class="entry cellrowborder" headers="d379206e423 "><span class="keyword parmname">pathToTrustStore</span></td>
+
+                            <td class="entry cellrowborder" headers="d379206e426 ">
+                              <div class="p">
+                                <ul class="ul" id="bia_configure_web_service_settings__ul_pgw_mzq_n1b">
+                                  <li class="li">(Optional) The path to trust store file.</li>
+
+                                  <li class="li">When this argument's key is empty, REST Assured automatically
+                                    searches for a certificate file named
+                                      <span class="ph filepath">cecarts</span>, which resides in the
+                                      <span class="ph filepath">security</span> properties directory,
+                                      <span class="ph filepath">java.home/lib/security</span>, where
+                                      <span class="ph filepath">java.home</span> is the runtime environment's
+                                    directory.
+                                      (<a class="xref" href="http://docs.oracle.com/javase/1.5.0/docs/tooldocs/solaris/keytool.html#cacerts" target="_blank">Learn
+                                    more</a>.)</li>
+
+                                </ul>
+
+                              </div>
+
+                              <ul class="ul">
+                                <li class="li">To separate directories in JSON, use four consecutive
+                                  backslashes (\), or alternatively, use a single forward slash
+                                  (/).</li>
+
+                              </ul>
+
+                            </td>
+
+                          </tr>
+
+                          <tr>
+                            <td class="entry cellrowborder" headers="d379206e423 "><span class="keyword parmname">trustStorePassword</span></td>
+
+                            <td class="entry cellrowborder" headers="d379206e426 ">
+                              <div class="p">
+                                <ul class="ul" id="bia_configure_web_service_settings__ul_cnj_nzq_n1b">
+                                  <li class="li">(Optional) The password for the trust store.</li>
+
+                                  <li class="li"><span class="ph">When this argument's key is empty,
+                                  this key is ignored during
+                                automation.</span></li>
+
+                                </ul>
+
+                              </div>
+
+                            </td>
+
+                          </tr>
+
+                          <tr>
+                            <td class="entry cellrowborder" headers="d379206e423 "><span class="keyword parmname">port</span></td>
+
+                            <td class="entry cellrowborder" headers="d379206e426 ">
+                              <div class="p">
+                                <ul class="ul" id="bia_configure_web_service_settings__ul_twr_nzq_n1b">
+                                  <li class="li">(Optional) The port for SSL connections. <div class="note note"><span class="notetitle">Note:</span> Most of the
+                                      time you do not need to specify a port, since REST Assured
+                                      will apply the configuration to the HTTPS port, defined in the
+                                      URI.</div>
+</li>
+
+                                  <li class="li"><span class="ph">When this argument's key is empty,
+                                  this key is ignored during
+                                automation.</span></li>
+
+                                </ul>
+
+                              </div>
+
+                            </td>
+
+                          </tr>
+
+                        </tbody>
+</table>
+</div>
+</li>
+
+                  <li class="li">A sample JSON string might look like the following.<br /><img class="image" id="bia_configure_web_service_settings__image_grb_3nq_n1b" src="../Images/JSON_ssl_configuration.png" /><br /></li>
+
+                </ul>
+</li>
+
+            </ol>
+</li>
+
+          <li class="li"><span class="keyword option">Cookies</span>: Specifies HTTP cookies that are sent back to the server.<ul class="ul" id="bia_configure_web_service_settings__ul_nsv_vwq_n1b">
+              <li class="li">JSON string for HTTP cookies must be defined as follows.
+                  <pre class="pre codeblock"><code>{"cookies":{"&lt;cookie-name&gt;":"&lt;cookie-value1&gt;","&lt;cookie-name2&gt;":"&lt;cookie-value2&gt;","&lt;cookie-name3&gt;":"&lt;cookie-value3&gt;"}}</code></pre><div class="note note"><span class="notetitle">Note:</span> A
+                  list of name-value pairs in the form of
+                    <code class="ph codeph">"&lt;cookie-name&gt;":"&lt;cookie-value&gt;"</code>. Pairs in the list are
+                  separated by a comma.</div>
+</li>
+
+              <li class="li">A sample JSON string might look like the following.<br /><img class="image" id="bia_configure_web_service_settings__image_osv_vwq_n1b" src="../Images/JSON_cookies_configuration.png" /><br /></li>
+
+            </ul>
+</li>
+
+          <li class="li" id="bia_configure_web_service_settings__li_Encoder"><span class="keyword option">Encoder</span>: Specifies configurations for the encoder.<ul class="ul">
+              <li class="li">JSON string for the encoder must be defined as follows.
+                  <pre class="pre codeblock"><code>{"encoder":{"contentTypeToDefaultCharset":{"&lt;content-type1&gt;":"&lt;charset1&gt;","&lt;content-type2&gt;":"&lt;charset2&gt;"},
+"defaultQueryParameterCharset":"&lt;value&gt;","defaultContentCharset":"&lt;value&gt;",
+"urlEncodingEnabled": "&lt;value&gt;","addDefaultContentCharsetToContentType":"&lt;value&gt;"}}</code></pre>
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><colgroup><col style="width:36.63003663003663%" /><col style="width:63.369963369963365%" /></colgroup><thead class="thead" style="text-align:left;">
+                      <tr>
+                        <th class="entry cellrowborder" id="d379206e669">Option</th>
+
+                        <th class="entry cellrowborder" id="d379206e672">Description</th>
+
+                      </tr>
+
+                    </thead>
+<tbody class="tbody">
+                      
+                      <tr id="bia_configure_web_service_settings__row_contentTypeToDefaultCharset">
+                        <td class="entry cellrowborder" headers="d379206e669 "><span class="keyword parmname">contentTypeToDefaultCharset</span></td>
+
+                        <td class="entry cellrowborder" headers="d379206e672 ">
+                          <div class="p">
+                            <ul class="ul" id="bia_configure_web_service_settings__ul_d3m_4zq_n1b">
+                              <li class="li">(Optional) Specify the default charset to use for the specific
+                                content-type. </li>
+
+                              <li class="li">A list of pairs of the default charset to use for each specific
+                                content-type in the form of
+                                  <code class="ph codeph">"&lt;content-type&gt;":"&lt;charset&gt;"</code>. Pairs in the
+                                list are separated by a comma.</li>
+
+                              <li class="li">For a list of available content types, see
+                                  <a class="xref" href="http://static.javadoc.io/io.rest-assured/rest-assured/3.0.3/io/restassured/http/ContentType.html" target="_blank">here.</a></li>
+
+                              <li class="li">For a list of available charsets, see
+                                  <a class="xref" href="http://docs.oracle.com/javase/1.5.0/docs/api/java/nio/charset/Charset.html?is-external=true" target="_blank">here</a></li>
+
+                              <li class="li"><span class="ph" id="bia_configure_web_service_settings__ph.empty_value_ignored">When this argument's key is empty,
+                                  this key is ignored during
+                                automation.</span></li>
+
+                            </ul>
+
+                          </div>
+
+                        </td>
+
+                      </tr>
+
+                      <tr>
+                        <td class="entry cellrowborder" headers="d379206e669 "><span class="keyword parmname">defaultQueryParameterCharset</span></td>
+
+                        <td class="entry cellrowborder" headers="d379206e672 ">
+                          <div class="p">
+                            <ul class="ul" id="bia_configure_web_service_settings__ul_trz_pzq_n1b">
+                              <li class="li">(Optional) Specify the default charset for
+                                  <a class="xref" href="http://static.javadoc.io/io.rest-assured/rest-assured/3.0.1/io/restassured/specification/RequestSpecification.html#queryParam-java.lang.String-java.util.Collection-" target="_blank">query
+                                parameters</a>.</li>
+
+                              <li class="li">When this argument's key is empty, by default, the value of
+                                  <span class="keyword option">UTF-8</span> is used.</li>
+
+                              <li class="li">If you don't want the query parameters to be encoded in the URL,
+                                it's highly recommended that you set
+                                  <span class="keyword parmname">urlEncodingEnabled</span> to
+                                <span class="keyword option">false</span>.</li>
+
+                            </ul>
+
+                          </div>
+
+                        </td>
+
+                      </tr>
+
+                      <tr>
+                        <td class="entry cellrowborder" headers="d379206e669 "><span class="keyword parmname">defaultContentCharset</span></td>
+
+                        <td class="entry cellrowborder" headers="d379206e672 ">
+                          <div class="p">
+                            <ul class="ul" id="bia_configure_web_service_settings__ul_iwk_qzq_n1b">
+                              <li class="li">(Optional) Specify the default charset for the body/content in the
+                                request specification.</li>
+
+                              <li class="li">When this argument's key is empty, by default, the value of
+                                  <span class="keyword option">ISO-8859-1</span> is used.</li>
+
+                              <li class="li">When <span class="keyword parmname">contentTypeToDefaultCharset</span> and
+                                  <span class="keyword parmname">defaultContentCharset</span> are defined
+                                simultaneously, <span class="keyword parmname">contentTypeToDefaultCharset</span> has
+                                precedence.</li>
+
+                            </ul>
+
+                          </div>
+
+                        </td>
+
+                      </tr>
+
+                      <tr>
+                        <td class="entry cellrowborder" headers="d379206e669 "><span class="keyword parmname">urlEncodingEnabled</span></td>
+
+                        <td class="entry cellrowborder" headers="d379206e672 ">
+                          <ul class="ul" id="bia_configure_web_service_settings__ul_jtk_lsz_q1b">
+                            <li class="li">(Optional) (Boolean value) Specify if URL is encoded automatically.
+                              Usually this is a recommended but in some cases, e.g. the query
+                              parameters are already be encoded before you provide them to REST
+                              Assured then it's useful to disable URL encoding. Specifically, the
+                              query is already URL encoded so you need to disable REST Assured's URL
+                              encoding to prevent double encoding.</li>
+
+                            <li class="li">When this argument's key is empty, by default, the value of
+                                <span class="keyword option">true</span> is used.</li>
+
+                          </ul>
+
+                        </td>
+
+                      </tr>
+
+                      <tr id="bia_configure_web_service_settings__row_addDefaultContentCharsetToContentType">
+                        <td class="entry cellrowborder" headers="d379206e669 "><span class="keyword parmname">addDefaultContentCharsetToContentType</span></td>
+
+                        <td class="entry cellrowborder" headers="d379206e672 ">
+                          <ul class="ul">
+                            <li class="li">(Optional) (Boolean value) Tells whether REST Assured should
+                              automatically append the <span class="keyword parmname">content charset</span> to the
+                                <span class="keyword parmname">content-type</span> header if <span class="keyword parmname">content
+                                charset</span> is not defined explicitly.</li>
+
+                            <li class="li">When this argument's key is empty, by default, the value of
+                                <span class="keyword option">true</span> is used.</li>
+
+                          </ul>
+
+                        </td>
+
+                      </tr>
+
+                    </tbody>
+</table>
+</div>
+</li>
+
+              <li class="li">A sample JSON string might look like the following.<br /><img class="image" src="../Images/JSON_encoder_configuration.png" /><br /></li>
+
+            </ul>
+</li>
+
+          <li class="li"><span class="keyword option">Decoder</span>: Specifies configurations for the decoder.<ul class="ul">
+              <li class="li">JSON string for the decoder must be defined as follows.
+                  <pre class="pre codeblock"><code>{"decoder":{"contentDecoders":"&lt;value&gt;","contentTypeToDefaultCharset":{"&lt;content-type1&gt;":"&lt;charset1&gt;","&lt;content-type2&gt;":"&lt;charset2&gt;"}}}</code></pre>
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><colgroup><col style="width:33.89830508474576%" /><col style="width:66.10169491525423%" /></colgroup><thead class="thead" style="text-align:left;">
+                      <tr>
+                        <th class="entry cellrowborder" id="d379206e890">Option</th>
+
+                        <th class="entry cellrowborder" id="d379206e893">Description</th>
+
+                      </tr>
+
+                    </thead>
+<tbody class="tbody">
+                      <tr>
+                        <td class="entry cellrowborder" headers="d379206e890 "><span class="keyword parmname">contentDecoders</span></td>
+
+                        <td class="entry cellrowborder" headers="d379206e893 ">
+                          <div class="p">
+                            <ul class="ul">
+                              <li class="li">(Optional) Specify the content decoders that will be presented to
+                                the server when making a request (using the Accept-Encoding header).
+                                If the server supports any of these encodings then REST Assured will
+                                automatically perform decoding of the response accordingly.</li>
+
+                              <li class="li">Supported modes:<ol class="ol" type="a" id="bia_configure_web_service_settings__ol_pcg_l1r_n1b">
+                                  <li class="li"><span class="keyword option">default</span>: (Default) In REST Assured,
+                                      <span class="ph filepath">gzip</span> and <span class="ph filepath">deflate</span> are
+                                      used.<ul class="ul" id="bia_configure_web_service_settings__ul_yfz_l1r_n1b">
+                                      <li class="li"><a class="xref" href="http://static.javadoc.io/io.rest-assured/rest-assured/3.0.3/io/restassured/config/DecoderConfig.ContentDecoder.html#GZIP" target="_blank">DecoderConfig.ContentDecoder.GZIP</a></li>
+
+                                      <li class="li"><a class="xref" href="http://static.javadoc.io/io.rest-assured/rest-assured/3.0.3/io/restassured/config/DecoderConfig.ContentDecoder.html#DEFLATE" target="_blank">DecoderConfig.ContentDecoder.DEFLATE</a>
+                                      </li>
+
+                                    </ul>
+</li>
+
+                                  <li class="li"><span class="keyword option">identity</span>: No compression
+                                      (<a class="xref" href="https://developer.mozilla.org/vi/docs/Web/HTTP/Headers/Accept-Encoding" target="_blank">learn
+                                    more</a>)</li>
+
+                                </ol>
+</li>
+
+                            </ul>
+
+                          </div>
+
+                        </td>
+
+                      </tr>
+
+                      <tr>
+                        <td class="entry cellrowborder" headers="d379206e890 "><span class="keyword parmname">contentTypeToDefaultCharset</span></td>
+
+                        <td class="entry cellrowborder" headers="d379206e893 ">
+                          <div class="p">
+                            <ul class="ul" id="bia_configure_web_service_settings__d1783e645">
+                              <li class="li">(Optional) Specify the default charset to use for the specific
+                                content-type. </li>
+
+                              <li class="li">A list of pairs of the default charset to use for each specific
+                                content-type in the form of
+                                  <code class="ph codeph">"&lt;content-type&gt;":"&lt;charset&gt;"</code>. Pairs in the
+                                list are separated by a comma.</li>
+
+                              <li class="li">For a list of available content types, see
+                                  <a class="xref" href="http://static.javadoc.io/io.rest-assured/rest-assured/3.0.3/io/restassured/http/ContentType.html" target="_blank">here.</a></li>
+
+                              <li class="li">For a list of available charsets, see
+                                  <a class="xref" href="http://docs.oracle.com/javase/1.5.0/docs/api/java/nio/charset/Charset.html?is-external=true" target="_blank">here</a></li>
+
+                              <li class="li"><span class="ph" id="bia_configure_web_service_settings__d1783e672">When this argument's key is empty,
+                                  this key is ignored during
+                                automation.</span></li>
+
+                            </ul>
+
+                          </div>
+
+                        </td>
+
+                      </tr>
+
+                    </tbody>
+</table>
+</div>
+</li>
+
+              <li class="li">A sample JSON string might look like the following.<br /><img class="image" src="../Images/JSON_decoder_configuration.png" /><br /></li>
+
+            </ul>
+</li>
+
+          <li class="li"><span class="keyword option">Redirect</span>: Configures the redirect settings<ul class="ul" id="bia_configure_web_service_settings__ul_rj5_lbr_n1b">
+              <li class="li">JSON string for the redirect must be defined as follows.
+                  <pre class="pre codeblock"><code>{"redirect":{"followRedirects":"&lt;value&gt;","allowCircularRedirects":"&lt;value&gt;","rejectRelativeRedirect":"&lt;value&gt;","maxRedirects":&lt;value&gt;}}</code></pre>
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="bia_configure_web_service_settings__table_sj5_lbr_n1b" class="table" frame="border" border="1" rules="all"><colgroup><col style="width:26.80965147453083%" /><col style="width:73.19034852546918%" /></colgroup><thead class="thead" style="text-align:left;">
+                      <tr>
+                        <th class="entry cellrowborder" id="d379206e1037">Option</th>
+
+                        <th class="entry cellrowborder" id="d379206e1040">Description</th>
+
+                      </tr>
+
+                    </thead>
+<tbody class="tbody">
+                      <tr>
+                        <td class="entry cellrowborder" headers="d379206e1037 "><span class="keyword parmname">followRedirects</span></td>
+
+                        <td class="entry cellrowborder" headers="d379206e1040 ">
+                          <div class="p">
+                            <ul class="ul" id="bia_configure_web_service_settings__ul_tj5_lbr_n1b">
+                              <li class="li">(Optional) (Boolean value) Defines whether redirects should be
+                                handled automatically.</li>
+
+                              <li class="li">When this argument's key is empty, by default, the value of
+                                  <span class="keyword option">true</span> is used.</li>
+
+                            </ul>
+
+                          </div>
+
+                        </td>
+
+                      </tr>
+
+                      <tr>
+                        <td class="entry cellrowborder" headers="d379206e1037 "><span class="keyword parmname">allowCircularRedirects</span></td>
+
+                        <td class="entry cellrowborder" headers="d379206e1040 ">
+                          <div class="p">
+                            <ul class="ul">
+                              <li class="li">(Optional) (Boolean value) Defines whether circular redirects
+                                (redirects to the same location) should be allowed</li>
+
+                              <li class="li">When this argument's key is empty, by default, the value of
+                                  <span class="keyword option">false</span> is used.</li>
+
+                            </ul>
+
+                          </div>
+
+                        </td>
+
+                      </tr>
+
+                      <tr>
+                        <td class="entry cellrowborder" headers="d379206e1037 "><span class="keyword parmname">rejectRelativeRedirect</span></td>
+
+                        <td class="entry cellrowborder" headers="d379206e1040 ">
+                          <div class="p">
+                            <ul class="ul">
+                              <li class="li">(Optional) (Boolean value) Defines whether relative redirects
+                                should be rejected. HTTP specification requires the location value
+                                be an absolute URI.</li>
+
+                              <li class="li">When this argument's key is empty, by default, the value of
+                                  <span class="keyword option">false</span> is used.</li>
+
+                            </ul>
+
+                          </div>
+
+                        </td>
+
+                      </tr>
+
+                      <tr>
+                        <td class="entry cellrowborder" headers="d379206e1037 "><span class="keyword parmname">maxRedirects</span></td>
+
+                        <td class="entry cellrowborder" headers="d379206e1040 ">
+                          <div class="p">
+                            <ul class="ul">
+                              <li class="li">(Optional) (Boolean value) Defines the maximum number of redirects
+                                to be followed. The limit on number of redirects is intended to
+                                prevent infinite loops caused by broken server side scripts.</li>
+
+                              <li class="li">When this argument's key is empty, by default, the value of
+                                  <span class="keyword option">100</span> is used.</li>
+
+                            </ul>
+
+                          </div>
+
+                        </td>
+
+                      </tr>
+
+                    </tbody>
+</table>
+</div>
+</li>
+
+              <li class="li">A sample JSON string might look like the following.<br /><img class="image" src="../Images/JSON_redirect_configuration.png" /><br /></li>
+
+            </ul>
+</li>
+
+        </ol>
+
+      </div>
+
+    </section>
+
+    <section class="section TARef-bia-appsettings" id="bia_configure_web_service_settings__section_rgg_w52_1y"><h2 class="title sectiontitle">Applicable Built-In
+        Settings</h2><span class="ph">The following settings are applicable to this action:
+          </span><a class="xref" href="bis_remove_double_quotes_from_cells.html">remove double quotes from
+      cells</a>.</section>
+
+    <section class="section TARef-bia-example"><h2 class="title sectiontitle">Example: Proxy configurations</h2>
+      
+      <div class="sectiondiv"><strong class="ph b">Case 1: User-defined proxy configurations</strong>: </div>
+      <div class="sectiondiv">Suppose that you'd like add the following proxy configurations:<div class="p">
+          <ol class="ol" id="bia_configure_web_service_settings__ul_j3j_hry_q1b">
+            <li class="li">Hostname: <kbd class="ph userinput">192.168.167.29</kbd></li>
+
+            <li class="li">Port: <kbd class="ph userinput">8888</kbd></li>
+
+            <li class="li">Protocol: <kbd class="ph userinput">http</kbd></li>
+
+            <li class="li">Proxy authentications:<ul class="ul" id="bia_configure_web_service_settings__ul_evk_nry_q1b">
+                <li class="li">Username: <kbd class="ph userinput">john</kbd></li>
+
+                <li class="li">Password: <kbd class="ph userinput">doe</kbd></li>
+
+              </ul>
+</li>
+
+          </ol>
+
+        </div>
+<div class="p">Your JSON string should resemble as follows:
+          <pre class="pre codeblock"><code>{"proxy":{"hostname":"192.168.167.29","port":8888,"scheme":"http","username":"john","password":"doe"}}</code></pre></div>
+<p class="p"><strong class="ph b">Action
+            Lines</strong></p>
+<br /><img class="image" id="bia_configure_web_service_settings__image_b2b_ysy_q1b" src="../Images/bia_configure_web_service_settings_proxy_pgm.png" /><br />
+        <div class="sectiondiv"><strong class="ph b">Case 2: System proxy configurations</strong>: </div><div class="sectiondiv">Suppose
+          that you'd like to apply system proxy configurations for <span class="keyword option">hostname</span> and
+            <span class="keyword option">port</span>:<div class="p">
+            <ol class="ol" id="bia_configure_web_service_settings__ul_ddz_wsy_q1b">
+              <li class="li">Hostname: <kbd class="ph userinput">system</kbd></li>
+
+              <li class="li">Port: <kbd class="ph userinput">system</kbd></li>
+
+              <li class="li">Protocol: <kbd class="ph userinput">http</kbd></li>
+
+              <li class="li">Proxy authentications:<ul class="ul" id="bia_configure_web_service_settings__ul_edz_wsy_q1b">
+                  <li class="li">Username: <kbd class="ph userinput">john</kbd></li>
+
+                  <li class="li">Password: <kbd class="ph userinput">doe</kbd></li>
+
+                </ul>
+</li>
+
+            </ol>
+
+          </div>
+<div class="p">Your JSON string should resemble as follows:
+            <pre class="pre codeblock"><code>{"proxy":{"hostname":"system","port":"system","scheme":"http","username":"john","password":"doe"}}</code></pre></div>
+<p class="p"><strong class="ph b">Action
+              Lines</strong></p>
+<br /><img class="image" id="bia_configure_web_service_settings__image_fdz_wsy_q1b" src="../Images/bia_configure_web_service_settings_proxy_system_pgm.png" /><br />
+        </div></div>
+    </section>
+
+    <section class="section TARef-bia-example"><h2 class="title sectiontitle">Example: SSL configuration</h2>
+      
+      
+      
+      <div class="sectiondiv">
+        <p class="p"><strong class="ph b">Case 1: No SSL validation</strong></p>
+
+        <p class="p">For example, you run into a problem, because the server is using an invalid SSL
+          certificate. The easiest way to workaround this is that you trust all hosts.</p>
+
+        <div class="p">Your JSON string should resemble as follows: <pre class="pre codeblock"><code>{"ssl":"skip"}</code></pre></div>
+
+      </div>
+      <div class="sectiondiv">
+        <p class="p"><strong class="ph b">Action Lines</strong></p>
+
+        <br /><img class="image" src="../Images/bia_configure_web_service_settings_ssl_skip_pgm.png" /><br />
+      </div>
+      <div class="sectiondiv"><p class="p"><strong class="ph b">Case 2: SSL client validation</strong>
+        </p>
+<div class="p">Suppose that you'd like to configure SSL with the following certificate
+          authentications: <ol class="ol" id="bia_configure_web_service_settings__ul_jqq_5vy_q1b">
+            <li class="li">Path to the keystore to use when locating client certificates:
+                <kbd class="ph userinput">C:/Test_Folder/newkeystore.jks</kbd></li>
+
+            <li class="li">The keystore password: <kbd class="ph userinput">123456</kbd></li>
+
+            <li class="li">The trust store to use: <kbd class="ph userinput">C:/Test_Folder/cacerts</kbd></li>
+
+            <li class="li">The trust store password: <kbd class="ph userinput">changeit</kbd></li>
+
+          </ol>
+</div>
+Your JSON string should resemble as
+        follows:<pre class="pre codeblock"><code>{"ssl":{"pathToKeyStore":"C:/Test_Folder/newkeystore.jks","keyStorePassword":"123456","pathToTrustStore":"C:/Test_Folder/cacerts","trustStorePassword":"changeit"}}</code></pre></div>
+      <div class="sectiondiv">
+        <p class="p"><strong class="ph b">Action Lines</strong></p>
+
+        <br /><img class="image" src="../Images/bia_configure_web_service_settings_ssl_local_validation_pgm.png" /><br />
+      </div>
+    </section>
+
+    <section class="section TARef-bia-example"><h2 class="title sectiontitle">Example: Cookies configuration</h2><div class="p">Suppose
+        that you'd like to specify the following cookies which are sent to the server.<ol class="ol" id="bia_configure_web_service_settings__ul_pht_bnz_q1b">
+          <li class="li"><kbd class="ph userinput">yummy_cookie=choco</kbd></li>
+
+          <li class="li"><kbd class="ph userinput">tasty_cookie=strawberry</kbd></li>
+
+        </ol>
+</div>
+Your JSON string should resemble as follows:<pre class="pre codeblock"><code>{"cookies":{"yummy_cookie":"choco","tasty_cookie":"strawberry"}}</code></pre><div class="sectiondiv">
+        <p class="p"><strong class="ph b">Action Lines</strong></p>
+
+        <br /><img class="image" src="../Images/bia_configure_web_service_settings_cookies_pgm.png" /><br />
+      </div></section>
+
+    <section class="section TARef-bia-example"><h2 class="title sectiontitle">Example - Case 4: Encoder configuration</h2>
+      
+      <div class="p">Suppose that you'd like to specify the following configurations for the encoder.<ol class="ol" id="bia_configure_web_service_settings__ul_o15_2sz_q1b">
+          <li class="li">The default charset to use for the specific content-type.<ul class="ul" id="bia_configure_web_service_settings__ul_kr2_d5z_q1b">
+              <li class="li"><kbd class="ph userinput">application/json=UTF-8</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">text/plain=US-ASCII</kbd></li>
+
+            </ul>
+</li>
+
+          <li class="li">The default charset for query parameters. <ul class="ul" id="bia_configure_web_service_settings__ul_yh2_25z_q1b">
+              <li class="li"><kbd class="ph userinput">defaultQueryParameterCharset=US-ASCII</kbd></li>
+
+            </ul>
+</li>
+
+          <li class="li">REST Assured does not encode the URL.<ul class="ul" id="bia_configure_web_service_settings__ul_o5g_c5z_q1b">
+              <li class="li"><kbd class="ph userinput">urlEncodingEnabled=false</kbd></li>
+
+            </ul>
+</li>
+
+        </ol>
+</div>
+
+      <div class="p">JSON string resembles the
+        following:<pre class="pre codeblock"><code>{"encoder":{"contentTypeToDefaultCharset":{"application/json":"UTF-8","text/plain":"US-ASCII"},"defaultQueryParameterCharset":"US-ASCII","urlEncodingEnabled":"false"}}</code></pre></div>
+
+      <div class="sectiondiv">
+        <p class="p"><strong class="ph b">Action Lines</strong></p>
+
+        <br /><img class="image" src="../Images/bia_configure_web_service_settings_encoder_pgm.png" /><br />
+      </div>
+    </section>
+
+    <section class="section TARef-bia-example"><h2 class="title sectiontitle">Example - Case 5: Decoder configuration</h2>
+      
+      <div class="p">Suppose that you'd like to specify the following configurations for the decoder.<ol class="ol" id="bia_configure_web_service_settings__ul_njf_pvz_q1b">
+          <li class="li">The default charset to use for the specific content-type.<ul class="ul" id="bia_configure_web_service_settings__ul_ojf_pvz_q1b">
+              <li class="li"><kbd class="ph userinput">application/octet-stream=us-ascii</kbd></li>
+
+            </ul>
+</li>
+
+          <li class="li">The content decoder to apply: No compression.<div class="note note"><span class="notetitle">Note:</span> When you do this the <a class="xref" href="https://developer.mozilla.org/vi/docs/Web/HTTP/Headers/Accept-Encoding" target="_blank"><span class="keyword parmname">Accept-Encoding</span></a>
+              header will be added automatically to the request and the response body will not be
+              encoded. In this case, <span class="keyword option">identity</span> value, which indicates no
+              compression, is enabled.</div>
+</li>
+
+        </ol>
+</div>
+
+      <div class="p">JSON string resembles the
+        following:<pre class="pre codeblock"><code>{"decoder":{"contentDecoders":"identity","contentTypeToDefaultCharset":{"application/octet-stream":"us-ascii"}}}</code></pre></div>
+
+      <div class="sectiondiv">
+        <p class="p"><strong class="ph b">Action Lines</strong></p>
+
+        <br /><img class="image" src="../Images/bia_configure_web_service_settings_decoder_pgm.png" /><br />
+      </div>
+    </section>
+
+    <section class="section TARef-bia-example"><h2 class="title sectiontitle">Example - Case 6: Redirect
+      configuration</h2>Suppose that you'd like to configure the following redirect settings:<ol class="ol" id="bia_configure_web_service_settings__ul_qgy_vxz_q1b">
+        <li class="li">Follow redirects.<ul class="ul" id="bia_configure_web_service_settings__ul_o4g_2yz_q1b">
+            <li class="li"><kbd class="ph userinput">followRedirects=true</kbd></li>
+
+          </ul>
+</li>
+
+        <li class="li">Allow circular redirects.<ul class="ul" id="bia_configure_web_service_settings__ul_krm_2yz_q1b">
+            <li class="li"><kbd class="ph userinput">allowCircularRedirects=true</kbd></li>
+
+          </ul>
+</li>
+
+        <li class="li">Reject relative redirects<ul class="ul" id="bia_configure_web_service_settings__ul_rs4_fyz_q1b">
+            <li class="li"><kbd class="ph userinput">rejectRelativeRedirect=true</kbd></li>
+
+          </ul>
+</li>
+
+        <li class="li">The maximum number of redirects: 50<ul class="ul" id="bia_configure_web_service_settings__ul_ygz_gyz_q1b">
+            <li class="li"><kbd class="ph userinput">maxRedirects=50</kbd></li>
+
+          </ul>
+</li>
+
+      </ol>
+<div class="p">JSON string resembles the following:
+        <pre class="pre codeblock"><code>{"redirect":{"followRedirects":"true","allowCircularRedirects":"true","rejectRelativeRedirect":"true","maxRedirects":50}}</code></pre></div>
+<div class="sectiondiv">
+        <p class="p"><strong class="ph b">Action Lines</strong></p>
+
+        <br /><img class="image" src="../Images/bia_configure_web_service_settings_redirect_pgm.png" /><br />
+      </div></section>
+
+  </div>
+
+</article></main></div>
+                        
+                        <div class=" wh_related_links "><nav role="navigation" class="related-links"><div class="linklist linklist relinfo relconcepts"><strong>Related concepts</strong><br /><div class="related_link"><a class="navheader_parent_path" href="../../TA_Automation/Topics/aut_testing_web_service.html" title="Web services are applications that can be published and called over the Internet by client applications. TestArchitect supports functional testing of web services.">Testing web services</a></div></div></nav></div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div> <nav class="navbar navbar-default wh_footer">
+ <!--  <div class=" footer-container text-center ">
+    <whc:include_html href="${webhelp.fragment.footer}"/>
+  </div> -->
+</nav>
+
+        
+        <div id="go2top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close glyphicon glyphicon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" />
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        <script src="../../oxygen-webhelp/lib/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        
+        
+<div id="bottom-3" class="tsection hidden-print">
+ <div class="tsection-inner">
+ 	<div class="tcol col-sm-no-grid">
+      <div class="mod-block clearfix">
+      	<div class="mb2pb-section clearfix light section_5abb0c9af2a15" style="">
+      		<div class="mb2pb-section-inner clearfix" style="padding-top:0px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+      			<div class="mb2pb-row clearfix dark-gray hpadding-normal row_5abb0c9af2a15" style="">
+      				<div class="mb2pb-row-inner clearfix" style="padding-top:70px;padding-bottom:70px;background-color:rgb(8, 8, 8);">
+      					<div class="container-fluid" style="">
+      						<div class="row">
+      							<div class="mb2pb-column col-sm-5 cnoempty light cnoheight" style="">
+                                   <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                   	 <div style="" class="mb2pb-text pos-left">
+                                   	 	<div class="moduletable">
+                                   	 		<div class="mb2pb-section clearfix light section_5abb0c9af2a15" style="">
+                                   	 			<div class="mb2pb-section-inner clearfix" style="padding-top:0px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+                                   	 				<div class="mb2pb-row clearfix dark-gray hpadding-normal row_5abb0c9b024dd" style="">
+                                   	 					<div class="mb2pb-row-inner clearfix" style="padding-top:20px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+                                                      		<div class="container-fluid" style="">
+                                                         		<div class="row">
+                                                         			<div class="mb2pb-column col-sm-6 cnoempty light cnoheight" style="">
+		                                                               <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+		                                                                  <div class="border-hor border1" style="border-bottom-color:rgba(255, 255, 255, 0.1);border-bottom-style:solid;border-bottom-width:1px;"></div>
+		                                                                  <div class="mb2pb-gap gap clearfix" style="height:45px;"></div>
+		                                                                  <div style="padding:0px 0px 20px 0px;" class="mb2pb-text pos-left">
+		                                                                     <h4 class="title">Contact Us</h4>
+		                                                                     <ul class="list list2 list-left">
+		                                                                        <li><a href="https://www.testarchitect.com/company/contact-us" target="_self">Leave A Message</a></li>
+		                                                                        <li><a href="https://www.testarchitect.com/product/testarchitect-team-and-testarchitect-enterprise/request-a-demo" target="_self">Request A Demo</a></li>
+		                                                                        <li><a href="https://www.testarchitect.com/company/request-a-quote" target="_self">Request A Quote</a></li>
+		                                                                        <li><a href="https://www.testarchitect.com/company/partners/become-a-partner" target="_self">Become A Partner</a></li>
+		                                                                     </ul>
+		                                                                  </div>
+		                                                               </div>
+		                                                            </div>	
+		                                                            <div class="mb2pb-column col-sm-6 cnoempty light cnoheight" style="">
+		                                                               <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+		                                                                  <div class="border-hor border1" style="border-bottom-color:rgba(255, 255, 255, 0.1);border-bottom-style:solid;border-bottom-width:1px;"></div>
+		                                                                  <div class="mb2pb-gap gap clearfix" style="height:45px;"></div>
+		                                                                  <div style="padding:0px 0px 20px 0px;" class="mb2pb-text pos-left">
+		                                                                     <h4 class="title">TestArchitect</h4>
+		                                                                     <ul class="list list2 list-left">
+		                                                                        <li><a href="https://www.testarchitect.com/" target="_self">Home</a></li>
+		                                                                        <li><a href="https://www.testarchitect.com/why-testarchitect" target="_self">Why TestArchitect</a></li>
+		                                                                        <li><a href="https://www.testarchitect.com/product/features-and-supported-platforms" target="_self">Products</a></li>
+		                                                                        <li><a href="https://www.testarchitect.com/product/professional-services-and-training" target="_self">Services</a></li>
+		                                                                     </ul>
+		                                                                  </div>
+		                                                               </div>
+		                                                            </div>
+                                                         		</div>
+                                                         	</div>
+                                                         </div>			
+
+                                   	 				</div>
+                                   	 			</div>	
+                                   	 		</div>
+                                   	 	</div>	
+                                   	 </div>
+                                   </div>
+      							</div>	
+      							<div class="mb2pb-column col-sm-2 cnoempty light cnoheight" style="">
+                                 <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                    <div style="" class="mb2pb-text pos-left">
+                                       <div class="moduletable">
+                                          <div class="mb2pb-section clearfix light section_5abb0c9b024dd" style="">
+                                             <div class="mb2pb-section-inner clearfix" style="padding-top:0px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+                                                <div class="mb2pb-row clearfix dark-gray hpadding-normal row_5abb0c9b024dd" style="">
+                                                   <div class="mb2pb-row-inner clearfix" style="padding-top:20px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+                                                      <div class="container-fluid" style="">
+                                                         <div class="row">
+                                                            <div class="mb2pb-column col-sm-12 cnoempty light cnoheight" style="">
+                                                               <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                                                  <div class="border-hor border1" style="border-bottom-color:rgba(255, 255, 255, 0.1);border-bottom-style:solid;border-bottom-width:1px;"></div>
+                                                                  <div class="mb2pb-gap gap clearfix" style="height:45px;"></div>
+                                                                  <div style="padding:0px 0px 20px 0px;" class="mb2pb-text pos-left">
+                                                                     <h4 class="title">Resources</h4>
+                                                                     <ul class="list list2 list-left">
+                                                                        <li><a href="https://www.testarchitect.com/resources/data-sheets" target="_self">Data Sheets</a></li>
+                                                                        <li><a href="https://www.testarchitect.com/resources/case-studies" target="_self">Case Studies</a></li>
+                                                                        <li><a href="https://www.testarchitect.com/resources/white-papers" target="_self">White Papers</a></li>
+                                                                        <li><a href="https://www.testarchitect.com/support/documentation/tutorial-videos" target="_self">Tutorial Videos</a></li>
+                                                                     </ul>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="mb2pb-column col-sm-5 cnoempty light cnoheight" style="">
+                                 <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                    <div style="" class="mb2pb-text pos-left">
+                                       <div class="moduletable">
+                                          <div class="mb2pb-section clearfix light section_5abb0c9b061e6" style="">
+                                             <div class="mb2pb-section-inner clearfix" style="padding-top:0px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+                                                <div class="mb2pb-row clearfix dark-gray hpadding-normal row_5abb0c9b061e6" style="">
+                                                   <div class="mb2pb-row-inner clearfix" style="padding-top:20px;padding-bottom:0px;background-color:rgb(8, 8, 8);">
+                                                      <div class="container-fluid" style="">
+                                                         <div class="row">
+                                                            <div class="mb2pb-column col-sm-6 cnoempty light cnoheight" style="">
+                                                               <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                                                  <div class="border-hor border1" style="border-bottom-color:rgba(255, 255, 255, 0.1);border-bottom-style:solid;border-bottom-width:1px;"></div>
+                                                                  <div class="mb2pb-gap gap clearfix" style="height:45px;"></div>
+                                                                  <div style="padding:0px 0px 20px 0px;" class="mb2pb-text pos-left">
+                                                                     <h4 class="title">Support</h4>
+                                                                     <ul class="list list2 list-left">
+                                                                        <li><a href="http://testarchitect.com/onlinehelp" target="_blank">Online Help</a></li>
+                                                                        <li><a href="http://support-ta.logigear.com/support/tickets/new" target="_blank">Submit A Ticket</a></li>
+                                                                        <li><a href="http://testarchitect.com/sso?host_url=support-ta.logigear.com" target="_blank">Login</a></li>
+                                                                        <li><a href="https://www.testarchitect.com/support/documentation/release-notes" target="_self">Release Notes</a></li>
+                                                                     </ul>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                            <div class="mb2pb-column col-sm-6 cnoempty light cnoheight" style="">
+                                                               <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                                                  <div class="border-hor border1" style="border-bottom-color:rgba(255, 255, 255, 0.1);border-bottom-style:solid;border-bottom-width:1px;"></div>
+                                                                  <div class="mb2pb-gap gap clearfix" style="height:45px;"></div>
+                                                                  <div style="padding:0px 0px 20px 0px;" class="mb2pb-text pos-left">
+                                                                     <h4 class="title">Community</h4>
+                                                                     <ul class="list list2 list-left">
+                                                                        <li><a href="http://support-ta.logigear.com/support/discussions" target="_blank">Forums</a></li>
+                                                                        <li><a href="http://support-ta.logigear.com/support/solutions" target="_blank">Knowledge Base</a></li>
+                                                                        <li><a href="http://www.logigear.com/blog" target="_blank">LogiGear Blog</a></li>
+                                                                        <li><a href="http://www.logigear.com/Magazine" target="_blank">LogiGear Magazine</a></li>
+                                                                     </ul>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+      						</div>	
+      					</div>
+      				</div>
+      			</div>
+      		</div>	
+      		<!-- END FOOTER ITEMS-->
+            <!-- START SOCIAL NETWORK-->
+      		<div class="mb2pb-section clearfix light section_5abb0c9af2a15" style="">
+               <div class="mb2pb-section-inner clearfix" style="padding-top:0px;padding-bottom:0px;">
+                  <div class="mb2pb-row clearfix light hpadding-normal row_5abb0c9af2a15" style="">
+                     <div class="mb2pb-row-inner clearfix" style="padding-top:px;padding-bottom:px;background-color:rgba(0, 0, 0, 0.83);">
+                        <div class="container-fluid" style="">
+                           <div class="row">
+                              <div class="mb2pb-column col-sm-4 cnoempty light cnoheight" style="">
+                                 <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                    <div style="" class="mb2pb-text pos-left">
+                                       <h6 style="color: white;">Powered by<!-- &nbsp; --> 
+                                       	<img style="vertical-align: middle;" src="https://www.testarchitect.com/images/gallery/other/logigear-logo.png" alt="" width="108" height="31" /> 
+                                       	</h6>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="mb2pb-column col-sm-8 cnoempty light cnoheight" style="">
+                                 <div class="tmpl-col-inner" style="padding-top:0px;padding-bottom:0px;">
+                                    <div style="" class="mb2pb-text pos-left">
+                                       <h6 style="color: white;">
+                                       <strong>STAY IN TOUCH</strong><!-- &nbsp; --> 
+                                       <a href="https://www.facebook.com/logigearcorporation/" target="_blank">
+                                       <img style="vertical-align: middle; margin-left: 5px; margin-right: 5px;" src="https://www.testarchitect.com/images/gallery/other/fb-icon.png" alt="" width="30" height="30" />
+                                       </a>
+                                       <a href="https://twitter.com/logigear" target="_blank">
+                                       <img class="" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;" src="https://www.testarchitect.com/images/gallery/other/twitter.png" alt="" width="30" height="30" />
+                                       </a>
+                                       <a href="https://www.linkedin.com/company/logigear-corporation" target="_blank">
+                                       <img class="" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;" src="https://www.testarchitect.com/images/gallery/other/linked-in-icon.png" alt="" width="30" height="30" />
+                                       </a>
+                                       <a href="https://www.youtube.com/user/LogiGearCorporation" target="_blank">
+                                       <img class="" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;" src="https://www.testarchitect.com/images/gallery/other/youtube-icon.png" alt="" width="30" height="30" />
+                                       </a>
+                                       <a href="https://plus.google.com/102920289935162355348" target="_blank">
+                                       <img class="" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;" src="https://www.testarchitect.com/images/gallery/other/g+-icon.png" alt="" width="30" height="30" />
+                                       </a>
+                                       <a href="mailto:sales@logigear.com?Subject=" target="_top">
+                                       <img class="" style="vertical-align: middle; margin-left: 5px; margin-right: 5px;" src="https://www.testarchitect.com/images/gallery/other/email-icon.png" alt="" width="30" height="30" />
+                                       </a>
+                                   		</h6>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+      	</div>
+      </div>
+    </div>  	
+ </div>	
+</div>	
+   <footer id="footer" class="tsection hidden-print">
+      <div class="tsection-inner">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="tfooter tcol col-sm-12">
+                  <div style="float:left; padding:0">
+                     © 2019 LogiGear Corporation. All rights reserved. 
+                  </div>
+                  <div id="footer-url">
+                     <a href="https://www.testarchitect.com/legal/privacy-policy">
+                     Security Policy
+                     </a>
+                     <a href="https://www.testarchitect.com/legal/eula">
+                     Terms of Use
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+<script src="../../oxygen-webhelp/resource/media/jui/js/jquery.min.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/templates/fruition/js/jui/bootstrap.min.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/templates/fruition/assets/tooltipsy.min.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/templates/fruition/js/template.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/media/mb2ctmenu/js/superfish.custom.min.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/media/mb2ctmenu/js/mb2ctmenu.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/custom-script.js" type="text/javascript"> </script>
+<script src="../../oxygen-webhelp/resource/jquery.bing.translator.js" type="text/javascript"> </script>
+<script src="https://apis.google.com/js/platform.js"></script>
+<script type="text/javascript">
+		$(document).ready(function(){
+    		$('#languagePicker').languagePicker({mode:'auto',delay:1000});
+		});
+		</script>
+		<script type="text/javascript">
+		    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		    try {
+		      var pageTracker = _gat._getTracker("UA-56756158-1");
+		    pageTracker._trackPageview();
+		    } catch(err) {}
+		</script>
+<!--
+<script type="text/javascript">
+	function setDefault(){
+	
+		document.getElementsByClassName('goog-te-menu-frame')[1].contentDocument.body.getElementsByClassName('text')[0].click();
+	}
+	
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
+    }
+
+	function triggerHtmlEvent(element, eventName) {
+	  var event;
+	  if (document.createEvent) {
+		event = document.createEvent('HTMLEvents');
+		event.initEvent(eventName, true, true);
+		element.dispatchEvent(event);
+	  } else {
+		event = document.createEventObject();
+		event.eventType = eventName;
+		element.fireEvent('on' + event.eventType, event);
+	  }
+	}
+
+	jQuery('.lang-select').click(function() {
+	  var theLang = jQuery(this).attr('data-lang');
+	  jQuery('.goog-te-combo').val(theLang);
+
+	  //alert(jQuery(this).attr('href'));
+	  window.location = jQuery(this).attr('href');
+	  location.reload();
+
+	});
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+-->
+
+        <div id="cover">
+            <div id="social-button">
+            <div class="share-social">
+            <h4 class="share-via-title">Share Via...</h4>
+            <div class="x-button"> 
+                <a href="javascript:turnOffPopUp()" class="glyphicon glyphicon-remove-sign"></a>
+            </div>
+            <div id="button-group">
+            <div class="social-button-popup"><a title="Facebook" href="javascript:fbshareCurrentPage()" alt="Facebook"> Facebook </a></div>
+            <div class="social-button-popup"><a title="Twitter" href="javascript:tweetCurrentPage()" alt="Twitter"> Twitter </a></div>
+            <div class="social-button-popup"><a title="LinkedIn" href="javascript:linkedinCurrentPage()" alt="LinkedIn"> LinkedIn </a></div>
+            <div class="social-button-popup" style="border: none;"><a title="Google+" href="javascript:gplusShare()" alt="Google+"> Google+ </a></div>
+            </div>
+            <div id="content-group">
+            </div>    
+            
+            </div>
+           <!--  <div class="g-plus" data-action="share"></div> -->
+        </div>        
+        </div>
+        
+    </body>
+</html>

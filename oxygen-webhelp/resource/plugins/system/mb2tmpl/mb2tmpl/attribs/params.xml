@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="attribs" addfieldpath="/plugins/system/mb2tmpl/mb2tmpl/libs/fields/">
+	   <fieldset name="mb2-mb2tmpl-params" label="PLG_SYSTEM_MB2TMPL_TAB_LABEL"> 
+	   		
+			<field type="mb2admin" label="" title="" />	
+			
+			<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_CUSTOM_SECTION1" />		
+			
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_COLOR" />			
+					<field name="custom_section1_color" type="mb2color" default="" label="TMPL_SCALE_TEXT_COLOR" description=""  />
+					<field name="custom_section1_h_color" type="mb2color" default="" label="TMPL_SCALE_HEADINGS_COLOR" description=""  />
+					<field name="custom_section1_l_color" type="mb2color" default="" label="TMPL_SCALE_LINKS_COLOR" description=""  />
+					<field name="custom_section1_lh_color" type="mb2color" default="" label="TMPL_SCALE_LINKS_HOVER_COLOR" description=""  />
+				<field type="mb2enditem" label="" />		
+				
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_BG" />			
+					<field name="custom_section1_bg_color" type="mb2color" default="" label="TMPL_SCALE_BG_COLOR" description=""  />		
+					<field name="custom_section1_bg_image" type="media" default="" label="TMPL_SCALE_CUSTOM_BG_IMAGE" description=""  />
+					<field name="custom_section1_bg_repeat" type="list" default="" label="TMPL_SCALE_BG_REPEAT" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="repeat">TMPL_SCALE_REPEAT</option>
+						<option value="repeat-x">TMPL_SCALE_REPEAT_X</option>
+						<option value="repeat-y">TMPL_SCALE_REPEAT_Y</option>
+						<option value="no-repeat">TMPL_SCALE_NO_REPEAT</option>
+					</field>
+					<field name="custom_section1_bg_position" type="list" default="" label="TMPL_SCALE_BG_POSITION" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="left top">TMPL_SCALE_LEFT_TOP</option>
+						<option value="left bottom">TMPL_SCALE_LEFT_BOTTOM</option>
+						<option value="left center">TMPL_SCALE_LEFT_CENTER</option>
+						<option value="right top">TMPL_SCALE_RIGHT_TOP</option>
+						<option value="right bottom">TMPL_SCALE_RIGHT_BOTTOM</option>
+						<option value="right center">TMPL_SCALE_RIGHT_CENTER</option>
+						<option value="center top">TMPL_SCALE_CENTER_TOP</option>
+						<option value="center bottom">TMPL_SCALE_CENTER_BOTTOM</option>
+						<option value="center center">TMPL_SCALE_CENTER</option>
+					</field>
+					<field name="custom_section1_attachment" type="list" default="" label="TMPL_SCALE_BG_ATTACHMENT" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="scroll">TMPL_SCALE_SCROLL</option>
+						<option value="fixed">TMPL_SCALE_FIXED</option>
+					</field>
+					<field name="custom_section1_bg_scale" type="list" default="" label="TMPL_SCALE_SCALE_BG" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />			
+				
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_PARALLAX" />			
+					<field name="custom_section1_parallax" type="list" default="" label="TMPL_SCALE_PARALLAX" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>	
+					<field name="custom_section1_parallax_speed" type="text" default="" label="TMPL_SCALE_PARALLAX_SPEED" description=""  />
+				<field type="mb2enditem" label="" />				
+			
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_BGSLIDER" />			
+					<field name="custom_section1_cerousel_dir" type="text" default="" label="TMPL_SCALE_CAROUSEL_DIR" description=""  />			
+					<field name="custom_section1_cerousel_duration" type="text" default="" label="TMPL_SCALE_CAROUSEL_DURATION" description=""  />
+					<field name="custom_section1_cerousel_fade" type="text" default="" label="TMPL_SCALE_CAROUSEL_FADE" description=""  />
+				<field type="mb2enditem" label="" />
+				
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_VIDEOBG" />			
+					<field name="custom_section1_videoid" type="text" default="" label="TMPL_SCALE_YT_VIDOID" description=""  />
+					<field name="custom_section1_videoquality" type="list" default="" label="TMPL_SCALE_YT_VIDOQUALITY" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="default">TMPL_SCALE_DEFAULT_OPT</option>
+						<option value="small">TMPL_SCALE_SMALL_OPT</option>
+						<option value="medium">TMPL_SCALE_MEDIUM_OPT</option>
+						<option value="large">TMPL_SCALE_LARGE_OPT</option>
+						<option value="hd720">HD 720</option>
+						<option value="hd1080">HD 1080</option>
+						<option value="highres">TMPL_SCALE_HIGHRES_OPT</option>
+					</field>
+					<field name="custom_section1_videoloop" type="list" default="" label="TMPL_SCALE_VIDEOLOOP" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section1_videoautoplay" type="list" default="" label="TMPL_SCALE_VIDEOAUTOPLAY" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section1_videostoponblur" type="list" default="" label="TMPL_SCALE_VIDEOSTOPONBLUR" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section1_videobg" type="mb2color" default="" label="TMPL_SCALE_YT_VIDOOVERLAYBG" description=""  />
+				<field type="mb2enditem" label="" />		
+		
+			<field type="mb2enditem" label="" />
+			
+			
+			<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_CUSTOM_SECTION2" />		
+			
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_COLOR" />			
+					<field name="custom_section2_color" type="mb2color" default="" label="TMPL_SCALE_TEXT_COLOR" description=""  />
+					<field name="custom_section2_h_color" type="mb2color" default="" label="TMPL_SCALE_HEADINGS_COLOR" description=""  />
+					<field name="custom_section2_l_color" type="mb2color" default="" label="TMPL_SCALE_LINKS_COLOR" description=""  />
+					<field name="custom_section2_lh_color" type="mb2color" default="" label="TMPL_SCALE_LINKS_HOVER_COLOR" description=""  />
+				<field type="mb2enditem" label="" />		
+				
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_BG" />			
+					<field name="custom_section2_bg_color" type="mb2color" default="" label="TMPL_SCALE_BG_COLOR" description=""  />		
+					<field name="custom_section2_bg_image" type="media" default="" label="TMPL_SCALE_CUSTOM_BG_IMAGE" description=""  />
+					<field name="custom_section2_bg_repeat" type="list" default="" label="TMPL_SCALE_BG_REPEAT" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="repeat">TMPL_SCALE_REPEAT</option>
+						<option value="repeat-x">TMPL_SCALE_REPEAT_X</option>
+						<option value="repeat-y">TMPL_SCALE_REPEAT_Y</option>
+						<option value="no-repeat">TMPL_SCALE_NO_REPEAT</option>
+					</field>
+					<field name="custom_section2_bg_position" type="list" default="" label="TMPL_SCALE_BG_POSITION" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="left top">TMPL_SCALE_LEFT_TOP</option>
+						<option value="left bottom">TMPL_SCALE_LEFT_BOTTOM</option>
+						<option value="left center">TMPL_SCALE_LEFT_CENTER</option>
+						<option value="right top">TMPL_SCALE_RIGHT_TOP</option>
+						<option value="right bottom">TMPL_SCALE_RIGHT_BOTTOM</option>
+						<option value="right center">TMPL_SCALE_RIGHT_CENTER</option>
+						<option value="center top">TMPL_SCALE_CENTER_TOP</option>
+						<option value="center bottom">TMPL_SCALE_CENTER_BOTTOM</option>
+						<option value="center center">TMPL_SCALE_CENTER</option>
+					</field>
+					<field name="custom_section2_attachment" type="list" default="" label="TMPL_SCALE_BG_ATTACHMENT" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="scroll">TMPL_SCALE_SCROLL</option>
+						<option value="fixed">TMPL_SCALE_FIXED</option>
+					</field>
+					<field name="custom_section2_bg_scale" type="list" default="" label="TMPL_SCALE_SCALE_BG" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />			
+				
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_PARALLAX" />			
+					<field name="custom_section2_parallax" type="list" default="" label="TMPL_SCALE_PARALLAX" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>	
+					<field name="custom_section2_parallax_speed" type="text" default="" label="TMPL_SCALE_PARALLAX_SPEED" description=""  />
+				<field type="mb2enditem" label="" />				
+			
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_BGSLIDER" />			
+					<field name="custom_section2_cerousel_dir" type="text" default="" label="TMPL_SCALE_CAROUSEL_DIR" description=""  />			
+					<field name="custom_section2_cerousel_duration" type="text" default="" label="TMPL_SCALE_CAROUSEL_DURATION" description=""  />
+					<field name="custom_section2_cerousel_fade" type="text" default="" label="TMPL_SCALE_CAROUSEL_FADE" description=""  />
+				<field type="mb2enditem" label="" />
+				
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_VIDEOBG" />			
+					<field name="custom_section2_videoid" type="text" default="" label="TMPL_SCALE_YT_VIDOID" description=""  />
+					<field name="custom_section2_videoquality" type="list" default="" label="TMPL_SCALE_YT_VIDOQUALITY" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="default">TMPL_SCALE_DEFAULT_OPT</option>
+						<option value="small">TMPL_SCALE_SMALL_OPT</option>
+						<option value="medium">TMPL_SCALE_MEDIUM_OPT</option>
+						<option value="large">TMPL_SCALE_LARGE_OPT</option>
+						<option value="hd720">HD 720</option>
+						<option value="hd1080">HD 1080</option>
+						<option value="highres">TMPL_SCALE_HIGHRES_OPT</option>
+					</field>
+					<field name="custom_section2_videoloop" type="list" default="" label="TMPL_SCALE_VIDEOLOOP" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section2_videoautoplay" type="list" default="" label="TMPL_SCALE_VIDEOAUTOPLAY" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section2_videostoponblur" type="list" default="" label="TMPL_SCALE_VIDEOSTOPONBLUR" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section2_videobg" type="mb2color" default="" label="TMPL_SCALE_YT_VIDOOVERLAYBG" description=""  />
+				<field type="mb2enditem" label="" />		
+		
+			<field type="mb2enditem" label="" />
+			
+			
+			<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_CUSTOM_SECTION3" />		
+			
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_COLOR" />			
+					<field name="custom_section3_color" type="mb2color" default="" label="TMPL_SCALE_TEXT_COLOR" description=""  />
+					<field name="custom_section3_h_color" type="mb2color" default="" label="TMPL_SCALE_HEADINGS_COLOR" description=""  />
+					<field name="custom_section3_l_color" type="mb2color" default="" label="TMPL_SCALE_LINKS_COLOR" description=""  />
+					<field name="custom_section3_lh_color" type="mb2color" default="" label="TMPL_SCALE_LINKS_HOVER_COLOR" description=""  />
+				<field type="mb2enditem" label="" />		
+				
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_BG" />			
+					<field name="custom_section3_bg_color" type="mb2color" default="" label="TMPL_SCALE_BG_COLOR" description=""  />		
+					<field name="custom_section3_bg_image" type="media" default="" label="TMPL_SCALE_CUSTOM_BG_IMAGE" description=""  />
+					<field name="custom_section3_bg_repeat" type="list" default="" label="TMPL_SCALE_BG_REPEAT" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="repeat">TMPL_SCALE_REPEAT</option>
+						<option value="repeat-x">TMPL_SCALE_REPEAT_X</option>
+						<option value="repeat-y">TMPL_SCALE_REPEAT_Y</option>
+						<option value="no-repeat">TMPL_SCALE_NO_REPEAT</option>
+					</field>
+					<field name="custom_section3_bg_position" type="list" default="" label="TMPL_SCALE_BG_POSITION" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="left top">TMPL_SCALE_LEFT_TOP</option>
+						<option value="left bottom">TMPL_SCALE_LEFT_BOTTOM</option>
+						<option value="left center">TMPL_SCALE_LEFT_CENTER</option>
+						<option value="right top">TMPL_SCALE_RIGHT_TOP</option>
+						<option value="right bottom">TMPL_SCALE_RIGHT_BOTTOM</option>
+						<option value="right center">TMPL_SCALE_RIGHT_CENTER</option>
+						<option value="center top">TMPL_SCALE_CENTER_TOP</option>
+						<option value="center bottom">TMPL_SCALE_CENTER_BOTTOM</option>
+						<option value="center center">TMPL_SCALE_CENTER</option>
+					</field>
+					<field name="custom_section3_attachment" type="list" default="" label="TMPL_SCALE_BG_ATTACHMENT" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="scroll">TMPL_SCALE_SCROLL</option>
+						<option value="fixed">TMPL_SCALE_FIXED</option>
+					</field>
+					<field name="custom_section3_bg_scale" type="list" default="" label="TMPL_SCALE_SCALE_BG" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />			
+				
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_PARALLAX" />			
+					<field name="custom_section3_parallax" type="list" default="" label="TMPL_SCALE_PARALLAX" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>	
+					<field name="custom_section3_parallax_speed" type="text" default="" label="TMPL_SCALE_PARALLAX_SPEED" description=""  />
+				<field type="mb2enditem" label="" />				
+			
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_BGSLIDER" />			
+					<field name="custom_section3_cerousel_dir" type="text" default="" label="TMPL_SCALE_CAROUSEL_DIR" description=""  />			
+					<field name="custom_section3_cerousel_duration" type="text" default="" label="TMPL_SCALE_CAROUSEL_DURATION" description=""  />
+					<field name="custom_section3_cerousel_fade" type="text" default="" label="TMPL_SCALE_CAROUSEL_FADE" description=""  />
+				<field type="mb2enditem" label="" />
+				
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_VIDEOBG" />			
+					<field name="custom_section3_videoid" type="text" default="" label="TMPL_SCALE_YT_VIDOID" description=""  />
+					<field name="custom_section3_videoquality" type="list" default="" label="TMPL_SCALE_YT_VIDOQUALITY" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="default">TMPL_SCALE_DEFAULT_OPT</option>
+						<option value="small">TMPL_SCALE_SMALL_OPT</option>
+						<option value="medium">TMPL_SCALE_MEDIUM_OPT</option>
+						<option value="large">TMPL_SCALE_LARGE_OPT</option>
+						<option value="hd720">HD 720</option>
+						<option value="hd1080">HD 1080</option>
+						<option value="highres">TMPL_SCALE_HIGHRES_OPT</option>
+					</field>
+					<field name="custom_section3_videoloop" type="list" default="" label="TMPL_SCALE_VIDEOLOOP" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section3_videoautoplay" type="list" default="" label="TMPL_SCALE_VIDEOAUTOPLAY" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section3_videostoponblur" type="list" default="" label="TMPL_SCALE_VIDEOSTOPONBLUR" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section3_videobg" type="mb2color" default="" label="TMPL_SCALE_YT_VIDOOVERLAYBG" description=""  />
+				<field type="mb2enditem" label="" />		
+		
+			<field type="mb2enditem" label="" />
+			
+			
+			<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_CUSTOM_SECTION4" />		
+			
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_COLOR" />			
+					<field name="custom_section4_color" type="mb2color" default="" label="TMPL_SCALE_TEXT_COLOR" description=""  />
+					<field name="custom_section4_h_color" type="mb2color" default="" label="TMPL_SCALE_HEADINGS_COLOR" description=""  />
+					<field name="custom_section4_l_color" type="mb2color" default="" label="TMPL_SCALE_LINKS_COLOR" description=""  />
+					<field name="custom_section4_lh_color" type="mb2color" default="" label="TMPL_SCALE_LINKS_HOVER_COLOR" description=""  />
+				<field type="mb2enditem" label="" />		
+				
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_BG" />			
+					<field name="custom_section4_bg_color" type="mb2color" default="" label="TMPL_SCALE_BG_COLOR" description=""  />		
+					<field name="custom_section4_bg_image" type="media" default="" label="TMPL_SCALE_CUSTOM_BG_IMAGE" description=""  />
+					<field name="custom_section4_bg_repeat" type="list" default="" label="TMPL_SCALE_BG_REPEAT" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="repeat">TMPL_SCALE_REPEAT</option>
+						<option value="repeat-x">TMPL_SCALE_REPEAT_X</option>
+						<option value="repeat-y">TMPL_SCALE_REPEAT_Y</option>
+						<option value="no-repeat">TMPL_SCALE_NO_REPEAT</option>
+					</field>
+					<field name="custom_section4_bg_position" type="list" default="" label="TMPL_SCALE_BG_POSITION" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="left top">TMPL_SCALE_LEFT_TOP</option>
+						<option value="left bottom">TMPL_SCALE_LEFT_BOTTOM</option>
+						<option value="left center">TMPL_SCALE_LEFT_CENTER</option>
+						<option value="right top">TMPL_SCALE_RIGHT_TOP</option>
+						<option value="right bottom">TMPL_SCALE_RIGHT_BOTTOM</option>
+						<option value="right center">TMPL_SCALE_RIGHT_CENTER</option>
+						<option value="center top">TMPL_SCALE_CENTER_TOP</option>
+						<option value="center bottom">TMPL_SCALE_CENTER_BOTTOM</option>
+						<option value="center center">TMPL_SCALE_CENTER</option>
+					</field>
+					<field name="custom_section4_attachment" type="list" default="" label="TMPL_SCALE_BG_ATTACHMENT" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="scroll">TMPL_SCALE_SCROLL</option>
+						<option value="fixed">TMPL_SCALE_FIXED</option>
+					</field>
+					<field name="custom_section4_bg_scale" type="list" default="" label="TMPL_SCALE_SCALE_BG" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />			
+				
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_PARALLAX" />			
+					<field name="custom_section4_parallax" type="list" default="" label="TMPL_SCALE_PARALLAX" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>	
+					<field name="custom_section4_parallax_speed" type="text" default="" label="TMPL_SCALE_PARALLAX_SPEED" description=""  />
+				<field type="mb2enditem" label="" />				
+			
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_BGSLIDER" />			
+					<field name="custom_section4_cerousel_dir" type="text" default="" label="TMPL_SCALE_CAROUSEL_DIR" description=""  />			
+					<field name="custom_section4_cerousel_duration" type="text" default="" label="TMPL_SCALE_CAROUSEL_DURATION" description=""  />
+					<field name="custom_section4_cerousel_fade" type="text" default="" label="TMPL_SCALE_CAROUSEL_FADE" description=""  />
+				<field type="mb2enditem" label="" />
+				
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_VIDEOBG" />			
+					<field name="custom_section4_videoid" type="text" default="" label="TMPL_SCALE_YT_VIDOID" description=""  />
+					<field name="custom_section4_videoquality" type="list" default="" label="TMPL_SCALE_YT_VIDOQUALITY" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="default">TMPL_SCALE_DEFAULT_OPT</option>
+						<option value="small">TMPL_SCALE_SMALL_OPT</option>
+						<option value="medium">TMPL_SCALE_MEDIUM_OPT</option>
+						<option value="large">TMPL_SCALE_LARGE_OPT</option>
+						<option value="hd720">HD 720</option>
+						<option value="hd1080">HD 1080</option>
+						<option value="highres">TMPL_SCALE_HIGHRES_OPT</option>
+					</field>
+					<field name="custom_section4_videoloop" type="list" default="" label="TMPL_SCALE_VIDEOLOOP" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section4_videoautoplay" type="list" default="" label="TMPL_SCALE_VIDEOAUTOPLAY" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section4_videostoponblur" type="list" default="" label="TMPL_SCALE_VIDEOSTOPONBLUR" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section4_videobg" type="mb2color" default="" label="TMPL_SCALE_YT_VIDOOVERLAYBG" description=""  />
+				<field type="mb2enditem" label="" />		
+		
+			<field type="mb2enditem" label="" />	
+			
+			
+			
+			<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_CUSTOM_SECTION5" />		
+			
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_COLOR" />			
+					<field name="custom_section5_color" type="mb2color" default="" label="TMPL_SCALE_TEXT_COLOR" description=""  />
+					<field name="custom_section5_h_color" type="mb2color" default="" label="TMPL_SCALE_HEADINGS_COLOR" description=""  />
+					<field name="custom_section5_l_color" type="mb2color" default="" label="TMPL_SCALE_LINKS_COLOR" description=""  />
+					<field name="custom_section5_lh_color" type="mb2color" default="" label="TMPL_SCALE_LINKS_HOVER_COLOR" description=""  />
+				<field type="mb2enditem" label="" />		
+				
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_BG" />			
+					<field name="custom_section5_bg_color" type="mb2color" default="" label="TMPL_SCALE_BG_COLOR" description=""  />		
+					<field name="custom_section5_bg_image" type="media" default="" label="TMPL_SCALE_CUSTOM_BG_IMAGE" description=""  />
+					<field name="custom_section5_bg_repeat" type="list" default="" label="TMPL_SCALE_BG_REPEAT" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="repeat">TMPL_SCALE_REPEAT</option>
+						<option value="repeat-x">TMPL_SCALE_REPEAT_X</option>
+						<option value="repeat-y">TMPL_SCALE_REPEAT_Y</option>
+						<option value="no-repeat">TMPL_SCALE_NO_REPEAT</option>
+					</field>
+					<field name="custom_section5_bg_position" type="list" default="" label="TMPL_SCALE_BG_POSITION" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="left top">TMPL_SCALE_LEFT_TOP</option>
+						<option value="left bottom">TMPL_SCALE_LEFT_BOTTOM</option>
+						<option value="left center">TMPL_SCALE_LEFT_CENTER</option>
+						<option value="right top">TMPL_SCALE_RIGHT_TOP</option>
+						<option value="right bottom">TMPL_SCALE_RIGHT_BOTTOM</option>
+						<option value="right center">TMPL_SCALE_RIGHT_CENTER</option>
+						<option value="center top">TMPL_SCALE_CENTER_TOP</option>
+						<option value="center bottom">TMPL_SCALE_CENTER_BOTTOM</option>
+						<option value="center center">TMPL_SCALE_CENTER</option>
+					</field>
+					<field name="custom_section5_attachment" type="list" default="" label="TMPL_SCALE_BG_ATTACHMENT" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="scroll">TMPL_SCALE_SCROLL</option>
+						<option value="fixed">TMPL_SCALE_FIXED</option>
+					</field>
+					<field name="custom_section5_bg_scale" type="list" default="" label="TMPL_SCALE_SCALE_BG" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />			
+				
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_PARALLAX" />			
+					<field name="custom_section5_parallax" type="list" default="" label="TMPL_SCALE_PARALLAX" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>	
+					<field name="custom_section5_parallax_speed" type="text" default="" label="TMPL_SCALE_PARALLAX_SPEED" description=""  />
+				<field type="mb2enditem" label="" />				
+			
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_BGSLIDER" />			
+					<field name="custom_section5_cerousel_dir" type="text" default="" label="TMPL_SCALE_CAROUSEL_DIR" description=""  />			
+					<field name="custom_section5_cerousel_duration" type="text" default="" label="TMPL_SCALE_CAROUSEL_DURATION" description=""  />
+					<field name="custom_section5_cerousel_fade" type="text" default="" label="TMPL_SCALE_CAROUSEL_FADE" description=""  />
+				<field type="mb2enditem" label="" />
+				
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_VIDEOBG" />			
+					<field name="custom_section5_videoid" type="text" default="" label="TMPL_SCALE_YT_VIDOID" description=""  />
+					<field name="custom_section5_videoquality" type="list" default="" label="TMPL_SCALE_YT_VIDOQUALITY" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="default">TMPL_SCALE_DEFAULT_OPT</option>
+						<option value="small">TMPL_SCALE_SMALL_OPT</option>
+						<option value="medium">TMPL_SCALE_MEDIUM_OPT</option>
+						<option value="large">TMPL_SCALE_LARGE_OPT</option>
+						<option value="hd720">HD 720</option>
+						<option value="hd1080">HD 1080</option>
+						<option value="highres">TMPL_SCALE_HIGHRES_OPT</option>
+					</field>
+					<field name="custom_section5_videoloop" type="list" default="" label="TMPL_SCALE_VIDEOLOOP" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section5_videoautoplay" type="list" default="" label="TMPL_SCALE_VIDEOAUTOPLAY" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section5_videostoponblur" type="list" default="" label="TMPL_SCALE_VIDEOSTOPONBLUR" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section5_videobg" type="mb2color" default="" label="TMPL_SCALE_YT_VIDOOVERLAYBG" description=""  />
+				<field type="mb2enditem" label="" />		
+		
+			<field type="mb2enditem" label="" />	
+		
+			
+			
+			<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_CUSTOM_SECTION6" />		
+			
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_COLOR" />			
+					<field name="custom_section6_color" type="mb2color" default="" label="TMPL_SCALE_TEXT_COLOR" description=""  />
+					<field name="custom_section6_h_color" type="mb2color" default="" label="TMPL_SCALE_HEADINGS_COLOR" description=""  />
+					<field name="custom_section6_l_color" type="mb2color" default="" label="TMPL_SCALE_LINKS_COLOR" description=""  />
+					<field name="custom_section6_lh_color" type="mb2color" default="" label="TMPL_SCALE_LINKS_HOVER_COLOR" description=""  />
+				<field type="mb2enditem" label="" />		
+				
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_BG" />			
+					<field name="custom_section6_bg_color" type="mb2color" default="" label="TMPL_SCALE_BG_COLOR" description=""  />		
+					<field name="custom_section6_bg_image" type="media" default="" label="TMPL_SCALE_CUSTOM_BG_IMAGE" description=""  />
+					<field name="custom_section6_bg_repeat" type="list" default="" label="TMPL_SCALE_BG_REPEAT" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="repeat">TMPL_SCALE_REPEAT</option>
+						<option value="repeat-x">TMPL_SCALE_REPEAT_X</option>
+						<option value="repeat-y">TMPL_SCALE_REPEAT_Y</option>
+						<option value="no-repeat">TMPL_SCALE_NO_REPEAT</option>
+					</field>
+					<field name="custom_section6_bg_position" type="list" default="" label="TMPL_SCALE_BG_POSITION" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="left top">TMPL_SCALE_LEFT_TOP</option>
+						<option value="left bottom">TMPL_SCALE_LEFT_BOTTOM</option>
+						<option value="left center">TMPL_SCALE_LEFT_CENTER</option>
+						<option value="right top">TMPL_SCALE_RIGHT_TOP</option>
+						<option value="right bottom">TMPL_SCALE_RIGHT_BOTTOM</option>
+						<option value="right center">TMPL_SCALE_RIGHT_CENTER</option>
+						<option value="center top">TMPL_SCALE_CENTER_TOP</option>
+						<option value="center bottom">TMPL_SCALE_CENTER_BOTTOM</option>
+						<option value="center center">TMPL_SCALE_CENTER</option>
+					</field>
+					<field name="custom_section6_attachment" type="list" default="" label="TMPL_SCALE_BG_ATTACHMENT" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="scroll">TMPL_SCALE_SCROLL</option>
+						<option value="fixed">TMPL_SCALE_FIXED</option>
+					</field>
+					<field name="custom_section6_bg_scale" type="list" default="" label="TMPL_SCALE_SCALE_BG" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />			
+				
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_PARALLAX" />			
+					<field name="custom_section6_parallax" type="list" default="" label="TMPL_SCALE_PARALLAX" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>	
+					<field name="custom_section6_parallax_speed" type="text" default="" label="TMPL_SCALE_PARALLAX_SPEED" description=""  />
+				<field type="mb2enditem" label="" />				
+			
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_BGSLIDER" />			
+					<field name="custom_section6_cerousel_dir" type="text" default="" label="TMPL_SCALE_CAROUSEL_DIR" description=""  />			
+					<field name="custom_section6_cerousel_duration" type="text" default="" label="TMPL_SCALE_CAROUSEL_DURATION" description=""  />
+					<field name="custom_section6_cerousel_fade" type="text" default="" label="TMPL_SCALE_CAROUSEL_FADE" description=""  />
+				<field type="mb2enditem" label="" />
+				
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_VIDEOBG" />			
+					<field name="custom_section6_videoid" type="text" default="" label="TMPL_SCALE_YT_VIDOID" description=""  />
+					<field name="custom_section6_videoquality" type="list" default="" label="TMPL_SCALE_YT_VIDOQUALITY" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="default">TMPL_SCALE_DEFAULT_OPT</option>
+						<option value="small">TMPL_SCALE_SMALL_OPT</option>
+						<option value="medium">TMPL_SCALE_MEDIUM_OPT</option>
+						<option value="large">TMPL_SCALE_LARGE_OPT</option>
+						<option value="hd720">HD 720</option>
+						<option value="hd1080">HD 1080</option>
+						<option value="highres">TMPL_SCALE_HIGHRES_OPT</option>
+					</field>
+					<field name="custom_section6_videoloop" type="list" default="" label="TMPL_SCALE_VIDEOLOOP" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section6_videoautoplay" type="list" default="" label="TMPL_SCALE_VIDEOAUTOPLAY" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section6_videostoponblur" type="list" default="" label="TMPL_SCALE_VIDEOSTOPONBLUR" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section6_videobg" type="mb2color" default="" label="TMPL_SCALE_YT_VIDOOVERLAYBG" description=""  />
+				<field type="mb2enditem" label="" />		
+		
+			<field type="mb2enditem" label="" />
+		
+			
+			
+			<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_CUSTOM_SECTION7" />		
+			
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_COLOR" />			
+					<field name="custom_section7_color" type="mb2color" default="" label="TMPL_SCALE_TEXT_COLOR" description=""  />
+					<field name="custom_section7_h_color" type="mb2color" default="" label="TMPL_SCALE_HEADINGS_COLOR" description=""  />
+					<field name="custom_section7_l_color" type="mb2color" default="" label="TMPL_SCALE_LINKS_COLOR" description=""  />
+					<field name="custom_section7_lh_color" type="mb2color" default="" label="TMPL_SCALE_LINKS_HOVER_COLOR" description=""  />
+				<field type="mb2enditem" label="" />		
+				
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_BG" />			
+					<field name="custom_section7_bg_color" type="mb2color" default="" label="TMPL_SCALE_BG_COLOR" description=""  />		
+					<field name="custom_section7_bg_image" type="media" default="" label="TMPL_SCALE_CUSTOM_BG_IMAGE" description=""  />
+					<field name="custom_section7_bg_repeat" type="list" default="" label="TMPL_SCALE_BG_REPEAT" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="repeat">TMPL_SCALE_REPEAT</option>
+						<option value="repeat-x">TMPL_SCALE_REPEAT_X</option>
+						<option value="repeat-y">TMPL_SCALE_REPEAT_Y</option>
+						<option value="no-repeat">TMPL_SCALE_NO_REPEAT</option>
+					</field>
+					<field name="custom_section7_bg_position" type="list" default="" label="TMPL_SCALE_BG_POSITION" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="left top">TMPL_SCALE_LEFT_TOP</option>
+						<option value="left bottom">TMPL_SCALE_LEFT_BOTTOM</option>
+						<option value="left center">TMPL_SCALE_LEFT_CENTER</option>
+						<option value="right top">TMPL_SCALE_RIGHT_TOP</option>
+						<option value="right bottom">TMPL_SCALE_RIGHT_BOTTOM</option>
+						<option value="right center">TMPL_SCALE_RIGHT_CENTER</option>
+						<option value="center top">TMPL_SCALE_CENTER_TOP</option>
+						<option value="center bottom">TMPL_SCALE_CENTER_BOTTOM</option>
+						<option value="center center">TMPL_SCALE_CENTER</option>
+					</field>
+					<field name="custom_section7_attachment" type="list" default="" label="TMPL_SCALE_BG_ATTACHMENT" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="scroll">TMPL_SCALE_SCROLL</option>
+						<option value="fixed">TMPL_SCALE_FIXED</option>
+					</field>
+					<field name="custom_section7_bg_scale" type="list" default="" label="TMPL_SCALE_SCALE_BG" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				<field type="mb2enditem" label="" />			
+				
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_PARALLAX" />			
+					<field name="custom_section7_parallax" type="list" default="" label="TMPL_SCALE_PARALLAX" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>	
+					<field name="custom_section7_parallax_speed" type="text" default="" label="TMPL_SCALE_PARALLAX_SPEED" description=""  />
+				<field type="mb2enditem" label="" />				
+			
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_BGSLIDER" />			
+					<field name="custom_section7_cerousel_dir" type="text" default="" label="TMPL_SCALE_CAROUSEL_DIR" description=""  />			
+					<field name="custom_section7_cerousel_duration" type="text" default="" label="TMPL_SCALE_CAROUSEL_DURATION" description=""  />
+					<field name="custom_section7_cerousel_fade" type="text" default="" label="TMPL_SCALE_CAROUSEL_FADE" description=""  />
+				<field type="mb2enditem" label="" />
+				
+				<field type="mb2startitem" label="" title="TMPL_SCALE_HEADING_VIDEOBG" />			
+					<field name="custom_section7_videoid" type="text" default="" label="TMPL_SCALE_YT_VIDOID" description=""  />
+					<field name="custom_section7_videoquality" type="list" default="" label="TMPL_SCALE_YT_VIDOQUALITY" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="default">TMPL_SCALE_DEFAULT_OPT</option>
+						<option value="small">TMPL_SCALE_SMALL_OPT</option>
+						<option value="medium">TMPL_SCALE_MEDIUM_OPT</option>
+						<option value="large">TMPL_SCALE_LARGE_OPT</option>
+						<option value="hd720">HD 720</option>
+						<option value="hd1080">HD 1080</option>
+						<option value="highres">TMPL_SCALE_HIGHRES_OPT</option>
+					</field>
+					<field name="custom_section7_videoloop" type="list" default="" label="TMPL_SCALE_VIDEOLOOP" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section7_videoautoplay" type="list" default="" label="TMPL_SCALE_VIDEOAUTOPLAY" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section7_videostoponblur" type="list" default="" label="TMPL_SCALE_VIDEOSTOPONBLUR" description="" >	
+						<option value="">TMPL_SCALE_USE_TEMPLATE</option>
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					<field name="custom_section7_videobg" type="mb2color" default="" label="TMPL_SCALE_YT_VIDOOVERLAYBG" description=""  />
+				<field type="mb2enditem" label="" />		
+		
+			<field type="mb2enditem" label="" />
+				
+		
+			<field type="mb2startitem" label="" title="TMPL_SCALE_CUSTOM_CSS" />
+			
+				<field name="custom_css" type="textarea" default="" cols="" rows="10" label="TMPL_SCALE_CUSTOM_CSS" description="TMPL_SCALE_CUSTOM_CSS_DESC" filter="string" class="my_textarea" />
+				
+			<field type="mb2enditem" label="" />
+			
+			
+			
+			
+						
+		</fieldset>
+	</fields>
+</form>

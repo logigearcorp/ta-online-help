@@ -1,0 +1,154 @@
+
+
+
+// ========== COLORS ========== //
+
+@mb2_color_bg_accent3: darken(@mb2_color_bg_accent2, 10%);
+@mb2_color_text_lighten: lighten(@mb2_color_text_base, 3%);
+@mb2_color_text_lighten2: lighten(@mb2_color_text_base, 5%);
+@mb2_color_text_darken: darken(@mb2_color_text_base, 10%);
+@mb2_color_text_darken2: darken(@mb2_color_text_base, 5%);
+
+
+@mb2_color_bg_danger: #cc3333;
+@mb2_color_bg_success: #33cc66;
+@mb2_color_bg_info: #3366ff;
+@mb2_color_bg_warning: #ff9933;
+
+
+
+@mb2_color_bg_gray1: #f2f2f2;
+@mb2_color_bg_gray2: #f7f8f9;
+@mb2_color_bg_gray3: #fafbfc;
+
+
+
+
+// ========== NORMAL FONTS ========== //
+
+@mb2_font_family_base: 'Open Sans', Helvetica, Arial, sans-serif;
+
+
+@mb2_font_size_small: ceil((@mb2_font_size_base * 0.9));
+@mb2_font_size_xsmall: ceil((@mb2_font_size_base * 0.8));
+@mb2_font_size_xxsmall: ceil((@mb2_font_size_base * 0.73));
+@mb2_font_size_large: ceil((@mb2_font_size_base * 1.12));
+@mb2_font_size_xlarge: ceil((@mb2_font_size_base * 1.8));
+
+
+@mb2_line_height_base: ceil((@mb2_font_size_base * 1.65));
+@mb2_line_height_large: ceil((@mb2_font_size_large * 1.65));
+@mb2_line_height_xlarge: ceil((@mb2_font_size_xlarge * 1.65));
+@mb2_line_height_small: ceil((@mb2_font_size_small * 1.65));
+@mb2_line_height_xsmall: ceil((@mb2_font_size_xsmall * 1.65));
+
+
+
+
+// ========== HEADINGS ========== //
+
+
+
+
+
+@mb2_line_height_headings: normal;
+
+
+@mb2_letter_spacing: 1px;
+
+
+@mb2_font_size_module_headings: 17px;
+
+
+
+
+// ========== CSS TRANSITIONS ========== //
+
+.mb2_transition1(@mb2_type: color, @mb2_speed: 2s){
+	-webkit-transition: @mb2_type @mb2_speed ease-in-out;
+  	-moz-transition: @mb2_type @mb2_speed ease-in-out;
+  	-o-transition: @mb2_type @mb2_speed ease-in-out;
+  	transition: @mb2_type @mb2_speed ease-in-out;
+}
+
+.mb2_transform_scale(@mb2_scale: 1.25){
+	-webkit-transform:scale(@mb2_scale); 
+    -moz-transform:scale(@mb2_scale);
+    -ms-transform:scale(@mb2_scale); 
+    -o-transform:scale(@mb2_scale);
+    transform:scale(@mb2_scale);		
+}
+
+
+
+
+// ========== ROUDED CORNERS ========== //
+
+.mb2_border_radius(@mb2_radius: 999px){
+	-webkit-border-radius: @mb2_radius;
+  	-moz-border-radius: @mb2_radius;
+  	-ms-border-radius: @mb2_radius;
+  	-o-border-radius: @mb2_radius;
+  	border-radius: @mb2_radius;
+}
+
+
+
+
+// ============= SOCIAL ICONS COLOR ============= //
+
+
+@mb2_android_color: #a4c639;
+@mb2_dribbble_color: #ea4c89;
+@mb2_dropbox_color: #007ee5;
+@mb2_facebook_color: #3b5998;
+@mb2_flickr_color: #ff0084;
+@mb2_github_color: #4183c4;
+@mb2_google_plus_color: #dd4b39;
+@mb2_instagram_color: #3f729b;
+@mb2_linkedin_color: #0976b4;
+@mb2_pinterest_color: #cc2127;
+@mb2_rss_color: #f26522;
+@mb2_skype_color: #00aff0;
+@mb2_tumblr_color: #35465c;
+@mb2_twitter_color: #55acee;
+@mb2_xing_color: #cfdc00;
+@mb2_youtube_color: #e52d27;
+@mb2_vimeo_color: #1ab7ea;
+
+
+
+
+
+// ============= BOX SHADOWS ============= //
+
+
+.mb2_box_shadow(@mb2_size: 0 0 3px, @mb2_color: rgba(0,0,0,0.3)){
+	-moz-box-shadow: @mb2_size @mb2_color;
+	-webkit-box-shadow: @mb2_size @mb2_color;
+	-ms-box-shadow: @mb2_size @mb2_color;
+	-o-box-shadow: @mb2_size @mb2_color;
+	box-shadow: @mb2_size @mb2_color;
+}
+
+
+
+ 
+
+// ========== IMAGE PATH ========== //
+
+
+@mb2_img_path: '../images';
+ 
+
+
+
+
+// ========== RESPONSIVE STYLE ========== //
+
+
+@mb2_screen_desktop_lg: 1200px;
+@mb2_screen_desktop: 992px;
+@mb2_screen_tablet: 768px;
+@mb2_screen_phone_hor: 530px;
+@mb2_screen_phone: 480px;

@@ -1,0 +1,267 @@
+
+/* Style for bootstrap tabs */
+
+.nav-tabs {
+	border-bottom-color: transparent;
+	padding-left: 0;
+	margin: 0;
+}
+
+
+.nav-tabs li a {
+	line-height: 1;
+	display: block;
+	position: relative;
+	.mb2_border_radius(0);
+	border-color: #e7e8e9;
+	padding: 20px 30px;
+	margin-right: 5px;
+	color: @mb2_color_headings;
+	background-color: transparent;
+}
+
+.nav-tabs li a:before {
+	content: '';
+	display: block;
+	position: absolute;	
+}
+
+.nav-tabs li a:hover,
+.nav-tabs li a:focus {
+	background-color: transparent;
+	border-color: fade(@mb2_color_bg_accent1,50%);
+}
+
+
+
+/* Active tab style */
+
+.nav-tabs li.active a,
+.nav-tabs li.active a:hover,
+.nav-tabs li.active a:focus {
+	background-color: transparent;
+	border-color: @mb2_color_bg_accent1;
+	color: @mb2_color_headings;
+}
+
+.tab-content {
+	padding-top: 30px;
+}
+
+.nav-tabs li a:before {
+	background-color: #e7e8e9;	
+}
+
+.nav-tabs li.active a:before {
+	background-color: @mb2_color_bg_accent1;	
+}
+
+
+/* Top tabs */
+
+.tabs.top .nav-tabs li a:before {
+	width: 100%;
+	height: 5px;
+	top: 0;
+	left: 0;	
+}
+
+
+
+
+
+
+
+
+
+
+/* Tabs horizontal position */
+
+.tabs.left,
+.tabs.right {
+	position: relative;	
+}
+
+.tabs.left .nav-tabs,
+.tabs.right .nav-tabs {
+	position: absolute;
+	top: 0;
+	width: 180px;
+	border-bottom: 0;
+}
+
+.tabs.left .nav-tabs li,
+.tabs.right .nav-tabs li {
+	margin: 0;
+	display: block;
+	float: none;	
+}
+
+.tabs.left .nav-tabs li a,
+.tabs.right .nav-tabs li a {
+	margin: 0 0 3px 0;	
+	display: block !important;	
+}
+
+.tabs.left .nav-tabs li a:before,
+.tabs.right .nav-tabs li a:before {
+	height: 100%;
+	width: 5px;
+	top: 0;		
+}
+
+
+
+/* Tabs left */
+
+.tabs.left {
+	padding-left: 180px;	
+}
+
+.tabs.left .nav-tabs {
+	left: 0;
+}
+
+.tabs.left .nav-tabs li a {
+	margin-right: -1px;	
+	text-align: right;
+}
+
+.tabs.left .nav-tabs li a:before {
+	right: 0;	
+}
+
+.tabs.left .tab-content {
+	padding: 0 0 0 30px;	
+}
+
+
+
+
+/* Tabs right */
+
+.tabs.right {
+	padding-right: 180px;	
+}
+
+.tabs.right .nav-tabs {
+	right: 0;	
+}
+
+.tabs.right .nav-tabs li a {
+	margin-left: -1px;	
+}
+
+.tabs.right .nav-tabs li a:before {
+	left: 0;	
+}
+
+.tabs.right .tab-content {
+	padding: 0 30px 0 0;	
+}
+
+
+
+
+
+/* Tabs icon */
+
+.nav-tabs li a i {
+	position: relative;
+	font-size: 100%;
+	color: @mb2_color_bg_accent1;
+	margin: 0 3px;
+}
+
+
+
+
+
+
+
+
+/*===================================== TABS IN DARK SECTION */
+
+
+.dark .nav-tabs li a {
+	color: rgba(255,255,255,.6);
+	border-color: rgba(255,255,255,.2);
+}
+
+
+
+
+
+
+/* Active tab style */
+
+.dark .nav-tabs li.active a,
+.dark .nav-tabs li.active a:hover,
+.dark .nav-tabs li.active a:focus{
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: @mb2_screen_tablet){
+
+
+	
+	.nav-tabs,
+	.tabs.left .nav-tabs,
+	.tabs.right .nav-tabs {
+		padding: 0;
+		border: 0;
+		position: relative;
+		width: 100%;
+		left: 0;
+		top: 0;
+		text-align: center;
+	}	
+	
+	.nav-tabs li,
+	.tabs.left .nav-tabs li,
+	.tabs.right .nav-tabs li {
+		display: inline-block;
+		float: none;
+		margin: 0 5px 10px 5px;	
+	}	
+	
+	.tabs.left,
+	.tabs.right {
+		padding: 0;	
+	}	
+	
+	
+	.tabs.left .nav-tabs li a:before,
+	.tabs.right .nav-tabs li a:before {
+		top: auto;
+		bottom: 0;
+		left: 0;
+		right: auto;
+		width: 100%;
+		height: 5px;
+	}	
+	
+	.tab-content,
+	.tabs.left .tab-content,
+	.tabs.right .tab-content {
+		padding: 20px 0 0 0;	
+	}
+
+}

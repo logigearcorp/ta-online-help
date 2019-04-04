@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+<types name="Dynamic Elements">
+	<el>
+		<name>Accordions</name>
+		<data>acc</data>
+	</el>
+	<el>
+		<name>Tabs</name>
+		<data>tabs</data>
+	</el>
+</types>
+<types name="HTML Elements">
+	<el>
+		<name>Columns</name>
+		<data>col</data>
+	</el>
+	<el>
+		<name>Half Columns</name>
+		<data>hcol</data>
+	</el>
+	<el>
+		<name>Single Column</name>
+		<data>scol</data>
+	</el>
+	<el>
+		<name>Gaps</name>
+		<data>gap</data>
+	</el>
+	<el>
+		<name>Horizontal Border</name>
+		<data>bord</data>
+	</el>
+	<el>
+		<name>Icon Boxes</name>
+		<data>box</data>
+	</el>
+	<el>
+		<name>Vertical Separator</name>
+		<data>sep</data>
+	</el>
+</types>
+<types name="Media">
+	<el>
+		<name>Image</name>
+		<data>img</data>
+	</el>
+	<el>
+		<name>Video</name>
+		<data>video</data>
+	</el>
+</types>
+<types name="Site Eelements">
+	<el>
+		<name>Buttons</name>
+		<data>btn</data>
+	</el>
+	<el>
+		<name>Icons</name>
+		<data>icon</data>
+	</el>
+	<el>
+		<name>Language Module</name>
+		<data>lang</data>
+	</el>
+	<el>
+		<name>Login Module</name>
+		<data>login</data>
+	</el>
+	<el>
+		<name>Message</name>
+		<data>message</data>
+	</el>
+	<el>
+		<name>Site Email</name>
+		<data>email</data>
+	</el>
+	<el>
+		<name>Site Phone</name>
+		<data>phone</data>
+	</el>
+	<el>
+		<name>Social Icons</name>
+		<data>sicons</data>
+	</el>
+</types>
+<types name="Typography">
+	<el>
+		<name>Typed</name>
+		<data>typed</data>
+	</el>
+	<el>
+		<name>Drop Caps</name>
+		<data>dropcaps</data>
+	</el>
+	<el>
+		<name>Headings</name>
+		<data>headings</data>
+	</el>
+	<el>
+		<name>Highlight</name>
+		<data>highlight</data>
+	</el>
+	<el>
+		<name>Leading Text</name>
+		<data>lead_text</data>
+	</el>
+	<el>
+		<name>List</name>
+		<data>list</data>
+	</el>
+	<el>
+		<name>Big Title</name>
+		<data>titles</data>
+	</el>
+</types>
+<types name="Joomla">
+	<el>
+		<name>Module</name>
+		<data>module</data>
+	</el>
+	<el>
+		<name>Module Position</name>
+		<data>mposition</data>
+	</el>
+</types>
+</elements> 

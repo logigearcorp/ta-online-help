@@ -1,0 +1,1 @@
+define({"topics" : [{"title":"Return values","shortdesc":"\n                     <p class=\"shortdesc\">Actions can be written to return values to test modules or actions that call             them.</p>\n                  ","id":"Return_values","href":"TA_Tutorials\/Topics\/Return_values.html","menu": {"hasChildren":false,},"tocID":"Return_values-d46e35113","topics":[]}]});

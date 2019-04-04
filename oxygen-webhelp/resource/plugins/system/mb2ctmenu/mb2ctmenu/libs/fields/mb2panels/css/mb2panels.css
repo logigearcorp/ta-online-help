@@ -1,0 +1,283 @@
+/**
+ * @package		Mb2 CtMenu
+ * @version		1.4.0
+ * @author		Mariusz Boloz (http://mb2extensions.com)
+ * @copyright	Copyright (C) 2016 Mariusz Boloz (http://mb2extensions.com). All rights reserved
+ * @license		Commercial (http://codecanyon.net/licenses)
+**/
+
+/* Panel */
+
+
+#mb2options {
+	max-width: 1100px;	
+}
+
+
+#mb2options .mb2options-settings,
+#mb2options .mb2options-panels {	
+	float: left;	
+}
+
+#mb2options .mb2options-settings {
+	width: 20%;	
+}
+
+#mb2options .mb2options-panels {
+	width: 60%;	
+	margin-right:3%;
+}
+
+
+
+/* Hide panel content */
+
+#mb2options .mb2options-item-content {
+	padding: 15px;
+	display: none;
+	background: #fff;
+	border: solid 1px #d1d2d3;
+	border-top: 0;
+}
+
+
+/* panels list */
+
+#mb2options .mb2options-list {
+	margin: 0;
+	padding: 20px 0 0 0;
+	list-style: none;	
+}
+
+
+
+#mb2options .mb2options-item {
+	display: block;
+	float: none;
+	margin: 5px 0 !important;	
+	position: relative;
+	overflow: hidden;
+	user-select: none !important;
+	-moz-user-select: none !important;
+	-webkit-user-select: none !important;
+	-ms-user-select: none !important;
+}
+
+
+
+/* Panel heading */
+
+#mb2options .mb2options-item-heading {
+	padding: 0 15px 0 40px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 110%;	
+	cursor: pointer;
+	display: block;
+	background-color: #f4f5f6;
+	color: #555;
+	user-select: none !important;
+	-moz-user-select: none !important;
+	-webkit-user-select: none !important;
+	-ms-user-select: none !important;
+	font-weight: bold;
+	position: relative;
+}
+
+
+
+#mb2options .mb2options-remove,
+#mb2options .mb2options-removecolumn {
+	position: absolute;
+	display: block;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	text-indent:-999px;
+	overflow: hidden;
+	top: 14px;
+	z-index: 999;
+	padding: 0 !important;
+	-moz-border-radius: 999px;
+	-webkit-border-radius: 999px;
+	-ms-border-radius: 999px;
+	-o-border-radius: 999px;
+	border-radius: 999px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;	
+	opacity: .6;
+}
+
+
+#mb2options .mb2options-remove,
+#mb2options .mb2options-removecolumn {
+	right: 10px;
+	z-index: 999;
+	background-color: #F03;
+	background-image: url('../img/remove.png');
+	background-size: 10px 10px;
+}
+
+#mb2options .mb2options-removecolumn {
+	width: 16px;
+	height: 16px;
+	background-size: 8px 8px;
+}
+
+
+
+#mb2options .mb2options-remove:hover,
+#mb2options .mb2options-removecolumn:hover {
+	opacity: 1;		
+}
+
+
+
+
+/* Draggable area */
+
+#mb2options .mb2options-item-drag,
+#mb2options .mb2options-item-column-drag {
+	display: block;
+	height: 50px;
+	width: 30px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	text-indent:-999px;
+	overflow: hidden;
+	background-color: #e5e6e7;
+	cursor: move;
+	background-image: url('../img/move.png');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: 16px 16px;
+}
+
+#mb2options .mb2options-item-column-drag {
+	height: 40px;	
+}
+
+
+
+/* Features list */
+
+#mb2options .mb2options-features-rows {
+	padding-top: 30px;
+	margin-top: 30px;
+	border-top: solid 1px #d1d2d3;
+}
+
+
+
+/* Params columns */
+
+#mb2options .mb2options-addcolumn {
+	margin-bottom: 30px;	
+}
+
+#mb2options .mb2options-addrow {
+	float: right;	
+}
+
+#mb2options .mb2options-item-content-col {
+	width: 46%;
+	margin-right: 2%;
+	float: left;
+}
+
+
+#mb2options .mb2options-item-content-col.last {
+	margin-right: 0;
+	margin-left: 2%;	
+}
+
+
+#mb2options label {
+	font-weight: bold;	
+}
+
+
+#mb2options .mb2options-panels .mb2options-select {
+	display: block !important;	
+}
+
+
+#mb2options .mb2options-panels .chzn-container {
+	display: none !important;	
+}
+
+
+/* Columns item */
+
+#mb2options .mb2options-item-columns {
+	margin-top: 30px;
+	padding-top: 30px;
+	border-top: solid 3px #eee;	
+}
+
+#mb2options .mb2options-item-column {
+	background-color: #f6f7f8;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+#mb2options .mb2options-item-column-heading {
+	padding: 0 15px;
+	height: 40px;
+	line-height: 40px;
+	cursor: pointer;
+	position: relative;	
+}
+
+
+#mb2options .mb2options-item-column-content {
+	display: none;
+	padding: 15px;
+	border-top: solid 1px #fff;	
+}
+
+
+#mb2options .mb2options-row .mb2options-item-column-content {
+	display: none !important;
+}
+
+
+#mb2options .mb2options-row .mb2options-item-column-heading {
+	background: #ddd;	
+	cursor: auto;
+}
+
+
+#mb2options .mb2options-item-column-heading input {
+	position: absolute;
+	left: 50px;
+	top: 3px;
+	width: 30px;
+	z-index: 999;	
+}
+
+#mb2options .mb2options-row .mb2options-item-column-heading .mb2options-item-column-drag {
+	left: 50%;
+	margin-left: -15px;		
+}
+
+
+
+
+
+
+
+/* Custom style for textarea field */
+
+#mb2options .mb2options-textarea {
+	width: 97%;
+	min-height: 250px;	
+}
+
+
+
+
+
+

@@ -1,0 +1,2608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="template" version="3.0" client="site" method="upgrade">
+	<name>fruition</name>
+	<creationDate>March 2015</creationDate>
+	<author>Mariusz Boloz</author>
+	<authorEmail>mariuszboloz@gmail.com</authorEmail>
+	<authorUrl>http://www.marbol2.com</authorUrl>
+	<copyright>Copyright (C) 2015 marbol2. All rights reserved.</copyright>
+	<license>Commercial (http://themeforest.net/licenses)</license>
+	<version>1.1.0</version>
+	<description></description>
+	<files>
+		<folder>assets</folder>
+		<folder>blocks</folder>
+		<folder>css</folder>
+		<folder>features</folder>	
+		<folder>less</folder>
+		<folder>shortcodes</folder>
+		<folder>fonts</folder>	
+		<folder>framework</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<filename>index.php</filename>
+		<filename>index.html</filename>	
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+	</files>
+	<positions>
+		<position>breadcrumbs</position>
+		<position>after-content-1-a</position>
+		<position>after-content-1-b</position>
+		<position>after-content-1-c</position>
+		<position>after-content-1-d</position>
+		<position>after-content-2-a</position>
+		<position>after-content-2-b</position>
+		<position>after-content-2-c</position>
+		<position>after-content-2-d</position>
+		<position>after-content-3-a</position>
+		<position>after-content-3-b</position>
+		<position>after-content-3-c</position>
+		<position>after-content-3-d</position>
+		<position>before-content-1-a</position>
+		<position>before-content-1-b</position>
+		<position>before-content-1-c</position>
+		<position>before-content-1-d</position>
+		<position>before-content-2-a</position>
+		<position>before-content-2-b</position>
+		<position>before-content-2-c</position>
+		<position>before-content-2-d</position>
+		<position>before-content-3-a</position>
+		<position>before-content-3-b</position>
+		<position>before-content-3-c</position>
+		<position>before-content-3-d</position>			
+		<position>bottom-1-a</position>
+		<position>bottom-1-b</position>
+		<position>bottom-1-c</position>
+		<position>bottom-1-d</position>
+		<position>bottom-2-a</position>
+		<position>bottom-2-b</position>
+		<position>bottom-2-c</position>
+		<position>bottom-2-d</position>		
+		<position>bottom-3-a</position>
+		<position>bottom-3-b</position>
+		<position>bottom-3-c</position>
+		<position>bottom-3-d</position>		
+		<position>footer-a</position>
+		<position>footer-b</position>
+		<position>footer-c</position>
+		<position>header-a</position>
+		<position>header-b</position>
+		<position>header-c</position>
+		<position>language</position>
+		<position>login</position>
+		<position>footer-menu</position>
+		<position>page-heading</position>
+		<!--<position>search</position>-->
+		<position>sidebar-a</position>
+		<position>sidebar-b</position>
+		<position>sidebar-c</position>
+		<position>showcase-a</position>
+		<position>showcase-b</position>
+		<position>showcase-c</position>
+		<position>showcase-d</position>
+		<position>top-a</position>
+		<position>top-b</position>
+		<position>top-c</position>
+		<position>top-d</position>
+		<!--<position>sub-menu</position>-->
+		<!--<position>sliding-panel-a</position>
+		<position>sliding-panel-b</position>
+		<position>sliding-panel-c</position>
+		<position>sliding-panel-d</position>-->
+		<position>header-nav</position>
+		<position>off-canvas</position>
+		<position>main-nav</position>
+		<position>debug</position>
+	</positions>
+	
+	<languages folder="language">
+		<language tag="en-GB">en-GB.tpl_fruition.ini</language>
+	</languages>
+		
+<config>
+
+<fields name="params" addfieldpath="/templates/fruition/framework/fields/">
+	
+	<fieldset name="basic" label="" >
+		<field type="mb2admin" />
+	</fieldset>
+	
+	<fieldset name="general_settings" label="TMPL_MB2_GENERAL_SETTINGS" >				
+				
+		<field type="mb2startitem" label="" title="TMPL_MB2_LOGO" />
+			
+			
+			
+			<field name="logo_type" type="list" default="text" label="TMPL_MB2_LOGO_TYPE" description="" >	
+				<option value="text">TMPL_MB2_TEXT</option>
+				<option value="image">TMPL_MB2_IMAGE</option>
+			</field>			
+			<field name="logo_align" type="list" default="left" label="TMPL_MB2_LOGO_ALIGN" description="" >	
+				<option value="left">TMPL_MB2_OPT_LEFT</option>
+				<option value="right">TMPL_MB2_OPT_RIGHT</option>
+				<option value="center">TMPL_MB2_OPT_CENTER</option>
+			</field>			
+			
+			<field type="spacer" hr="true"/>
+				
+			<field name="logo_image" type="media" default="" label="TMPL_MB2_LOGO_IMAGE" description=""  />
+			<field name="logo_image_size" type="mb2size" defsize="140,30,px" label="TMPL_MB2_LOGO_IMAGE_SIZE" description=""  />
+			<field name="logo_margin" type="mb2mp" defmp="20,0,20,0,px" label="TMPL_MB2_LOGO_MARGIN" description=""  />	
+			
+			<field type="spacer" hr="true"/>		
+			
+			<field name="logo_title_attr_text" type="textarea" default="" label="TMPL_MB2_LOGO_TEXT" description=""  />
+			<field name="logo_alt_attr_text" type="textarea" default="" label="TMPL_MB2_LOGO_ALT_TEXT" description="" filter="string"  />
+			<field name="site_slogan" type="textarea" default="" label="TMPL_MB2_SITE_SLOGAN" description=""  />
+			
+			<field type="spacer" hr="true"/>			
+			
+			<field name="logo_custom_link" type="text" default="" label="TMPL_MB2_LOGO_CUSTOM_LINK" description="TMPL_MB2_LOGO_CUSTOM_LINK_DESC"  />
+			
+			<field type="spacer" hr="true"/>			
+			
+			<field name="mb2_logo_on_mobile" type="radio" class="btn-group btn-group-yesno" default="1" label="TMPL_MB2_LOGO_ON_MOBILE" description="TMPL_MB2_LOGO_ON_MOBILE_INFO" >	
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>			
+		
+		<field type="mb2enditem" label="" />	
+			
+		<field type="mb2startitem" label="" title="TMPL_MB2_FAVICON" />	
+			<field name="custom_favicon" type="media" default="" label="TMPL_MB2_CUSTOM_FAVICON" description=""  />
+			<field name="iphone_favicon" type="media" default="" label="TMPL_MB2_IPHONE_FAVICON" description=""  />
+			<field name="ipad_favicon" type="media" default="" label="TMPL_MB2_IPAD_FAVICON" description=""  />
+			<field name="retina_favicon" type="media" default="" label="TMPL_MB2_RETINA_FAVICON" description=""  />
+		<field type="mb2enditem" label="" />	
+			
+		<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_LAYOUT" />			
+					
+			<field name="layout" type="list" default="full" label="TMPL_MB2_LAYOUT" description="" >	
+				<option value="full">TMPL_MB2_FULL_WIDTH</option>
+				<option value="boxed">TMPL_MB2_BOXED</option>
+				<option value="frame">TMPL_MB2_FRAME</option>
+				<!--<option value="full_top">TMPL_MB2_FULL_TOP</option>-->
+			</field>			
+			<field name="page_width" type="text" default="1140" label="TMPL_MB2_PAGE_WIDTH" description="TMPL_MB2_PAGE_WIDTH_DESC" />
+			
+			<field type="spacer" hr="true"/>			
+			
+			<!--<field name="grid" type="list" default="-fluid" label="TMPL_MB2_GRID_SYSTEM" description="" >	
+				<option value=" ">TMPL_MB2_FIXED</option>
+				<option value="-fluid">TMPL_MB2_FLUID</option>
+			</field>-->			
+			<field name="cls_prefix" type="list" default="sm" label="TMPL_MB2_CLASS_PREFIX" description="TMPL_MB2_CLASS_PREFIX_DESC" >	
+				<option value="xs">xs</option>
+				<option value="sm">sm</option>
+				<option value="md">md</option>
+				<option value="lg">lg</option>
+			</field>				
+		
+		<field type="mb2enditem" label="" />	
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_SITE_INFO" />	
+	
+					
+			<field name="mb2_site_phone" type="text" default="" label="TMPL_MB2_SITE_PHONE" description=""  />
+			
+			<field type="spacer" hr="true"/>
+			
+			<field name="mb2_site_email" type="text" default="" label="TMPL_MB2_SITE_EMAIL" description="TMPL_MB2_SITE_EMAIL_DESC"  />
+			<field name="mb2_site_email_diff_phrase" type="textarea" default="" label="TMPL_MB2_SITE_EMAIL_DIFF_PHRASE" description="TMPL_MB2_SITE_EMAIL_DIFF_PHRASE_DESC"  />	
+			<field name="mb2_site_email_link" type="radio" class="btn-group btn-group-yesno" default="1" label="TMPL_MB2_SITE_EMAIL_LINK" description="TMPL_MB2_SITE_EMAIL_LINK_DESC" >	
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>	
+			
+			
+			<field type="spacer" hr="true"/>
+			<field name="google_analytics_id" type="text" default="" label="TMPL_MB2_ANALYTICS_CODE" description=""  />	
+			
+			
+		<field type="mb2enditem" label="" />	
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_SCRIPTS_AND_STYLES" />		
+			<field name="mb2_lesscss" type="hidden" default="1"/>
+			
+			<!--<field name="mb2_lesscss" type="radio" class="btn-group btn-group-yesno" default="1" label="TMPL_MB2_LESSCSS" description="" >	
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>-->			
+			<field name="mb2_lesscss_compress" type="radio" class="btn-group btn-group-yesno" default="1" label="TMPL_MB2_LESSCSS_COMPRESS" description="" >	
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+			<field name="mb2_lesscss_cache" type="radio" class="btn-group btn-group-yesno" default="1" label="TMPL_MB2_LESSCSS_CACHE" description="" >	
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+			<field type="spacer" hr="true" />
+			
+			<field name="mb2_mootools" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_MOOTOOLS" description="" >	
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>		
+			<field name="mb2_jcaption" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_JCAPTION" description="" >	
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>	
+			
+		
+		<field type="mb2enditem" label="" />	
+							
+	</fieldset>
+	
+	<fieldset name="features_settings" label="TMPL_MB2_BLOCKS_FEATURES_SETTINGS" >
+		
+		
+		
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_LOADING_SCREEN" />
+		
+		<field name="mb2_loading_screen" type="list" default="3" label="TMPL_MB2_LOADING_SCREEN" description="TMPL_MB2_LOADING_SCREEN_DESC" >	
+			<option value="0">JNONE</option>
+			<option value="1">TMPL_MB2_LOADING_SCREEN_OPT_1</option>
+			<option value="2">TMPL_MB2_LOADING_SCREEN_OPT_2</option>
+			<option value="3">TMPL_MB2_LOADING_SCREEN_OPT_3</option>
+			<option value="4">TMPL_MB2_LOADING_SCREEN_OPT_4</option>
+			<option value="5">TMPL_MB2_LOADING_SCREEN_OPT_5</option>
+			<option value="6">TMPL_MB2_LOADING_SCREEN_OPT_6</option>
+			<option value="7">TMPL_MB2_LOADING_SCREEN_OPT_7</option>
+			<option value="8">TMPL_MB2_LOADING_SCREEN_OPT_8</option>
+		</field>
+		<field name="mb2_loading_screen_timehide" type="number" default="600" min="100" label="TMPL_MB2_LOADING_TIME_TO_HIDE" description="TMPL_MB2_LOADING_TIME_TO_HIDE_DESC"/>
+		<field name="mb2_loading_screen_bgcolor" type="mb2color" default="rgba(255,255,255,0.95)" label="TMPL_MB2_LOADING_BGCOLOR" description=""/>
+		<field name="mb2_loading_screen_spinnercolor" type="mb2color" default="#f0bc22" label="TMPL_MB2_LOADING_SPINNER_COLOR" description=""/>
+		<field name="mb2_loading_screen_img" type="media" default="" label="TMPL_MB2_LOADING_SCREEN_OPT_8" description=""/>
+		
+		
+		
+		<field type="mb2enditem" label="" />
+		
+		<!--<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_SMOOTH_SCROLLING" />
+		
+		<field name="smooth_scrolling" type="radio" class="btn-group btn-group-yesno" default="0" label="TMPL_MB2G_SMOOTH_SCROLLING" description="" >	
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>		
+		<field type="mb2enditem" label="" />-->
+		
+	
+		<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_SITE_NAVIGATION" />	
+		
+			<field name="mb2_sticky_navigation" type="radio" class="btn-group btn-group-yesno" default="1" label="TMPL_MB2_STICKY_NAVIGATION" description="" >	
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+			<field name="mb2_scroll_top" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_SCROLL_TOP" description="" >	
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+			<field type="spacer" hr="true" />
+			
+			<field name="one_page_nav" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_ONE_PAGE_NAV" description="" >	
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="one_page_nav_scroll_speed" type="number" min="100" default="750" label="TMPL_MB2_ONE_PAGE_NAV_SCROLL_SPEED" />
+			<field name="one_page_nav_offset" type="number" min="0" default="100" label="TMPL_MB2_ONE_PAGE_NAV_OFFSET_TOP" />
+			
+				
+		<field type="mb2enditem" label="" />
+		
+		
+		
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_EADING_OFF_CANVAS_PANEL" />
+			
+			<field type="mb2desc" description="TMPL_MB2_OFF_CANVAS_INFO" />
+			
+			
+			<field name="off_canvas_pos" type="list" default="left" label="TMPL_MB2_OFFCANVAS_POSITION" description="" >	
+				<option value="left">TMPL_MB2_OPT_LEFT</option>
+				<option value="right">TMPL_MB2_OPT_RIGHT</option>
+			</field>
+			<field name="off_canvas_style" type="list" default="dark-gray" label="TMPL_MB2_OFFCANVAS_COLOR_SHEME" description="" >	
+				<option value="light">TMPL_MB2_COLOR_SHEME_LIGHT</option>
+				<option value="dark-gray">TMPL_MB2_COLOR_SHEME_DARK</option>
+			</field>		
+			
+			<field type="spacer" hr="true" />
+			
+			<field name="off_canvas_link_pos" type="list" default="a" label="TMPL_MB2_OFFCANVAS_LINK_POSITION" description="" >	
+				<option value="a">header-a</option>
+				<option value="b">header-b</option>
+				<option value="c">header-c</option>
+				<option value="header-nav">header-nav</option>
+			</field>
+			
+			<field name="off_canvas_link_showicon" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_OFFCANVAS_LINK_SHOWICON" description="" >	
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+			<field name="off_canvas_link_icon" type="text" default="glyphicon glyphicon-menu-hamburager" label="TMPL_MB2_OFFCANVAS_LINK_ICON" />
+			<field name="off_canvas_link_icon_size" type="number" min="10" default="22" label="TMPL_MB2_OFFCANVAS_LINK_ICON_SIZE" />			
+			<field name="off_canvas_link_text" type="text" default="" label="TMPL_MB2_OFFCANVAS_LINK_TEXT" />
+			<field name="off_canvas_link_height" type="number" min="20" default="72" label="TMPL_MB2_OFFCANVAS_LINK_HEIGHT" />
+			
+			<field type="spacer" hr="true" />
+			
+			<field name="off_canvas_norma_menu" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_OFFCANVAS_NORMAL_MENU" description="TMPL_MB2_OFFCANVAS_NORMAL_MENU_DESC" >	
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+				
+		<field type="mb2enditem" label="" />
+		
+		
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_EADING_LIGHTBOX" />
+		
+			<field name="mb2_lightbox" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_LIGHTBOX" description="TMPL_MB2_LIGHTBOX_DESC" >	
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		
+		<field type="mb2enditem" label="" />
+		
+		
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_TEMPLATE" />
+		
+			<field name="sectioninfo" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_SHOWSECTIONS_INFO" description="TMPL_MB2_SHOWSECTIONS_INFO_DESC" >	
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+		
+		
+		
+		<field type="mb2enditem" label="" />
+		
+		
+		
+		
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_JOOMLA" />	
+			
+			<field name="error_article_403" type="sql" default="" label="TMPL_MB2_ERROR403_ARTICLE" description="TMPL_MB2_ERROR403_ARTICLE_DESC" query="SELECT id, title FROM #__content" key_field="id" value_field="title" >
+				<option value="">JNONE</option>
+				<option value="login">TMPL_MB2_REDIRECT_TO_LOGIN_PAGE</option>				
+			</field>
+			
+			<field name="error_article_404" type="sql" default="" label="TMPL_MB2_ERROR404_ARTICLE" description="TMPL_MB2_ERROR_ARTICLE_DESC" query="SELECT id, title FROM #__content" key_field="id" value_field="title" >
+				<option value="">JNONE</option>			
+			</field>		
+		
+			<field type="spacer" hr="true" />
+			
+			<field name="generator_tag" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_TAG_GENERATOR" description="TMPL_MB2_TAG_GENERATOR_DESC" >	
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>	
+			
+			<field type="spacer" hr="true" />
+		
+			<field name="mb2_custom_title" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_CUSTOM_PAGE_TITLE" description="TMPL_MB2_CUSTOM_PAGE_TITLE_DESC" >	
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+				
+			<field name="mb2_custom_title_sep" type="text" default="|" label="TMPL_MB2_CUSTOM_PAGE_TITLE_SEP" description="" />
+			<field type="spacer" hr="true" />
+			
+			<field name="component_css" type="textarea" default="body{padding:30px;}" cols="" rows="10" label="TMPL_MB2_COMPONENT_STYLE" description="TMPL_MB2_COMPONENT_STYLE_DESC" filter="string" class="my_textarea" />
+		
+		<field type="mb2enditem" label="" />
+	
+	</fieldset>
+	
+	
+	<fieldset name="layout_settings" label="TMPL_MB2_BLOCKS_LAYOUT_SETTINGS">		
+		
+		
+		<field name="sections_order" type="hidden" default="" />
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_SECTION_TOP_BAR" desc="TMPL_MB2_SECTION_TOP_BAR_DESC" />	
+			
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_GRID" />				
+				<field name="top_grid" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_GRID" description="TMPL_MB2_GRID_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="top_fwidth"  type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_SECTION_FULL_WIDTH" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="top_two_columns_layout" type="mb2radioimg" default="6-6" label="TMPL_MB2_TWO_COLUMNS" description="TMPL_MB2_LAYOUT_SHOWCASE_TWO_DESC" >	
+					<option value="6-6">/layout/50-50.jpg</option>
+					<option value="9-3">/layout/75-25.jpg</option>	
+					<option value="3-9">/layout/25-75.jpg</option>
+					<option value="8-4">/layout/60-40.jpg</option>
+					<option value="4-8">/layout/40-60.jpg</option>
+				</field>
+				<field name="top_three_columns_layout" type="mb2radioimg" default="4-4-4" label="TMPL_MB2_THREE_COLUMNS" description="TMPL_MB2_LAYOUT_SHOWCASE_THREE_DESC" >	
+					<option value="4-4-4">/layout/33-33-33.jpg</option>
+					<option value="6-3-3">/layout/50-25-25.jpg</option>
+					<option value="3-3-6">/layout/25-25-50.jpg</option>
+					<option value="3-6-3">/layout/25-50-25.jpg</option>
+					<option value="5-3-4">/layout/45-25-30.jpg</option>
+					<option value="4-3-5">/layout/30-25-45.jpg</option>
+				</field>
+				<field name="top_four_columns_layout" type="mb2radioimg" default="3-3-3-3" label="TMPL_MB2_FOUR_COLUMNS" description="TMPL_MB2_LAYOUT_SHOWCASE_FOUR_DESC" >	
+					<option value="3-3-3-3">/layout/25-25-25-25.jpg</option>
+					<option value="6-2-2-2">/layout/50-15-15-15.jpg</option>
+					<option value="2-2-2-6">/layout/15-15-15-50.jpg</option>
+					<option value="2-6-2-2">/layout/15-50-15-15.jpg</option>
+					<option value="2-2-6-2">/layout/15-15-50-15.jpg</option>
+				</field>		
+			<field type="mb2enditem" label="" />
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_STYLE" />			
+				<field name="top_vertical_align" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_VERTICAL_ALIGN" description="TMPL_MB2_VERTICAL_ALIGN_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>			
+				<field name="top_padding" type="mb2mp" defmp="5,,5,,px" label="TMPL_MB2_SECTION_PADDING" description="TMPL_MB2_SECTION_PADDING_DESC" />
+				<field name="top_mod_margin" type="mb2mp" defmp="0,,0,,px" label="TMPL_MB2_SECTION_MOD_MARGIN" description="TMPL_MB2_SECTION_MOD_MARGIN_DESC" />				
+				<field name="top_ccss" type="mb2toggletext" label="" />
+			<field type="mb2enditem" label="" />		
+		
+		<field type="mb2enditem" label="" />
+		
+		
+		
+		
+		
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_HEADER" desc="TMPL_MB2_HEADING_HEADER_DESC" />
+			
+			
+			<field name="main_header" type="radio" class="btn-group btn-group-yesno" default="1" label="TMPL_MB2_MAIN_HEADER_ON" description="" >	
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+					
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_GRID" />			
+				<field name="main_header_grid" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_GRID" description="TMPL_MB2_GRID_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="main_header_fwidth"  type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_SECTION_FULL_WIDTH" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>			
+				<field name="main_header_two_columns_layout" type="mb2radioimg" default="l-9" label="TMPL_MB2_TWO_COLUMNS" description="" >
+					<option value="l-9">/layout/logo-9.jpg</option>
+					<option value="9-l">/layout/9-logo.jpg</option>	
+					<option value="l-8">/layout/logo-8.jpg</option>
+					<option value="8-l">/layout/8-logo.jpg</option>		
+					<option value="l-10">/layout/logo-10.jpg</option>
+					<option value="10-l">/layout/10-logo.jpg</option>
+				</field>
+				<field name="main_header_three_columns_layout" type="mb2radioimg" default="l-5-5" label="TMPL_MB2_THREE_COLUMNS" description="" >	
+					<option value="l-5-5">/layout/logo-5-5.jpg</option>
+					<option value="5-5-l">/layout/5-5-logo.jpg</option>
+					<option value="5-l-5">/layout/5-logo-5.jpg</option>
+					<option value="l-4-4">/layout/logo-4-4.jpg</option>
+					<option value="4-4-l">/layout/4-4-logo.jpg</option>
+					<option value="4-l-4">/layout/4-logo-4.jpg</option>
+					<option value="l-5-4">/layout/logo-5-4.jpg</option>
+					<option value="4-5-l">/layout/4-5-logo.jpg</option>
+					<option value="4-l-5">/layout/4-logo-5.jpg</option>
+					<option value="5-l-4">/layout/5-logo-4.jpg</option>
+				</field>
+				<field name="main_header_four_columns_layout" type="mb2radioimg" default="l-4-3-3" label="TMPL_MB2_FOUR_COLUMNS" description="" >	
+					<option value="l-4-3-3">/layout/logo-4-3-3.jpg</option>
+					<option value="3-3-4-l">/layout/3-3-4-logo.jpg</option>
+					<option value="l-3-3-3">/layout/logo-3-3-3.jpg</option>
+					<option value="3-3-3-l">/layout/3-3-3-logo.jpg</option>
+					<option value="l-3-3-2">/layout/logo-3-3-2.jpg</option>
+					<option value="2-3-3-l">/layout/2-3-3-logo.jpg</option>
+				</field>
+			<field type="mb2enditem" label="" />
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_STYLE" />
+				<field name="main_header_style" type="groupedlist" default="1" label="TMPL_MB2_HEADER_STYLE" description="" >			
+					<group label="TMPL_MB2_HEADER_STYLE_NORMAL">
+						<option value="1">TMPL_MB2_HEADER_STYLE_OPT_1</option>
+						<option value="2">TMPL_MB2_HEADER_STYLE_OPT_2</option>
+						<!--<option value="11">TMPL_MB2_HEADER_STYLE_OPT_11</option>-->
+					</group>
+					<group label="TMPL_MB2_HEADER_STYLE_DARK">
+						<option value="5">TMPL_MB2_HEADER_STYLE_OPT_5</option>
+					</group>
+					<group label="TMPL_MB2_HEADER_STYLE_TRANSPARENT">
+						<option value="3">TMPL_MB2_HEADER_STYLE_OPT_3</option>
+						<option value="4">TMPL_MB2_HEADER_STYLE_OPT_4</option>
+						<option value="6">TMPL_MB2_HEADER_STYLE_OPT_6</option>
+						<option value="7">TMPL_MB2_HEADER_STYLE_OPT_7</option>
+						<option value="8">TMPL_MB2_HEADER_STYLE_OPT_8</option>
+						<option value="9">TMPL_MB2_HEADER_STYLE_OPT_9</option>
+						<option value="10">TMPL_MB2_HEADER_STYLE_OPT_10</option>
+					</group>
+				</field>				
+				<field name="main_header_fixw"  type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_HEADER_FIX_WIDTH" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>			
+				<field name="main_header_vertical_align" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_VERTICAL_ALIGN" description="TMPL_MB2_VERTICAL_ALIGN_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>			
+				<field name="main_header_padding" type="mb2mp" defmp="0,,0,,px" label="TMPL_MB2_SECTION_PADDING" description="TMPL_MB2_SECTION_PADDING_DESC" />			
+				<field name="main_header_mod_margin" type="mb2mp" defmp="0,,0,,px" label="TMPL_MB2_SECTION_MOD_MARGIN" description="TMPL_MB2_SECTION_MOD_MARGIN_DESC" />						
+				<field name="main_header_ccss" type="mb2toggletext" label="" />
+			<field type="mb2enditem" label="" />
+		<field type="mb2enditem" label="" />		
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_SECTION_SHOWCASE" desc="TMPL_MB2_SECTION_SHOWCASE_DESC" />	
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_GRID" />
+				<field name="showcase_grid" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_GRID" description="TMPL_MB2_GRID_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="showcase_fwidth"  type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_SECTION_FULL_WIDTH" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>	
+				<field name="showcase_two_columns_layout" type="mb2radioimg" default="6-6" label="TMPL_MB2_TWO_COLUMNS" description="TMPL_MB2_LAYOUT_SHOWCASE_TWO_DESC" >	
+					<option value="6-6">/layout/50-50.jpg</option>
+					<option value="9-3">/layout/75-25.jpg</option>	
+					<option value="3-9">/layout/25-75.jpg</option>
+					<option value="8-4">/layout/60-40.jpg</option>
+					<option value="4-8">/layout/40-60.jpg</option>
+				</field>
+				<field name="showcase_three_columns_layout" type="mb2radioimg" default="4-4-4" label="TMPL_MB2_THREE_COLUMNS" description="TMPL_MB2_LAYOUT_SHOWCASE_THREE_DESC" >	
+					<option value="4-4-4">/layout/33-33-33.jpg</option>
+					<option value="6-3-3">/layout/50-25-25.jpg</option>
+					<option value="3-3-6">/layout/25-25-50.jpg</option>
+					<option value="3-6-3">/layout/25-50-25.jpg</option>
+					<option value="5-3-4">/layout/45-25-30.jpg</option>
+					<option value="4-3-5">/layout/30-25-45.jpg</option>
+				</field>
+				<field name="showcase_four_columns_layout" type="mb2radioimg" default="3-3-3-3" label="TMPL_MB2_FOUR_COLUMNS" description="TMPL_MB2_LAYOUT_SHOWCASE_FOUR_DESC" >	
+					<option value="3-3-3-3">/layout/25-25-25-25.jpg</option>
+					<option value="6-2-2-2">/layout/50-15-15-15.jpg</option>
+					<option value="2-2-2-6">/layout/15-15-15-50.jpg</option>
+					<option value="2-6-2-2">/layout/15-50-15-15.jpg</option>
+					<option value="2-2-6-2">/layout/15-15-50-15.jpg</option>
+				</field>
+			<field type="mb2enditem" label="" />		
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_STYLE" />			
+				<field name="showcase_vertical_align" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_VERTICAL_ALIGN" description="TMPL_MB2_VERTICAL_ALIGN_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="showcase_padding" type="mb2mp" defmp="0,,0,,px" label="TMPL_MB2_SECTION_PADDING" description="TMPL_MB2_SECTION_PADDING_DESC" />
+				<field name="showcase_mod_margin" type="mb2mp" defmp="0,,0,,px" label="TMPL_MB2_SECTION_MOD_MARGIN" description="TMPL_MB2_SECTION_MOD_MARGIN_DESC" />			
+				<field name="showcase_color_sheme" type="list" default="0" label="TMPL_MB2_COLOR_SHEME" description="" >	
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<option value="light">TMPL_MB2_COLOR_SHEME_LIGHT</option>
+					<!-- <option value="dark-gray">TMPL_MB2_COLOR_SHEME_DARK_GRAY</option> -->
+					<option value="dark">TMPL_MB2_COLOR_SHEME_DARK</option>
+				</field>			
+				<field name="showcase_cls" type="groupedlist" default="0" label="TMPL_MB2_SECTION_CLS" description="" >
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<group label="TMPL_MB2_SECTION_STYLE_PREDEFINED">
+						<option value="dark-section">TMPL_MB2_SECTION_DARK</option>
+					</group>
+					<group label="TMPL_MB2_SECTION_STYLE_CUSTOM">
+						<option value="custom-section1">TMPL_MB2_SECTION_CUSTOM_STYLE1</option>
+						<option value="custom-section2">TMPL_MB2_SECTION_CUSTOM_STYLE2</option>
+						<option value="custom-section3">TMPL_MB2_SECTION_CUSTOM_STYLE3</option>
+						<option value="custom-section4">TMPL_MB2_SECTION_CUSTOM_STYLE4</option>
+						<option value="custom-section5">TMPL_MB2_SECTION_CUSTOM_STYLE5</option>
+						<option value="custom-section6">TMPL_MB2_SECTION_CUSTOM_STYLE6</option>
+						<option value="custom-section7">TMPL_MB2_SECTION_CUSTOM_STYLE7</option>
+					</group>				
+				</field>
+				<field name="showcase_ccss" type="mb2toggletext" label="" />
+			<field type="mb2enditem" label="" />		
+		
+		<field type="mb2enditem" label="" />	
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_PAGE_TITLE" desc="TMPL_MB2_HEADING_PAGE_TITLE_DESC" />
+	
+			<field name="mb2_page_title" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_PAGE_TITLE" description="TMPL_MB2_PAGE_TITLE_DESC" >	
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			<field name="page_title_fwidth"  type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_SECTION_FULL_WIDTH" description="" >	
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_STYLE" />			
+				<field name="page_title_vertical_align" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_VERTICAL_ALIGN" description="TMPL_MB2_VERTICAL_ALIGN_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="page_title_padding" type="mb2mp" defmp="90,,90,,px" label="TMPL_MB2_SECTION_PADDING" description="TMPL_MB2_SECTION_PADDING_DESC" />
+				<field name="page_title_mod_margin" type="mb2mp" defmp="0,,0,,px" label="TMPL_MB2_SECTION_MOD_MARGIN" description="TMPL_MB2_SECTION_MOD_MARGIN_DESC" />				
+				<field name="page_title_color_sheme" type="list" default="dark" label="TMPL_MB2_COLOR_SHEME" description="" >	
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<option value="light">TMPL_MB2_COLOR_SHEME_LIGHT</option>
+					<!-- <option value="dark-gray">TMPL_MB2_COLOR_SHEME_DARK_GRAY</option> -->
+					<option value="dark">TMPL_MB2_COLOR_SHEME_DARK</option>
+				</field>				
+				<field name="page_title_cls" type="groupedlist" default="dark-section" label="TMPL_MB2_SECTION_CLS" description="" >
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<group label="TMPL_MB2_SECTION_STYLE_PREDEFINED">
+						<option value="dark-section">TMPL_MB2_SECTION_DARK</option>
+					</group>
+					<group label="TMPL_MB2_SECTION_STYLE_CUSTOM">
+						<option value="custom-section1">TMPL_MB2_SECTION_CUSTOM_STYLE1</option>
+						<option value="custom-section2">TMPL_MB2_SECTION_CUSTOM_STYLE2</option>
+						<option value="custom-section3">TMPL_MB2_SECTION_CUSTOM_STYLE3</option>
+						<option value="custom-section4">TMPL_MB2_SECTION_CUSTOM_STYLE4</option>
+						<option value="custom-section5">TMPL_MB2_SECTION_CUSTOM_STYLE5</option>
+						<option value="custom-section6">TMPL_MB2_SECTION_CUSTOM_STYLE6</option>
+						<option value="custom-section7">TMPL_MB2_SECTION_CUSTOM_STYLE7</option>
+					</group>				
+				</field>
+				<field name="page-title_ccss" type="mb2toggletext" label="" />
+			<field type="mb2enditem" label="" />
+		<field type="mb2enditem" label="" />	
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_SECTION_BEFORE_CONTENT_1" desc="TMPL_MB2_SECTION_BEFORE_CONTENT_1_DESC" />		
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_GRID" />
+				<field name="before_content_1_grid" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_GRID" description="TMPL_MB2_GRID_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="before_content_1_fwidth"  type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_SECTION_FULL_WIDTH" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="before_content_1_two_columns_layout" type="mb2radioimg" default="6-6" label="TMPL_MB2_TWO_COLUMNS" description="TMPL_MB2_LAYOUT_BEFORE_CONTENT_1_TWO_DESC" >	
+					<option value="6-6">/layout/50-50.jpg</option>
+					<option value="9-3">/layout/75-25.jpg</option>	
+					<option value="3-9">/layout/25-75.jpg</option>
+					<option value="8-4">/layout/60-40.jpg</option>
+					<option value="4-8">/layout/40-60.jpg</option>
+				</field>
+				<field name="before_content_1_three_columns_layout" type="mb2radioimg" default="4-4-4" label="TMPL_MB2_THREE_COLUMNS" description="TMPL_MB2_LAYOUT_BEFORE_CONTENT_1_THREE_DESC" >	
+					<option value="4-4-4">/layout/33-33-33.jpg</option>
+					<option value="6-3-3">/layout/50-25-25.jpg</option>
+					<option value="3-3-6">/layout/25-25-50.jpg</option>
+					<option value="3-6-3">/layout/25-50-25.jpg</option>
+					<option value="5-3-4">/layout/45-25-30.jpg</option>
+					<option value="4-3-5">/layout/30-25-45.jpg</option>
+				</field>
+				<field name="before_content_1_four_columns_layout" type="mb2radioimg" default="3-3-3-3" label="TMPL_MB2_FOUR_COLUMNS" description="TMPL_MB2_LAYOUT_BEFORE_CONTENT_1_FOUR_DESC" >	
+					<option value="3-3-3-3">/layout/25-25-25-25.jpg</option>
+					<option value="6-2-2-2">/layout/50-15-15-15.jpg</option>
+					<option value="2-2-2-6">/layout/15-15-15-50.jpg</option>
+					<option value="2-6-2-2">/layout/15-50-15-15.jpg</option>
+					<option value="2-2-6-2">/layout/15-15-50-15.jpg</option>
+				</field>
+			<field type="mb2enditem" label="" />
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_STYLE" />			
+				<field name="before_content_1_vertical_align" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_VERTICAL_ALIGN" description="TMPL_MB2_VERTICAL_ALIGN_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="before_content_1_padding" type="mb2mp" defmp="90,,90,,px" label="TMPL_MB2_SECTION_PADDING" description="TMPL_MB2_SECTION_PADDING_DESC" />
+				<field name="before_content_1_mod_margin" type="mb2mp" defmp="0,,0,,px" label="TMPL_MB2_SECTION_MOD_MARGIN" description="TMPL_MB2_SECTION_MOD_MARGIN_DESC" />			
+				<field name="before_content_1_color_sheme" type="list" default="0" label="TMPL_MB2_COLOR_SHEME" description="" >	
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<option value="light">TMPL_MB2_COLOR_SHEME_LIGHT</option>
+					<!-- <option value="dark-gray">TMPL_MB2_COLOR_SHEME_DARK_GRAY</option> -->
+					<option value="dark">TMPL_MB2_COLOR_SHEME_DARK</option>
+				</field>			
+				<field name="before_content_1_cls" type="groupedlist" default="0" label="TMPL_MB2_SECTION_CLS" description="" >
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<group label="TMPL_MB2_SECTION_STYLE_PREDEFINED">
+						<option value="dark-section">TMPL_MB2_SECTION_DARK</option>
+					</group>
+					<group label="TMPL_MB2_SECTION_STYLE_CUSTOM">
+						<option value="custom-section1">TMPL_MB2_SECTION_CUSTOM_STYLE1</option>
+						<option value="custom-section2">TMPL_MB2_SECTION_CUSTOM_STYLE2</option>
+						<option value="custom-section3">TMPL_MB2_SECTION_CUSTOM_STYLE3</option>
+						<option value="custom-section4">TMPL_MB2_SECTION_CUSTOM_STYLE4</option>
+						<option value="custom-section5">TMPL_MB2_SECTION_CUSTOM_STYLE5</option>
+						<option value="custom-section6">TMPL_MB2_SECTION_CUSTOM_STYLE6</option>
+						<option value="custom-section7">TMPL_MB2_SECTION_CUSTOM_STYLE7</option>
+					</group>				
+				</field>			
+				<field name="before_content_1_ccss" type="mb2toggletext" label="" />
+			<field type="mb2enditem" label="" />			
+		
+		<field type="mb2enditem" label="" />		
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_SECTION_BEFORE_CONTENT_2" desc="TMPL_MB2_SECTION_BEFORE_CONTENT_2_DESC" />		
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_GRID" />	
+				<field name="before_content_2_grid" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_GRID" description="TMPL_MB2_GRID_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="before_content_2_fwidth"  type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_SECTION_FULL_WIDTH" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="before_content_2_two_columns_layout" type="mb2radioimg" default="6-6" label="TMPL_MB2_TWO_COLUMNS" description="TMPL_MB2_LAYOUT_BEFORE_CONTENT_2_TWO_DESC" >	
+					<option value="6-6">/layout/50-50.jpg</option>
+					<option value="9-3">/layout/75-25.jpg</option>	
+					<option value="3-9">/layout/25-75.jpg</option>
+					<option value="8-4">/layout/60-40.jpg</option>
+					<option value="4-8">/layout/40-60.jpg</option>
+				</field>
+				<field name="before_content_2_three_columns_layout" type="mb2radioimg" default="4-4-4" label="TMPL_MB2_THREE_COLUMNS" description="TMPL_MB2_LAYOUT_BEFORE_CONTENT_2_THREE_DESC" >	
+					<option value="4-4-4">/layout/33-33-33.jpg</option>
+					<option value="6-3-3">/layout/50-25-25.jpg</option>
+					<option value="3-3-6">/layout/25-25-50.jpg</option>
+					<option value="3-6-3">/layout/25-50-25.jpg</option>
+					<option value="5-3-4">/layout/45-25-30.jpg</option>
+					<option value="4-3-5">/layout/30-25-45.jpg</option>
+				</field>
+				<field name="before_content_2_four_columns_layout" type="mb2radioimg" default="3-3-3-3" label="TMPL_MB2_FOUR_COLUMNS" description="TMPL_MB2_LAYOUT_BEFORE_CONTENT_2_FOUR_DESC" >	
+					<option value="3-3-3-3">/layout/25-25-25-25.jpg</option>
+					<option value="6-2-2-2">/layout/50-15-15-15.jpg</option>
+					<option value="2-2-2-6">/layout/15-15-15-50.jpg</option>
+					<option value="2-6-2-2">/layout/15-50-15-15.jpg</option>
+					<option value="2-2-6-2">/layout/15-15-50-15.jpg</option>
+				</field>
+			<field type="mb2enditem" label="" />
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_STYLE" />	
+				<field name="before_content_2_vertical_align" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_VERTICAL_ALIGN" description="TMPL_MB2_VERTICAL_ALIGN_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="before_content_2_padding" type="mb2mp" defmp="90,,90,,px" label="TMPL_MB2_SECTION_PADDING" description="TMPL_MB2_SECTION_PADDING_DESC" />
+				<field name="before_content_2_mod_margin" type="mb2mp" defmp="0,,0,,px" label="TMPL_MB2_SECTION_MOD_MARGIN" description="TMPL_MB2_SECTION_MOD_MARGIN_DESC" />				
+				<field name="before_content_2_color_sheme" type="list" default="0" label="TMPL_MB2_COLOR_SHEME" description="" >	
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<option value="light">TMPL_MB2_COLOR_SHEME_LIGHT</option>
+					<!-- <option value="dark-gray">TMPL_MB2_COLOR_SHEME_DARK_GRAY</option> -->
+					<option value="dark">TMPL_MB2_COLOR_SHEME_DARK</option>
+				</field>				
+				<field name="before_content_2_cls" type="groupedlist" default="0" label="TMPL_MB2_SECTION_CLS" description="" >	
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<group label="TMPL_MB2_SECTION_STYLE_PREDEFINED">
+						<option value="dark-section">TMPL_MB2_SECTION_DARK</option>
+					</group>
+					<group label="TMPL_MB2_SECTION_STYLE_CUSTOM">
+						<option value="custom-section1">TMPL_MB2_SECTION_CUSTOM_STYLE1</option>
+						<option value="custom-section2">TMPL_MB2_SECTION_CUSTOM_STYLE2</option>
+						<option value="custom-section3">TMPL_MB2_SECTION_CUSTOM_STYLE3</option>
+						<option value="custom-section4">TMPL_MB2_SECTION_CUSTOM_STYLE4</option>
+						<option value="custom-section5">TMPL_MB2_SECTION_CUSTOM_STYLE5</option>
+						<option value="custom-section6">TMPL_MB2_SECTION_CUSTOM_STYLE6</option>
+						<option value="custom-section7">TMPL_MB2_SECTION_CUSTOM_STYLE7</option>
+					</group>				
+				</field>			
+				<field name="before_content_2_ccss" type="mb2toggletext" label="" />
+			<field type="mb2enditem" label="" />	
+		
+		<field type="mb2enditem" label="" />
+		
+		
+		
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_SECTION_BEFORE_CONTENT_3" desc="TMPL_MB2_SECTION_BEFORE_CONTENT_3_DESC" />		
+		
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_GRID" />	
+				<field name="before_content_3_grid" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_GRID" description="TMPL_MB2_GRID_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="before_content_3_fwidth"  type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_SECTION_FULL_WIDTH" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="before_content_3_two_columns_layout" type="mb2radioimg" default="6-6" label="TMPL_MB2_TWO_COLUMNS" description="TMPL_MB2_LAYOUT_BEFORE_CONTENT_3_TWO_DESC" >	
+					<option value="6-6">/layout/50-50.jpg</option>
+					<option value="9-3">/layout/75-25.jpg</option>	
+					<option value="3-9">/layout/25-75.jpg</option>
+					<option value="8-4">/layout/60-40.jpg</option>
+					<option value="4-8">/layout/40-60.jpg</option>
+				</field>
+				<field name="before_content_3_three_columns_layout" type="mb2radioimg" default="4-4-4" label="TMPL_MB2_THREE_COLUMNS" description="TMPL_MB2_LAYOUT_BEFORE_CONTENT_3_THREE_DESC" >	
+					<option value="4-4-4">/layout/33-33-33.jpg</option>
+					<option value="6-3-3">/layout/50-25-25.jpg</option>
+					<option value="3-3-6">/layout/25-25-50.jpg</option>
+					<option value="3-6-3">/layout/25-50-25.jpg</option>
+					<option value="5-3-4">/layout/45-25-30.jpg</option>
+					<option value="4-3-5">/layout/30-25-45.jpg</option>
+				</field>
+				<field name="before_content_3_four_columns_layout" type="mb2radioimg" default="3-3-3-3" label="TMPL_MB2_FOUR_COLUMNS" description="TMPL_MB2_LAYOUT_BEFORE_CONTENT_3_FOUR_DESC" >	
+					<option value="3-3-3-3">/layout/25-25-25-25.jpg</option>
+					<option value="6-2-2-2">/layout/50-15-15-15.jpg</option>
+					<option value="2-2-2-6">/layout/15-15-15-50.jpg</option>
+					<option value="2-6-2-2">/layout/15-50-15-15.jpg</option>
+					<option value="2-2-6-2">/layout/15-15-50-15.jpg</option>
+				</field>
+			<field type="mb2enditem" label="" />
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_STYLE" />				
+				<field name="before_content_3_vertical_align" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_VERTICAL_ALIGN" description="TMPL_MB2_VERTICAL_ALIGN_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="before_content_3_padding" type="mb2mp" defmp="90,,90,,px" label="TMPL_MB2_SECTION_PADDING" description="TMPL_MB2_SECTION_PADDING_DESC" />
+				<field name="before_content_3_mod_margin" type="mb2mp" defmp="0,,0,,px" label="TMPL_MB2_SECTION_MOD_MARGIN" description="TMPL_MB2_SECTION_MOD_MARGIN_DESC" />			
+				<field name="before_content_3_color_sheme" type="list" default="0" label="TMPL_MB2_COLOR_SHEME" description="" >	
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<option value="light">TMPL_MB2_COLOR_SHEME_LIGHT</option>
+					<!-- <option value="dark-gray">TMPL_MB2_COLOR_SHEME_DARK_GRAY</option> -->
+					<option value="dark">TMPL_MB2_COLOR_SHEME_DARK</option>
+				</field>			
+				<field name="before_content_3_cls" type="groupedlist" default="0" label="TMPL_MB2_SECTION_CLS" description="" >	
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<group label="TMPL_MB2_SECTION_STYLE_PREDEFINED">
+						<option value="dark-section">TMPL_MB2_SECTION_DARK</option>
+					</group>
+					<group label="TMPL_MB2_SECTION_STYLE_CUSTOM">
+						<option value="custom-section1">TMPL_MB2_SECTION_CUSTOM_STYLE1</option>
+						<option value="custom-section2">TMPL_MB2_SECTION_CUSTOM_STYLE2</option>
+						<option value="custom-section3">TMPL_MB2_SECTION_CUSTOM_STYLE3</option>
+						<option value="custom-section4">TMPL_MB2_SECTION_CUSTOM_STYLE4</option>
+						<option value="custom-section5">TMPL_MB2_SECTION_CUSTOM_STYLE5</option>
+						<option value="custom-section6">TMPL_MB2_SECTION_CUSTOM_STYLE6</option>
+						<option value="custom-section7">TMPL_MB2_SECTION_CUSTOM_STYLE7</option>
+					</group>				
+				</field>			
+				<field name="before_content_3_ccss" type="mb2toggletext" label="" />
+			<field type="mb2enditem" label="" />	
+		
+		<field type="mb2enditem" label="" />
+		
+		
+		
+				
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_SECTION_MAIN_CONTENT"  desc="TMPL_MB2_SECTION_MAIN_CONTENT_DESC"/>				
+			
+			<field name="main_content" type="radio" class="btn-group btn-group-yesno" default="1" label="TMPL_MB2_MAIN_CONTENT_ON" description="TMPL_MB2_MAIN_CONTENT_ON_DESC" >	
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_GRID" />			
+				<field name="main_content_grid" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_GRID" description="TMPL_MB2_GRID_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="main_content_fwidth"  type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_SECTION_FULL_WIDTH" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>			
+				<field name="main_content_two_columns_layout" type="mb2radioimg" default="c-3" label="TMPL_MB2_TWO_COLUMNS" description="TMPL_MB2_LAYOUT_MAIN_CONTENT_TWO_DESC" >	
+					<option value="c-6">/layout/content-50.jpg</option>
+					<option value="6-c">/layout/50-content.jpg</option>
+					<option value="c-4">/layout/content-30.jpg</option>
+					<option value="4-c">/layout/30-content.jpg</option>
+					<option value="c-3">/layout/content-25.jpg</option>
+					<option value="3-c">/layout/25-content.jpg</option>
+					<option value="c-2">/layout/content-15.jpg</option>
+					<option value="2-c">/layout/15-content.jpg</option>
+				</field>		
+				<field name="main_content_three_columns_layout" type="mb2radioimg" default="3-c-3" label="TMPL_MB2_THREE_COLUMNS" description="TMPL_MB2_LAYOUT_MAIN_CONTENT_THREE_DESC" >	
+					<option value="c-4-4">/layout/content-33-33.jpg</option>
+					<option value="4-4-c">/layout/33-33-content.jpg</option>
+					<option value="4-c-4">/layout/33-content-33.jpg</option>
+					<option value="c-3-3">/layout/content-25-25.jpg</option>
+					<option value="3-3-c">/layout/25-25-content.jpg</option>
+					<option value="3-c-3">/layout/25-content-25.jpg</option>
+					<option value="c-2-2">/layout/content-15-15.jpg</option>
+					<option value="2-2-c">/layout/15-15-content.jpg</option>
+					<option value="2-c-2">/layout/15-content-15.jpg</option>		
+					<option value="4-3-c">/layout/33-25-content.jpg</option>
+					<option value="c-3-4">/layout/content-25-33.jpg</option>
+					<option value="3-2-c">/layout/25-15-content.jpg</option>
+					<option value="c-2-3">/layout/content-15-25.jpg</option>
+					<option value="4-c-3">/layout/33-content-25.jpg</option>
+					<option value="3-c-4">/layout/25-content-33.jpg</option>
+					<option value="3-c-2">/layout/25-content-15.jpg</option>
+					<option value="2-c-3">/layout/15-content-25.jpg</option>
+				</field>
+				<field name="main_content_four_columns_layout" type="mb2radioimg" default="3-c-2-3" label="TMPL_MB2_FOUR_COLUMNS" description="TMPL_MB2_LAYOUT_MAIN_CONTENT_FOUR_DESC" >	
+					<option value="c-2-2-2">/layout/content-15-15-15.jpg</option>
+					<option value="2-2-2-c">/layout/15-15-15-content.jpg</option>		
+					<option value="2-c-2-2">/layout/15-content-15-15.jpg</option>
+					<option value="2-2-c-2">/layout/15-15-content-15.jpg</option>
+					<option value="3-c-2-3">/layout/25-content-15-25.jpg</option>
+					<option value="3-2-c-3">/layout/25-15-content-25.jpg</option>
+				</field>
+			<field type="mb2enditem" label="" />
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_STYLE" />			
+				<field name="main_content_vertical_align" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_VERTICAL_ALIGN" description="TMPL_MB2_VERTICAL_ALIGN_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="main_content_padding" type="mb2mp" defmp="90,,40,,px" label="TMPL_MB2_SECTION_PADDING" description="TMPL_MB2_SECTION_PADDING_DESC" />	
+				<!--<field name="main_content_mod_margin" type="mb2mp" defmp="0,,0,,px" label="TMPL_MB2_SECTION_MOD_MARGIN" description="TMPL_MB2_SECTION_MOD_MARGIN_DESC" />-->				
+				<field name="main_content_color_sheme" type="list" default="0" label="TMPL_MB2_COLOR_SHEME" description="" >	
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<option value="light">TMPL_MB2_COLOR_SHEME_LIGHT</option>
+					<!-- <option value="dark-gray">TMPL_MB2_COLOR_SHEME_DARK_GRAY</option> -->
+					<option value="dark">TMPL_MB2_COLOR_SHEME_DARK</option>
+				</field>				
+				<field name="main_content_cls" type="groupedlist" default="0" label="TMPL_MB2_SECTION_CLS" description="" >	
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<group label="TMPL_MB2_SECTION_STYLE_PREDEFINED">
+						<option value="dark-section">TMPL_MB2_SECTION_DARK</option>
+					</group>
+					<group label="TMPL_MB2_SECTION_STYLE_CUSTOM">
+						<option value="custom-section1">TMPL_MB2_SECTION_CUSTOM_STYLE1</option>
+						<option value="custom-section2">TMPL_MB2_SECTION_CUSTOM_STYLE2</option>
+						<option value="custom-section3">TMPL_MB2_SECTION_CUSTOM_STYLE3</option>
+						<option value="custom-section4">TMPL_MB2_SECTION_CUSTOM_STYLE4</option>
+						<option value="custom-section5">TMPL_MB2_SECTION_CUSTOM_STYLE5</option>
+						<option value="custom-section6">TMPL_MB2_SECTION_CUSTOM_STYLE6</option>
+						<option value="custom-section7">TMPL_MB2_SECTION_CUSTOM_STYLE7</option>
+					</group>				
+				</field>	
+				<field name="main_content_ccss" type="mb2toggletext" label="" />
+			<field type="mb2enditem" label="" />	
+		
+		<field type="mb2enditem" label="" />		
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_SECTION_AFTER_CONTENT_1" desc="TMPL_MB2_SECTION_AFTER_CONTENT_1_DESC" />
+		
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_GRID" />
+				<field name="after_content_1_grid" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_GRID" description="TMPL_MB2_GRID_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>	
+				<field name="after_content_1_fwidth"  type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_SECTION_FULL_WIDTH" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>		
+				<field name="after_content_1_two_columns_layout" type="mb2radioimg" default="6-6" label="TMPL_MB2_TWO_COLUMNS" description="TMPL_MB2_LAYOUT_AFTER_CONTENT_1_TWO_DESC" >	
+					<option value="6-6">/layout/50-50.jpg</option>
+					<option value="9-3">/layout/75-25.jpg</option>	
+					<option value="3-9">/layout/25-75.jpg</option>
+					<option value="8-4">/layout/60-40.jpg</option>
+					<option value="4-8">/layout/40-60.jpg</option>
+				</field>		
+				<field name="after_content_1_three_columns_layout" type="mb2radioimg" default="4-4-4" label="TMPL_MB2_THREE_COLUMNS" description="TMPL_MB2_LAYOUT_AFTER_CONTENT_1_THREE_DESC" >	
+					<option value="4-4-4">/layout/33-33-33.jpg</option>
+					<option value="6-3-3">/layout/50-25-25.jpg</option>
+					<option value="3-3-6">/layout/25-25-50.jpg</option>
+					<option value="3-6-3">/layout/25-50-25.jpg</option>
+					<option value="5-3-4">/layout/45-25-30.jpg</option>
+					<option value="4-3-5">/layout/30-25-45.jpg</option>
+				</field>		
+				<field name="after_content_1_four_columns_layout" type="mb2radioimg" default="3-3-3-3" label="TMPL_MB2_FOUR_COLUMNS" description="TMPL_MB2_LAYOUT_AFTER_CONTENT_1_FOUR_DESC" >	
+					<option value="3-3-3-3">/layout/25-25-25-25.jpg</option>
+					<option value="6-2-2-2">/layout/50-15-15-15.jpg</option>
+					<option value="2-2-2-6">/layout/15-15-15-50.jpg</option>
+					<option value="2-6-2-2">/layout/15-50-15-15.jpg</option>
+					<option value="2-2-6-2">/layout/15-15-50-15.jpg</option>
+				</field>
+			<field type="mb2enditem" label="" />
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_STYLE" />
+				<field name="after_content_1_vertical_align" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_VERTICAL_ALIGN" description="TMPL_MB2_VERTICAL_ALIGN_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="after_content_1_padding" type="mb2mp" defmp="90,,90,,px" label="TMPL_MB2_SECTION_PADDING" description="TMPL_MB2_SECTION_PADDING_DESC" />			
+				<field name="after_content_1_mod_margin" type="mb2mp" defmp="0,,0,,px" label="TMPL_MB2_SECTION_MOD_MARGIN" description="TMPL_MB2_SECTION_MOD_MARGIN_DESC" />			
+				<field name="after_content_1_color_sheme" type="list" default="0" label="TMPL_MB2_COLOR_SHEME" description="" >	
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<option value="light">TMPL_MB2_COLOR_SHEME_LIGHT</option>
+					<!-- <option value="dark-gray">TMPL_MB2_COLOR_SHEME_DARK_GRAY</option> -->
+					<option value="dark">TMPL_MB2_COLOR_SHEME_DARK</option>
+				</field>			
+				<field name="after_content_1_cls" type="groupedlist" default="0" label="TMPL_MB2_SECTION_CLS" description="" >	
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<group label="TMPL_MB2_SECTION_STYLE_PREDEFINED">
+						<option value="dark-section">TMPL_MB2_SECTION_DARK</option>
+					</group>
+					<group label="TMPL_MB2_SECTION_STYLE_CUSTOM">
+						<option value="custom-section1">TMPL_MB2_SECTION_CUSTOM_STYLE1</option>
+						<option value="custom-section2">TMPL_MB2_SECTION_CUSTOM_STYLE2</option>
+						<option value="custom-section3">TMPL_MB2_SECTION_CUSTOM_STYLE3</option>
+						<option value="custom-section4">TMPL_MB2_SECTION_CUSTOM_STYLE4</option>
+						<option value="custom-section5">TMPL_MB2_SECTION_CUSTOM_STYLE5</option>
+						<option value="custom-section6">TMPL_MB2_SECTION_CUSTOM_STYLE6</option>
+						<option value="custom-section7">TMPL_MB2_SECTION_CUSTOM_STYLE7</option>
+					</group>				
+				</field>			
+				<field name="after_content_1_ccss" type="mb2toggletext" label="" />	
+			<field type="mb2enditem" label="" />			
+			
+		<field type="mb2enditem" label="" />		
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_SECTION_AFTER_CONTENT_2" desc="TMPL_MB2_SECTION_AFTER_CONTENT_2_DESC" />		
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_GRID" />
+				<field name="after_content_2_grid" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_GRID" description="TMPL_MB2_GRID_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>	
+				<field name="after_content_2_fwidth"  type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_SECTION_FULL_WIDTH" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>			
+				<field name="after_content_2_two_columns_layout" type="mb2radioimg" default="6-6" label="TMPL_MB2_TWO_COLUMNS" description="TMPL_MB2_LAYOUT_AFTER_CONTENT_2_TWO_DESC" >	
+					<option value="6-6">/layout/50-50.jpg</option>
+					<option value="9-3">/layout/75-25.jpg</option>	
+					<option value="3-9">/layout/25-75.jpg</option>
+					<option value="8-4">/layout/60-40.jpg</option>
+					<option value="4-8">/layout/40-60.jpg</option>
+				</field>		
+				<field name="after_content_2_three_columns_layout" type="mb2radioimg" default="4-4-4" label="TMPL_MB2_THREE_COLUMNS" description="TMPL_MB2_LAYOUT_AFTER_CONTENT_2_THREE_DESC" >	
+					<option value="4-4-4">/layout/33-33-33.jpg</option>
+					<option value="6-3-3">/layout/50-25-25.jpg</option>
+					<option value="3-3-6">/layout/25-25-50.jpg</option>
+					<option value="3-6-3">/layout/25-50-25.jpg</option>
+					<option value="5-3-4">/layout/45-25-30.jpg</option>
+					<option value="4-3-5">/layout/30-25-45.jpg</option>
+				</field>		
+				<field name="after_content_2_four_columns_layout" type="mb2radioimg" default="3-3-3-3" label="TMPL_MB2_FOUR_COLUMNS" description="TMPL_MB2_LAYOUT_AFTER_CONTENT_2_FOUR_DESC" >	
+					<option value="3-3-3-3">/layout/25-25-25-25.jpg</option>
+					<option value="6-2-2-2">/layout/50-15-15-15.jpg</option>
+					<option value="2-2-2-6">/layout/15-15-15-50.jpg</option>
+					<option value="2-6-2-2">/layout/15-50-15-15.jpg</option>
+					<option value="2-2-6-2">/layout/15-15-50-15.jpg</option>
+				</field>
+			<field type="mb2enditem" label="" />		
+			
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_STYLE" />			
+				<field name="after_content_2_vertical_align" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_VERTICAL_ALIGN" description="TMPL_MB2_VERTICAL_ALIGN_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="after_content_2_padding" type="mb2mp" defmp="90,,90,,px" label="TMPL_MB2_SECTION_PADDING" description="TMPL_MB2_SECTION_PADDING_DESC" />			
+				<field name="after_content_2_mod_margin" type="mb2mp" defmp="0,,0,,px" label="TMPL_MB2_SECTION_MOD_MARGIN" description="TMPL_MB2_SECTION_MOD_MARGIN_DESC" />			
+				<field name="after_content_2_color_sheme" type="list" default="0" label="TMPL_MB2_COLOR_SHEME" description="" >	
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<option value="light">TMPL_MB2_COLOR_SHEME_LIGHT</option>
+					<!-- <option value="dark-gray">TMPL_MB2_COLOR_SHEME_DARK_GRAY</option> -->
+					<option value="dark">TMPL_MB2_COLOR_SHEME_DARK</option>
+				</field>
+				<field name="after_content_2_cls" type="groupedlist" default="0" label="TMPL_MB2_SECTION_CLS" description="" >	
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<group label="TMPL_MB2_SECTION_STYLE_PREDEFINED">
+						<option value="dark-section">TMPL_MB2_SECTION_DARK</option>
+					</group>
+					<group label="TMPL_MB2_SECTION_STYLE_CUSTOM">
+						<option value="custom-section1">TMPL_MB2_SECTION_CUSTOM_STYLE1</option>
+						<option value="custom-section2">TMPL_MB2_SECTION_CUSTOM_STYLE2</option>
+						<option value="custom-section3">TMPL_MB2_SECTION_CUSTOM_STYLE3</option>
+						<option value="custom-section4">TMPL_MB2_SECTION_CUSTOM_STYLE4</option>
+						<option value="custom-section5">TMPL_MB2_SECTION_CUSTOM_STYLE5</option>
+						<option value="custom-section6">TMPL_MB2_SECTION_CUSTOM_STYLE6</option>
+						<option value="custom-section7">TMPL_MB2_SECTION_CUSTOM_STYLE7</option>
+					</group>				
+				</field>			
+				<field name="after_content_2_ccss" type="mb2toggletext" label="" />
+			<field type="mb2enditem" label="" />			
+		
+		<field type="mb2enditem" label="" />
+		
+		
+		
+		
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_SECTION_AFTER_CONTENT_3" desc="TMPL_MB2_SECTION_AFTER_CONTENT_3_DESC" />		
+		
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_GRID" />
+				<field name="after_content_3_grid" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_GRID" description="TMPL_MB2_GRID_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>	
+				<field name="after_content_3_fwidth"  type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_SECTION_FULL_WIDTH" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>			
+				<field name="after_content_3_two_columns_layout" type="mb2radioimg" default="6-6" label="TMPL_MB2_TWO_COLUMNS" description="TMPL_MB2_LAYOUT_AFTER_CONTENT_3_TWO_DESC" >	
+					<option value="6-6">/layout/50-50.jpg</option>
+					<option value="9-3">/layout/75-25.jpg</option>	
+					<option value="3-9">/layout/25-75.jpg</option>
+					<option value="8-4">/layout/60-40.jpg</option>
+					<option value="4-8">/layout/40-60.jpg</option>
+				</field>		
+				<field name="after_content_3_three_columns_layout" type="mb2radioimg" default="4-4-4" label="TMPL_MB2_THREE_COLUMNS" description="TMPL_MB2_LAYOUT_AFTER_CONTENT_3_THREE_DESC" >	
+					<option value="4-4-4">/layout/33-33-33.jpg</option>
+					<option value="6-3-3">/layout/50-25-25.jpg</option>
+					<option value="3-3-6">/layout/25-25-50.jpg</option>
+					<option value="3-6-3">/layout/25-50-25.jpg</option>
+					<option value="5-3-4">/layout/45-25-30.jpg</option>
+					<option value="4-3-5">/layout/30-25-45.jpg</option>
+				</field>		
+				<field name="after_content_3_four_columns_layout" type="mb2radioimg" default="3-3-3-3" label="TMPL_MB2_FOUR_COLUMNS" description="TMPL_MB2_LAYOUT_AFTER_CONTENT_3_FOUR_DESC" >	
+					<option value="3-3-3-3">/layout/25-25-25-25.jpg</option>
+					<option value="6-2-2-2">/layout/50-15-15-15.jpg</option>
+					<option value="2-2-2-6">/layout/15-15-15-50.jpg</option>
+					<option value="2-6-2-2">/layout/15-50-15-15.jpg</option>
+					<option value="2-2-6-2">/layout/15-15-50-15.jpg</option>
+				</field>
+			<field type="mb2enditem" label="" />		
+			
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_STYLE" />			
+				<field name="after_content_3_vertical_align" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_VERTICAL_ALIGN" description="TMPL_MB2_VERTICAL_ALIGN_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="after_content_3_padding" type="mb2mp" defmp="90,,90,,px" label="TMPL_MB2_SECTION_PADDING" description="TMPL_MB2_SECTION_PADDING_DESC" />			
+				<field name="after_content_3_mod_margin" type="mb2mp" defmp="0,,0,,px" label="TMPL_MB2_SECTION_MOD_MARGIN" description="TMPL_MB2_SECTION_MOD_MARGIN_DESC" />			
+				<field name="after_content_3_color_sheme" type="list" default="0" label="TMPL_MB2_COLOR_SHEME" description="" >	
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<option value="light">TMPL_MB2_COLOR_SHEME_LIGHT</option>
+					<!-- <option value="dark-gray">TMPL_MB2_COLOR_SHEME_DARK_GRAY</option> -->
+					<option value="dark">TMPL_MB2_COLOR_SHEME_DARK</option>
+				</field>			
+				<field name="after_content_3_cls" type="groupedlist" default="0" label="TMPL_MB2_SECTION_CLS" description="" >	
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<group label="TMPL_MB2_SECTION_STYLE_PREDEFINED">
+						<option value="dark-section">TMPL_MB2_SECTION_DARK</option>
+					</group>
+					<group label="TMPL_MB2_SECTION_STYLE_CUSTOM">
+						<option value="custom-section1">TMPL_MB2_SECTION_CUSTOM_STYLE1</option>
+						<option value="custom-section2">TMPL_MB2_SECTION_CUSTOM_STYLE2</option>
+						<option value="custom-section3">TMPL_MB2_SECTION_CUSTOM_STYLE3</option>
+						<option value="custom-section4">TMPL_MB2_SECTION_CUSTOM_STYLE4</option>
+						<option value="custom-section5">TMPL_MB2_SECTION_CUSTOM_STYLE5</option>
+						<option value="custom-section6">TMPL_MB2_SECTION_CUSTOM_STYLE6</option>
+						<option value="custom-section7">TMPL_MB2_SECTION_CUSTOM_STYLE7</option>
+					</group>				
+				</field>			
+				<field name="after_content_3_ccss" type="mb2toggletext" label="" />
+			<field type="mb2enditem" label="" />		
+		
+		<field type="mb2enditem" label="" />
+		
+			
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_SECTION_BOTTOM_1"  desc="TMPL_MB2_SECTION_BOTTOM_1_DESC" />	
+	
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_GRID" />
+				<field name="bottom_1_grid" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_GRID" description="TMPL_MB2_GRID_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>	
+				<field name="bottom_1_fwidth"  type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_SECTION_FULL_WIDTH" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>			
+				<field name="bottom_1_two_columns_layout" type="mb2radioimg" default="6-6" label="TMPL_MB2_TWO_COLUMNS" description="TMPL_MB2_LAYOUT_BOTTOM_1_TWO_DESC" >	
+					<option value="6-6">/layout/50-50.jpg</option>
+					<option value="9-3">/layout/75-25.jpg</option>	
+					<option value="3-9">/layout/25-75.jpg</option>
+					<option value="8-4">/layout/60-40.jpg</option>
+					<option value="4-8">/layout/40-60.jpg</option>
+				</field>		
+				<field name="bottom_1_three_columns_layout" type="mb2radioimg" default="4-4-4" label="TMPL_MB2_THREE_COLUMNS" description="TMPL_MB2_LAYOUT_BOTTOM_1_THREE_DESC" >	
+					<option value="4-4-4">/layout/33-33-33.jpg</option>
+					<option value="6-3-3">/layout/50-25-25.jpg</option>
+					<option value="3-3-6">/layout/25-25-50.jpg</option>
+					<option value="3-6-3">/layout/25-50-25.jpg</option>
+					<option value="5-3-4">/layout/45-25-30.jpg</option>
+					<option value="4-3-5">/layout/30-25-45.jpg</option>
+				</field>		
+				<field name="bottom_1_four_columns_layout" type="mb2radioimg" default="3-3-3-3" label="TMPL_MB2_FOUR_COLUMNS" description="TMPL_MB2_LAYOUT_BOTTOM_1_FOUR_DESC" >	
+					<option value="3-3-3-3">/layout/25-25-25-25.jpg</option>
+					<option value="6-2-2-2">/layout/50-15-15-15.jpg</option>
+					<option value="2-2-2-6">/layout/15-15-15-50.jpg</option>
+					<option value="2-6-2-2">/layout/15-50-15-15.jpg</option>
+					<option value="2-2-6-2">/layout/15-15-50-15.jpg</option>
+				</field>
+			<field type="mb2enditem" label="" />			
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_STYLE" />			
+				<field name="bottom_1_vertical_align" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_VERTICAL_ALIGN" description="TMPL_MB2_VERTICAL_ALIGN_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="bottom_1_padding" type="mb2mp" defmp="90,,90,,px" label="TMPL_MB2_SECTION_PADDING" description="TMPL_MB2_SECTION_PADDING_DESC" />			
+				<field name="bottom_1_mod_margin" type="mb2mp" defmp="0,,0,,px" label="TMPL_MB2_SECTION_MOD_MARGIN" description="TMPL_MB2_SECTION_MOD_MARGIN_DESC" />			
+				<field name="bottom_1_color_sheme" type="list" default="0" label="TMPL_MB2_COLOR_SHEME" description="" >	
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<option value="light">TMPL_MB2_COLOR_SHEME_LIGHT</option>
+					<!-- <option value="dark-gray">TMPL_MB2_COLOR_SHEME_DARK_GRAY</option> -->
+					<option value="dark">TMPL_MB2_COLOR_SHEME_DARK</option>
+				</field>			
+				<field name="bottom_1_cls" type="groupedlist" default="0" label="TMPL_MB2_SECTION_CLS" description="" >	
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<group label="TMPL_MB2_SECTION_STYLE_PREDEFINED">
+						<option value="dark-section">TMPL_MB2_SECTION_DARK</option>
+					</group>
+					<group label="TMPL_MB2_SECTION_STYLE_CUSTOM">
+						<option value="custom-section1">TMPL_MB2_SECTION_CUSTOM_STYLE1</option>
+						<option value="custom-section2">TMPL_MB2_SECTION_CUSTOM_STYLE2</option>
+						<option value="custom-section3">TMPL_MB2_SECTION_CUSTOM_STYLE3</option>
+						<option value="custom-section4">TMPL_MB2_SECTION_CUSTOM_STYLE4</option>
+						<option value="custom-section5">TMPL_MB2_SECTION_CUSTOM_STYLE5</option>
+						<option value="custom-section6">TMPL_MB2_SECTION_CUSTOM_STYLE6</option>
+						<option value="custom-section7">TMPL_MB2_SECTION_CUSTOM_STYLE7</option>
+					</group>				
+				</field>		
+				<field name="bottom_1_ccss" type="mb2toggletext" label="" />
+			<field type="mb2enditem" label="" />		
+		
+		<field type="mb2enditem" label="" />	
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_SECTION_BOTTOM_2" desc="TMPL_MB2_SECTION_BOTTOM_2_DESC" />
+		
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_GRID" />
+				<field name="bottom_2_grid" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_GRID" description="TMPL_MB2_GRID_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="bottom_2_fwidth"  type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_SECTION_FULL_WIDTH" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>	
+				<field name="bottom_2_two_columns_layout" type="mb2radioimg" default="6-6" label="TMPL_MB2_TWO_COLUMNS" description="TMPL_MB2_LAYOUT_BOTTOM_2_TWO_DESC" >	
+					<option value="6-6">/layout/50-50.jpg</option>
+					<option value="9-3">/layout/75-25.jpg</option>	
+					<option value="3-9">/layout/25-75.jpg</option>
+					<option value="8-4">/layout/60-40.jpg</option>
+					<option value="4-8">/layout/40-60.jpg</option>
+				</field>	
+				<field name="bottom_2_three_columns_layout" type="mb2radioimg" default="4-4-4" label="TMPL_MB2_THREE_COLUMNS" description="TMPL_MB2_LAYOUT_BOTTOM_2_THREE_DESC" >	
+					<option value="4-4-4">/layout/33-33-33.jpg</option>
+					<option value="6-3-3">/layout/50-25-25.jpg</option>
+					<option value="3-3-6">/layout/25-25-50.jpg</option>
+					<option value="3-6-3">/layout/25-50-25.jpg</option>
+					<option value="5-3-4">/layout/45-25-30.jpg</option>
+					<option value="4-3-5">/layout/30-25-45.jpg</option>
+				</field>		
+				<field name="bottom_2_four_columns_layout" type="mb2radioimg" default="3-3-3-3" label="TMPL_MB2_FOUR_COLUMNS" description="TMPL_MB2_LAYOUT_BOTTOM_2_FOUR_DESC" >	
+					<option value="3-3-3-3">/layout/25-25-25-25.jpg</option>
+					<option value="6-2-2-2">/layout/50-15-15-15.jpg</option>
+					<option value="2-2-2-6">/layout/15-15-15-50.jpg</option>
+					<option value="2-6-2-2">/layout/15-50-15-15.jpg</option>
+					<option value="2-2-6-2">/layout/15-15-50-15.jpg</option>
+				</field>
+			<field type="mb2enditem" label="" />			
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_STYLE" />			
+				<field name="bottom_2_vertical_align" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_VERTICAL_ALIGN" description="TMPL_MB2_VERTICAL_ALIGN_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="bottom_2_padding" type="mb2mp" defmp="90,,90,,px" label="TMPL_MB2_SECTION_PADDING" description="TMPL_MB2_SECTION_PADDING_DESC" />			
+				<field name="bottom_2_mod_margin" type="mb2mp" defmp="0,,0,,px" label="TMPL_MB2_SECTION_MOD_MARGIN" description="TMPL_MB2_SECTION_MOD_MARGIN_DESC" />			
+				<field name="bottom_2_color_sheme" type="list" default="0" label="TMPL_MB2_COLOR_SHEME" description="" >	
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<option value="light">TMPL_MB2_COLOR_SHEME_LIGHT</option>
+					<!-- <option value="dark-gray">TMPL_MB2_COLOR_SHEME_DARK_GRAY</option> -->
+					<option value="dark">TMPL_MB2_COLOR_SHEME_DARK</option>
+				</field>			
+				<field name="bottom_2_cls" type="groupedlist" default="0" label="TMPL_MB2_SECTION_CLS" description="" >	
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<group label="TMPL_MB2_SECTION_STYLE_PREDEFINED">
+						<option value="dark-section">TMPL_MB2_SECTION_DARK</option>
+					</group>
+					<group label="TMPL_MB2_SECTION_STYLE_CUSTOM">
+						<option value="custom-section1">TMPL_MB2_SECTION_CUSTOM_STYLE1</option>
+						<option value="custom-section2">TMPL_MB2_SECTION_CUSTOM_STYLE2</option>
+						<option value="custom-section3">TMPL_MB2_SECTION_CUSTOM_STYLE3</option>
+						<option value="custom-section4">TMPL_MB2_SECTION_CUSTOM_STYLE4</option>
+						<option value="custom-section5">TMPL_MB2_SECTION_CUSTOM_STYLE5</option>
+						<option value="custom-section6">TMPL_MB2_SECTION_CUSTOM_STYLE6</option>
+						<option value="custom-section7">TMPL_MB2_SECTION_CUSTOM_STYLE7</option>
+					</group>				
+				</field>			
+				<field name="bottom_2_ccss" type="mb2toggletext" label="" />
+			<field type="mb2enditem" label="" />
+			
+		<field type="mb2enditem" label="" />
+		
+		
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_SECTION_BOTTOM_3" desc="TMPL_MB2_SECTION_BOTTOM_3_DESC" />
+		
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_GRID" />	
+				<field name="bottom_3_grid" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_GRID" description="TMPL_MB2_GRID_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>	
+				<field name="bottom_3_fwidth"  type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_SECTION_FULL_WIDTH" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="bottom_3_two_columns_layout" type="mb2radioimg" default="6-6" label="TMPL_MB2_TWO_COLUMNS" description="TMPL_MB2_LAYOUT_BOTTOM_3_TWO_DESC" >	
+					<option value="6-6">/layout/50-50.jpg</option>
+					<option value="9-3">/layout/75-25.jpg</option>	
+					<option value="3-9">/layout/25-75.jpg</option>
+					<option value="8-4">/layout/60-40.jpg</option>
+					<option value="4-8">/layout/40-60.jpg</option>
+				</field>	
+				<field name="bottom_3_three_columns_layout" type="mb2radioimg" default="4-4-4" label="TMPL_MB2_THREE_COLUMNS" description="TMPL_MB2_LAYOUT_BOTTOM_3_THREE_DESC" >	
+					<option value="4-4-4">/layout/33-33-33.jpg</option>
+					<option value="6-3-3">/layout/50-25-25.jpg</option>
+					<option value="3-3-6">/layout/25-25-50.jpg</option>
+					<option value="3-6-3">/layout/25-50-25.jpg</option>
+					<option value="5-3-4">/layout/45-25-30.jpg</option>
+					<option value="4-3-5">/layout/30-25-45.jpg</option>
+				</field>		
+				<field name="bottom_3_four_columns_layout" type="mb2radioimg" default="3-3-3-3" label="TMPL_MB2_FOUR_COLUMNS" description="TMPL_MB2_LAYOUT_BOTTOM_3_FOUR_DESC" >	
+					<option value="3-3-3-3">/layout/25-25-25-25.jpg</option>
+					<option value="6-2-2-2">/layout/50-15-15-15.jpg</option>
+					<option value="2-2-2-6">/layout/15-15-15-50.jpg</option>
+					<option value="2-6-2-2">/layout/15-50-15-15.jpg</option>
+					<option value="2-2-6-2">/layout/15-15-50-15.jpg</option>
+				</field>
+			<field type="mb2enditem" label="" />			
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_STYLE" />				
+				<field name="bottom_3_vertical_align" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_VERTICAL_ALIGN" description="TMPL_MB2_VERTICAL_ALIGN_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="bottom_3_padding" type="mb2mp" defmp="90,,90,,px" label="TMPL_MB2_SECTION_PADDING" description="TMPL_MB2_SECTION_PADDING_DESC" />			
+				<field name="bottom_3_mod_margin" type="mb2mp" defmp="0,,0,,px" label="TMPL_MB2_SECTION_MOD_MARGIN" description="TMPL_MB2_SECTION_MOD_MARGIN_DESC" />			
+				<field name="bottom_3_color_sheme" type="list" default="0" label="TMPL_MB2_COLOR_SHEME" description="" >	
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<option value="light">TMPL_MB2_COLOR_SHEME_LIGHT</option>
+					<!-- <option value="dark-gray">TMPL_MB2_COLOR_SHEME_DARK_GRAY</option> -->
+					<option value="dark">TMPL_MB2_COLOR_SHEME_DARK</option>
+				</field>			
+				<field name="bottom_3_cls" type="groupedlist" default="dark-section" label="TMPL_MB2_SECTION_CLS" description="" >	
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<group label="TMPL_MB2_SECTION_STYLE_PREDEFINED">
+						<option value="dark-section">TMPL_MB2_SECTION_DARK</option>
+					</group>
+					<group label="TMPL_MB2_SECTION_STYLE_CUSTOM">
+						<option value="custom-section1">TMPL_MB2_SECTION_CUSTOM_STYLE1</option>
+						<option value="custom-section2">TMPL_MB2_SECTION_CUSTOM_STYLE2</option>
+						<option value="custom-section3">TMPL_MB2_SECTION_CUSTOM_STYLE3</option>
+						<option value="custom-section4">TMPL_MB2_SECTION_CUSTOM_STYLE4</option>
+						<option value="custom-section5">TMPL_MB2_SECTION_CUSTOM_STYLE5</option>
+						<option value="custom-section6">TMPL_MB2_SECTION_CUSTOM_STYLE6</option>
+						<option value="custom-section7">TMPL_MB2_SECTION_CUSTOM_STYLE7</option>
+					</group>				
+				</field>			
+				<field name="bottom_3_ccss" type="mb2toggletext" label="" />
+			<field type="mb2enditem" label="" />
+			
+		<field type="mb2enditem" label="" />
+		
+					
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_FOOTER"  desc="TMPL_MB2_HEADING_FOOTER_DESC" />		
+			
+			<field name="footer" type="radio" class="btn-group btn-group-yesno" default="1" label="TMPL_MB2_FOOTER_ON" description="" >	
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>		
+			<field name="mb2_custom_footer_content" type="textarea" default="" label="TMPL_MB2_FOOTER_CONTENT" description="TMPL_MB2_FOOTER_CONTENT_DESC" filter="raw"/>			
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_GRID" />			
+				<field name="footer_grid" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_GRID" description="TMPL_MB2_GRID_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>	
+				<field name="footer_fwidth"  type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_SECTION_FULL_WIDTH" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>		
+				<field name="footer_two_columns_layout" type="mb2radioimg" default="f-9" label="TMPL_MB2_TWO_COLUMNS" description="" >
+					<option value="f-9">/layout/footer-9.jpg</option>
+					<option value="9-f">/layout/9-footer.jpg</option>	
+					<option value="f-8">/layout/footer-8.jpg</option>
+					<option value="8-f">/layout/8-footer.jpg</option>		
+					<option value="f-10">/layout/footer-10.jpg</option>
+					<option value="10-f">/layout/10-footer.jpg</option>
+				</field>		
+				<field name="footer_three_columns_layout" type="mb2radioimg" default="f-5-5" label="TMPL_MB2_THREE_COLUMNS" description="" >	
+					<option value="f-5-5">/layout/footer-5-5.jpg</option>
+					<option value="5-5-f">/layout/5-5-footer.jpg</option>
+					<option value="5-f-5">/layout/5-footer-5.jpg</option>
+					<option value="f-4-4">/layout/footer-4-4.jpg</option>
+					<option value="4-4-f">/layout/4-4-footer.jpg</option>
+					<option value="4-f-4">/layout/4-footer-4.jpg</option>
+					<option value="f-5-4">/layout/footer-5-4.jpg</option>
+					<option value="4-5-f">/layout/4-5-footer.jpg</option>
+					<option value="4-f-5">/layout/4-footer-5.jpg</option>
+					<option value="5-f-4">/layout/5-footer-4.jpg</option>
+				</field>			
+				<field name="footer_four_columns_layout" type="mb2radioimg" default="f-4-3-3" label="TMPL_MB2_FOUR_COLUMNS" description="" >	
+					<option value="f-4-3-3">/layout/footer-4-3-3.jpg</option>
+					<option value="3-3-4-f">/layout/3-3-4-footer.jpg</option>
+					<option value="f-3-3-3">/layout/footer-3-3-3.jpg</option>
+					<option value="3-3-3-f">/layout/3-3-3-footer.jpg</option>
+					<option value="f-3-3-2">/layout/footer-3-3-2.jpg</option>
+					<option value="2-3-3-f">/layout/2-3-3-footer.jpg</option>
+				</field>
+			<field type="mb2enditem" label="" />			
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_STYLE" />			
+				<field name="footer_vertical_align" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_VERTICAL_ALIGN" description="TMPL_MB2_VERTICAL_ALIGN_DESC" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="footer_padding" type="mb2mp" defmp="20,,20,,px" label="TMPL_MB2_SECTION_PADDING" description="TMPL_MB2_SECTION_PADDING_DESC" />
+				<field name="footer_mod_margin" type="mb2mp" defmp="0,,0,,px" label="TMPL_MB2_SECTION_MOD_MARGIN" description="TMPL_MB2_SECTION_MOD_MARGIN_DESC" />				
+				<field name="footer_color_sheme" type="list" default="0" label="TMPL_MB2_COLOR_SHEME" description="" >	
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<option value="light">TMPL_MB2_COLOR_SHEME_LIGHT</option>
+					<!-- <option value="dark-gray">TMPL_MB2_COLOR_SHEME_DARK_GRAY</option> -->
+					<option value="dark">TMPL_MB2_COLOR_SHEME_DARK</option>
+				</field>		
+				<field name="footer_cls" type="groupedlist" default="dark-section" label="TMPL_MB2_SECTION_CLS" description="" >	
+					<option value="0">TMPL_MB2_NO_SELECTED</option>
+					<group label="TMPL_MB2_SECTION_STYLE_PREDEFINED">
+						<option value="dark-section">TMPL_MB2_SECTION_DARK</option>
+					</group>
+					<group label="TMPL_MB2_SECTION_STYLE_CUSTOM">
+						<option value="custom-section1">TMPL_MB2_SECTION_CUSTOM_STYLE1</option>
+						<option value="custom-section2">TMPL_MB2_SECTION_CUSTOM_STYLE2</option>
+						<option value="custom-section3">TMPL_MB2_SECTION_CUSTOM_STYLE3</option>
+						<option value="custom-section4">TMPL_MB2_SECTION_CUSTOM_STYLE4</option>
+						<option value="custom-section5">TMPL_MB2_SECTION_CUSTOM_STYLE5</option>
+						<option value="custom-section6">TMPL_MB2_SECTION_CUSTOM_STYLE6</option>
+						<option value="custom-section7">TMPL_MB2_SECTION_CUSTOM_STYLE7</option>
+					</group>				
+				</field>		
+				<field name="footer_ccss" type="mb2toggletext" label="" />
+			<field type="mb2enditem" label="" />	
+			
+		<field type="mb2enditem" label="" />		
+					
+	</fieldset>			
+		
+	<fieldset name="style_settings" label="TMPL_MB2_STYLE_SETTINGS">	
+	
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_PREDEFINED_STYLES" />
+						
+			<field name="predefined_style" type="mb2prestyles" default="10" label="" />
+		
+		<field type="mb2enditem" label="" />
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_ACCENT_COLORS" />
+			
+			<field name="accent_color1" type="mb2color" default="#f0bc22" label="TMPL_MB2_ACCENT_COLOR1" description="" />	
+			<field name="accent_color2" type="mb2color" default="#303031" label="TMPL_MB2_ACCENT_COLOR2" description="" />
+			<field name="border_color" type="mb2color" default="#e5e5e5" label="TMPL_MB2_BORDER_COLOR" description="" />
+			
+	
+		<field type="mb2enditem" label="" />
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_TEXT_COLORS" />
+		
+			
+			<field name="text_color" type="mb2color" default="#666666" label="TMPL_MB2_TEXT_COLOR" description="" />			
+			<field name="links_color" type="mb2color" default="#f0bc22" label="TMPL_MB2_LINKS_COLOR" description="" />
+			<field name="links_h_color" type="mb2color" default="#303031" label="TMPL_MB2_LINKS_HOVER_COLOR" description="" />
+			<field name="headings_color" type="mb2color" default="#000000" label="TMPL_MB2_HEADINGS_COLOR" description="" />
+	
+	
+	
+		<field type="mb2enditem" label="" />
+	
+		<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_BODY" />
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_BG" />
+				<field name="bd_bg_color" type="mb2color" default="" label="TMPL_MB2_BG_COLOR" description=""  />
+				
+				<field name="bd_bg_image" type="media" default="" label="TMPL_MB2_CUSTOM_BG_IMAGE" description=""  />
+				<field name="bd_bg_repeat" type="list" default="no-repeat" label="TMPL_MB2_BG_REPEAT" description="" >	
+					<option value="repeat">TMPL_MB2_REPEAT</option>
+					<option value="repeat-x">TMPL_MB2_REPEAT_X</option>
+					<option value="repeat-y">TMPL_MB2_REPEAT_Y</option>
+					<option value="no-repeat">TMPL_MB2_NO_REPEAT</option>
+				</field>
+				<field name="bd_bg_position" type="list" default="left top" label="TMPL_MB2_BG_POSITION" description="" >	
+					<option value="left top">TMPL_MB2_LEFT_TOP</option>
+					<option value="left bottom">TMPL_MB2_LEFT_BOTTOM</option>
+					<option value="left center">TMPL_MB2_LEFT_CENTER</option>
+					<option value="right top">TMPL_MB2_RIGHT_TOP</option>
+					<option value="right bottom">TMPL_MB2_RIGHT_BOTTOM</option>
+					<option value="right center">TMPL_MB2_RIGHT_CENTER</option>
+					<option value="center top">TMPL_MB2_CENTER_TOP</option>
+					<option value="center bottom">TMPL_MB2_CENTER_BOTTOM</option>
+					<option value="center center">TMPL_MB2_CENTER</option>
+				</field>
+			<field type="mb2enditem" label="" />
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_BGSLIDER" />			
+				<field name="page_cerousel_dir" type="text" default="" label="TMPL_MB2_CAROUSEL_DIR" description=""  />			
+				<field name="page_cerousel_duration" type="number" min="100" default="5000" label="TMPL_MB2_CAROUSEL_DURATION" description=""  />
+				<field name="page_cerousel_fade" type="number" min="100" default="1000" label="TMPL_MB2_CAROUSEL_FADE" description=""  />
+			<field type="mb2enditem" label="" />
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_VIDEOBG" />			
+				<field name="page_videoid" type="text" default="" label="TMPL_MB2_YT_VIDOID" description=""  />
+				<field name="page_videoquality" type="list" default="left top" label="TMPL_MB2_YT_VIDOQUALITY" description="" >	
+					<option value="default">TMPL_MB2_DEFAULT_OPT</option>
+					<option value="small">TMPL_MB2_SMALL_OPT</option>
+					<option value="medium">TMPL_MB2_MEDIUM_OPT</option>
+					<option value="large">TMPL_MB2_LARGE_OPT</option>
+					<option value="hd720">HD 720</option>
+					<option value="hd1080">HD 1080</option>
+					<option value="highres">TMPL_MB2_HIGHRES_OPT</option>
+				</field>
+				<field name="page_videoloop" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_VIDEOLOOP" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="page_videoautoplay" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_VIDEOAUTOPLAY" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="page_videostoponblur" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_VIDEOSTOPONBLUR" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="page_videobg" type="mb2color" default="" label="TMPL_MB2_YT_VIDOOVERLAYBG" description=""  />
+			<field type="mb2enditem" label="" />
+			
+		<field type="mb2enditem" label="" />	
+	
+			
+	
+		<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_CUSTOM_SECTION1" />	
+		
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_COLOR" />			
+				<field name="custom_section1_color" type="mb2color" default="" label="TMPL_MB2_TEXT_COLOR" description=""  />
+				<field name="custom_section1_h_color" type="mb2color" default="" label="TMPL_MB2_HEADINGS_COLOR" description=""  />
+				<field name="custom_section1_l_color" type="mb2color" default="" label="TMPL_MB2_LINKS_COLOR" description=""  />
+				<field name="custom_section1_lh_color" type="mb2color" default="" label="TMPL_MB2_LINKS_HOVER_COLOR" description=""  />
+			<field type="mb2enditem" label="" />		
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_BG" />			
+				<field name="custom_section1_bg_color" type="mb2color" default="" label="TMPL_MB2_BG_COLOR" description=""  />		
+				<field name="custom_section1_bg_image" type="media" default="" label="TMPL_MB2_CUSTOM_BG_IMAGE" description=""  />
+				<field name="custom_section1_bg_repeat" type="list" default="no-repeat" label="TMPL_MB2_BG_REPEAT" description="" >	
+					<option value="repeat">TMPL_MB2_REPEAT</option>
+					<option value="repeat-x">TMPL_MB2_REPEAT_X</option>
+					<option value="repeat-y">TMPL_MB2_REPEAT_Y</option>
+					<option value="no-repeat">TMPL_MB2_NO_REPEAT</option>
+				</field>
+				<field name="custom_section1_bg_position" type="list" default="left top" label="TMPL_MB2_BG_POSITION" description="" >	
+					<option value="left top">TMPL_MB2_LEFT_TOP</option>
+					<option value="left bottom">TMPL_MB2_LEFT_BOTTOM</option>
+					<option value="left center">TMPL_MB2_LEFT_CENTER</option>
+					<option value="right top">TMPL_MB2_RIGHT_TOP</option>
+					<option value="right bottom">TMPL_MB2_RIGHT_BOTTOM</option>
+					<option value="right center">TMPL_MB2_RIGHT_CENTER</option>
+					<option value="center top">TMPL_MB2_CENTER_TOP</option>
+					<option value="center bottom">TMPL_MB2_CENTER_BOTTOM</option>
+					<option value="center center">TMPL_MB2_CENTER</option>
+				</field>
+				<field name="custom_section1_attachment" type="list" default="scroll" label="TMPL_MB2_BG_ATTACHMENT" description="" >	
+					<option value="scroll">TMPL_MB2_SCROLL</option>
+					<option value="fixed">TMPL_MB2_FIXED</option>
+				</field>
+				<field name="custom_section1_bg_scale" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_SCALE_BG" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			<field type="mb2enditem" label="" />			
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_PARALLAX" />			
+				<field name="custom_section1_parallax" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_PARALLAX" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>	
+				<field name="custom_section1_parallax_speed" type="text" default="0.25" label="TMPL_MB2_PARALLAX_SPEED" description=""  />
+			<field type="mb2enditem" label="" />				
+		
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_BGSLIDER" />			
+				<field name="custom_section1_cerousel_dir" type="text" default="" label="TMPL_MB2_CAROUSEL_DIR" description=""  />			
+				<field name="custom_section1_cerousel_duration" type="number" min="100" default="5000" label="TMPL_MB2_CAROUSEL_DURATION" description=""  />
+				<field name="custom_section1_cerousel_fade" type="number" min="100" default="1000" label="TMPL_MB2_CAROUSEL_FADE" description=""  />
+			<field type="mb2enditem" label="" />
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_VIDEOBG" />			
+				<field name="custom_section1_videoid" type="text" default="" label="TMPL_MB2_YT_VIDOID" description=""  />
+				<field name="custom_section1_videoquality" type="list" default="left top" label="TMPL_MB2_YT_VIDOQUALITY" description="" >	
+					<option value="default">TMPL_MB2_DEFAULT_OPT</option>
+					<option value="small">TMPL_MB2_SMALL_OPT</option>
+					<option value="medium">TMPL_MB2_MEDIUM_OPT</option>
+					<option value="large">TMPL_MB2_LARGE_OPT</option>
+					<option value="hd720">HD 720</option>
+					<option value="hd1080">HD 1080</option>
+					<option value="highres">TMPL_MB2_HIGHRES_OPT</option>
+				</field>
+				<field name="custom_section1_videoloop" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_VIDEOLOOP" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="custom_section1_videoautoplay" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_VIDEOAUTOPLAY" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="custom_section1_videostoponblur" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_VIDEOSTOPONBLUR" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="custom_section1_videobg" type="mb2color" default="" label="TMPL_MB2_YT_VIDOOVERLAYBG" description=""  />
+			<field type="mb2enditem" label="" />
+			
+			
+			
+		
+		<field type="mb2enditem" label="" />		
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_CUSTOM_SECTION2" />	
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_COLOR" />			
+				<field name="custom_section2_color" type="mb2color" default="" label="TMPL_MB2_TEXT_COLOR" description=""  />
+				<field name="custom_section2_h_color" type="mb2color" default="" label="TMPL_MB2_HEADINGS_COLOR" description=""  />
+				<field name="custom_section2_l_color" type="mb2color" default="" label="TMPL_MB2_LINKS_COLOR" description=""  />
+				<field name="custom_section2_lh_color" type="mb2color" default="" label="TMPL_MB2_LINKS_HOVER_COLOR" description=""  />
+			<field type="mb2enditem" label="" />		
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_BG" />			
+				<field name="custom_section2_bg_color" type="mb2color" default="" label="TMPL_MB2_BG_COLOR" description=""  />		
+				<field name="custom_section2_bg_image" type="media" default="" label="TMPL_MB2_CUSTOM_BG_IMAGE" description=""  />
+				<field name="custom_section2_bg_repeat" type="list" default="no-repeat" label="TMPL_MB2_BG_REPEAT" description="" >	
+					<option value="repeat">TMPL_MB2_REPEAT</option>
+					<option value="repeat-x">TMPL_MB2_REPEAT_X</option>
+					<option value="repeat-y">TMPL_MB2_REPEAT_Y</option>
+					<option value="no-repeat">TMPL_MB2_NO_REPEAT</option>
+				</field>
+				<field name="custom_section2_bg_position" type="list" default="left top" label="TMPL_MB2_BG_POSITION" description="" >	
+					<option value="left top">TMPL_MB2_LEFT_TOP</option>
+					<option value="left bottom">TMPL_MB2_LEFT_BOTTOM</option>
+					<option value="left center">TMPL_MB2_LEFT_CENTER</option>
+					<option value="right top">TMPL_MB2_RIGHT_TOP</option>
+					<option value="right bottom">TMPL_MB2_RIGHT_BOTTOM</option>
+					<option value="right center">TMPL_MB2_RIGHT_CENTER</option>
+					<option value="center top">TMPL_MB2_CENTER_TOP</option>
+					<option value="center bottom">TMPL_MB2_CENTER_BOTTOM</option>
+					<option value="center center">TMPL_MB2_CENTER</option>
+				</field>
+				<field name="custom_section2_attachment" type="list" default="scroll" label="TMPL_MB2_BG_ATTACHMENT" description="" >	
+					<option value="scroll">TMPL_MB2_SCROLL</option>
+					<option value="fixed">TMPL_MB2_FIXED</option>
+				</field>
+				<field name="custom_section2_bg_scale" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_SCALE_BG" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			<field type="mb2enditem" label="" />			
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_PARALLAX" />			
+				<field name="custom_section2_parallax" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_PARALLAX" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>	
+				<field name="custom_section2_parallax_speed" type="text" default="0.25" label="TMPL_MB2_PARALLAX_SPEED" description=""  />
+			<field type="mb2enditem" label="" />				
+		
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_BGSLIDER" />			
+				<field name="custom_section2_cerousel_dir" type="text" default="" label="TMPL_MB2_CAROUSEL_DIR" description=""  />			
+				<field name="custom_section2_cerousel_duration" type="number" min="100" default="5000" label="TMPL_MB2_CAROUSEL_DURATION" description=""  />
+				<field name="custom_section2_cerousel_fade" type="number" min="100" default="1000" label="TMPL_MB2_CAROUSEL_FADE" description=""  />
+			<field type="mb2enditem" label="" />
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_VIDEOBG" />			
+				<field name="custom_section2_videoid" type="text" default="" label="TMPL_MB2_YT_VIDOID" description=""  />
+				<field name="custom_section2_videoquality" type="list" default="left top" label="TMPL_MB2_YT_VIDOQUALITY" description="" >	
+					<option value="default">TMPL_MB2_DEFAULT_OPT</option>
+					<option value="small">TMPL_MB2_SMALL_OPT</option>
+					<option value="medium">TMPL_MB2_MEDIUM_OPT</option>
+					<option value="large">TMPL_MB2_LARGE_OPT</option>
+					<option value="hd720">HD 720</option>
+					<option value="hd1080">HD 1080</option>
+					<option value="highres">TMPL_MB2_HIGHRES_OPT</option>
+				</field>
+				<field name="custom_section2_videoloop" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_VIDEOLOOP" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="custom_section2_videoautoplay" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_VIDEOAUTOPLAY" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="custom_section2_videostoponblur" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_VIDEOSTOPONBLUR" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="custom_section2_videobg" type="mb2color" default="" label="TMPL_MB2_YT_VIDOOVERLAYBG" description=""  />
+			<field type="mb2enditem" label="" />
+					
+		
+		<field type="mb2enditem" label="" />	
+		
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_CUSTOM_SECTION3" />	
+		
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_COLOR" />			
+				<field name="custom_section3_color" type="mb2color" default="" label="TMPL_MB2_TEXT_COLOR" description=""  />
+				<field name="custom_section3_h_color" type="mb2color" default="" label="TMPL_MB2_HEADINGS_COLOR" description=""  />
+				<field name="custom_section3_l_color" type="mb2color" default="" label="TMPL_MB2_LINKS_COLOR" description=""  />
+				<field name="custom_section3_lh_color" type="mb2color" default="" label="TMPL_MB2_LINKS_HOVER_COLOR" description=""  />
+			<field type="mb2enditem" label="" />		
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_BG" />			
+				<field name="custom_section3_bg_color" type="mb2color" default="" label="TMPL_MB2_BG_COLOR" description=""  />		
+				<field name="custom_section3_bg_image" type="media" default="" label="TMPL_MB2_CUSTOM_BG_IMAGE" description=""  />
+				<field name="custom_section3_bg_repeat" type="list" default="no-repeat" label="TMPL_MB2_BG_REPEAT" description="" >	
+					<option value="repeat">TMPL_MB2_REPEAT</option>
+					<option value="repeat-x">TMPL_MB2_REPEAT_X</option>
+					<option value="repeat-y">TMPL_MB2_REPEAT_Y</option>
+					<option value="no-repeat">TMPL_MB2_NO_REPEAT</option>
+				</field>
+				<field name="custom_section3_bg_position" type="list" default="left top" label="TMPL_MB2_BG_POSITION" description="" >	
+					<option value="left top">TMPL_MB2_LEFT_TOP</option>
+					<option value="left bottom">TMPL_MB2_LEFT_BOTTOM</option>
+					<option value="left center">TMPL_MB2_LEFT_CENTER</option>
+					<option value="right top">TMPL_MB2_RIGHT_TOP</option>
+					<option value="right bottom">TMPL_MB2_RIGHT_BOTTOM</option>
+					<option value="right center">TMPL_MB2_RIGHT_CENTER</option>
+					<option value="center top">TMPL_MB2_CENTER_TOP</option>
+					<option value="center bottom">TMPL_MB2_CENTER_BOTTOM</option>
+					<option value="center center">TMPL_MB2_CENTER</option>
+				</field>
+				<field name="custom_section3_attachment" type="list" default="scroll" label="TMPL_MB2_BG_ATTACHMENT" description="" >	
+					<option value="scroll">TMPL_MB2_SCROLL</option>
+					<option value="fixed">TMPL_MB2_FIXED</option>
+				</field>
+				<field name="custom_section3_bg_scale" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_SCALE_BG" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			<field type="mb2enditem" label="" />			
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_PARALLAX" />			
+				<field name="custom_section3_parallax" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_PARALLAX" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>	
+				<field name="custom_section3_parallax_speed" type="text" default="0.25" label="TMPL_MB2_PARALLAX_SPEED" description=""  />
+			<field type="mb2enditem" label="" />				
+		
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_BGSLIDER" />			
+				<field name="custom_section3_cerousel_dir" type="text" default="" label="TMPL_MB2_CAROUSEL_DIR" description=""  />			
+				<field name="custom_section3_cerousel_duration" type="number" min="100" default="5000" label="TMPL_MB2_CAROUSEL_DURATION" description=""  />
+				<field name="custom_section3_cerousel_fade" type="number" min="100" default="1000" label="TMPL_MB2_CAROUSEL_FADE" description=""  />
+			<field type="mb2enditem" label="" />
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_VIDEOBG" />			
+				<field name="custom_section3_videoid" type="text" default="" label="TMPL_MB2_YT_VIDOID" description=""  />
+				<field name="custom_section3_videoquality" type="list" default="left top" label="TMPL_MB2_YT_VIDOQUALITY" description="" >	
+					<option value="default">TMPL_MB2_DEFAULT_OPT</option>
+					<option value="small">TMPL_MB2_SMALL_OPT</option>
+					<option value="medium">TMPL_MB2_MEDIUM_OPT</option>
+					<option value="large">TMPL_MB2_LARGE_OPT</option>
+					<option value="hd720">HD 720</option>
+					<option value="hd1080">HD 1080</option>
+					<option value="highres">TMPL_MB2_HIGHRES_OPT</option>
+				</field>
+				<field name="custom_section3_videoloop" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_VIDEOLOOP" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="custom_section3_videoautoplay" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_VIDEOAUTOPLAY" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="custom_section3_videostoponblur" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_VIDEOSTOPONBLUR" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="custom_section3_videobg" type="mb2color" default="" label="TMPL_MB2_YT_VIDOOVERLAYBG" description=""  />
+			<field type="mb2enditem" label="" />
+		
+		<field type="mb2enditem" label="" />
+		
+		
+		
+		
+			
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_CUSTOM_SECTION4" />	
+		
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_COLOR" />			
+				<field name="custom_section4_color" type="mb2color" default="" label="TMPL_MB2_TEXT_COLOR" description=""  />
+				<field name="custom_section4_h_color" type="mb2color" default="" label="TMPL_MB2_HEADINGS_COLOR" description=""  />
+				<field name="custom_section4_l_color" type="mb2color" default="" label="TMPL_MB2_LINKS_COLOR" description=""  />
+				<field name="custom_section4_lh_color" type="mb2color" default="" label="TMPL_MB2_LINKS_HOVER_COLOR" description=""  />
+			<field type="mb2enditem" label="" />		
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_BG" />			
+				<field name="custom_section4_bg_color" type="mb2color" default="" label="TMPL_MB2_BG_COLOR" description=""  />		
+				<field name="custom_section4_bg_image" type="media" default="" label="TMPL_MB2_CUSTOM_BG_IMAGE" description=""  />
+				<field name="custom_section4_bg_repeat" type="list" default="no-repeat" label="TMPL_MB2_BG_REPEAT" description="" >	
+					<option value="repeat">TMPL_MB2_REPEAT</option>
+					<option value="repeat-x">TMPL_MB2_REPEAT_X</option>
+					<option value="repeat-y">TMPL_MB2_REPEAT_Y</option>
+					<option value="no-repeat">TMPL_MB2_NO_REPEAT</option>
+				</field>
+				<field name="custom_section4_bg_position" type="list" default="left top" label="TMPL_MB2_BG_POSITION" description="" >	
+					<option value="left top">TMPL_MB2_LEFT_TOP</option>
+					<option value="left bottom">TMPL_MB2_LEFT_BOTTOM</option>
+					<option value="left center">TMPL_MB2_LEFT_CENTER</option>
+					<option value="right top">TMPL_MB2_RIGHT_TOP</option>
+					<option value="right bottom">TMPL_MB2_RIGHT_BOTTOM</option>
+					<option value="right center">TMPL_MB2_RIGHT_CENTER</option>
+					<option value="center top">TMPL_MB2_CENTER_TOP</option>
+					<option value="center bottom">TMPL_MB2_CENTER_BOTTOM</option>
+					<option value="center center">TMPL_MB2_CENTER</option>
+				</field>
+				<field name="custom_section4_attachment" type="list" default="scroll" label="TMPL_MB2_BG_ATTACHMENT" description="" >	
+					<option value="scroll">TMPL_MB2_SCROLL</option>
+					<option value="fixed">TMPL_MB2_FIXED</option>
+				</field>
+				<field name="custom_section4_bg_scale" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_SCALE_BG" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			<field type="mb2enditem" label="" />			
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_PARALLAX" />			
+				<field name="custom_section4_parallax" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_PARALLAX" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>	
+				<field name="custom_section4_parallax_speed" type="text" default="0.25" label="TMPL_MB2_PARALLAX_SPEED" description=""  />
+			<field type="mb2enditem" label="" />				
+		
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_BGSLIDER" />			
+				<field name="custom_section4_cerousel_dir" type="text" default="" label="TMPL_MB2_CAROUSEL_DIR" description=""  />			
+				<field name="custom_section4_cerousel_duration" type="number" min="100" default="5000" label="TMPL_MB2_CAROUSEL_DURATION" description=""  />
+				<field name="custom_section4_cerousel_fade" type="number" min="100" default="1000" label="TMPL_MB2_CAROUSEL_FADE" description=""  />
+			<field type="mb2enditem" label="" />
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_VIDEOBG" />			
+				<field name="custom_section4_videoid" type="text" default="" label="TMPL_MB2_YT_VIDOID" description=""  />
+				<field name="custom_section4_videoquality" type="list" default="left top" label="TMPL_MB2_YT_VIDOQUALITY" description="" >	
+					<option value="default">TMPL_MB2_DEFAULT_OPT</option>
+					<option value="small">TMPL_MB2_SMALL_OPT</option>
+					<option value="medium">TMPL_MB2_MEDIUM_OPT</option>
+					<option value="large">TMPL_MB2_LARGE_OPT</option>
+					<option value="hd720">HD 720</option>
+					<option value="hd1080">HD 1080</option>
+					<option value="highres">TMPL_MB2_HIGHRES_OPT</option>
+				</field>
+				<field name="custom_section4_videoloop" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_VIDEOLOOP" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="custom_section4_videoautoplay" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_VIDEOAUTOPLAY" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="custom_section4_videostoponblur" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_VIDEOSTOPONBLUR" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="custom_section4_videobg" type="mb2color" default="" label="TMPL_MB2_YT_VIDOOVERLAYBG" description=""  />
+			<field type="mb2enditem" label="" />
+		
+		<field type="mb2enditem" label="" />	
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_CUSTOM_SECTION5" />	
+		
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_COLOR" />			
+				<field name="custom_section5_color" type="mb2color" default="" label="TMPL_MB2_TEXT_COLOR" description=""  />
+				<field name="custom_section5_h_color" type="mb2color" default="" label="TMPL_MB2_HEADINGS_COLOR" description=""  />
+				<field name="custom_section5_l_color" type="mb2color" default="" label="TMPL_MB2_LINKS_COLOR" description=""  />
+				<field name="custom_section5_lh_color" type="mb2color" default="" label="TMPL_MB2_LINKS_HOVER_COLOR" description=""  />
+			<field type="mb2enditem" label="" />		
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_BG" />			
+				<field name="custom_section5_bg_color" type="mb2color" default="" label="TMPL_MB2_BG_COLOR" description=""  />		
+				<field name="custom_section5_bg_image" type="media" default="" label="TMPL_MB2_CUSTOM_BG_IMAGE" description=""  />
+				<field name="custom_section5_bg_repeat" type="list" default="no-repeat" label="TMPL_MB2_BG_REPEAT" description="" >	
+					<option value="repeat">TMPL_MB2_REPEAT</option>
+					<option value="repeat-x">TMPL_MB2_REPEAT_X</option>
+					<option value="repeat-y">TMPL_MB2_REPEAT_Y</option>
+					<option value="no-repeat">TMPL_MB2_NO_REPEAT</option>
+				</field>
+				<field name="custom_section5_bg_position" type="list" default="left top" label="TMPL_MB2_BG_POSITION" description="" >	
+					<option value="left top">TMPL_MB2_LEFT_TOP</option>
+					<option value="left bottom">TMPL_MB2_LEFT_BOTTOM</option>
+					<option value="left center">TMPL_MB2_LEFT_CENTER</option>
+					<option value="right top">TMPL_MB2_RIGHT_TOP</option>
+					<option value="right bottom">TMPL_MB2_RIGHT_BOTTOM</option>
+					<option value="right center">TMPL_MB2_RIGHT_CENTER</option>
+					<option value="center top">TMPL_MB2_CENTER_TOP</option>
+					<option value="center bottom">TMPL_MB2_CENTER_BOTTOM</option>
+					<option value="center center">TMPL_MB2_CENTER</option>
+				</field>
+				<field name="custom_section5_attachment" type="list" default="scroll" label="TMPL_MB2_BG_ATTACHMENT" description="" >	
+					<option value="scroll">TMPL_MB2_SCROLL</option>
+					<option value="fixed">TMPL_MB2_FIXED</option>
+				</field>
+				<field name="custom_section5_bg_scale" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_SCALE_BG" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			<field type="mb2enditem" label="" />			
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_PARALLAX" />			
+				<field name="custom_section5_parallax" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_PARALLAX" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>	
+				<field name="custom_section5_parallax_speed" type="text" default="0.25" label="TMPL_MB2_PARALLAX_SPEED" description=""  />
+			<field type="mb2enditem" label="" />				
+		
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_BGSLIDER" />			
+				<field name="custom_section5_cerousel_dir" type="text" default="" label="TMPL_MB2_CAROUSEL_DIR" description=""  />			
+				<field name="custom_section5_cerousel_duration" type="number" min="100" default="5000" label="TMPL_MB2_CAROUSEL_DURATION" description=""  />
+				<field name="custom_section5_cerousel_fade" type="number" min="100" default="1000" label="TMPL_MB2_CAROUSEL_FADE" description=""  />
+			<field type="mb2enditem" label="" />
+			
+			
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_VIDEOBG" />			
+				<field name="custom_section5_videoid" type="text" default="" label="TMPL_MB2_YT_VIDOID" description=""  />
+				<field name="custom_section5_videoquality" type="list" default="left top" label="TMPL_MB2_YT_VIDOQUALITY" description="" >	
+					<option value="default">TMPL_MB2_DEFAULT_OPT</option>
+					<option value="small">TMPL_MB2_SMALL_OPT</option>
+					<option value="medium">TMPL_MB2_MEDIUM_OPT</option>
+					<option value="large">TMPL_MB2_LARGE_OPT</option>
+					<option value="hd720">HD 720</option>
+					<option value="hd1080">HD 1080</option>
+					<option value="highres">TMPL_MB2_HIGHRES_OPT</option>
+				</field>
+				<field name="custom_section5_videoloop" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_VIDEOLOOP" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="custom_section5_videoautoplay" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_VIDEOAUTOPLAY" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="custom_section5_videostoponblur" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_VIDEOSTOPONBLUR" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="custom_section5_videobg" type="mb2color" default="" label="TMPL_MB2_YT_VIDOOVERLAYBG" description=""  />
+			<field type="mb2enditem" label="" />
+		
+		<field type="mb2enditem" label="" />	
+		
+			
+		
+			
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_CUSTOM_SECTION6" />	
+		
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_COLOR" />			
+				<field name="custom_section6_color" type="mb2color" default="" label="TMPL_MB2_TEXT_COLOR" description=""  />
+				<field name="custom_section6_h_color" type="mb2color" default="" label="TMPL_MB2_HEADINGS_COLOR" description=""  />
+				<field name="custom_section6_l_color" type="mb2color" default="" label="TMPL_MB2_LINKS_COLOR" description=""  />
+				<field name="custom_section6_lh_color" type="mb2color" default="" label="TMPL_MB2_LINKS_HOVER_COLOR" description=""  />
+			<field type="mb2enditem" label="" />		
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_BG" />			
+				<field name="custom_section6_bg_color" type="mb2color" default="" label="TMPL_MB2_BG_COLOR" description=""  />		
+				<field name="custom_section6_bg_image" type="media" default="" label="TMPL_MB2_CUSTOM_BG_IMAGE" description=""  />
+				<field name="custom_section6_bg_repeat" type="list" default="no-repeat" label="TMPL_MB2_BG_REPEAT" description="" >	
+					<option value="repeat">TMPL_MB2_REPEAT</option>
+					<option value="repeat-x">TMPL_MB2_REPEAT_X</option>
+					<option value="repeat-y">TMPL_MB2_REPEAT_Y</option>
+					<option value="no-repeat">TMPL_MB2_NO_REPEAT</option>
+				</field>
+				<field name="custom_section6_bg_position" type="list" default="left top" label="TMPL_MB2_BG_POSITION" description="" >	
+					<option value="left top">TMPL_MB2_LEFT_TOP</option>
+					<option value="left bottom">TMPL_MB2_LEFT_BOTTOM</option>
+					<option value="left center">TMPL_MB2_LEFT_CENTER</option>
+					<option value="right top">TMPL_MB2_RIGHT_TOP</option>
+					<option value="right bottom">TMPL_MB2_RIGHT_BOTTOM</option>
+					<option value="right center">TMPL_MB2_RIGHT_CENTER</option>
+					<option value="center top">TMPL_MB2_CENTER_TOP</option>
+					<option value="center bottom">TMPL_MB2_CENTER_BOTTOM</option>
+					<option value="center center">TMPL_MB2_CENTER</option>
+				</field>
+				<field name="custom_section6_attachment" type="list" default="scroll" label="TMPL_MB2_BG_ATTACHMENT" description="" >	
+					<option value="scroll">TMPL_MB2_SCROLL</option>
+					<option value="fixed">TMPL_MB2_FIXED</option>
+				</field>
+				<field name="custom_section6_bg_scale" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_SCALE_BG" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			<field type="mb2enditem" label="" />			
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_PARALLAX" />			
+				<field name="custom_section6_parallax" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_PARALLAX" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>	
+				<field name="custom_section6_parallax_speed" type="text" default="0.25" label="TMPL_MB2_PARALLAX_SPEED" description=""  />
+			<field type="mb2enditem" label="" />				
+		
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_BGSLIDER" />			
+				<field name="custom_section6_cerousel_dir" type="text" default="" label="TMPL_MB2_CAROUSEL_DIR" description=""  />			
+				<field name="custom_section6_cerousel_duration" type="number" min="100" default="5000" label="TMPL_MB2_CAROUSEL_DURATION" description=""  />
+				<field name="custom_section6_cerousel_fade" type="number" min="100" default="1000" label="TMPL_MB2_CAROUSEL_FADE" description=""  />
+			<field type="mb2enditem" label="" />
+			
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_VIDEOBG" />			
+				<field name="custom_section6_videoid" type="text" default="" label="TMPL_MB2_YT_VIDOID" description=""  />
+				<field name="custom_section6_videoquality" type="list" default="left top" label="TMPL_MB2_YT_VIDOQUALITY" description="" >	
+					<option value="default">TMPL_MB2_DEFAULT_OPT</option>
+					<option value="small">TMPL_MB2_SMALL_OPT</option>
+					<option value="medium">TMPL_MB2_MEDIUM_OPT</option>
+					<option value="large">TMPL_MB2_LARGE_OPT</option>
+					<option value="hd720">HD 720</option>
+					<option value="hd1080">HD 1080</option>
+					<option value="highres">TMPL_MB2_HIGHRES_OPT</option>
+				</field>
+				<field name="custom_section6_videoloop" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_VIDEOLOOP" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="custom_section6_videoautoplay" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_VIDEOAUTOPLAY" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="custom_section6_videostoponblur" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_VIDEOSTOPONBLUR" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="custom_section6_videobg" type="mb2color" default="" label="TMPL_MB2_YT_VIDOOVERLAYBG" description=""  />
+			<field type="mb2enditem" label="" />
+		
+		<field type="mb2enditem" label="" />
+		
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_CUSTOM_SECTION7" />	
+		
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_COLOR" />			
+				<field name="custom_section7_color" type="mb2color" default="" label="TMPL_MB2_TEXT_COLOR" description=""  />
+				<field name="custom_section7_h_color" type="mb2color" default="" label="TMPL_MB2_HEADINGS_COLOR" description=""  />
+				<field name="custom_section7_l_color" type="mb2color" default="" label="TMPL_MB2_LINKS_COLOR" description=""  />
+				<field name="custom_section7_lh_color" type="mb2color" default="" label="TMPL_MB2_LINKS_HOVER_COLOR" description=""  />
+			<field type="mb2enditem" label="" />		
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_BG" />			
+				<field name="custom_section7_bg_color" type="mb2color" default="" label="TMPL_MB2_BG_COLOR" description=""  />		
+				<field name="custom_section7_bg_image" type="media" default="" label="TMPL_MB2_CUSTOM_BG_IMAGE" description=""  />
+				<field name="custom_section7_bg_repeat" type="list" default="no-repeat" label="TMPL_MB2_BG_REPEAT" description="" >	
+					<option value="repeat">TMPL_MB2_REPEAT</option>
+					<option value="repeat-x">TMPL_MB2_REPEAT_X</option>
+					<option value="repeat-y">TMPL_MB2_REPEAT_Y</option>
+					<option value="no-repeat">TMPL_MB2_NO_REPEAT</option>
+				</field>
+				<field name="custom_section7_bg_position" type="list" default="left top" label="TMPL_MB2_BG_POSITION" description="" >	
+					<option value="left top">TMPL_MB2_LEFT_TOP</option>
+					<option value="left bottom">TMPL_MB2_LEFT_BOTTOM</option>
+					<option value="left center">TMPL_MB2_LEFT_CENTER</option>
+					<option value="right top">TMPL_MB2_RIGHT_TOP</option>
+					<option value="right bottom">TMPL_MB2_RIGHT_BOTTOM</option>
+					<option value="right center">TMPL_MB2_RIGHT_CENTER</option>
+					<option value="center top">TMPL_MB2_CENTER_TOP</option>
+					<option value="center bottom">TMPL_MB2_CENTER_BOTTOM</option>
+					<option value="center center">TMPL_MB2_CENTER</option>
+				</field>
+				<field name="custom_section7_attachment" type="list" default="scroll" label="TMPL_MB2_BG_ATTACHMENT" description="" >	
+					<option value="scroll">TMPL_MB2_SCROLL</option>
+					<option value="fixed">TMPL_MB2_FIXED</option>
+				</field>
+				<field name="custom_section7_bg_scale" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_SCALE_BG" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			<field type="mb2enditem" label="" />			
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_PARALLAX" />			
+				<field name="custom_section7_parallax" type="radio" default="0" class="btn-group btn-group-yesno" label="TMPL_MB2_PARALLAX" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>	
+				<field name="custom_section7_parallax_speed" type="text" default="0.25" label="TMPL_MB2_PARALLAX_SPEED" description=""  />
+			<field type="mb2enditem" label="" />				
+		
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_BGSLIDER" />			
+				<field name="custom_section7_cerousel_dir" type="text" default="" label="TMPL_MB2_CAROUSEL_DIR" description=""  />			
+				<field name="custom_section7_cerousel_duration" type="number" min="100" default="5000" label="TMPL_MB2_CAROUSEL_DURATION" description=""  />
+				<field name="custom_section7_cerousel_fade" type="number" min="100" default="1000" label="TMPL_MB2_CAROUSEL_FADE" description=""  />
+			<field type="mb2enditem" label="" />
+			
+			<field type="mb2startitem" label="" title="TMPL_MB2_HEADING_VIDEOBG" />			
+				<field name="custom_section7_videoid" type="text" default="" label="TMPL_MB2_YT_VIDOID" description=""  />
+				<field name="custom_section7_videoquality" type="list" default="left top" label="TMPL_MB2_YT_VIDOQUALITY" description="" >	
+					<option value="default">TMPL_MB2_DEFAULT_OPT</option>
+					<option value="small">TMPL_MB2_SMALL_OPT</option>
+					<option value="medium">TMPL_MB2_MEDIUM_OPT</option>
+					<option value="large">TMPL_MB2_LARGE_OPT</option>
+					<option value="hd720">HD 720</option>
+					<option value="hd1080">HD 1080</option>
+					<option value="highres">TMPL_MB2_HIGHRES_OPT</option>
+				</field>
+				<field name="custom_section7_videoloop" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_VIDEOLOOP" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="custom_section7_videoautoplay" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_VIDEOAUTOPLAY" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="custom_section7_videostoponblur" type="radio" default="1" class="btn-group btn-group-yesno" label="TMPL_MB2_VIDEOSTOPONBLUR" description="" >	
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="custom_section7_videobg" type="mb2color" default="" label="TMPL_MB2_YT_VIDOOVERLAYBG" description=""  />
+			<field type="mb2enditem" label="" />
+		
+		<field type="mb2enditem" label="" />
+		
+		
+				
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_CUSTOM_CSS" />
+		
+			<field name="custom_css" type="textarea" default="" cols="" rows="10" label="TMPL_MB2_CUSTOM_CSS" description="TMPL_MB2_CUSTOM_CSS_DESC" filter="string" class="my_textarea" />
+			
+		<field type="mb2enditem" label="" />	
+					
+	</fieldset>
+
+	<fieldset name="typography_settings" label="TMPL_MB2_TYPOGRAPHY_SETTINGS" >
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_GENERAL_FONT" />	
+		
+			<field name="general_font_type" type="groupedlist" default="google1" label="TMPL_MB2_FONT_TYPE" description="" >	
+				<group label="TMPL_MB2_FONT_TYPE_NORMAL">
+					<option value="normal1">TMPL_MB2_FONT_TYPE_NORMAL1</option>
+					<option value="normal2">TMPL_MB2_FONT_TYPE_NORMAL2</option>
+					<option value="normal3">TMPL_MB2_FONT_TYPE_NORMAL3</option>
+				</group>
+				<group label="TMPL_MB2_FONT_TYPE_GOOGLE">
+					<option value="google1">TMPL_MB2_FONT_TYPE_GOOGLE1</option>
+					<option value="google2">TMPL_MB2_FONT_TYPE_GOOGLE2</option>
+					<option value="google3">TMPL_MB2_FONT_TYPE_GOOGLE3</option>
+				</group>
+				<group label="TMPL_MB2_FONT_TYPE_CUSTOM">
+					<option value="custom1">TMPL_MB2_FONT_TYPE_CUSTOM1</option>
+					<option value="custom2">TMPL_MB2_FONT_TYPE_CUSTOM2</option>
+					<option value="custom3">TMPL_MB2_FONT_TYPE_CUSTOM3</option>
+				</group>
+				
+			</field>
+			
+			<field type="spacer" hr="true" />	
+			
+			<field name="general_font_size" type="number" min="6" default="14" label="TMPL_MB2_FONT_SIZE" description=""  />	
+			
+			<field name="general_font_weight" type="list" default="300" label="TMPL_MB2_FONT_WEIGHT" description="" >
+				<option value="normal">TMPL_MB2_NORMAL</option>
+				<option value="bold">TMPL_MB2_BOLD</option>
+				<option value="bolder">TMPL_MB2_BOLDER</option>
+				<option value="lighter">TMPL_MB2_LIGHTER</option>
+				<option value="100">100</option>
+				<option value="200">200</option>
+				<option value="300">300</option>
+				<option value="400">400</option>
+				<option value="500">500</option>
+				<option value="600">600</option>
+				<option value="700">700</option>
+				<option value="800">800</option>
+				<option value="900">900</option>
+				<option value="inherit">TMPL_MB2_INHERIT</option>
+			</field>
+			
+			<field name="general_font_letter_spacing" type="number" min="0" step=".5" default="0" label="TMPL_MB2_FONT_LETTER_SPACING" description=""  />
+		
+		<field type="mb2enditem" label="" />	
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_HEADINGS_FONT" />
+		
+			<field name="headings_font_type" type="groupedlist" default="google1" label="TMPL_MB2_FONT_TYPE" description="" >	
+				<group label="TMPL_MB2_FONT_TYPE_NORMAL">
+					<option value="normal1">TMPL_MB2_FONT_TYPE_NORMAL1</option>
+					<option value="normal2">TMPL_MB2_FONT_TYPE_NORMAL2</option>
+					<option value="normal3">TMPL_MB2_FONT_TYPE_NORMAL3</option>
+				</group>
+				<group label="TMPL_MB2_FONT_TYPE_GOOGLE">
+					<option value="google1">TMPL_MB2_FONT_TYPE_GOOGLE1</option>
+					<option value="google2">TMPL_MB2_FONT_TYPE_GOOGLE2</option>
+					<option value="google3">TMPL_MB2_FONT_TYPE_GOOGLE3</option>
+				</group>
+				<group label="TMPL_MB2_FONT_TYPE_CUSTOM">
+					<option value="custom1">TMPL_MB2_FONT_TYPE_CUSTOM1</option>
+					<option value="custom2">TMPL_MB2_FONT_TYPE_CUSTOM2</option>
+					<option value="custom3">TMPL_MB2_FONT_TYPE_CUSTOM3</option>
+				</group>
+			</field>
+			
+			<field type="spacer" hr="true" />		
+			
+			<field name="headings_h1_size" type="number" min="6" default="26" label="TMPL_MB2_H1_SIZE" description="" />
+			<field name="headings_h2_size" type="number" min="6" default="24" label="TMPL_MB2_H2_SIZE" description="" />
+			<field name="headings_h3_size" type="number" min="6" default="22" label="TMPL_MB2_H3_SIZE" description="" />
+			<field name="headings_h4_size" type="number" min="6" default="20" label="TMPL_MB2_H4_SIZE" description="" />
+			<field name="headings_h5_size" type="number" min="6" default="18" label="TMPL_MB2_H5_SIZE" description="" />
+			<field name="headings_h6_size" type="number" min="6" default="16" label="TMPL_MB2_H6_SIZE" description="" />		
+			<field name="headings_font_weight" type="list" default="400" label="TMPL_MB2_FONT_WEIGHT" description="" >
+				<option value="normal">TMPL_MB2_NORMAL</option>
+				<option value="bold">TMPL_MB2_BOLD</option>
+				<option value="bolder">TMPL_MB2_BOLDER</option>
+				<option value="lighter">TMPL_MB2_LIGHTER</option>
+				<option value="100">100</option>
+				<option value="200">200</option>
+				<option value="300">300</option>
+				<option value="400">400</option>
+				<option value="500">500</option>
+				<option value="600">600</option>
+				<option value="700">700</option>
+				<option value="800">800</option>
+				<option value="900">900</option>
+				<option value="inherit">TMPL_MB2_INHERIT</option>
+			</field>
+			<field name="headings_text_transform" type="list" default="none" label="TMPL_MB2_TEXT_TRANSFORM" description="" >
+				<option value="none">TMPL_MB2_TRANSFORM_NONE</option>
+				<option value="uppercase">TMPL_MB2_UPPERCASE</option>
+				<option value="capitalize">TMPL_MB2_CAPITALIZE</option>
+				<option value="lowercase">TMPL_MB2_LOWERCASE</option>
+			</field>
+			<field name="headings_font_style" type="list" default="normal" label="TMPL_MB2_FONT_STYLE" description="" >
+				<option value="normal">TMPL_MB2_NORMAL</option>
+				<option value="italic">TMPL_MB2_ITALIC</option>
+				<option value="oblique">TMPL_MB2_OBLIGUE</option>
+			</field>
+			<field name="headings_font_letter_spacing" type="number" min="0" step=".5" default="0" label="TMPL_MB2_FONT_LETTER_SPACING" description=""  />	
+		
+		<field type="mb2enditem" label="" />	
+		
+		
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_MAIN_MENU" />
+		
+			<field name="menu_font_type" type="groupedlist" default="google1" label="TMPL_MB2_FONT_TYPE" description="" >	
+				<group label="TMPL_MB2_FONT_TYPE_NORMAL">
+					<option value="normal1">TMPL_MB2_FONT_TYPE_NORMAL1</option>
+					<option value="normal2">TMPL_MB2_FONT_TYPE_NORMAL2</option>
+					<option value="normal3">TMPL_MB2_FONT_TYPE_NORMAL3</option>
+				</group>
+				<group label="TMPL_MB2_FONT_TYPE_GOOGLE">
+					<option value="google1">TMPL_MB2_FONT_TYPE_GOOGLE1</option>
+					<option value="google2">TMPL_MB2_FONT_TYPE_GOOGLE2</option>
+					<option value="google3">TMPL_MB2_FONT_TYPE_GOOGLE3</option>
+				</group>
+				<group label="TMPL_MB2_FONT_TYPE_CUSTOM">
+					<option value="custom1">TMPL_MB2_FONT_TYPE_CUSTOM1</option>
+					<option value="custom2">TMPL_MB2_FONT_TYPE_CUSTOM2</option>
+					<option value="custom3">TMPL_MB2_FONT_TYPE_CUSTOM3</option>
+				</group>
+			</field>
+			
+			<field name="menu_font_size" type="number" min="6" default="14" label="TMPL_MB2_FONT_SIZE" description="" />		
+			<field name="menu_font_weight" type="list" default="400" label="TMPL_MB2_FONT_WEIGHT" description="" >
+				<option value="normal">TMPL_MB2_NORMAL</option>
+				<option value="bold">TMPL_MB2_BOLD</option>
+				<option value="bolder">TMPL_MB2_BOLDER</option>
+				<option value="lighter">TMPL_MB2_LIGHTER</option>
+				<option value="100">100</option>
+				<option value="200">200</option>
+				<option value="300">300</option>
+				<option value="400">400</option>
+				<option value="500">500</option>
+				<option value="600">600</option>
+				<option value="700">700</option>
+				<option value="800">800</option>
+				<option value="900">900</option>
+				<option value="inherit">TMPL_MB2_INHERIT</option>
+			</field>
+			<field name="menu_text_transform" type="list" default="none" label="TMPL_MB2_TEXT_TRANSFORM" description="" >
+				<option value="none">TMPL_MB2_TRANSFORM_NONE</option>
+				<option value="uppercase">TMPL_MB2_UPPERCASE</option>
+				<option value="capitalize">TMPL_MB2_CAPITALIZE</option>
+				<option value="lowercase">TMPL_MB2_LOWERCASE</option>
+			</field>
+			<field name="menu_font_style" type="list" default="normal" label="TMPL_MB2_FONT_STYLE" description="" >
+				<option value="normal">TMPL_MB2_NORMAL</option>
+				<option value="italic">TMPL_MB2_ITALIC</option>
+				<option value="oblique">TMPL_MB2_OBLIGUE</option>
+			</field>
+			<field name="menu_font_letter_spacing" type="number" min="0" step=".5" default="0" label="TMPL_MB2_FONT_LETTER_SPACING" description=""  />
+			
+			
+		<field type="mb2enditem" label="" />	
+			
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_CUSTOM_FONT" />
+		
+			<field name="custom_font_element" type="textarea" default="" cols="" rows="" label="TMPL_MB2_FONT_ELEMENT" description="TMPL_MB2_FONT_ELEMENT_DESC" filter="raw" class="my_textarea"  />	
+			<field name="custom_font_type" type="groupedlist" default="normal1" label="TMPL_MB2_FONT_TYPE" description="" >	
+				<group label="TMPL_MB2_FONT_TYPE_NORMAL">
+					<option value="normal1">TMPL_MB2_FONT_TYPE_NORMAL1</option>
+					<option value="normal2">TMPL_MB2_FONT_TYPE_NORMAL2</option>
+					<option value="normal3">TMPL_MB2_FONT_TYPE_NORMAL3</option>
+				</group>
+				<group label="TMPL_MB2_FONT_TYPE_GOOGLE">
+					<option value="google1">TMPL_MB2_FONT_TYPE_GOOGLE1</option>
+					<option value="google2">TMPL_MB2_FONT_TYPE_GOOGLE2</option>
+					<option value="google3">TMPL_MB2_FONT_TYPE_GOOGLE3</option>
+				</group>
+				<group label="TMPL_MB2_FONT_TYPE_CUSTOM">
+					<option value="custom1">TMPL_MB2_FONT_TYPE_CUSTOM1</option>
+					<option value="custom2">TMPL_MB2_FONT_TYPE_CUSTOM2</option>
+					<option value="custom3">TMPL_MB2_FONT_TYPE_CUSTOM3</option>
+				</group>
+			</field>
+			<field name="custom_font_weight" type="list" default="normal" label="TMPL_MB2_FONT_WEIGHT" description="" >
+				<option value="normal">TMPL_MB2_NORMAL</option>
+				<option value="bold">TMPL_MB2_BOLD</option>
+				<option value="bolder">TMPL_MB2_BOLDER</option>
+				<option value="lighter">TMPL_MB2_LIGHTER</option>
+				<option value="100">100</option>
+				<option value="200">200</option>
+				<option value="300">300</option>
+				<option value="400">400</option>
+				<option value="500">500</option>
+				<option value="600">600</option>
+				<option value="700">700</option>
+				<option value="800">800</option>
+				<option value="900">900</option>
+				<option value="inherit">TMPL_MB2_INHERIT</option>
+			</field>
+			
+			<field type="spacer" hr="true" />
+			
+			
+			<field name="custom1_font_element" type="textarea" default=".handwrite" cols="" rows="" label="TMPL_MB2_FONT_ELEMENT" description="TMPL_MB2_FONT_ELEMENT_DESC" filter="raw" class="my_textarea"  />	
+			<field name="custom1_font_type" type="groupedlist" default="google2" label="TMPL_MB2_FONT_TYPE" description="" >	
+				<group label="TMPL_MB2_FONT_TYPE_NORMAL">
+					<option value="normal1">TMPL_MB2_FONT_TYPE_NORMAL1</option>
+					<option value="normal2">TMPL_MB2_FONT_TYPE_NORMAL2</option>
+					<option value="normal3">TMPL_MB2_FONT_TYPE_NORMAL3</option>
+				</group>
+				<group label="TMPL_MB2_FONT_TYPE_GOOGLE">
+					<option value="google1">TMPL_MB2_FONT_TYPE_GOOGLE1</option>
+					<option value="google2">TMPL_MB2_FONT_TYPE_GOOGLE2</option>
+					<option value="google3">TMPL_MB2_FONT_TYPE_GOOGLE3</option>
+				</group>
+				<group label="TMPL_MB2_FONT_TYPE_CUSTOM">
+					<option value="custom1">TMPL_MB2_FONT_TYPE_CUSTOM1</option>
+					<option value="custom2">TMPL_MB2_FONT_TYPE_CUSTOM2</option>
+					<option value="custom3">TMPL_MB2_FONT_TYPE_CUSTOM3</option>
+				</group>
+			</field>
+			<field name="custom1_font_weight" type="list" default="400" label="TMPL_MB2_FONT_WEIGHT" description="" >
+				<option value="normal">TMPL_MB2_NORMAL</option>
+				<option value="bold">TMPL_MB2_BOLD</option>
+				<option value="bolder">TMPL_MB2_BOLDER</option>
+				<option value="lighter">TMPL_MB2_LIGHTER</option>
+				<option value="100">100</option>
+				<option value="200">200</option>
+				<option value="300">300</option>
+				<option value="400">400</option>
+				<option value="500">500</option>
+				<option value="600">600</option>
+				<option value="700">700</option>
+				<option value="800">800</option>
+				<option value="900">900</option>
+				<option value="inherit">TMPL_MB2_INHERIT</option>
+			</field>
+			
+			
+			
+			<field type="spacer" hr="true" />
+			
+			
+			<field name="custom2_font_element" type="textarea" default="" cols="" rows="" label="TMPL_MB2_FONT_ELEMENT" description="TMPL_MB2_FONT_ELEMENT_DESC" filter="raw" class="my_textarea"  />	
+			<field name="custom2_font_type" type="groupedlist" default="normal1" label="TMPL_MB2_FONT_TYPE" description="" >	
+				<group label="TMPL_MB2_FONT_TYPE_NORMAL">
+					<option value="normal1">TMPL_MB2_FONT_TYPE_NORMAL1</option>
+					<option value="normal2">TMPL_MB2_FONT_TYPE_NORMAL2</option>
+					<option value="normal3">TMPL_MB2_FONT_TYPE_NORMAL3</option>
+				</group>
+				<group label="TMPL_MB2_FONT_TYPE_GOOGLE">
+					<option value="google1">TMPL_MB2_FONT_TYPE_GOOGLE1</option>
+					<option value="google2">TMPL_MB2_FONT_TYPE_GOOGLE2</option>
+					<option value="google3">TMPL_MB2_FONT_TYPE_GOOGLE3</option>
+				</group>
+				<group label="TMPL_MB2_FONT_TYPE_CUSTOM">
+					<option value="custom1">TMPL_MB2_FONT_TYPE_CUSTOM1</option>
+					<option value="custom2">TMPL_MB2_FONT_TYPE_CUSTOM2</option>
+					<option value="custom3">TMPL_MB2_FONT_TYPE_CUSTOM3</option>
+				</group>
+			</field>
+			<field name="custom2_font_weight" type="list" default="normal" label="TMPL_MB2_FONT_WEIGHT" description="" >
+				<option value="normal">TMPL_MB2_NORMAL</option>
+				<option value="bold">TMPL_MB2_BOLD</option>
+				<option value="bolder">TMPL_MB2_BOLDER</option>
+				<option value="lighter">TMPL_MB2_LIGHTER</option>
+				<option value="100">100</option>
+				<option value="200">200</option>
+				<option value="300">300</option>
+				<option value="400">400</option>
+				<option value="500">500</option>
+				<option value="600">600</option>
+				<option value="700">700</option>
+				<option value="800">800</option>
+				<option value="900">900</option>
+				<option value="inherit">TMPL_MB2_INHERIT</option>
+			</field>
+			
+		<field type="mb2enditem" label="" />
+		
+	</fieldset>
+	
+	<fieldset name="font_settings" label="TMPL_MB2_FONT_SETTINGS">			
+			
+		<field type="mb2startitem" label="" title="TMPL_MB2_NORMAL_FONTS" />
+		
+			<field name="normal_font1" type="list" default="Arial, Helvetica, sans-serif" label="TMPL_MB2_FONT_TYPE_NORMAL1" description="" >	
+				<option value="Arial, Helvetica, sans-serif">Arial, Helvetica, sans-serif</option>
+				<option value="Georgia, 'Times New Roman', Times, serif">Georgia, 'Times New Roman', Times, serif</option>
+				<option value="Tahoma, Geneva, sans-serif">Tahoma, Geneva, sans-serif</option>
+				<option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">'Lucida Sans Unicode', 'Lucida Grande', sans-serif</option>
+				<option value="'Palatino Linotype', 'Book Antiqua', Palatino, serif">'Palatino Linotype', 'Book Antiqua', Palatino, serif</option>
+				<option value="'Trebuchet MS', Arial, Helvetica, sans-serif">'Trebuchet MS', Arial, Helvetica, sans-serif</option>
+			</field>		
+			<field name="normal_font2" type="list" default="Georgia, 'Times New Roman', Times, serif" label="TMPL_MB2_FONT_TYPE_NORMAL2" description="" >	
+				<option value="Arial, Helvetica, sans-serif">Arial, Helvetica, sans-serif</option>
+				<option value="Georgia, 'Times New Roman', Times, serif">Georgia, 'Times New Roman', Times, serif</option>
+				<option value="Tahoma, Geneva, sans-serif">Tahoma, Geneva, sans-serif</option>
+				<option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">'Lucida Sans Unicode', 'Lucida Grande', sans-serif</option>
+				<option value="'Palatino Linotype', 'Book Antiqua', Palatino, serif">'Palatino Linotype', 'Book Antiqua', Palatino, serif</option>
+				<option value="'Trebuchet MS', Arial, Helvetica, sans-serif">'Trebuchet MS', Arial, Helvetica, sans-serif</option>
+			</field>		
+			<field name="normal_font3" type="list" default="'Lucida Sans Unicode', 'Lucida Grande', sans-serif" label="TMPL_MB2_FONT_TYPE_NORMAL3" description="" >	
+				<option value="Arial, Helvetica, sans-serif">Arial, Helvetica, sans-serif</option>
+				<option value="Georgia, 'Times New Roman', Times, serif">Georgia, 'Times New Roman', Times, serif</option>
+				<option value="Tahoma, Geneva, sans-serif">Tahoma, Geneva, sans-serif</option>
+				<option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">'Lucida Sans Unicode', 'Lucida Grande', sans-serif</option>
+				<option value="'Palatino Linotype', 'Book Antiqua', Palatino, serif">'Palatino Linotype', 'Book Antiqua', Palatino, serif</option>
+				<option value="'Trebuchet MS', Arial, Helvetica, sans-serif">'Trebuchet MS', Arial, Helvetica, sans-serif</option>
+			</field>	
+		
+		<field type="mb2enditem" label="" />	
+		
+		<field type="mb2startitem" label="" title="TMPL_MB2_GOOGLE_FONTS" />
+		
+			<field name="google_font_name1" type="text" default="Roboto" label="TMPL_MB2_FONT_TYPE_GOOGLE1" description=""  />
+			<field name="google_font_style1" type="text" default="100,300,400,700" label="TMPL_MB2_GOOGLE_FONT_STYLE1" description="TMPL_MB2_GOOGLE_FONT_STYLE_DESC"  />
+			
+			<field type="spacer" label="" />
+			
+			<field name="google_font_name2" type="text" default="Caveat" label="TMPL_MB2_FONT_TYPE_GOOGLE2" description=""  />
+			<field name="google_font_style2" type="text" default="400" label="TMPL_MB2_GOOGLE_FONT_STYLE2" description="TMPL_MB2_GOOGLE_FONT_STYLE_DESC"  />		
+			
+			<field type="spacer" label="" />
+			
+			<field name="google_font_name3" type="text" default="Source Sans Pro" label="TMPL_MB2_FONT_TYPE_GOOGLE3" description=""  />
+			<field name="google_font_style3" type="text" default="" label="TMPL_MB2_GOOGLE_FONT_STYLE3" description="TMPL_MB2_GOOGLE_FONT_STYLE_DESC"  />			
+		
+		<field type="mb2enditem" label="" />
+			
+		<field type="mb2startitem" label="" title="TMPL_MB2_CUSTOM_FONTS" />	
+		
+			<field name="custom_font_name1" type="text" default="" label="TMPL_MB2_FONT_TYPE_CUSTOM1" description=""  />	
+			<field name="custom_font_eot1" type="text" label="TMPL_MB2_CUSTOM_FONT_EOT1" description="" size="10"  />
+			<field name="custom_font_woff1" type="text" label="TMPL_MB2_CUSTOM_FONT_WOFF1" description="" size="10"  />
+			<field name="custom_font_ttf1" type="text" label="TMPL_MB2_CUSTOM_FONT_TTF1" description="" size="10"  />
+			<field name="custom_font_svg1" type="text" label="TMPL_MB2_CUSTOM_FONT_SVG1" description="" size="10"  />
+			
+			<field type="spacer" label="" />
+			
+			<field name="custom_font_name2" type="text" default="" label="TMPL_MB2_FONT_TYPE_CUSTOM2" description=""  />	
+			<field name="custom_font_eot2" type="text" label="TMPL_MB2_CUSTOM_FONT_EOT2" description="" size="10"  />
+			<field name="custom_font_woff2" type="text" label="TMPL_MB2_CUSTOM_FONT_WOFF2" description="" size="10"  />
+			<field name="custom_font_ttf2" type="text" label="TMPL_MB2_CUSTOM_FONT_TTF2" description="" size="10"  />
+			<field name="custom_font_svg2" type="text" label="TMPL_MB2_CUSTOM_FONT_SVG2" description="" size="10"  />
+			
+			<field type="spacer" label="" />
+			
+			<field name="custom_font_name3" type="text" default="" label="TMPL_MB2_FONT_TYPE_CUSTOM3" description=""  />	
+			<field name="custom_font_eot3" type="text" label="TMPL_MB2_CUSTOM_FONT_EOT3" description="" size="10"  />
+			<field name="custom_font_woff3" type="text" label="TMPL_MB2_CUSTOM_FONT_WOFF3" description="" size="10"  />
+			<field name="custom_font_ttf3" type="text" label="TMPL_MB2_CUSTOM_FONT_TTF3" description="" size="10"  />
+			<field name="custom_font_svg3" type="text" label="TMPL_MB2_CUSTOM_FONT_SVG3" description="" size="10"  />
+		
+		<field type="mb2enditem" label="" />		
+		
+	</fieldset>
+	
+	
+	<fieldset name="fonticon" label="TMPL_MB2_FONT_ICON_SETTINGS">			
+			
+				
+		<field name="icon_font_glyphicon" type="radio" class="btn-group btn-group-yesno" default="1" label="TMPL_MB2_FONT_GLYPHICON" description="TMPL_MB2_FONT_GLYPHICON_DESC" >	
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		
+		<field name="icon_font_fa" type="radio" class="btn-group btn-group-yesno" default="1" label="TMPL_MB2_FONT_AWESOME" description="TMPL_MB2_FONT_AWESOME_DESC" >	
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		
+		<field name="icon_font_lineicons" type="radio" class="btn-group btn-group-yesno" default="1" label="TMPL_MB2_FONT_LINEICONS" description="TMPL_MB2_FONT_LINEICONS_DESC" >	
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>		
+		
+		<field name="icon_font_pe7stroke" type="radio" class="btn-group btn-group-yesno" default="1" label="TMPL_MB2_FONT_PE7STROKE" description="TMPL_MB2_FONT_PE7STROKE_DESC" >	
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		
+		
+		
+		<field type="spacer" label="" hr="true" />
+		
+		<field name="icon_email" type="text" default="fa fa-envelope-o" label="TMPL_MB2_ICON_EMAIL" description="" />
+		<field name="icon_phone" type="text" default="fa fa-phone" label="TMPL_MB2_ICON_PHONE" description="" />
+		<field name="icon_lang" type="text" default="fa fa-globe" label="TMPL_MB2_ICON_LANG" description="" />
+		<field name="icon_login" type="text" default="fa fa-lock" label="TMPL_MB2_ICON_LOGN" description="" />
+		
+			
+					
+	</fieldset>
+	
+	
+
+	<fieldset name="social" label="TMPL_MB2_SOCIAL_SETTINGS">		
+			
+		<field type="mb2desc" description="TMPL_MB2_SOCIAL_INFO" />		
+		<field name="social_link_target" type="list" default="_self" label="TMPL_MB2_LINK_TARGET" description="" >
+			<option value="_self">TMPL_MB2_LINK_TARGET_SELF</option>
+			<option value="_blank">TMPL_MB2_LINK_TARGET_BLANK</option>
+		</field>	
+		
+		<field type="spacer" />	
+				
+		<field name="social_1" type="mb2sociallist" default="" label="TMPL_MB2_SOCIAL_ICON1" description="" />	
+		<field name="social_1_link" type="text" default="" label="TMPL_MB2_SOCIAL_LINK1" description=""  />
+		
+		<field type="spacer" />	
+				
+		<field name="social_2" type="mb2sociallist" default="" label="TMPL_MB2_SOCIAL_ICON2" description="" />		
+		<field name="social_2_link" type="text" default="" label="TMPL_MB2_SOCIAL_LINK2" description="" />			
+		
+		<field type="spacer" />	
+				
+		<field name="social_3" type="mb2sociallist" default="" label="TMPL_MB2_SOCIAL_ICON3" description="" />		
+		<field name="social_3_link" type="text" default="" label="TMPL_MB2_SOCIAL_LINK3" description="" />			
+		
+		<field type="spacer" />	
+				
+		<field name="social_4" type="mb2sociallist" default="" label="TMPL_MB2_SOCIAL_ICON4" description="" />		
+		<field name="social_4_link" type="text" default="" label="TMPL_MB2_SOCIAL_LINK4" description="" />		
+		
+		<field type="spacer" />	
+				
+		<field name="social_5" type="mb2sociallist" default="" label="TMPL_MB2_SOCIAL_ICON5" description="" />		
+		<field name="social_5_link" type="text" default="" label="TMPL_MB2_SOCIAL_LINK5" description="" />			
+		
+		<field type="spacer" />	
+				
+		<field name="social_6" type="mb2sociallist" default="" label="TMPL_MB2_SOCIAL_ICON6" description="" />		
+		<field name="social_6_link" type="text" default="" label="TMPL_MB2_SOCIAL_LINK6" description="" />			
+		
+		<field type="spacer" />	
+				
+		<field name="social_7" type="mb2sociallist" default="" label="TMPL_MB2_SOCIAL_ICON7" description="" />		
+		<field name="social_7_link" type="text" default="" label="TMPL_MB2_SOCIAL_LINK7" description="" />		
+			
+		<field type="spacer" />	
+				
+		<field name="social_8" type="mb2sociallist" default="" label="TMPL_MB2_SOCIAL_ICON8" description="" />		
+		<field name="social_8_link" type="text" default="" label="TMPL_MB2_SOCIAL_LINK8" description="" />		
+		
+		<field type="spacer" />	
+				
+		<field name="social_9" type="mb2sociallist" default="" label="TMPL_MB2_SOCIAL_ICON9" description="" />		
+		<field name="social_9_link" type="text" default="" label="TMPL_MB2_SOCIAL_LINK9" description="" />		
+		
+		<field type="spacer" />	
+				
+		<field name="social_10" type="mb2sociallist" default="" label="TMPL_MB2_SOCIAL_ICON10" description="" />		
+		<field name="social_10_link" type="text" default="" label="TMPL_MB2_SOCIAL_LINK10" description="" />	
+					
+	</fieldset>
+
+</fields>
+
+</config>
+</extension>

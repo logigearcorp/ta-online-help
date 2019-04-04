@@ -1,0 +1,169 @@
+
+/* Style for forms */
+
+
+/* Set basic style for all input elements */
+
+input[type="text"],
+input[type="search"], 
+input[type="email"], 
+input[type="password"],
+select,
+textarea,
+.markItUpContainer textarea {
+	border: solid 1px @mb2_border_color_base;
+	background-color: #fff;
+	.mb2_box_shadow(0 0 , transparent);
+	padding: 8px 10px;
+	color: @mb2_color_text_lighten;
+	.mb2_transition1(all, 0.15s);
+}
+
+input[type="checkbox"] {
+	border: solid 1px @mb2_border_color_base;
+	background-color: #fff;
+	.mb2_box_shadow(0 0 , transparent);
+	color: @mb2_color_text_lighten;	
+	.mb2_transition1(all, 0.15s);
+}
+
+input[type="text"]:hover, 
+input[type="email"]:hover, 
+input[type="password"]:hover,
+input[type="checkbox"]:hover,
+input[type="search"]:hover,
+input[type="submit"]:hover,
+textarea:hover,
+select:hover,
+.markItUpContainer textarea:hover,
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+input[type="password"]:focus,
+input[type="checkbox"]:focus,
+input[type="search"]:focus,
+input[type="submit"]:focus,
+textarea:focus,
+select:focus,
+.markItUpContainer textarea:focus {
+	border-color: @mb2_color_bg_accent1;
+	color: @mb2_color_text_base;
+	outline: none;
+}
+
+
+/* Label */
+
+label {
+	font-weight: 700;	
+}
+
+
+
+/* Legend */
+
+legend {
+	display: inline-block;
+	color: @mb2_color_headings;
+	border-bottom: 0;	
+}
+
+
+/* Set margin bottom for form control group */
+
+.control-group {
+	margin-bottom: 15px;
+}
+
+
+.control-group .control-label {
+	font-size: @mb2_font_size_small;
+}
+
+fieldset {
+	width: 100%;
+}
+
+
+
+
+/* Disable 'chzn' select filed */
+
+.chzn-container {
+	display: none!important;	
+}
+
+select.chzn-done {
+	display: block !important;	
+}
+
+
+
+
+
+
+
+/* ================================ STYLE IN DARK SECTIONS */
+
+
+/* Dark  gray */
+
+.dark-gray {
+	
+	input[type="text"], 
+	input[type="email"], 
+	input[type="password"],
+	select,
+	textarea {
+		background-color: transparent;
+		border-color: rgba(255,255,255,.15);
+		color: @mb2_color_text_base;
+	}
+	
+	
+	input[type="text"]:hover, 
+	input[type="email"]:hover, 
+	input[type="password"]:hover,
+	textarea:hover,
+	input[type="text"]:focus, 
+	input[type="email"]:focus, 
+	input[type="password"]:focus,
+	textarea:focus {
+		border-color: @mb2_color_bg_accent1;
+		color: lighten(@mb2_color_text_base,20%);
+	}
+	
+}
+
+
+
+
+/* Dark */
+
+.dark {
+	
+	input[type="text"], 
+	input[type="email"], 
+	input[type="password"],
+	select,
+	textarea {
+		background-color: transparent;
+		border-color: rgba(255,255,255,.15);
+		color: @mb2_color_text_base;
+	}
+	
+	
+	input[type="text"]:hover, 
+	input[type="email"]:hover, 
+	input[type="password"]:hover,
+	textarea:hover,
+	input[type="text"]:focus, 
+	input[type="email"]:focus, 
+	input[type="password"]:focus,
+	textarea:focus {
+		border-color: @mb2_color_bg_accent1;
+		color: lighten(@mb2_color_text_base,20%);
+	}
+	
+}
+
+

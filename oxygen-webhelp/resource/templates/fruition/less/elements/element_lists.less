@@ -1,0 +1,139 @@
+
+
+/* Lists */
+
+.list,
+.menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;	
+}
+
+.list li,
+.menu li  {
+	margin: 4px 0;
+	padding: 0;	
+}
+
+
+
+/* list hrorizontal */
+
+.list-horizontal {
+	margin-top: 0;	
+}
+
+.list-horizontal li {
+	display: inline-block;	
+}
+
+
+
+/* List left */
+
+.list-horizontal.list-left li {
+	margin-right: 15px;	
+}
+
+.list-horizontal.list-left li:last-child {
+	margin-right: 0;	
+}
+
+
+
+/* List right */
+
+.list-right {
+	text-align: right;	
+}
+
+.list-horizontal.list-right li {
+	margin-left: 15px;	
+}
+
+.list-horizontal.list-right li:first-child {
+	margin-left: 0;	
+}
+
+
+
+/* List center */
+
+.list-center {
+	text-align: center;	
+}
+
+.list-horizontal.list-center li {
+	margin-left: 7px;	
+	margin-right: 7px;
+}
+
+
+
+
+
+/* List 1 and 2 */
+
+.list li a {
+	color: @mb2_color_text_base;
+	text-decoration: none;	
+}
+
+.list li a:hover,
+.list li a:focus {
+	color: @mb2_color_bg_accent1;
+	text-decoration: none;	
+}
+
+
+
+/* List 2 */
+
+.list2 > li:before {
+	display: inline-block;
+  	font: normal normal normal 14px/1 FontAwesome;
+  	font-size: inherit;
+  	text-rendering: auto;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+}
+
+.list2 > li:before {
+	content: "\f105";
+	margin-right: 10px;
+}
+
+
+
+
+
+/*=============================== DARK SECTION */
+
+/* Dark */
+
+.dark .list li a {
+	color: #fff;	
+}
+
+.dark .list li a:hover,
+.dark .list li a:focus {
+	color: #fff;
+	text-decoration: underline;	
+}
+
+.dark .list2 > li:before {
+	color: rgba(255,255,255,.3);	
+}
+
+
+
+
+
+
+
+@media (max-width: @mb2_screen_tablet){
+	.list-right {
+		text-align: left;	
+	}
+	
+}

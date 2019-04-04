@@ -1,0 +1,252 @@
+
+
+/* Style for K2 modules */
+
+
+
+
+
+/* K2 modules */
+
+.k2ItemsBlock > ul,
+.k2LatestCommentsBlock > ul,
+.k2TopCommentersBlock > ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+
+.k2ItemsBlock > ul > li,
+.k2LatestCommentsBlock > ul > li,
+.k2TopCommentersBlock > ul > li {
+	margin: 0 0 15px 0;
+	padding: 0 0 15px 0;
+	border-bottom: solid 1px @mb2_border_color_base;
+}
+
+
+.k2ItemsBlock > ul > li:last-child,
+.k2LatestCommentsBlock > ul > li:last-child,
+.k2TopCommentersBlock > ul > li:last-child {
+	border-bottom: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+
+.k2ItemsBlock > ul > li.clearList,
+.k2LatestCommentsBlock > ul > li.clearList,
+.k2TopCommentersBlock > ul > li.clearList {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+
+
+
+
+
+
+/* K2 comments */
+
+
+
+.k2TopCommentersBlock .comment-text,
+.k2LatestCommentsBlock .comment-info,
+.k2LatestCommentsBlock .comment-item-info {	
+	font-size: @mb2_font_size_small;
+	color: @mb2_color_text_lighten;	
+}
+
+
+.k2TopCommentersBlock .comment-text {
+	padding-top: 15px;
+	margin-bottom: 0;
+}
+
+
+
+
+
+
+.k2TopCommentersBlock .tcLink {
+	font-weight: bold;
+}
+
+
+.k2TopCommentersBlock .tcLatestComment,
+.k2LatestCommentsBlock .lcComment {
+	font-style: italic;
+}
+
+
+.k2LatestCommentsBlock .comment-user {
+	width: 20%;
+	float: left;
+}
+
+
+.k2LatestCommentsBlock .comment-text {
+	width: 80%;
+	float: left;
+}
+
+
+.k2LatestCommentsBlock .comment-info {
+	margin-top: 10px;
+}
+
+
+.k2LatestCommentsBlock .k2FeedIcon,
+.k2TopCommentersBlock .k2FeedIcon {
+	margin: 30px 0 0 0;
+}
+
+
+
+
+
+/* Categories list, Arcgives list */
+
+.k2CategoriesListBlock ul,
+.k2ArchivesBlock ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.k2CategoriesListBlock ul li a,
+.k2ArchivesBlock ul li a  {
+	color: @mb2_color_text_base;
+	padding: 4px 0;
+	display: block;
+}
+
+.k2CategoriesListBlock ul li a:hover,
+.k2CategoriesListBlock ul li a:focus,
+.k2ArchivesBlock ul li a:hover,
+.k2ArchivesBlock ul li a:focus {
+	color: @mb2_color_links_base;
+}
+
+.k2CategoriesListBlock > ul > li > a,
+.k2ArchivesBlock > ul > li > a {}
+
+.k2CategoriesListBlock > ul ul,
+.k2ArchivesBlock > ul ul {
+	margin-left: 10px;
+	padding-left: 15px;
+	position: relative;
+}
+
+.k2CategoriesListBlock > ul ul:before,
+.k2ArchivesBlock > ul ul:before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 1px;
+	border-right: dotted 1px darken(@mb2_border_color_base,15%);	
+}
+
+.k2CategoriesListBlock > ul ul a,
+.k2ArchivesBlock > ul ul a {
+	position: relative;
+	font-size: @mb2_font_size_small;
+}
+
+.k2CategoriesListBlock > ul ul a:before,
+.k2ArchivesBlock > ul ul a:before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: -15px;
+	top: 50%;
+	margin-top: -1px;
+	height: 1px;
+	width: 10px;
+	border-top: dotted 1px darken(@mb2_border_color_base,15%);	
+}
+
+
+
+/* Callendar */
+.calendar {
+	background-color: @mb2_color_bg_gray3;
+	border: 0;
+	width: 350px;
+	max-width: 100%;
+	border-top: solid 1px #fff;
+	border-left: solid 1px #fff;
+	font-size: @mb2_font_size_xsmall;
+}
+
+.calendar th,
+.calendar td {
+	background-color: @mb2_color_bg_gray3;
+	border:solid 1px #fff;
+	border-left: 0;
+	border-top: 0;
+	text-align: center;
+	vertical-align: middle;
+	padding: 7px 8px;
+} 
+
+
+							
+.calendar th {
+	font-weight: bold;	
+}
+
+.calendar tbody {
+	color: @mb2_color_text_base;
+}
+
+.calendar tbody td {}
+
+.calendar tbody td.pad  {
+	background: none;
+}
+
+.calendar tbody td:hover {
+	background: #fff;
+}		
+
+.calendar tbody td.pad:hover {
+	background:none;
+}
+
+
+
+
+
+/* Tags cloud */
+
+.k2TagCloudBlock a {
+	font-size: @mb2_font_size_small !important;
+	display: block;
+	float: left;
+	border: solid 1px @mb2_color_bg_accent1;
+	padding: 5px 10px;
+	margin: 0 5px 5px 0;
+	line-height: 1;
+	.mb2_border_radius(2px);
+	text-align: center;
+    vertical-align: baseline;
+    white-space: nowrap;
+	color: @mb2_color_bg_accent1;
+}
+
+
+
+.k2TagCloudBlock a:hover,
+.k2TagCloudBlock a:focus {
+	background-color: @mb2_color_bg_accent1;
+	color: #fff;
+	border-color: @mb2_color_bg_accent1;
+}

@@ -1,0 +1,80 @@
+
+/* Style for messages element */
+
+.message {padding:15px 15px 15px 60px;
+			-moz-border-radius:3px;
+			-webkit-border-radius:3px;
+			border-radius:3px;
+			position:relative;
+			min-height:20px;
+			-moz-box-shadow:0 1px 0 rgba(0,0,0,0.1);
+			-webkit-box-shadow:0 1px 0 rgba(0,0,0,0.1);
+			box-shadow:0 1px 0 rgba(0,0,0,0.1);
+			margin-bottom:20px;}
+
+
+.message > i	{position:absolute;
+					left:15px;
+					top:50%;
+					margin-top:-16px;
+					font-size:16px;
+					display:inline-block;
+					width:32px;
+					height:32px;
+					text-align:center;
+					line-height:32px;
+					color:#fff;
+					-moz-border-radius:999px;
+					-webkit-border-radius:999px;
+					border-radius:999px;
+					background:#000;
+					opacity:0.2;
+					filter: alpha(opacity=20);}
+
+
+.message a				{text-decoration:underline;}
+
+.message a:hover,
+.message a:active,
+.message a:focus		{text-decoration:none;}
+
+
+
+/* info message */
+.message.message-info	{background-color:#c7dbf0;
+						border:solid 1px #a7caee;
+						color:#13559a;}
+
+.message.message-info a	{color:#13559a;}
+
+
+
+
+
+/* warning message */
+.message.message-warning	{background-color:#f6db88;
+							border:solid 1px #f2cf62;
+							color:#887028;}
+
+.message.message-warning a	{color:#887028;}
+
+
+
+
+/* ok message */
+.message.message-ok			{background-color:#aff38e;
+							border:solid 1px #8ae65e;
+							color:#356e1a;}
+
+.message.message-ok a		{color:#356e1a;}
+
+
+
+
+
+/* error  message */
+.message.message-error			{background-color:#f8968c;
+								border:solid 1px #ec786c;
+								color:#8a2015;}
+
+.message.message-error a		{color:#8a2015;}

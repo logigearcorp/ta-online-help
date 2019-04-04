@@ -1,0 +1,11 @@
+.mailchimp-success {
+	color:green;
+}
+
+.mailchimp-error {
+	color:#ff0000;
+}
+
+.bdt-newsletter-wrapper .bdt-newsletter input.bdt-newsletter-field{
+    margin-bottom: 10px;
+}

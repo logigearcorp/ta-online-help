@@ -1,0 +1,678 @@
+/**
+ * @package		Mb2 FAQs
+ * @version		1.2.0
+ * @author		Mariusz Boloz (http://mb2extensions.com)
+ * @copyright	Copyright (C) 2015 - 2016 Mariusz Boloz (http://mb2extensions.com). All rights reserved
+ * @license		Commercial (http://codecanyon.net/licenses)
+**/
+@font-face{font-family:mb2faqs_font;src:url(font/mb2faqs_font.eot?57663963);src:url(font/mb2faqs_font.eot?57663963#iefix) format('embedded-opentype'),url(font/mb2faqs_font.woff?57663963) format('woff'),url(font/mb2faqs_font.ttf?57663963) format('truetype'),url(font/mb2faqs_font.svg?57663963#mb2faqs_font) format('svg');font-weight:400;font-style:normal}.mb2faqs-accordion-list-item__heading a:before,.mb2faqs-items-list .mb2faqs-item>a:before,[class*=" mb2faqs_icon-"]:before,[class^=mb2faqs_icon-]:before{font-family:mb2faqs_font;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:.2em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;margin-left:.2em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.mb2faqs_icon-menu:before{content:'\e800'}.mb2faqs_icon-plus:before{content:'\e801'}.mb2faqs_icon-thumbs-up:before{content:'\e802'}.mb2faqs_icon-thumbs-down:before{content:'\e803'}.mb2faqs_icon-down-open-mini:before{content:'\e804'}.mb2faqs_icon-up-open-mini:before{content:'\e805'}.mb2faqs_icon-minus:before{content:'\e806'}.mb2faqs_icon-cancel:before{content:'\e807'}.mb2faqs_icon-folder:before{content:'\e808'}.mb2faqs_icon-doc-text:before{content:'\e809'}
+
+
+
+
+/* =========================================== GENERAL STYLE */
+
+.mb2faqs *,
+.mb2faqs *:before,
+.mb2faqs *:after {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;	
+}
+
+
+
+
+
+
+/* Items list */
+
+.mb2faqs-items-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;	
+}
+
+.mb2faqs-items-list .mb2faqs-item {
+	display: block;
+	padding: 6px 0;	
+}
+
+.mb2faqs-items-list .mb2faqs-item > a:before {
+	content: '\e809';	
+}
+
+
+
+
+/* =========================================== ACCORDION BASE STYLE */
+
+/* Accordion list */
+
+.mb2faqs-accordion-list,
+.mb2faqs-accordion-list ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;	
+}
+
+
+
+/* Acconrdions expand/collapse all item */
+
+.mb2faqs-accordion-list .switch {
+	text-align: right;	
+}
+
+.mb2faqs-accordion-list .switch a {
+	outline: none;
+	display: inlne-block;
+	font-size: 11px;
+	text-decoration: none;	
+}
+
+.mb2faqs-accordion-list .switch a:hover,
+.mb2faqs-accordion-list .switch a:focus {
+	text-decoration: none;	
+}
+
+
+
+/* Accordion item heading */
+
+.mb2faqs-accordion-list-item__heading {
+	margin: 0;
+}
+
+.mb2faqs-accordion-list-item__heading a {
+	display: block;
+	line-height: 1;	
+	margin: 0;
+	font-size: 15px;
+	padding: 18px 15px;
+	vertical-align: middle;
+	text-decoration: none;
+	font-weight: normal;
+	outline: none;
+	position: relative;
+}
+
+.mb2faqs-accordion-list-item__heading a:before {	
+	margin-right: 10px;
+	font-size: 18px;	
+	content: '\e801';
+}
+
+.mb2faqs-accordion-list-item__heading a:hover,
+.mb2faqs-accordion-list-item__heading a:focus {
+	outline: none;
+	text-decoration: none;	
+}
+
+.mb2faqs-accordion-list-item__heading a.open:before {
+	content: '\e806';	
+}
+
+
+
+.mb2faqs-category-heading a:before {
+	border: 0!important;
+	content: '\e808' !important;
+}
+
+
+
+
+/* Accordion item content */
+
+.mb2faqs-accordion-list-item__content.mb2faqs-faq-content {
+	padding-top: 30px;
+	padding-bottom: 20px;	
+}
+
+.mb2faqs-accordion-list-item__content .mb2faqs-accordion-list-item {
+	margin-left: 15px;
+}
+
+
+
+
+
+
+
+
+/* =========================================== CATEGORIES PAGE 'LAYOUT1' */
+
+
+/* Categrosies page 'layout1' */
+
+.mb2faqs-layout1 .mb2faqs-category-items .mb2faqs-category-items,
+.mb2faqs-layout1 .mb2faqs-category-items > .mb2faqs-accordion-list-item__heading {
+	margin-left: 15px;	
+}
+
+.mb2faqs-layout1 .mb2faqs-category-description {
+	margin-top: 15px;	
+}
+
+
+
+
+
+
+/* =========================================== CATEGORIES PAGE 'LAYOUT2' */
+
+.mb2faqs-layout2 .mb2faqs-category-wrap .mb2faqs-category-wrap {
+	margin-left: 15px;	
+}
+
+.mb2faqs-layout2 > .mb2faqs-category-wrap {
+	margin-bottom: 30px;	
+}
+
+.mb2faqs-layout2 .mb2faqs-accordion-list {
+	margin-bottom: 30px;	
+}
+
+.mb2faqs-layout2 .mb2faqs-category-heading {
+	font-size: 18px;
+	margin-bottom: 0;
+	margin-top: 0;	
+}
+
+.mb2faqs-layout2 .mb2faqs-category-description {
+	margin-top: 15px;	
+}
+
+
+
+
+/* =========================================== CATEGORIES PAGE 'LAYOUT 5' */
+
+
+/* Columns layout */
+
+.mb2faqs-layout5 .mb2faqs-category-wrap-level0 {
+	float: left;
+	margin-bottom:30px;	
+}
+
+
+/* Categories wrap */
+
+.mb2faqs-layout5 .mb2faqs-category-wrap .mb2faqs-category-wrap {
+	margin-left: 15px;
+	margin-top: 30px;	
+}
+
+.mb2faqs-layout5 > .mb2faqs-category-wrap {
+	margin-bottom: 30px;	
+}
+
+.mb2faqs-layout5 .mb2faqs-accordion-list {
+	margin-bottom: 30px;	
+}
+
+.mb2faqs-layout5 .mb2faqs-category-heading {
+	font-size: 18px;
+	margin-bottom: 20px;
+	margin-top: 0;	
+}
+
+.mb2faqs-layout5 .mb2faqs-category-description {
+	margin-top: 15px;	
+}
+
+
+
+/* =========================================== CATEGORIES PAGE 'LAYOUT6' */
+
+.mb2faqs-layout6 .mb2faqs-category-heading {
+	margin-top: 30px;	
+}
+
+
+
+
+
+/* =========================================== TABS STYLE */
+
+.mb2faqs-subcategroies-tabs-area {
+	margin-top: 30px;	
+}
+
+.mb2faqs-categories-tabs {
+	position: relative;	
+}
+
+.mb2faqs-categories-tabs__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.mb2faqs-categories-tabs__list li {
+	display: inline-block;
+	margin: 0 5px 5px 0;
+	padding: 0;	
+	line-height: 1;
+}
+
+.mb2faqs-categories-tabs__list li a {
+	display: inline-block;
+	line-height: 1;
+	vertical-align: middle;
+	text-decoration: none;
+	padding: 18px 30px;
+}
+
+.mb2faqs-categories-tabs__list li a:hover,
+.mb2faqs-categories-tabs__list li a:focus {
+	text-decoration: none;
+	outline: none;	
+}
+
+.mb2faqs-categories-tabs__content {
+	padding-top: 20px;	
+}
+
+
+
+
+
+
+/* =========================================== CATEGORIES PAGE 'LAYOUT3' */
+
+.mb2faqs-layout3 .mb2faqs-category-wrap .mb2faqs-category-wrap {
+	margin-left: 15px;	
+}
+
+.mb2faqs-layout3 > .mb2faqs-category-wrap {
+	margin-bottom: 30px;	
+}
+
+.mb2faqs-layout3 .mb2faqs-accordion-list {
+	margin-bottom: 30px;	
+}
+
+.mb2faqs-layout3 .mb2faqs-category-heading {
+	font-size: 18px;
+	margin-bottom: 0;
+	margin-top: 0;	
+}
+
+.mb2faqs-layout3 .mb2faqs-category-description {
+	margin-top: 15px;	
+}
+
+.mb2faqs-layout3 .mb2faqs-category-wrap-level0 > .mb2faqs-category-description {
+	margin-top: 0;	
+}
+
+
+
+
+
+
+/* =========================================== CATEGORIES PAGE 'LAYOUT4' */
+
+.mb2faqs-layout4 .mb2faqs-category-description {
+	margin-top: 15px;		
+}
+
+
+.mb2faqs-layout4 .mb2faqs-accordion-tab-content > .mb2faqs-category-description {
+	margin-top: 0;
+	margin-left: 0;	
+}
+
+
+
+
+
+
+
+
+/* =========================================== SINGLE FAQ */
+
+/* Item heading */
+
+.mb2faqs-item-heading {
+	position: relative;	
+	margin-bottom: 20px;
+}
+
+.mb2faqs-item-heading h2 {
+	margin: 0;	
+}
+
+
+/* Item prev/next navigation */
+
+.mb2faqs-faq-nav {
+	text-align: right;	
+}
+
+.mb2faqs-faq-nav .next,
+.mb2faqs-faq-nav .prev {
+	display: inline-block;
+	line-height: normal;
+	margin-left: 20px;
+}
+
+.mb2faqs-faq-nav .next span,
+.mb2faqs-faq-nav .prev span {
+	font-size: 12px;
+	vertival-align: middle;
+	line-height: normal;
+}
+
+
+
+/* Item navigation list */
+
+.mb2faqs-nav {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;	
+}
+
+.mb2faqs-list-nav {
+	list-style: none;
+	display: block;
+	width: 200px;
+	padding: 20px;
+	border: solid 1px #eee;
+}
+
+.mb2faqs-list-nav li {
+	margin: 6px 0;	
+}
+
+.mb2faqs-list-nav.mb2faqs-hide {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	background-color: #fff;
+	border: solid 1px #e7e8e9;
+	-moz-box-shadow: 0 0 3px rgba(0,0,0,.1);
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,.1);
+	-ms-box-shadow: 0 0 3px rgba(0,0,0,.1);
+	-o-box-shadow: 0 0 3px rgba(0,0,0,.1);
+	box-shadow: 0 0 3px rgba(0,0,0,.1);	
+}
+
+
+.mb2faqs-show-list-nav {
+	position: relative;
+	margin-top: -10px;
+	display: block;
+	height: 48px;
+	width: 48px;
+	line-height: 48px;
+	color: #fff;
+	font-size: 24px;
+	text-align: center;
+	background-color: #0099ff;
+}
+
+.mb2faqs-show-list-nav:hover,
+.mb2faqs-show-list-nav:focus {
+	color: #fff;
+	text-decoration: none;
+	outline: none;	
+}
+
+
+.mb2faqs-show-list-nav.active span:before {
+	content: '\e807';	
+}
+
+
+
+
+
+
+
+/* =========================================== FAQ DEATILES */
+
+/* Item rating */
+
+.mb2faqs-rating {
+	margin-top: 20px;
+	font-size: 85%;
+	color: #999;	
+}
+
+.mb2faqs-rating-rating-question {
+	color: #555;	
+}
+
+.mb2faqs-votelink {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background-color: #bbb;
+	opacity: .7;
+	color: #fff;
+	text-decoration: none;
+	-moz-border-radius: 999px;
+	-webkit-border-radius: 999px;
+	-ms-border-radius: 999px;
+	-o-border-radius: 999px;
+	border-radius: 999px;
+	-webkit-transition: all .15s ease-in-out;
+  	-moz-transition: all .15s ease-in-out;
+	-ms-transition: all .15s ease-in-out;
+  	-o-transition: all .15s ease-in-out;
+  	transition: all .15s ease-in-out;	
+}
+
+.mb2faqs-votelink:hover,
+.mb2faqs-votelink:focus {
+	color: #fff;
+	text-decoration: none;
+	opacity: 1;	
+	outline: none;
+}
+
+
+/* Read more link */
+
+.mb2faqs-readmore {
+	margin-top: 20px;	
+}
+
+
+
+
+
+
+
+/* =========================================== TOOLTIP */
+
+.mb2faqs-tt {
+	background-color: rgba(0,0,0,.8);
+    -moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	padding: 0 5px;
+	color: #fff;
+	max-width: 260px;
+	font-size: 85%;	
+}
+
+.mb2faqs-tt:after {
+	display: block;
+	content: "";
+	position: absolute;
+	left: 50%;
+	margin-left: -5px;
+	bottom: -10px;
+	border: solid 5px rgba(255,255,255,0);
+	border-top-color:  rgba(0,0,0,.8);	
+}
+
+
+
+
+
+
+/* =========================================== SEARCH FORM */
+
+.mb2faqs-search-form {
+	margin-bottom: 50px;
+	vertical-align: top;
+	text-align: center;	
+}
+
+.mb2faqs-module .mb2faqs-search-form {
+	margin-bottom: 0;	
+}
+
+/*.mb2faqs-search-form-input {
+	display: inline-block;
+	width: 650px;
+	max-width: 75%;	
+}*/
+
+.mb2faqs-search-form input[type="search"] {
+	margin: 0;
+	display: block;
+	float: left;	
+	font-size: 16px;
+	padding: 0 20px;
+	width: 75%;
+	height: 60px;
+	-webkit-border-radius: 2px 0 0 2px;
+	border-radius: 2px 0 0 2px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.mb2faqs-search-form input[type="search"]:focus {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.mb2faqs-search-form input[type="submit"] {
+	margin-left:-1px;
+	height: 60px;
+	width: 25%;
+	padding-left: 0;
+	padding-right: 0;
+	border: solid 1px #d5d6d7;
+	background-color: rgba(255,255,255,0);
+	color: #555;
+	-webkit-border-radius: 0 2px 2px 0;
+	-moz-border-radius: 0 2px 2px 0;
+	-ms-border-radius: 0 2px 2px 0;
+	-o-border-radius: 0 2px 2px 0;
+	border-radius: 0 2px 2px 0;
+}
+
+.mb2faqs-search-form input[type="submit"]:hover {}
+
+.mb2faqs-search-form form {
+	margin: 0;	
+}
+
+.mb2faqs-search-form .error {
+	text-align: left;
+	position: relative;
+	display: block;
+	margin-bottom: 30px;
+	background-color: #f2dede;
+    border: solid 1px #ebccd1;
+    color: #a94442;
+	padding: 20px;	
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.mb2faqs-search-form .mb2fqs-error-close {
+	position: absolute;
+	top: 50%;
+	margin-top: -15px;
+	right: 5px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 18px;
+	text-align: center;	
+	color: #a94442;
+	text-decoration: none;
+}
+
+.mb2faqs-search-form .mb2fqs-error-close:hover,
+.mb2faqs-search-form .mb2fqs-error-close:focus {
+	text-decoration: none;
+	color: color: #a94442;
+}	 
+
+
+
+
+/* =========================================== OTHERS */
+
+
+/* hide elements */
+
+.mb2faqs-hide {
+	display: none;	
+}
+
+
+
+
+
+
+@media only screen and (max-width:768px){
+	
+	
+	.mb2faqs-multicol .mb2faqs-category-wrap-level0 {
+		width: 50% !important;	
+	}
+	
+	
+}
+
+
+
+@media only screen and (max-width:600px){
+	
+	
+	.mb2faqs-catlist,
+	.mb2faqs-category-wrap-level0 .mb2faqs-category-wrap-inner {
+		margin-left: 0!important;
+		margin-right: 0!important;	
+	}
+	
+	.mb2faqs-category-wrap-level0 {
+		width: 100% !important;	
+	}
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,159 @@
+/**
+ * @package		Mb2 Shortcodes
+ * @version		4.0.2
+ * @author		Mariusz Boloz (http://mb2extensions.com)
+ * @copyright	Copyright (C) 2013 - 2016 Mariusz Boloz (http://mb2extensions.com). All rights reserved
+ * @license		GNU/GPL (http://www.gnu.org/copyleft/gpl.html)
+**/
+
+.mb2shortcodes-header {
+	position:relative;
+	vertical-align: middle;
+	padding:10px;
+	border: solid 1px #e5e6e7;
+	background-color: #e5e5e5;
+}
+
+.mb2shortcodes-header h2 {
+	display: inline-block;
+	vertical-align: middle;		
+	font-size: 16px;
+	margin:0;
+	padding:0;
+	margin-right: 30px;
+}
+
+.mb2shortcodes-content {
+	padding: 20px 10px 10px 10px;	
+}
+
+.mb2shortcodes-result {
+	padding: 10px;
+	background-color: #e5e5e5;	
+	border: solid 1px #e5e6e7;
+}
+
+.mb2shortcodes-list-btn {
+	vertical-align: middle;
+}
+
+.mb2shortcodes-item {
+	display:none;
+}
+
+.mb2shortcodes-item > h3 {
+	margin: 0 0 20px 0;
+	font-size: 14px;	
+}
+
+#mb2shortcodes-result {
+	display: block;
+	background-color: #fff;
+	margin: 0 0 10px 0;
+	min-height:100px;
+	padding: 10px;
+	border: solid 1px #e5e6e7;
+	overflow: auto;
+}
+
+.mb2shortcodes-dd-list {
+	margin:0;
+	padding:0;
+	list-style:none;
+	display:none;
+	position:absolute;
+	left:0;
+	top:45px;
+	border:solid 1px #e5e6e7;	
+	background-color:#fff;
+	width: 480px;
+	z-index: 10;
+}
+
+.mb2shortcodes-dd-list > li {
+	display: inline-block;
+	vertical-align: top;
+	margin: 15px;
+	width: 130px;	
+}
+
+.mb2shortcodes-dd-list ul {
+	list-style: none;	
+	margin:0;
+	padding:0;
+}
+
+.mb2shortcodes-dd-list ul li {
+	margin:0;
+	padding:0;	
+}
+
+.mb2shortcodes-list-item{
+	margin:0;
+	padding:4px 15px;
+}
+
+.mb2shortcodes-color {
+	display: none!important;	
+}
+
+.mb2shortcodes-info {
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	right: 10px;
+	top: 50%;
+	margin-top: -10px;
+	position: absolute;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.mb2shortcodes-group-item {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 20px;	
+	border-bottom: solid 1px #e5e6e7;
+}
+
+
+
+
+/* Label description */
+
+.mb2shortcodes-desc {
+	display: block;
+	font-size: 90%;
+	font-style: italic;
+	color: #999;	
+}
+
+
+
+
+/* Icons tab */
+
+.mb2shortcodes-ilist {
+	display: block;
+	float: left;
+	width: 30px;
+	height: 30px;	
+	line-height: 30px;
+	text-align: center;
+	font-size: 16px;
+	background-color: #f1f2f3;
+	color: #a7a8a9;
+	text-decoration: none;
+	margin: 0 1px 1px 0;
+}
+
+.mb2shortcodes-ilist:hover,
+.mb2shortcodes-ilist:focus {
+	background: #373839;
+	color: #fff;
+	text-decoration: none;	
+}
+
+
+
+

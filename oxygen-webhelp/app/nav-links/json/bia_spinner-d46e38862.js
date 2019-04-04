@@ -1,0 +1,1 @@
+define({"topics" : [{"title":"spin down","id":"bia_spin_down","href":"TA_Automation\/Topics\/bia_spin_down.html","menu": {"hasChildren":false,},"tocID":"bia_spin_down-d46e38873","topics":[]},{"title":"spin up","id":"bia_spin_up","href":"TA_Automation\/Topics\/bia_spin_up.html","menu": {"hasChildren":false,},"tocID":"bia_spin_up-d46e38881","topics":[]}]});

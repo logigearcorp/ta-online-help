@@ -1,0 +1,144 @@
+/**
+ * @package		Mb2 Color Boxes
+ * @version		1.1.1
+ * @author		Mariusz Boloz (http://mb2extensions.com)
+ * @copyright	Copyright (C) 2015 - 2016 Mariusz Boloz (http://mb2extensions.com). All rights reserved
+ * @license		Commercial (http://codecanyon.net/licenses)
+**/
+
+
+
+
+
+
+/* Genral styles */
+
+.mb2cboxes {
+	position: relative;	
+	overflow: hidden;
+}
+
+
+
+
+/* Showcase item */
+
+.mb2cboxes-item {
+	position: relative;
+}
+
+.mb2cboxes-item-inner {
+	position: relative;
+	color: #fff;
+	padding-top: 30px;	
+}
+
+.mb2cboxes-article-title {
+	margin: 0;
+	color: #fff;
+}
+
+.mb2cboxes-article-introtext {
+	margin-top: 200px;
+	padding: 30px 30px 0 30px;	
+}
+
+.mb2cboxes-redmore {
+	padding-top: 30px;	
+}
+
+.mb2cboxes-redmore a {
+	display: inline-block;
+	padding: 8px 20px;
+	border: solid 1px #fff;	
+	color: #fff;
+	text-decoration: none;
+}
+
+.mb2cboxes-redmore a:hover,
+.mb2cboxes-redmore a:focus {
+	background-color: #fff;
+	color: #00C;	
+}
+ 
+
+
+
+
+
+
+
+/* Items columns */
+
+.mb2cboxes-item {
+	float: left;
+}
+
+
+
+
+
+/* Clear div */
+
+.mb2cboxes-clr {
+	*zoom: 1;
+}
+.mb2cboxes-clr:before,
+.mb2cboxes-clr:after {
+	display: table;
+	content: "";
+	line-height: 0;
+}
+.mb2cboxes-clr:after {
+	clear: both;
+}
+
+
+
+
+
+
+
+/* Add resposive style */
+
+@media only screen and (max-width:768px){
+	
+	
+	
+	.mb2cboxes {
+		background-image: none !important;	
+	}
+	
+	
+	
+	/* Remove overlay effect ans add 100% width for article items */
+	
+	.mb2cboxes .mb2cboxes-items .mb2cboxes-item {
+		top: 0 !important;	
+		float: none !important;
+		width: 100% !important;
+	}
+	
+	
+	
+	.mb2cboxes-article-title {
+		text-align: center !important;	
+	}
+	
+	
+	
+	.mb2cboxes-article-introtext {
+		margin-top: 0 !important;
+		text-align: center !important;	
+	}
+	
+	.mb2cboxes-item-inner {
+		height: auto!important;
+		padding-top: 50px !important;
+		padding-bottom: 50px !important;
+	}
+	
+		
+	
+	
+}

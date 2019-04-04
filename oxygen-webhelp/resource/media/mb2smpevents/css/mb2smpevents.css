@@ -1,0 +1,550 @@
+/**
+ * @package		Mb2 Simple Events
+ * @version		1.1.1
+ * @author		Mariusz Boloz (http://mb2extensions.com)
+ * @copyright	Copyright (C) 2016 Mariusz Boloz (http://mb2extensions.com). All rights reserved
+ * @license		Commercial (http://codecanyon.net/licenses/regular)
+**/
+
+
+@font-face {
+  font-family: 'mb2smpev_font';
+  src: url('font/mb2smpev_font.eot?20100873');
+  src: url('font/mb2smpev_font.eot?20100873#iefix') format('embedded-opentype'),
+       url('font/mb2smpev_font.woff2?20100873') format('woff2'),
+       url('font/mb2smpev_font.woff?20100873') format('woff'),
+       url('font/mb2smpev_font.ttf?20100873') format('truetype'),
+       url('font/mb2smpev_font.svg?20100873#mb2smpev_font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+ [class^="mb2smpev_icon-"]:before, [class*=" mb2smpev_icon-"]:before {
+  font-family: "mb2smpev_font";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.mb2smpev_icon-right-open-big:before { content: '\e800'; } /* '' */
+.mb2smpev_icon-left-open-big:before { content: '\e801'; } /* '' */
+.mb2smpev_icon-cancel:before { content: '\e802'; } /* '' */
+.mb2smpev_icon-calendar:before { content: '\e803'; } /* '' */
+.mb2smpev_icon-down-open-big:before { content: '\e804'; } /* '' */
+.mb2smpev_icon-up-open-big:before { content: '\e805'; } /* '' */
+
+
+
+
+/*--------------------------------------------------------------*/
+/*	General styles
+/*--------------------------------------------------------------*/
+
+.mb2smpev *,
+.mb2smpev *:before,
+.mb2smpev *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;	
+}
+
+
+/* clear div */
+
+.mb2smpev-clr {
+	*zoom: 1;
+}
+.mb2smpev-clr:before,
+.mb2smpev-clr:after {
+	display: table;
+	content: "";
+	line-height: 0;
+}
+.mb2smpev-clr:after {
+	clear: both;
+}
+
+.mb2smpev {
+	position:relative;
+}
+
+.mb2smpev-overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(255,255,255,.65);
+	z-index: 1;	
+}
+
+
+.mb2smpev-overlay > img {
+	width: 48px;
+	height: 48px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -24px;
+	margin-left: -24px;	
+}
+
+
+
+
+/*--------------------------------------------------------------*/
+/*	Calendar styles
+/*--------------------------------------------------------------*/
+
+.mb2smpev-calendar {}
+
+
+.calendar-month-header .month {
+	cursor: pointer;	
+}
+
+
+/* Calendar rows */
+
+.calendar-month-header > div,
+.calendar-dow-header > div,
+.calendar-dow > div {
+	text-align: center;	
+}
+
+ 
+
+/* Set three columns moth */
+
+.calendar-month-header > div {
+	display: block;
+	float: left;
+}
+
+.calendar-month-header .month {
+	width:71.428571428571%;	
+}
+
+.calendar-month-header .month {
+	height: 40px;
+	line-height: 40px;
+}
+
+.calendar-month-header .month-prev,
+.calendar-month-header .month-next {
+	width: 14.2857142857%;	
+}
+
+.calendar-month-header .month,
+.calendar-month-header .month-prev {
+	border-right: 0;	
+}
+
+
+.calendar-month-navigation {
+	cursor: pointer;
+	height: 40px;
+	line-height: 40px;	
+}
+
+
+
+/* Set 7 columns for day name and numbers */
+
+.calendar-dow-header,
+.calendar-dow {
+	border-left: solid 1px #e5e6e7;
+}
+
+.calendar-dow-header > div,
+.calendar-dow > div {
+	display: block;
+	float: left;
+	width: 14.2857142857%;	
+	border-right: solid 1px #e5e6e7;
+	border-bottom: solid 1px #e5e6e7;
+	height: 40px;
+	line-height: 39px;
+}
+
+.calendar-dow div.day {
+	min-height: 29px;
+}
+
+
+
+/* Day elements */
+
+.calendar-dow-header > div {
+	background-color: #f7f8f9;	
+}
+
+
+
+/* Events list below calendar */
+
+.mb2smpev-events-container {
+	overflow: hidden;	
+}
+
+.mb2smpev-event-item {
+	overflow: hidden;	
+}
+
+
+
+
+/* Calendar event links */
+
+.calendar-dow .event {
+	position: relative;	
+}
+
+.calendar-dow .event a {
+	text-decoration: none;	
+}
+
+.calendar-dow .event a:hover,
+.calendar-dow .event a:focus {
+	text-decoration: none;	
+}
+
+
+
+
+
+/*--------------------------------------------------------------*/
+/*	Calendar style 1
+/*--------------------------------------------------------------*/
+
+
+/* Calendar header */
+.mb2smpev-cstyle1 .calendar-month-header > div {
+	background-color: #ff6666;	
+	color: #fff;
+}
+
+/* Current day */
+.mb2smpev-cstyle1 .calendar-dow .today {
+	background-color: #f7f8f9;	
+}
+
+
+/* Event date */
+
+.mb2smpev-cstyle1 .calendar-dow .event {
+	background-color: #ff6666;	
+	color: #fff;
+}
+
+.mb2smpev-cstyle1 .calendar-dow .event a {
+	color: #fff;	
+}
+
+.mb2smpev-cstyle1 .calendar-dow .event a:hover,
+.mb2smpev-cstyle1 .calendar-dow .event a:focus {
+	color: #fff;	
+}
+
+
+
+
+
+/*--------------------------------------------------------------*/
+/*	Calendar style 2
+/*--------------------------------------------------------------*/
+
+
+/* Calendar header */
+.mb2smpev-cstyle2 .calendar-month-header > div {
+	background-color: #ff6666;	
+	color: #fff;
+}
+
+.mb2smpev-cstyle2 .calendar-dow-header,
+.mb2smpev-cstyle2 .calendar-dow {
+	border-left-color: transparent;	
+}
+
+.mb2smpev-cstyle2 .calendar-dow-header > div,
+.mb2smpev-cstyle2 .calendar-dow > div {
+	border-right-color: transparent;
+	border-bottom-color: transparent;	
+}
+
+.mb2smpev-cstyle2 .calendar-days {}
+
+
+
+
+/* Events */
+
+.mb2smpev-cstyle2 .calendar-dow .event a {
+	color: #ff6666;	
+}
+
+.mb2smpev-cstyle2 .calendar-dow .event:after {
+	content:'';
+	display: block;
+	height: 3px;
+	width: 20px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -10px;
+	background-color: #ff6666;
+}
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------*/
+/*	Events style
+/*--------------------------------------------------------------*/
+
+.mb2smpev-event-item {
+	margin-bottom: 30px;	
+}
+
+.mb2smpev-event-title {
+	margin: 0;	
+}
+
+.mb2smpev-thumbnail {
+	overflow: hidden;	
+}
+
+.mb2smpev-thumbc1 .mb2smpev-thumbnail {
+	border-radius: 999px;
+	-moz-border-radius: 999px;
+	-webkit-border-radius: 999px;
+	-ms-border-radius: 999px;
+	-o-border-radius: 999px;	
+}
+
+.mb2smpev-event-introtext {
+	margin-top: 10px;	
+}
+
+.mb2smpev-readmore {
+	margin: 10px 0 0 0;	
+}
+
+
+/* Layout 1 */
+
+.mb2smpev-elayout1 .mb2smpev-thumbnail {
+	float: left;
+	margin-right: 20px;		
+}
+
+.mb2smpev-elayout1 .mb2smpev-isthumb .mb2smpev-event-content {
+	padding-top: 10px;	
+}
+
+
+/* Layout 2 */
+
+.mb2smpev-elayout2 .mb2smpev-thumbnail {
+	margin: 0 auto 10px auto;	
+}
+
+.mb2smpev-elayout2 .mb2smpev-event-content {
+	text-align: center;	
+}
+
+
+
+
+
+/*--------------------------------------------------------------*/
+/*	Events popup window
+/*--------------------------------------------------------------*/
+
+.mb2smpev-popup {
+	display: none;
+	position: fixed;	
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100009;
+	background-color: rgba(0,0,0,.6);
+}
+
+.mb2smpev-popup-inner {
+	position: relative;
+	background-color: #fff;
+	z-index: 100010;
+	width: 700px;
+	margin: 50px auto 0 auto;
+	max-width: 97%;	
+}
+
+.mb2smpev-popup .mb2smpev-popup-title {
+	margin: 0;
+	padding: 30px;
+	background-color: #ff6666;
+	color: #fff;
+}
+
+.mb2smpev-popup .mb2smpev-popup-close {
+	display: block;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 48px;
+	height: 48px;
+	color: #fff;
+	font-size: 22px;
+	text-align: center;
+	line-height: 48px;	
+}
+
+
+
+
+
+/*--------------------------------------------------------------*/
+/*	Events item in popup window
+/*--------------------------------------------------------------*/
+
+
+.mb2smpev-popup .mb2smpev-event {
+	padding: 30px;
+	margin-bottom: 0;	
+}
+
+.mb2smpev-popup .mb2smpev-event.mb2smpev-even {
+	background-color: #f7f8f9;	
+}
+
+.mb2smpev-popup .mb2smpev-readmore {
+	margin: 0;
+	padding-top: 20px;	
+}
+
+
+
+
+
+/*--------------------------------------------------------------*/
+/*	Events container
+/*--------------------------------------------------------------*/
+
+.mb2smpev-events-container {
+	margin-top: 30px;	
+}
+
+
+
+
+/*--------------------------------------------------------------*/
+/*	Date filter
+/*--------------------------------------------------------------*/
+
+.mb2smpev-date-filter {
+	margin-bottom: 30px;	
+}
+
+
+
+
+
+/*--------------------------------------------------------------*/
+/*	Tooltop style
+/*--------------------------------------------------------------*/
+
+.mb2smpev-ttip {
+	background-color: #fff;
+	padding: 20px;
+	box-shadow: 0 0 3px 3px rgba(0,0,0,.1);
+	-moz-box-shadow: 0 0 3px 3px rgba(0,0,0,.1);	
+	-webkit-box-shadow: 0 0 3px 3px rgba(0,0,0,.1);
+	-ms-box-shadow: 0 0 3px 3px rgba(0,0,0,.1);
+	-o-box-shadow: 0 0 3px 3px rgba(0,0,0,.1);
+}
+
+.ttip-event-title {
+	display: block;
+}
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------*/
+/*	Events next to calendar
+/*--------------------------------------------------------------*/
+
+.mb2smpev-layout3 .mb2smpev-calendar,
+.mb2smpev-layout3 .mb2smpev-events-container {
+	float: left;
+	width: 50%;	
+}
+
+.mb2smpev-layout3 .mb2smpev-events-container {
+	margin-top: 0;	
+}
+
+.mb2smpev-layout3 .mb2smpev-events-container2 {
+	padding-left: 45px;	
+}
+
+
+@media only screen and (max-width:768px){
+
+	.mb2smpev-layout3 .mb2smpev-calendar,
+	.mb2smpev-layout3 .mb2smpev-events-container {
+		float: none;
+		width: 100%;	
+	}
+	
+	.mb2smpev-layout3 .mb2smpev-events-container {
+		margin-top: 50px;	
+	}
+	
+	.mb2smpev-layout3 .mb2smpev-events-container2 {
+		padding-left: 0;	
+	}
+
+}
+
+
+
+

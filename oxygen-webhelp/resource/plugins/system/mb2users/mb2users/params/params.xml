@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<form>
+	<fields name="params" addfieldpath="plugins/system/mb2users/mb2users/libs/fields">
+	
+	
+		
+	   <fieldset name="mb2-mb2ctmenu-params" label="PLG_MB2USERS_FORM_TAB"> 
+						
+			<field name="position" type="text" default="" label="PLG_MB2USERS_FORM_POSITION_LABEL"/>
+			<field name="image" type="media" label="PLG_MB2USERS_FORM_IMAGE_LABEL"/>
+			<field name="description" type="textarea" default="" label="PLG_MB2USERS_FORM_DESCRIPTION_LABEL"/>							
+			<field name="showemail" 
+				type="radio" 
+				class="btn-group btn-group-yesno" 
+				default="0" 
+				label="PLG_MB2USERS_FORM_SHOWEMAIL_LABEL" 
+				description="PLG_MB2USERS_FORM_SHOWEMAIL_DESC" 
+			>	
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+			<field type="spacer" hr="true"/>
+			
+			
+			<field name="icon1" type="mb2iconlist" label="PLG_MB2USERS_FORM_ICON_LABEL" />
+			<field name="link1" type="text" default="" label="PLG_MB2USERS_FORM_LINK_LABEL"/>
+			<field type="spacer" hr="true"/>
+			
+			<field name="icon2" type="mb2iconlist" label="PLG_MB2USERS_FORM_ICON_LABEL" />
+			<field name="link2" type="text" default="" label="PLG_MB2USERS_FORM_LINK_LABEL"/>
+			<field type="spacer" hr="true"/>
+			
+			<field name="icon3" type="mb2iconlist" label="PLG_MB2USERS_FORM_ICON_LABEL" />
+			<field name="link3" type="text" default="" label="PLG_MB2USERS_FORM_LINK_LABEL"/>
+			<field type="spacer" hr="true"/>
+			
+			<field name="icon4" type="mb2iconlist" label="PLG_MB2USERS_FORM_ICON_LABEL" />
+			<field name="link4" type="text" default="" label="PLG_MB2USERS_FORM_LINK_LABEL"/>
+			<field type="spacer" hr="true"/>
+			
+			<field name="icon5" type="mb2iconlist" label="PLG_MB2USERS_FORM_ICON_LABEL" />
+			<field name="link5" type="text" default="" label="PLG_MB2USERS_FORM_LINK_LABEL"/>	
+			
+			
+			
+		</fieldset>
+	</fields>
+
+</form>

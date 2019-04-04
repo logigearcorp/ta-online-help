@@ -1,0 +1,129 @@
+
+/* Basic styles */
+
+body{
+ 	color: @mb2_color_text_base;
+	font-family: @mb2_font_family_base;
+	font-size: @mb2_font_size_base;
+	line-height: @mb2_line_height_base;
+	background-color: #fff;
+	height: 100%;
+	margin: 0;
+}
+
+.ltype_boxed {
+	padding: 30px 0;	
+}
+
+
+.ltype_frame #page {
+	margin: 20px;
+	overflow: hidden;
+}
+
+.ltype_frame .fixed-nav-element {
+	left: 20px;
+	right: 20px;	
+}
+
+
+#page {
+	z-index: 10;
+	position: relative;	
+}
+
+
+#page-b,
+.header-no-transparent #page-a {
+	background-color: #fff;	
+}
+
+
+#page-a,
+#page-b {	
+	width:100%;
+	position: relative;
+}
+
+
+
+.container-fluid {
+	margin-left:auto;
+	margin-right:auto;	
+}
+
+
+
+/* Links */
+
+a {
+	color: @mb2_color_links_base;
+	text-decoration: none;
+	.mb2_transition1(color, 0.08s);
+}
+
+a:hover,
+a:focus {
+	color: @mb2_color_links_hover_base;
+	text-decoration: none;
+	outline: none;
+}
+
+
+
+/* Images */
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+
+/* Fixed element */
+
+.fixed-nav-element {
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999 !important;
+}
+
+
+/* Fixed page a container if header is set to transparent */
+
+.transparent-header #page-a {
+	z-index: 999;
+}
+
+
+/* Bootstrap fixes */
+
+label {
+	display: inline-block!important;	
+}
+
+input.hasTooltip {
+	display: block !important;	
+}
+
+
+
+
+
+
+@media (max-width: @mb2_screen_tablet){
+	
+	
+	.ltype_frame #page {
+		margin: 0;
+	}
+	
+	.ltype_boxed {
+		padding: 0;	
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,124 @@
+/**
+ * @package		Mb2 Skills
+ * @version		1.2.1
+ * @author		Mariusz Boloz (http://mb2extensions.com)
+ * @copyright	Copyright (C) 2016 Mariusz Boloz (http://mb2extensions.com). All rights reserved
+ * @license		Commercial (http://codecanyon.net/licenses)
+**/
+
+
+
+
+.mb2skills-item {
+    float: left;
+    position: relative;
+}
+
+
+
+
+/* Skill description element */
+
+
+.mb2skills-element {
+	position: relative;	
+}
+
+
+.showval0 .mb2skills-skill-value {
+	display: none!important;	
+}
+
+
+
+
+
+/* =========================================== Circle and semiCircle element */
+
+.typeCircle .mb2skills-desc-wrap,
+.typeSemiCircle .mb2skills-desc-wrap {
+	position: absolute;
+	width: 100%;
+	text-align: center;	
+}
+
+.typeCircle.showval1 .mb2skills-skill-name,
+.typeSemiCircle.showval1 .mb2skills-skill-name {
+	margin-top: 20px;	
+}
+
+
+
+/* Circle element */
+
+.typeCircle .mb2skills-desc-wrap {
+	top: 50%;
+	left: 50%;
+	-moz-transform: translate(-50%, -50%);	
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+
+
+/* Semi Circle element */
+
+.typeSemiCircle .mb2skills-desc-wrap {
+	bottom: 30px;	
+}
+
+
+
+
+
+
+/* =========================================== Line element */
+
+.typeLine .mb2skills-desc-wrap {
+	position: relative;
+	top: -100%;	
+}
+
+
+
+.typeLine .mb2skills-desc-wrap > div {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+
+.typeLine .mb2skills-skill-name {
+	float: left;	
+}
+
+
+.typeLine .mb2skills-skill-value {
+	float: right;	
+}
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+	.mb2skills-item {
+		width: 50% !important;
+	}
+}
+
+
+
+@media only screen and (max-width: 480px) {
+	.mb2skills-list, .mb2skills-item-inner {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+	.mb2skills-item {
+		float: none;
+		width: 100% !important;
+	}
+}
+
+

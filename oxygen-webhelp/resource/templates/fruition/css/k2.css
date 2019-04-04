@@ -1,0 +1,22 @@
+
+
+/* Fixe problem width item image (it have modal class which is hidden by bootstrap) */
+#k2Container .modal {
+	display: block;
+	position: static;
+	z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

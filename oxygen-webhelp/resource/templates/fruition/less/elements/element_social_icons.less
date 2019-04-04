@@ -1,0 +1,85 @@
+
+/* Element social icons styles */
+
+.social-icons {
+	display: inline-block;	
+}
+
+.social-icons a {
+	display: inline-block;
+	padding: 0;
+	margin: 0 5px;
+	text-align: center;
+	color: #000;
+	font-size: 100%;
+	.mb2_transition1(all, 0.15s);
+	vertical-align: center;
+}
+
+
+.social-icons a:hover,
+.social-icons a:focus {
+	color: @mb2_color_bg_accent1!important;
+	text-decoration: none;
+}
+
+
+
+
+/* Icons size */
+
+.social-icons.icons-lg a {
+	width: 120px;
+	height: 120px;
+	line-height: 115px;
+	font-size: 38px;
+	margin: 0 5px;
+}
+
+
+
+
+
+
+
+/* Transparent */
+
+.social-icons.transparent a {
+	color: rgba(255,255,255,.25);
+}
+
+.social-icons.transparent a:hover,
+.social-icons.transparent a:focus {
+	color: @mb2_color_bg_accent1;
+}
+
+
+
+
+/* Color */
+
+.social-icons.color a {
+	color: @mb2_color_bg_accent1;	
+}
+
+.social-icons.color a:hover,
+.social-icons.color a:focus {
+	color: lighten(@mb2_color_bg_accent2,3%);
+}
+
+
+
+/* Dark */
+
+.dark-gray .social-icons a,
+.social-icons.dark a {
+	color: #fff;	
+}
+
+.dark-gray .social-icons a:hover,
+.dark-gray .social-icons a:focus,
+.social-icons.dark a:hover,
+.social-icons.dark a:focus {
+	color: @mb2_color_bg_accent1;
+}
+

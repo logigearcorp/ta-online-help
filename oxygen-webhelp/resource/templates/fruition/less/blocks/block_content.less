@@ -1,0 +1,47 @@
+
+#main-content > div {
+	overflow: hidden;
+	padding-top: 90px;
+	padding-bottom: 60px;
+}
+
+
+.content-inner,
+.sidebar-inner {
+	margin-bottom: 30px;	
+}
+
+.content-col.left .content-inner {
+	padding-right: 10px;
+}
+
+.content-col.right .content-inner {
+	padding-left: 10px;
+}
+
+
+
+/* Case when shortcode section is in use */
+
+.issection #main-content > div {
+	padding-top: 0;
+	padding-bottom: 0;	
+}
+
+.issection .content-inner {
+	margin-bottom: 0;	
+}
+
+
+@media (max-width: @mb2_screen_tablet){
+	
+	.content-col.left .content-inner {
+		padding-right: 0;
+	}
+	
+	.content-col.right .content-inner {
+		padding-left: 0;
+	}
+	
+	
+}

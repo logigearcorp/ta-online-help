@@ -1,0 +1,1 @@
+define({"topics" : [{"title":"GetPictureCheck","id":"reference_GetPictureCheck","href":"TA_Automation\/Topics\/abt_GetPictureCheck.html","menu": {"hasChildren":false,},"tocID":"reference_GetPictureCheck-d46e41641","topics":[]}]});

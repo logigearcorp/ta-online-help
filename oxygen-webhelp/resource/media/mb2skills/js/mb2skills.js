@@ -1,0 +1,8 @@
+/**
+ * @package		Mb2 Skills
+ * @version		1.2.1
+ * @author		Mariusz Boloz (http://mb2extensions.com)
+ * @copyright	Copyright (C) 2016 Mariusz Boloz (http://mb2extensions.com). All rights reserved
+ * @license		Commercial (http://codecanyon.net/licenses)
+**/
+jQuery(document).ready(function(e){document.getElementById("example-circle-container");e(".mb2skills-item").each(function(){var t=e(this),a=t.find(".mb2skills-element"),s=a.data("sval"),l=a.data("text"),i=a.data("sw"),r=a.data("sc"),o=a.data("tc"),d=a.data("fc"),n=a.data("showval"),c=a.data("valsuff"),u=a.data("topval"),m=a.data("aspeed"),f=a.data("type"),l=1==n?"":l;if("Circle"==f)var v=new ProgressBar.Circle(a[0],{color:r,strokeWidth:i,duration:m,trailColor:""!=o?o:"",text:{value:l,style:null,className:"progressbar-text"},step:function(e,t){1==n&&t.setText((100*t.value()).toFixed(0)+c)},fill:d});else if("SemiCircle"==f)var v=new ProgressBar.SemiCircle(a[0],{color:r,strokeWidth:i,duration:m,trailColor:""!=o?o:"",text:{value:l,style:null,className:"progressbar-text"},step:function(e,t){1==n&&t.setText((100*t.value()).toFixed(0)+c)},fill:d});else var v=new ProgressBar.Line(a[0],{color:r,strokeWidth:i,duration:m,trailColor:""!=o?o:"",text:{value:l,style:null,className:"progressbar-text"},step:function(e,t){1==n&&t.setText((100*t.value()).toFixed(0)+c)},fill:""});a.find(".progressbar-text").wrap('<div class="mb2skills-desc-wrap" />'),a.find(".progressbar-text").addClass("mb2skills-skill-value"),a.find(".mb2skills-desc-wrap div").removeClass("progressbar-text"),a.find(".mb2skills-desc-wrap").append('<div class="mb2skills-skill-name">'+a.data("text")+"</div>");a.bind("inview",function(e,t){setTimeout(function(){v.animate(s/u,function(){})},300)})})});

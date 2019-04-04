@@ -1,0 +1,1187 @@
+/**
+ * @package		Mb2 CtMenu
+ * @version		1.4.2
+ * @author		Mariusz Boloz (http://mb2extensions.com)
+ * @copyright	Copyright (C) 2016 Mariusz Boloz (http://mb2extensions.com). All rights reserved
+ * @license		Commercial (http://codecanyon.net/licenses)
+**/
+
+@font-face {
+  font-family: 'mb2ctm_font';
+  src: url('font/mb2ctm_font.eot?35595855');
+  src: url('font/mb2ctm_font.eot?35595855#iefix') format('embedded-opentype'),
+       url('font/mb2ctm_font.woff?35595855') format('woff'),
+       url('font/mb2ctm_font.ttf?35595855') format('truetype'),
+       url('font/mb2ctm_font.svg?35595855#mb2ctm_font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'mb2ctm_font';
+    src: url('../font/mb2ctm_font.svg?35595855#mb2ctm_font') format('svg');
+  }
+}
+*/
+ 
+ [class^="mb2ctm_icon-"]:before, 
+ [class*=" mb2ctm_icon-"]:before,
+ul.mb2ctm-child-list2 > li > a:before,
+.mb2ctm .menu2 .menu > li > a:before,
+.mb2ctm .menu3 .menu > li > a:before,
+.mb2ctm .menu4 .menu > li > a:before,
+.mb2ctm .menu5 .menu > li > a:before,
+.mb2ctm-parent-open:before,
+.mb2ctm .menu > li > a:before,
+li.mb2ctm-isparent > a:before,
+.mb2ctm-dropdow .mb2ctm-stparent > a:before {
+  font-family: "mb2ctm_font";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.mb2ctm_icon-up-open:before { content: '\e800'; } /* '' */
+.mb2ctm_icon-down-open:before { content: '\e801'; } /* '' */
+.mb2ctm_icon-menu:before { content: '\e802'; } /* '' */
+.mb2ctm_icon-right-open:before { content: '\e803'; } /* '' */
+.mb2ctm_icon-left-open:before { content: '\e804'; } /* '' */
+.mb2ctm_icon-search:before { content: '\e805'; } /* '' */
+.mb2ctm_icon-cancel:before { content: '\e806'; } /* '' */
+
+
+
+/* ==================================== GENERAL STYLES */
+
+.mb2ctm {
+	position: relative;
+}
+
+.mb2ctm *,
+.mb2ctm *:before,
+.mb2ctm *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;	
+}
+
+
+/* Links */
+
+.mb2ctm a:focus {
+	outline: none;	
+}
+
+
+/* Headings */
+
+.mb2ctm h1,
+.mb2ctm h2,
+.mb2ctm h3,
+.mb2ctm h4,
+.mb2ctm h5,
+.mb2ctm h6 {
+	margin-top: 0;	
+}
+
+
+
+/* ==================================== MENU BAR */
+
+
+.mb2ctm-menu-bar {
+	display: none;
+	height: 50px;
+	line-height: 50px;
+	background-color: #6699ff;
+	color: #fff;
+	position: relative;	
+	padding: 0 15px;
+	float: none;
+	clear: both;
+}
+
+.mb2ctm-menu-link {
+	display: none;
+	position: relative;
+	padding: 0;
+	text-align: right;
+}
+
+.mb2ctm-menu-open {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: rgba(0,0,0,.2);
+	width: 50px;
+	height: 100%;
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+	text-decoration: none;	
+}
+
+.mb2ctm-menu-open:hover,
+.mb2ctm-menu-open:focus {
+	color: #fff;
+	text-decoration: none;	
+}
+
+.mb2ctm-menu-link .mb2ctm-menu-open {
+	position: relative;
+	display: inline-block;
+	height: 38px;
+	width: 50px;
+	line-height: 38px;
+	font-size: 26px;
+	color: #6699ff;	
+	background-color: transparent;
+}
+
+.mb2ctm-menu-link .mb2ctm-menu-open:hover,
+.mb2ctm-menu-link .mb2ctm-menu-open:focus {
+	color: #6699ff;	
+}
+
+.mb2ctm-menu-icon {
+	line-height: inherit; 	
+}
+
+
+
+@media only screen and (max-width:768px){
+	
+	.mb2ctm-menu-bar,
+	.mb2ctm-menu-link {
+		display: block;
+	}
+
+}
+
+
+
+
+/* ==================================== MENU LIST */
+
+
+.mb2ctm-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.desk-menu > ul {
+	display: block !important;	
+}
+
+.mb2ctm-list > li {
+	margin: 0;
+	padding: 0;
+	display: inline-block;	
+}
+
+.mb2ctm-dropdow {
+	position: relative;	
+}
+
+.mb2ctm-list > li > a {
+	display: inline-block;
+	position: relative;
+	padding: 0 18px;
+	color: #555;
+	height: 38px;
+	line-height: 38px;	
+}
+
+.mb2ctm-list > li:hover > a,
+.mb2ctm-list > li.mb2ctm-hover > a {
+	background-color: #6699ff;
+	color: #fff;
+	text-decoration: none;	
+}
+
+
+
+/* Arrow for parent menu items */
+
+.mb2ctm-list > li.mb2ctm-isparent > a:before {
+	content: '\e801';	
+	position: absolute;
+	right: 2px;
+	top: 50%;
+	margin-top: -5px;
+	font-size: 9px;
+	width: 10px;
+	height:10px;
+}
+
+
+li.mb2ctm-sitem > a:before {
+	display: none;	
+}
+
+
+
+/* Menu alignment */
+
+.mb2ctm-right .mb2ctm-list {
+	text-align: right;	
+}
+
+.mb2ctm-center .mb2ctm-list {
+	text-align: center;	
+}
+
+.mb2ctm-center .mb2ctm-list li,
+.mb2ctm-right .mb2ctm-list li {
+	text-align: left;	
+}
+
+.mb2ctm-center {
+	float: none;
+	clear: both;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+
+@media only screen and (max-width:768px){
+
+	.mb2ctm-list > li {
+		display: block !important;
+		position: relative;
+		margin: 0 0 1px 0;	
+	}
+	
+	.mb2ctm-list > li:last-child {
+		margin-bottom: 0;	
+	}
+	
+	.mb2ctm-list > li {
+		display: block !important;	
+		background-color: #ecedef;		
+	}
+	
+	.mb2ctm-list > li > a {
+		height: 50px !important;
+		line-height: 50px !important;
+		position: static !important;
+		display: block;	
+	}	
+	
+	.mb2ctm-list > li:hover > a {
+		background-color: #ecedef;
+		color: #555;	
+	}
+	
+	li.mb2ctm-isparent > a:before {
+		display: none;	
+	}
+	
+		
+	.mb2ctm-list {
+		border-bottom: 0;
+		width: 100%;
+		float: none;
+		clear: both;	
+	}
+	
+	.is-bar .mb2ctm-list {
+		display: none;	
+	} 
+	
+	
+	.mb2ctm-right .mb2ctm-list,
+	.mb2ctm-center .mb2ctm-list {
+		text-align: left;	
+	}
+
+
+}
+
+
+
+
+
+/* Search module */
+
+.mb2ctm-sitem > a {
+	text-align: center;
+}
+
+.mb2ctm-sitem .mb2ctm-module {
+	margin-left: 15px;
+	margin-right: 15px;	
+}
+
+.mb2ctm-sitem input[type="text"] {
+	width: 100%;
+	font-size: 1.8em;
+	height: 50px;
+	border: 0;
+	background-color: transparent;
+	padding: 0;	
+	outline: none!important;
+}
+
+
+@media only screen and (max-width:768px){
+
+	
+	.mb2ctm-sitem > a {
+		display: none !important;	
+	}
+	
+	.mb2ctm-sitem .mb2ctm-smenu {
+		display: block !important;	
+	}
+	
+	.mb2ctm-sitem .mb2ctm-smenu-inner {		
+		/*background-color: #ecedef;*/
+	}
+	
+	.mb2ctm-sitem input[type="text"] {
+		height: auto;
+		font-size:initial;
+	}
+
+}
+
+
+
+
+/* ==================================== SUB-MENU CONTAINER */
+
+
+.mb2ctm-smenu {
+	position: absolute;
+	width: 100%;
+	top:100%;
+	left: 0;
+	z-index: 999;
+	display: none;	
+	background-color: #fafbfc;
+}
+
+.mb2ctm-smenu-inner {
+	margin-left:auto;
+	margin-right:auto;
+	padding: 30px 15px 0 15px;
+}
+
+.click-mode > ul > li.mb2ctm-hover > .mb2ctm-smenu {
+	display: block !important;	
+}
+
+
+@media only screen and (max-width:768px){
+			
+	li.mb2ctm-hover .mb2ctm-smenu {
+		display: block!important;	
+	}
+	
+	.mb2ctm-smenu {
+		position: relative;
+		top: auto;	
+	}
+
+}
+
+
+
+
+/* Open smenu on mobile devices */
+
+.mb2ctm-smenu-open {
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 18px;
+	background-color: rgba(0,0,0,.2);
+	color: #fff;
+	display: none;
+	cursor: pointer;
+		
+}
+
+.mb2ctm-smenu-open.active:before {
+	content:'\e800';	
+}
+
+
+
+
+
+
+
+
+/* ==================================== MOBILE MENU ARROWS */
+
+
+.mb2ctm-smenu-item {
+	padding: 15px;	
+}
+
+.mb2ctm-parent-open {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 15px;
+	width: 50px;
+	height: 50px;	
+	cursor: pointer;
+	text-align: center;
+	line-height: 50px;
+}
+
+.mb2ctm-parent-open:before {
+	content: '\e801';		
+}
+
+.mb2ctm-parent-open.active:before {
+	content: '\e800';		
+}
+
+
+@media only screen and (max-width:768px){
+	
+	.mb2ctm-parent-open {
+		display: block;	
+	}
+
+}
+
+
+
+
+
+
+/* ==================================== SUB-MENU TABS */
+
+
+.mb2ctm-tabs {
+	position: relative;	
+}
+
+.mb2ctm-tabs-list {
+	margin: 0;
+	padding: 0;	
+	list-style: none;
+}
+
+.mb2ctm-tabs-list li {
+	margin: 0;
+	padding: 0;	
+	display: inline-block;
+}
+
+.mb2ctm-tabs-list li a {
+	display: block;
+	padding: 10px 15px;	
+	color: #555;
+	border: solid 1px #d1d2d3;
+}
+
+.mb2ctm-tabs-list li a:hover,
+.mb2ctm-tabs-list li a:focus {
+	text-decoration: none;
+}
+
+.mb2ctm-tabs-list li.active a {
+	background-color: #6699ff;
+	color: #fff;
+	border-color: #6699ff;
+}
+
+
+
+/* Tabs left and right */
+
+.mb2ctm-tabs-left .mb2ctm-tabs-list,
+.mb2ctm-tabs-right .mb2ctm-tabs-list {
+	display: block;
+	width: 200px;	
+}
+
+.mb2ctm-tabs-left .mb2ctm-tabs-list li,
+.mb2ctm-tabs-right .mb2ctm-tabs-list li {
+	display: block;
+	margin-bottom: 10px;	
+}
+
+
+/* Tabs left */ 
+
+.mb2ctm-tabs-left {
+	padding-left:230px;		
+}
+
+.mb2ctm-tabs-left .mb2ctm-tabs-list {	
+	margin-left: -215px;	
+	float: left;	
+}
+
+
+
+
+/* Tabs right */ 
+
+.mb2ctm-tabs-right {
+	padding-right: 230px;	
+}
+
+.mb2ctm-tabs-right .mb2ctm-tabs-list {
+	margin-right: -215px;
+	float: right;
+}
+
+
+
+/* Tabs top and bottom  */
+
+.mb2ctm-tabs-top .mb2ctm-tabs-list,
+.mb2ctm-tabs-bottom .mb2ctm-tabs-list {
+	padding-left: 15px;
+	padding-right: 15px;
+	text-align: center;	
+}
+
+.mb2ctm-tabs-top .mb2ctm-tabs-list li,
+.mb2ctm-tabs-bottom .mb2ctm-tabs-list li {
+	margin: 0 4px;	
+}
+
+
+
+/* Tabs bottom */
+
+.mb2ctm-tabs-bottom .mb2ctm-tabs-list {
+	margin-bottom: 30px;
+		
+}
+
+.mb2ctm-tabs-bottom .mb2ctm-tabs-list li {
+	margin-top: -15px;	
+}
+
+
+@media only screen and (max-width:768px){
+	
+	.mb2ctm-tabs-bottom .mb2ctm-tabs-list {
+		margin: 0 0 30px 0;	
+	}
+	
+	.mb2ctm-tabs-bottom .mb2ctm-tabs-list li {
+		margin-top: 0;	
+	}
+}
+
+
+
+/* Tabs content */
+
+.mb2ctm-tab-content {	
+	padding: 0;	
+}
+
+.mb2ctm-tab-col {
+	float: left;	
+}
+
+.mb2ctm-tab-col-inner {
+	padding: 0 15px;	
+}
+
+.mb2ctm-module,
+.mb2ctm-custom-content {
+	margin-bottom: 30px;	
+}
+
+
+.mb2ctm-tabs-top .mb2ctm-tab-content {
+	padding-top: 30px;	
+}
+
+
+
+@media only screen and (max-width:768px){
+
+	.mb2ctm-tabs {
+		background-color: rgba(255,255,255,0);
+		padding-left: 0 !important;	
+		padding-right: 0 !important;	
+	}
+	
+	.mb2ctm-tabs-list {
+		poaition: relative !important;
+		display: block !important;
+		width: 100% !important;
+		float: none !important;
+		text-align: center !important;
+		margin: 0 0 15px 0 !important;	
+	}
+	
+	.mb2ctm-tabs-list li {
+		margin: 0 3px !important;
+		display: inline-block !important;	
+	}	
+	
+	.mb2ctm-tab-col {
+		width: 100% !important;	
+	}
+	
+
+}
+
+
+
+/* ==================================== MODULES IN SUB-MENU CONTAIONER */
+
+
+
+
+
+/* Module title */
+
+.mb2ctm-module > div > h1, .mb2ctm-custom-content > h1
+.mb2ctm-module > div > h2, .mb2ctm-custom-content > h2
+.mb2ctm-module > div > h3, .mb2ctm-custom-content > h3
+.mb2ctm-module > div > h4, .mb2ctm-custom-content > h4
+.mb2ctm-module > div > h5, .mb2ctm-custom-content > h5
+.mb2ctm-module > div > h6, .mb2ctm-custom-content > h6
+.mb2ctm-module > div > p {
+	margin: 0 0 15px 0;
+	padding: 0;
+	font-size: 100%;
+}
+
+
+
+
+
+
+
+
+
+/* ==================================== MENU LIST (Submenus and Joomla menu modules published in tab columns) */
+
+/* MList style */
+
+.mb2ctm .menu,
+.mb2ctm-mega .mb2ctm-child-list1,
+.mb2ctm-mega .mb2ctm-child-list2 {
+	margin: 0;
+	padding: 0;	
+	list-style: none;
+}
+
+.mb2ctm .menu ul,
+.mb2ctm-mega .mb2ctm-child-list1 ul {
+	padding-top: 10px;
+}
+
+
+
+/* Li element style */
+
+.mb2ctm .menu > li,
+.mb2ctm-mega .mb2ctm-child-list1 li {
+	margin: 0;
+	padding: 0;	
+}
+
+.mb2ctm .menu > li a,
+.mb2ctm-mega .mb2ctm-child-list1 > li a {
+	padding: 4px 0;
+	text-decoration: none;
+	display: inline-block;	
+	line-height: 1.5;
+	position: relative;
+	
+}
+
+
+/* Menu Item link */
+
+.mb2ctm .menu > li.active a,
+.mb2ctm .menu > li.current a,
+.mb2ctm .menu > li.selected a,
+.mb2ctm .menu > li a:hover,
+.mb2ctm .menu > li a:focus {
+	color: #6699ff;
+	text-decoration: none;	
+}
+
+
+
+/* Next leve list */
+
+.mb2ctm-mega .mb2ctm-child-list2 > li > a,
+.mb2ctm .menu > li > a {
+	padding-left: 20px;	
+}
+
+.mb2ctm-mega .mb2ctm-child-list2 > li > a:before,
+.mb2ctm .menu > li > a:before {
+	content: '\e803';
+	font-size: 9px;
+	position: absolute;
+	display: block;
+	width: 10px;
+	height: 10px;
+	line-height:10px;
+	left: 0;
+	top: 50%;
+	margin-top:-5px	
+}
+
+.mb2ctm-mega .mb2ctm-child-list3,
+.mb2ctm-mega .mb2ctm-child-list3 ul,
+.mb2ctm .menu ul,
+.mb2ctm .menu ul ul {
+	list-style: none;
+	margin: 0 0 0 20px;
+	padding: 0;
+	position: relative;
+}
+
+.mb2ctm-mega .mb2ctm-child-list3,
+.mb2ctm .menu > li > ul {
+	margin-left: 35px;	
+}
+
+.mb2ctm-mega .mb2ctm-child-list3:before,
+.mb2ctm-mega .mb2ctm-child-list3 ul:before,
+.mb2ctm .menu  li ul:before {
+	content: '';
+	position: absolute;
+	left: -15px;
+	top: 0;
+	height: 100%;
+	width: 1px;
+	border-left: dashed 1px #d1d2d3;	
+}
+
+.mb2ctm-mega .mb2ctm-child-list3 li a,
+.mb2ctm .menu li ul li a {
+	position: relative;	
+	font-size: 90%;
+}
+
+.mb2ctm-mega .mb2ctm-child-list3 li a:before,
+.mb2ctm .menu li ul li a:before {
+	content: '';
+	position: absolute;
+	left: -12px;
+	top: 50%;
+	height: 10px;
+	width: 10px;
+	border-top: dashed 1px #d1d2d3;	
+}
+
+
+
+
+/* ==================================== SUBEMNU ITEMS (no mega columns) */
+
+
+.mb2ctm-mega .mb2ctm-noparent-list {
+	padding-bottom: 30px;	
+}
+
+.mb2ctm-mega .mb2ctm-isnoparent2 {
+	display: inline-block;
+}
+
+.mb2ctm-mega .mb2ctm-isnoparent2 > a {
+	margin: 0 15px;	
+	line-height: 1;
+	padding: 0;
+}
+
+
+@media only screen and (max-width:768px){
+	
+			
+	.mb2ctm-isnoparent2 {
+		display: block;	
+		width: 100% !important;
+	}
+			
+	.mb2ctm-isnoparent2 > a {
+		padding: 4px 0;	
+	}
+	
+	
+}
+
+
+
+
+
+
+/* ==================================== MEGA MENU COLUMNS */
+
+
+.mb2ctm-mega ul {
+	display: block !important;
+	opacity: 1 !important;
+	position: relative;	
+}
+
+.mb2ctm-mega ul.mb2ctm-child-list1 {
+	vertical-align: top;
+	margin: 0;	
+}
+
+.mb2ctm-mega li.mb2ctm-isparent2 {
+	list-style: none;
+	display: inline-block;
+	line-height: 1;
+	padding: 0;
+	width: 25%;
+	max-width: 100%;
+	vertical-align: top;
+	margin: 0 0 30px 0;
+}
+
+
+.mb2ctm-mega li.mb2ctm-isparent2 > a {
+	margin-left: 15px;
+	margin-right: 15px;	
+	padding: 0;
+	line-height: 1;
+	margin-bottom: 15px;
+}
+
+.mb2ctm-mega li.mb2ctm-isparent2 > ul {
+	margin: 0 15px;	
+	padding: 0;
+	line-height: 1;
+}
+
+
+
+@media only screen and (max-width:768px){
+	
+		
+	.mb2ctm-isparent2 {
+		display: block;	
+		width: 100% !important;
+	}
+			
+	.mb2ctm-child-list > li {
+		width: 100%;
+	}
+	
+	
+}
+
+
+
+
+
+/* ==================================== DROPDOWN MENU */
+
+.mb2ctm-dropdow,
+.mb2ctm-dropdow li {
+	position: relative;	
+}
+
+.mb2ctm-dropdow li {
+	display: block;
+	width: 100%!important;
+	float: none;
+}
+
+.mb2ctm-dropdow > div {
+	background-color: transparent;	
+}
+
+.mb2ctm-dropdow > div > div {
+	padding: 0;
+}
+
+.mb2ctm-dropdow > div,
+.mb2ctm-dropdow > div > div > ul,
+.mb2ctm-dropdow > div > div > ul ul {
+	width: 180px;
+	margin: 0;
+	padding: 0;
+}
+
+.mb2ctm-dropdow > div > div > ul ul {
+	position: absolute;
+	top: 0;
+}
+
+.mb2ctm-dropdow > div > div > ul {
+	left: 0;	
+}
+
+.mb2ctm-dropdow > div > div > ul ul  {
+	left: 100%;
+	margin: 0;		
+}
+
+.mb2ctm-dropdow li {
+	padding: 10px 15px;	
+	background-color: #fafbfc;
+}
+
+.mb2ctm-dropdow li > a {
+	display: block;	
+}
+
+.mb2ctm-dropdow .mb2ctm-stparent > a:before {
+	content: '\e803';
+	font-size: 9px;
+	position: absolute;
+	display: block;
+	width: 10px;
+	height: 10px;
+	line-height:10px;
+	right: 15px;
+	top: 50%;
+	margin-top:-5px		
+}
+
+
+
+/* Click mode */
+
+.click-mode .mb2ctm-dropdow > div > div > ul ul {
+	display: none;	
+}
+
+.click-mode .mb2ctm-dropdow > div > div > ul li.mb2ctm-hover > ul  {
+	display: block ;	
+}
+
+
+
+@media only screen and (max-width:768px){
+	
+	.mb2ctm-dropdow > div {
+		width: 100%;	
+	}
+	
+	.mb2ctm-dropdow > div > div {
+		padding: 20px 15px 0 15px;	
+	}
+	
+	.mb2ctm-dropdow > div > div > ul {
+		padding-bottom: 30px;
+		background-color: transparent;
+	}	
+	
+	.mb2ctm-dropdow > div > div > ul,
+	.mb2ctm-dropdow > div > div > ul ul {
+		display: block !important;
+		position: relative;
+		left: 0;
+		width: auto;
+	}
+	
+	.mb2ctm-dropdow li {
+		background-color: transparent;
+		padding: 0;	
+	}
+	
+	.mb2ctm-dropdow li a {
+		padding: 4px 0;	
+	}
+	
+	.mb2ctm-dropdow .mb2ctm-stparent > a:before {
+		display: none;	
+	}
+	
+	
+	
+	
+	/* Next leve list */
+
+	.mb2ctm-dropdow .mb2ctm-child-list2 > li > a {
+		padding-left: 20px;	
+	}
+	
+	.mb2ctm-dropdow .mb2ctm-child-list3,
+	.mb2ctm-dropdow .mb2ctm-child-list3 ul {
+		list-style: none;
+		margin: 0 0 0 20px;
+		padding: 0;
+		position: relative;
+	}
+	
+	.mb2ctm-dropdow .mb2ctm-child-list3 {
+		margin-left: 35px;	
+	}
+	
+	.mb2ctm-dropdow .mb2ctm-child-list3:before,
+	.mb2ctm-dropdow .mb2ctm-child-list3 ul:before {
+		content: '';
+		position: absolute;
+		left: -15px;
+		top: 0;
+		height: 100%;
+		width: 1px;
+		border-left: dashed 1px #d1d2d3;	
+	}
+	
+	.mb2ctm-dropdow .mb2ctm-child-list3 li a {
+		position: relative;	
+		font-size: 90%;
+	}
+	
+	.mb2ctm-dropdow .mb2ctm-child-list3 li a:before {
+		content: '';
+		position: absolute;
+		left: -12px;
+		top: 50%;
+		height: 10px;
+		width: 10px;
+		border-top: dashed 1px #d1d2d3;	
+	}
+	
+}
+
+
+
+
+
+/* ==================================== OTHER STYLES */
+
+/* Separator */
+
+.mb2ctm-separator {
+	width: 100%;
+	float: none;	
+}
+
+
+
+/* Clear div */
+
+.mb2ctm-clr {
+	*zoom: 1;
+}
+.mb2ctm-clr:before,
+.mb2ctm-clr:after {
+	display: table;
+	content: "";
+	line-height: 0;
+}
+.mb2ctm-clr:after {
+	clear: both;
+}
+
+
+
+
+
+
+/* ==================================== COLUMN CLASS */
+
+/* Padding */
+
+.mb2ctm .no-padding {
+	padding: 0;	
+}
+
+.mb2ctm .no-padding-top {
+	padding-top: 0;	
+}
+
+.mb2ctm .no-padding-bottom {
+	padding-bottom: 0;	
+}
+
+.mb2ctm .no-padding-left {
+	padding-left: 0;	
+}
+
+.mb2ctm .no-padding-right {
+	padding-right: 0;	
+}
+
+
+
+/* Border */
+
+.mb2ctm .border {
+	border: solid 1px #ecedef;	
+}
+
+.mb2ctm .border-top {
+	border-top: solid 1px #ecedef;	
+}
+
+.mb2ctm .border-bottom {
+	border-bottom: solid 1px #ecedef;
+}
+
+.mb2ctm .border-left {
+	border-left: solid 1px #ecedef;	
+}
+
+.mb2ctm .border-right {
+	border-right: solid 1px #ecedef;	
+}
+
+
+
+
+
+/* ==================================== MENU CLASS */
+
+
+/* Menu horizontal */
+
+.mb2ctm .menu-horizontal .menu > li ul {
+	display: none;	
+}
+
+.mb2ctm .menu-horizontal .menu > li {
+	display: inline-block;	
+}
+
+.mb2ctm .menu-horizontal .menu > li > a {
+	display: inline-block;
+	margin: 0 15px 0 0;	
+}

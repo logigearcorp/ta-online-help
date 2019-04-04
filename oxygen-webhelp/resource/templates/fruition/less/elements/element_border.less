@@ -1,0 +1,24 @@
+
+/* Border style */
+
+.border-hor {
+	position: relative;	
+	float: none;
+	border-bottom: solid 1px @mb2_border_color_base;	
+}
+
+.dark .border-hor,
+.dark-gray .border-hor {
+	border-color: rgba(255,255,255, .1);	
+}
+
+.border-hor.border1:before {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 80px;
+	height: 1px;
+	top: -4px;
+	left: 0;
+	border-top: solid 1px @mb2_color_bg_accent1;	
+}

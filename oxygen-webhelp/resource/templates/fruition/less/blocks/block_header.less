@@ -1,0 +1,386 @@
+
+/*========================================== TOP BAR */
+
+#top {
+	position: relative;
+	background-color: transparent;
+	border-bottom: solid 1px @mb2_border_color_base;
+	z-index: 26;
+	font-size: @mb2_font_size_small;
+}
+
+#top p {
+	margin-bottom: 0;	
+}
+
+
+
+
+
+
+
+/*========================================== HEADER */
+
+#main-header {
+	position: relative;
+	background-color: #fff;
+	z-index: 25;
+	vertical-align: middle;
+}
+
+
+
+/* Style for fixed header */
+
+#main-header.fixed-nav-element {
+	border-bottom: solid 1px @mb2_border_color_base;
+}
+
+
+
+/* Remove relative position for header columns (require for show full width menga menu container) */
+
+#main-header .tcol {
+	position: static;
+}
+
+#main-header > div {
+	position: relative;	
+}
+
+.header-fixw #main-header > div {
+	position: static;	
+}
+
+
+
+
+
+/*========================================== MAIN LOGO */
+
+.main-logo {
+	float: left;	
+}
+
+.main-logo.alignright {
+	text-align: right;
+	float: right;	
+}
+
+.main-logo.aligncenter {
+	text-align: center;
+	float: none;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+.main-logo img {
+	display: block;
+	width: auto;	
+}
+
+.main-logo .logo-text {
+	display: block;
+	font-size: @mb2_font_size_large;
+	text-transform: uppercase;
+	letter-spacing: @mb2_letter_spacing;
+}
+
+.main-logo .site-slogan {
+	display:block;
+	padding-top: 5px;
+	font-size: @mb2_font_size_xsmall;
+	text-transform: uppercase;
+	letter-spacing: @mb2_letter_spacing;
+	color: @mb2_color_text_lighten;
+}
+
+
+
+
+@media (max-width: @mb2_screen_tablet){
+	
+	.header-is-grid .main-logo {
+		float: none;
+		text-align: center;	
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.main-logo img {
+		display: inline-block;	
+	}
+	
+	.hide-logo .tlogo {
+		display: none;	
+	}		
+	
+	
+}
+
+
+
+
+
+
+
+/*========================================== HEADER FIXED WIDTH */
+
+.header-fixw #page-a {
+	padding-top:30px;	
+}
+
+
+
+
+
+
+/*========================================== NORMAL HEADER STYLES */
+
+
+/* Header style 2 */
+
+.header-style2 #top {
+	background-color: @mb2_color_bg_accent2;
+}
+
+
+/* Header style 5 */
+
+.header-style5 #top {
+	background-color: lighten(@mb2_color_bg_accent2,3%);
+	color: #fff;	
+}
+
+.header-style5 #main-header {
+	background-color: @mb2_color_bg_accent2;
+	border-bottom: 0;	
+}
+
+
+/* Header style 11 */
+
+.header-style11 #top {
+	background-color: transparent;
+	border-bottom: solid 1px @mb2_border_color_base;
+}
+
+
+
+
+
+
+
+
+/*========================================== TRANSPARENT HEADER STYLES */
+
+/* General transparent style */
+
+.header-transparent #top,
+.header-transparent #main-header,
+.header-transparent #main-navigation {
+	background-color: transparent;
+	.mb2_transition1(background-color,.25s);
+	color: #fff;	
+}
+
+.header-transparent #top {	
+	border-bottom: solid 1px rgba(255,255,255,.1);
+}
+
+.header-transparent #main-header {}
+
+.header-transparent #main-navigation {
+	border-top: solid 1px rgba(255,255,255,.1);	
+}
+
+.header-transparent #main-header.fixed-nav-element,
+.header-transparent #main-navigation.fixed-nav-element {
+	background-color: fade(@mb2_color_bg_accent2,90%);	
+	border-bottom: 0;
+}
+
+
+
+
+/* Transparent 2 */
+
+.header-transparent.header-style4 #top,
+.header-transparent.header-style4 #main-header,
+.header-transparent.header-style4 #main-navigation  {
+	background-color: transparent;	
+	border-bottom: solid 1px rgba(255,255,255,.2);
+	border-top: 0;
+}
+
+.header-transparent.header-style4 #main-header.fixed-nav-element,
+.header-transparent.header-style4 #main-navigation.fixed-nav-element {
+	background-color: @mb2_color_bg_accent2;
+	border-bottom-color: transparent;
+}
+
+
+
+/* Transparent 3 */
+
+.header-transparent.header-style6 #top,
+.header-transparent.header-style6 #main-header,
+.header-transparent.header-style6 #main-navigation {
+	background-color: fade(@mb2_color_bg_accent2,90%);
+	.mb2_transition1(background-color,.25s);
+}
+
+.header-transparent.header-style6 #main-header.fixed-nav-element,
+.header-transparent.header-style6 #main-navigation.fixed-nav-element  {
+	background-color: @mb2_color_bg_accent2;
+}
+
+
+
+
+/* Transparent 4 */
+
+.header-transparent.header-style7 #top  {
+	background-color: @mb2_color_bg_accent2;
+	border-bottom: 0;
+	color: @mb2_color_text_base;
+}
+
+.header-transparent.header-style7 #main-header {
+	background-color: fade(darken(@mb2_color_bg_accent2,3%),95%);
+	.mb2_transition1(background-color,.25s);
+	border-bottom: 0;
+}
+
+.header-transparent.header-style7 #main-navigation {
+	background-color: fade(@mb2_color_bg_accent1,85%);
+	.mb2_transition1(background-color,.25s);
+	border-top: 0;
+}
+
+.header-transparent.header-style7 #main-header.fixed-nav-element {
+	background-color: fade(darken(@mb2_color_bg_accent2,3%),95%);
+}
+
+.header-transparent.header-style7 #main-navigation.fixed-nav-element {
+	background-color: @mb2_color_bg_accent1;	
+}
+
+
+
+
+/* Transparent 5 */
+
+.header-transparent.header-style8 #top {
+	background-color: @mb2_color_bg_accent2;
+	color: @mb2_color_text_base;
+	border-bottom: 0;
+}
+
+
+.header-transparent.header-style8 #main-header,
+.header-transparent.header-style8 #main-navigation {
+	background-color: transparent;
+	.mb2_transition1(background-color,.25s);
+}
+
+.header-transparent.header-style8 #main-header.fixed-nav-element,
+.header-transparent.header-style8 #main-navigation.fixed-nav-element  {
+	background-color: @mb2_color_bg_accent2;
+}
+
+
+
+/* Transparent 6 */
+
+
+.header-transparent.header-style9 #top {
+	background-color: transparent;
+	border-bottom: 0;	
+}
+
+.header-transparent.header-style9 #main-header,
+.header-transparent.header-style9 #main-navigation {
+	background-color: fade(#fff,10%);
+	.mb2_transition1(background-color,.25s);
+}
+
+.header-transparent.header-style9 #main-header.fixed-nav-element,
+.header-transparent.header-style9 #main-navigation.fixed-nav-element  {
+	background-color: @mb2_color_bg_accent2;
+}
+
+
+
+
+/* Transparent 7 */
+
+.header-style10 #top {
+	background-color: @mb2_color_bg_accent2;
+}
+
+.header-style10 #main-navigation {
+	background-color: fade(@mb2_color_bg_accent1,95%);
+	.mb2_transition1(background-color,.25s);
+}
+
+
+
+
+
+
+@media (max-width: @mb2_screen_tablet){
+	
+	
+	/* General transparent style */
+
+	.header-transparent #page-a {
+		background-color: @mb2_color_bg_accent2;
+	}	
+	
+	#main-header {
+		height: auto !important;	
+	}
+	
+	#top .tcol,
+	#main-header .tcol {
+		margin: 0
+	}	
+		
+	.fixed-nav-element {
+		position: relative !important;
+	}
+	
+	.fixed-nav-element-offset {
+		display: none !important;
+		height: 0 !important;	
+	}
+	
+	/* Transparent 2 */
+	.header-transparent.header-style4 #main-header {
+		border-bottom: 0;	
+	}
+	
+	/* Transparent 7 */
+	
+	.header-style10 #main-navigation {
+		background-color: @mb2_color_bg_accent1;
+	}	
+	
+	
+	/* Header fixed width */
+	
+	.header-fixw #page-a {
+		padding-top: 0;	
+	}
+	
+	
+	
+	/* Add padding form header if menu is in main nav container */
+	
+	.mpos_main-nav #main-header {
+		padding-bottom: 20px;	
+	}
+			
+	
+}
